@@ -1,0 +1,2440 @@
+<!DOCTYPE html5>
+
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <title>Trafis Visher</title>
+  <link rel="stylesheet" href="./styles/homepage.css">
+  <link rel="icon" type="image/png" href="images/ocotillo2.JPG">
+
+</head>
+
+<body>
+  <div id="rendererContain">
+  </div>
+
+  <!--AUDIO TRACKS -->
+  <audio id="siderialAudio" preload="metadata" src="songs/maapSongs/siderial.mp3"> </audio>
+  <audio id="abstractingAudio" preload="metadata" src="songs/maapSongs/abstracting-abstractions.mp3"> </audio>
+  <audio id="feltAudio" preload="metadata" src="songs/maapSongs/felt-filter.mp3"> </audio>
+  <audio id="chocolateAudio" preload="metadata" src="songs/maapSongs/chocolate-entheogen.mp3"> </audio>
+  <audio id="keepAudio" preload="metadata" src="songs/maapSongs/keep-it-here.mp3"> </audio>
+  <audio id="coordinumAudio" preload="metadata" src="songs/maapSongs/coordinum.mp3"> </audio>
+  <audio id="soiseauAudio" preload="metadata" src="songs/maapSongs/soiseau-swerves-the-semblance.mp3"> </audio>
+  <audio id="someoneAudio" preload="metadata" src="songs/maapSongs/someone-to-hold-me.mp3"> </audio>
+  <audio id="isthistheAudio" preload="metadata" src="songs/maapSongs/is-this-the.mp3"> </audio>
+  <audio id="ninjangelesAudio" preload="metadata" src="songs/maapSongs/ninjangeles.mp3"> </audio>
+  <audio id="prometheusAudio" preload="metadata" src="songs/maapSongs/prometheus.mp3"> </audio>
+  <audio id="shatterglassAudio" preload="metadata" src="songs/maapSongs/shatterglass-branches.mp3"> </audio>
+  <audio id="looperAudio" preload="metadata" src="songs/maapSongs/looper-acid-duck.mp3"> </audio>
+  <audio id="lavenderAudio" preload="metadata" src="songs/maapSongs/lavender.mp3"> </audio>
+  <audio id="nobleAudio" preload="metadata" src="songs/maapSongs/noble-gas-miner.mp3"> </audio>
+  <audio id="syrinxAudio" preload="metadata" src="songs/maapSongs/syrinx.mp3"> </audio>
+  <audio id="vertraumtAudio" preload="metadata" src="songs/maapSongs/vertraumt.mp3"> </audio>
+  <audio id="windAudio" preload="metadata" src="songs/maapSongs/windriloquy.mp3"> </audio>
+  <audio id="roderickAudio" preload="metadata" src="songs/maapSongs/roderick.mp3"> </audio>
+
+  <audio id="moltenAudio" preload="metadata" src="songs/sapientsSongs/molten-glass.mp3"></audio>
+  <audio id="rocksAudio" preload="metadata" src="songs/sapientsSongs/rocks-and-waterbuckets.mp3"></audio>
+  <audio id="lydianAudio" preload="metadata" src="songs/sapientsSongs/lydian-coins.mp3"></audio>
+  <audio id="growthAudio" preload="metadata" src="songs/sapientsSongs/growth.mp3"></audio>
+  <audio id="firedancersAudio" preload="metadata" src="songs/sapientsSongs/firedancers-in-the-living-room.mp3"></audio>
+  <audio id="flourescentAudio" preload="metadata" src="songs/sapientsSongs/flourescent-rabbit.mp3"></audio>
+  <audio id="lugAudio" preload="metadata" src="songs/sapientsSongs/lug-along-the-colider.mp3"></audio>
+  <audio id="shippingAudio" preload="metadata" src="songs/sapientsSongs/shipping-silver.mp3"></audio>
+  <audio id="discoveryAudio" preload="metadata" src="songs/sapientsSongs/discovery-of-the-emulated-nature.mp3"></audio>
+  <audio id="zenoAudio" preload="metadata" src="songs/sapientsSongs/zeno-unzips-the-zeptosecond.mp3"></audio>
+
+  <audio id="sunDrinkersAudio" preload="auto" src="songs/symbioseSongs/sun-drinkers.mp3"></audio>
+  <audio id="fruitingBodyAudio" preload="auto" src="songs/symbioseSongs/fruiting-body.mp3"></audio>
+  <audio id="animatingWaterAudio" preload="auto" src="songs/symbioseSongs/animating-water.mp3"></audio>
+  <audio id="resilientOrbAudio" preload="auto" src="songs/symbioseSongs/resilient-orb.mp3"></audio>
+  <audio id="prophecyRelayAudio" preload="auto" src="songs/symbioseSongs/prophecy-relay.mp3"></audio>
+  <audio id="mycelliumAudio" preload="auto" src="songs/symbioseSongs/mycellium-running.mp3"></audio>
+  <audio id="filamentsAudio" preload="auto" src="songs/symbioseSongs/filaments.mp3"></audio>
+  <audio id="allDigitalAudio" preload="auto" src="songs/symbioseSongs/all-digital.mp3"></audio>
+  <audio id="inTheFleshAudio" preload="auto" src="songs/symbioseSongs/in-the-flesh.mp3"></audio>
+  <audio id="fungibleAudio" preload="auto" src="songs/symbioseSongs/fungible.mp3"></audio>
+  <audio id="inkSpreadsAudio" preload="auto" src="songs/symbioseSongs/ink-spreads.mp3"></audio>
+
+  <!--SONGTITLEIMAGES-->
+
+  <img id="backArrow" src="images/back-arrow.png">
+
+  <div id="scrollContainer">
+    <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg">
+    <img id="travisImage" src="images/travis-image.png">
+  </div>
+
+  <div id="centerContainer">
+    <div id="optionsDiv">
+      <img id="musicOption" class=option data-imgstm="images/music" src="images/music-unselected.png">
+      <img id="aboutOption" class=option data-imgstm="images/about" src="images/about-unselected.png">
+    </div>
+    <div id="aboutDiv">
+      <aboutText>it's not exactly what I mean to say,
+        it's like...(aha, can we do it like this again? a vague phrase then clarifying, like,
+        the steady occasion, (from time to time with regularity)) ... so what do I mean?</aboutText>
+    </div>
+
+    <div id="albumsDiv">
+      <img id="maapTitle" src="images/maap-title.png">
+      <img id="sapientsTitle" src="images/silver-tip-title.png">
+      <img id="symbioseTitle" src="images/symbiose-title.png">
+      <img id="eukaliptosowyTitle" src="images/eukaliptosowy-title.png">
+    </div>
+
+    <div id="seekbarContain" style="visibility: hidden;">
+      <input id="dur" class="seekbar" type="range" name="rng" value="50" min="0" step=".1">
+      <img class="previousTrack" id="previousTrackArrow" src="images/controls/forward-button.png"></img>
+      <img class="nextTrack" id="nextTrackArrow" src="images/controls/forward-button.png"> </img>
+      <img id="pausePlay" src="images/pause.png">
+    </div>
+  </div>
+
+
+  <img id="albumDivsNavButtonLeft" src="images/controls/back-button.png">
+  <img id="albumDivsNavButtonRight" src="images/controls/forward-button.png">
+
+
+  <div id="albumDivsContainer">
+    <div id="maapDiv" class="albumDiv">
+      <img class="maapTitleImage" id="siderialImage" data-song="siderialAudio"
+        src="images/maapImages/siderial-paused.png">
+      <img class="maapTitleImage" id="coordinumImage" data-song="coordinumAudio"
+        src="images/maapImages/coordinum-paused.png">
+      <img class="maapTitleImage" id="feltImage" data-song="feltAudio" src="images/maapImages/felt-paused.png">
+      <img class="maapTitleImage" id="nobleImage" data-song="nobleAudio" src="images/maapImages/noble-paused.png">
+      <img class="maapTitleImage" id="roderickImage" data-song="roderickAudio"
+        src="images/maapImages/roderick-paused.png">
+      <img class="maapTitleImage" id="keepImage" data-song="keepAudio" src="images/maapImages/keep-paused.png">
+      <img class="maapTitleImage" id="vertraumtImage" data-song="vertraumtAudio"
+        src="images/maapImages/vertraumt-paused.png">
+      <img class="maapTitleImage" id="abstractingImage" data-song="abstractingAudio"
+        src="images/maapImages/abstracting-paused.png">
+      <img class="maapTitleImage" id="syrinxImage" data-song="syrinxAudio" src="images/maapImages/syrinx-paused.png">
+      <img class="maapTitleImage" id="someoneImage" data-song="someoneAudio" src="images/maapImages/someone-paused.png">
+    </div>
+    <div id="maapDiv2" class="albumDiv">
+      <img class="maapTitleImage" id="isthistheImage" data-song="isthistheAudio"
+        src="images/maapImages/isthisthe-paused.png">
+      <img class="maapTitleImage" id="ninjangelesImage" data-song="ninjangelesAudio"
+        src="images/maapImages/ninjangeles-paused.png">
+      <img class="maapTitleImage" id="prometheusImage" data-song="prometheusAudio"
+        src="images/maapImages/prometheus-paused.png">
+      <img class="maapTitleImage" id="windImage" data-song="windAudio" src="images/maapImages/wind-paused.png">
+      <img class="maapTitleImage" id="chocolateImage" data-song="chocolateAudio"
+        src="images/maapImages/chocolate-paused.png">
+      <img class="maapTitleImage" id="lavenderImage" data-song="lavenderAudio"
+        src="images/maapImages/lavender-paused.png">
+      <img class="maapTitleImage" id="soiseauImage" data-song="soiseauAudio" src="images/maapImages/soiseau-paused.png">
+      <img class="maapTitleImage" id="shatterglassImage" data-song="shatterglassAudio"
+        src="images/maapImages/shatterglass-paused.png">
+      <img class="maapTitleImage" id="looperImage" data-song="looperAudio" src="images/maapImages/looper-paused.png">
+    </div>
+
+    <div id="sapientsDiv" class="albumDiv">
+      <img class="sapientsTitleImage" id="moltenImage" data-song="moltenAudio"
+        src="images/sapientsImages/molten-paused.png">
+      <img class="sapientsTitleImage" id="rocksImage" data-song="rocksAudio"
+        src="images/sapientsImages/rocks-paused.png">
+      <img class="sapientsTitleImage" id="lydianImage" data-song="lydianAudio"
+        src="images/sapientsImages/lydian-paused.png">
+      <img class="sapientsTitleImage" id="growthImage" data-song="growthAudio"
+        src="images/sapientsImages/growth-paused.png">
+      <img class="sapientsTitleImage" id="firedancersImage" data-song="firedancersAudio"
+        src="images/sapientsImages/firedancers-paused.png">
+      <img class="sapientsTitleImage" id="flourescentImage" data-song="flourescentAudio"
+        src="images/sapientsImages/flourescent-paused.png">
+    </div>
+    <div id="sapientsDiv2" class="albumDiv">
+      <img class="sapientsTitleImage" id="shippingImage" data-song="shippingAudio"
+        src="images/sapientsImages/lydian-paused.png">
+      <img class="sapientsTitleImage" id="lugImage" data-song="lugAudio" src="images/sapientsImages/growth-paused.png">
+      <img class="sapientsTitleImage" id="discoveryImage" data-song="discoveryAudio"
+        src="images/sapientsImages/firedancers-paused.png">
+      <img class="sapientsTitleImage" id="zenoImage" data-song="zenoAudio"
+        src="images/sapientsImages/molten-paused.png">
+    </div>
+
+    <div id="symbioseDiv" class="albumDiv">
+      <img class="symbioseTitleImage" id="sunDrinkersImage" data-song="sunDrinkersAudio"
+        src="images/symbioseImages/sun-drinkers-paused.png">
+      <img class="symbioseTitleImage" id="fruitingBodyImage" data-song="fruitingBodyAudio"
+        src="images/symbioseImages/fruiting-body-paused.png">
+      <img class="symbioseTitleImage" id="animatingWaterImage" data-song="animatingWaterAudio"
+        src="images/symbioseImages/animating-water-paused.png">
+      <img class="symbioseTitleImage" id="resilientOrbImage" data-song="resilientOrbAudio"
+        src="images/symbioseImages/resilient-orb-paused.png">
+      <img class="symbioseTitleImage" id="prophecyRelayImage" data-song="prophecyRelayAudio"
+        src="images/symbioseImages/prophecy-relay-paused.png">
+      <img class="symbioseTitleImage" id="mycelliumImage" data-song="mycelliumAudio"
+        src="images/symbioseImages/mycellium-paused.png">
+    </div>
+    <div id="symbioseDiv2" class="albumDiv">
+      <img class="symbioseTitleImage" id="filamentsImage" data-song="filamentsAudio"
+        src="images/symbioseImages/filaments-paused.png">
+      <img class="symbioseTitleImage" id="allDigitalImage" data-song="allDigitalAudio"
+        src="images/symbioseImages/all-digital-paused.png">
+      <img class="symbioseTitleImage" id="inTheFleshImage" data-song="inTheFleshAudio"
+        src="images/symbioseImages/in-the-flesh-paused.png">
+      <img class="symbioseTitleImage" id="fungibleImage" data-song="fungibleAudio"
+        src="images/symbioseImages/fungible-paused.png">
+      <img class="symbioseTitleImage" id="inkSpreadsImage" data-song="inkSpreadsAudio"
+        src="images/symbioseImages/ink-spreads-paused.png">
+    </div>
+
+    <div id="eukaliptosowyDiv" class="albumDiv">
+
+    </div>
+  </div>
+
+
+
+  <div id="sideControlsContainer">
+    <div id="sideControlsDiv">
+
+      <img id="sphereControlY" class="sideControl darkLightImg" data-imgStem="images/controls/sphere-control-y0">
+      <img id="sphereControlZ" class="sideControl darkLightImg" data-imgStem="images/controls/sphere-control-z0">
+      <img id="boxControlY" class="sideControl darkLightImg" data-imgStem="images/controls/box-control-y0">
+      <img id="boxControlZ" class="sideControl darkLightImg" data-imgStem="images/controls/box-control-z0">
+      <img id="sphereExpand" class="sideControl darkLightImg" data-imgStem="images/controls/sphere-expand">
+      <img id="sphereContract" class="sideControl darkLightImg" data-imgStem="images/controls/sphere-contract">
+      <img id="sideControlsNavButton" src="images/controls/back-button.png">
+      <img id="materialSwitch" class="materialControl darkLightImg" data-imgStem="images/controls/material-switch">
+      <input id="fov" type="range" name="rng" value="115" min="55" max="305" step="1">
+
+    </div>
+  </div>
+
+  <div id="topControlsContainer">
+    <img id="circleBW" src="images/controls/circleBW.png">
+    <img id="topControlsNavButton" src="images/controls/top-controls-nav-button.png">
+    <div id="topControlsDiv">
+      <img id="cubeColorSelect" class="topControl" src="images/controls/background-white-lines-icon.png">
+      <img id="rotateCounter" class="topControl" src="images/controls/rotate-counter.png">
+      <img id="rotateClockwise" class="topControl" src="images/controls/rotate-clockwise.png">
+      <img id="sphereView" class="topControl darkLightImg" data-imgStem="images/controls/sphere-view">
+      <img id="boxView" class="topControl darkLightImg" data-imgStem="images/controls/box-view">
+      <img id="birdView" class="topControl darkLightImg" data-imgStem="images/controls/bird-view">
+      <img id="z" class="topControl" src="images/controls/z-false.png">
+    </div>
+    <div id="presetControlsDiv">
+      <img id=preset7 class="presetControl" src="images/controls/view-preset-unselected.png">
+      <img id=preset6 class="presetControl" src="images/controls/view-preset-unselected.png">
+      <img id=preset5 class="presetControl" src="images/controls/view-preset-unselected.png">
+      <img id=preset4 class="presetControl" src="images/controls/view-preset-unselected.png">
+      <img id=preset3 class="presetControl" src="images/controls/view-preset-unselected.png">
+      <img id=preset2 class="presetControl" src="images/controls/view-preset-unselected.png">
+      <img id=preset1 class="presetControl" src="images/controls/view-preset-unselected.png">
+
+ 
+  
+   
+
+     
+      
+    </div>
+  </div>
+
+
+
+  <script type="module">
+
+    import * as THREE from './build/three.module.js';
+    import { OrbitControls } from './jsm/controls/OrbitControls.js';
+    var camera, controls, scene, renderer;
+    var SCREEN_WIDTH
+    var SCREEN_HEIGHT
+    var sunLight = new THREE.AmbientLight('rgb(255,255,255)', 1);
+
+    var mouse = new THREE.Vector2()
+    function onMouseMove(event) {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = (event.clientY / window.innerHeight);
+    }
+    window.addEventListener('mousemove', onMouseMove, false);
+
+
+
+    const rendererContain = document.getElementById("rendererContain")
+
+    const seekbarContain = document.getElementById("seekbarContain")
+
+    const loader = new THREE.TextureLoader();
+    loader.crossOrigin = '';
+
+    let sphereScaleClickCount = 1
+
+    let pngDarkLightFile = "-dark.png"
+    var boxControlFlipY = false
+    var boxControlFlipZ = false
+    var sphereControlFlipY = false
+    var sphereControlFlipZ = false
+    var boxControlClickCountY = 1
+    var boxControlClickCountZ = 0
+    var sphereControlClickCountY = 0
+    var sphereControlClickCountZ = 0
+
+    let sideControlsNavRotationDegrees = 180
+    let topControlsNavRotationDegrees = 180
+    let topControlsNavRotation
+    let navRotationDegrees = 0
+    let topControlsOpen = false
+    let navOpen = false
+
+    let orientationPortrait
+
+    let zCameraSwitch = false
+    let zReverse = true
+    let cameraZoomSwitch = false
+    let cameraZoom
+    let cameraZoomPos = true
+    let sideControlsOpen = false
+
+    let backgroundBlack = true
+    let backgroundWhite = false
+
+    let cubeColorRainbow = true
+    let materialSwitched = false
+
+    const options = document.getElementsByClassName("option")
+    const albumTitleImages = document.getElementsByClassName("albumTitleImage")
+
+    const topControlsNavButton = document.getElementById("topControlsNavButton")
+    const albumDivsNavButtonLeft = document.getElementById("albumDivsNavButtonLeft")
+    const albumDivsNavButtonRight = document.getElementById("albumDivsNavButtonRight")
+    const topControlsDiv = document.getElementById("topControlsDiv")
+    const sideControlsNavButton = document.getElementById("sideControlsNavButton")
+    const sideControlsDiv = document.getElementById("sideControlsDiv")
+    const sideControlsContainer = document.getElementById("sideControlsContainer")
+    const sideControl = document.getElementsByClassName("sideControl")
+    const presetControlsDiv = document.getElementById("presetControlsDiv")
+    const darkLightImg = document.getElementsByClassName("darkLightImg")
+
+    const sphereControlY = document.getElementById("sphereControlY")
+    const sphereControlZ = document.getElementById("sphereControlZ")
+    const boxControlY = document.getElementById("boxControlY")
+    const boxControlZ = document.getElementById("boxControlZ")
+
+    const boxViewPNG = document.getElementById("boxView")
+    const sphereViewPNG = document.getElementById("sphereView")
+    const birdViewPNG = document.getElementById("birdView")
+
+    const cubeColorSelect = document.getElementById("cubeColorSelect")
+    const materialSwitch = document.getElementById("materialSwitch")
+    const z = document.getElementById("z")
+    const fov = document.getElementById("fov");
+
+    const albumDivsContainer = document.getElementById("albumDivsContainer")
+    const albumsDiv = document.getElementById("albumsDiv")
+    const optionsDiv = document.getElementById("optionsDiv")
+    const aboutDiv = document.getElementById("aboutDiv")
+    const travisImage = document.getElementById("travisImage")
+    const pausePlay = document.getElementById("pausePlay")
+
+    const habitatsScroll = document.getElementById("habitatsScroll")
+    const scrollContainer = document.getElementById("scrollContainer")
+    const centerContainer = document.getElementById("centerContainer")
+    let centerContainerInitialWidth = centerContainer.clientWidth
+
+    let starSphere
+    let starSphere1
+    let starSphere2
+    let albumCube
+    let songSphere
+    let currentTexture
+    let currentTexture2
+    let currentTextureStem
+    let currentMaterial
+    let selectedSphereTexture
+    let transparentTexture = 'images/transparent-texture.png'
+
+    let currentOption = null
+    let currentOptionElem = null
+    let selectedAlbumDiv = null
+    let selectedAlbumDiv2 = null
+    let selectedAlbumTitleImage = null
+    let currentPlaylist = null
+    let currentPlaylist1 = null
+    let currentPlaylist2 = null
+    let currentAlbum = null
+    let selected = null
+    var selectedPreset
+    let songSelected = false
+    let currentSongIsPlaying = false
+    let currentSongWasPaused = false
+    let pausePlayPNGPaused = false
+    let pausedForShift = false
+
+
+    let albumsAreOpen = false
+    let albumIsOpen = false
+    let aboutIsOpen = false
+
+    const maapTitle = document.getElementById("maapTitle")
+    const symbioseTitle = document.getElementById("symbioseTitle")
+    const sapientsTitle = document.getElementById("sapientsTitle")
+    const eukaliptosowyTitle = document.getElementById("eukaliptosowyTitle")
+
+
+
+
+
+
+    const viewPresets = {
+
+      preset1: {
+        domId: "preset1",
+        fov: 140,
+        cameraX: 0,
+        cameraY: 20,
+        cameraZ: 0,
+        sphereScale: 1,
+        zSwitch: false,
+        boxControlClickCountY: 1,
+        boxControlClickCountZ: 0,
+        sphereControlClickCountY: 0,
+        sphereControlClickCountZ: 1,
+        materialSwitch: false,
+        boxY0: false,
+        boxZ0: true,
+        sphereY0: true,
+        sphereZ0: false,
+        boxControlYSrc: "images/controls/box-control-y1",
+        boxControlZSrc: "images/controls/box-control-z0",
+        sphereControlYSrc: "images/controls/sphere-control-y0",
+        sphereControlZSrc: "images/controls/sphere-control-z1-rev",
+        cameraZoom: 0
+      },
+      preset2: {
+        domId: "preset2",
+        fov: 200,
+        cameraX: 0,
+        cameraY: 65,
+        cameraZ: 90,
+        sphereScale: 4,
+        zSwitch: false,
+        boxControlClickCountY: 1,
+        boxControlClickCountZ: 0,
+        sphereControlClickCountY: 0,
+        sphereControlClickCountZ: 1,
+        materialSwitch: true,
+        boxY0: false,
+        boxZ0: true,
+        sphereY0: true,
+        sphereZ0: false,
+        boxControlYSrc: "images/controls/box-control-y1",
+        boxControlZSrc: "images/controls/box-control-z0",
+        sphereControlYSrc: "images/controls/sphere-control-y0",
+        sphereControlZSrc: "images/controls/sphere-control-z1",
+        cameraZoom: 1
+      },
+      preset3: {
+        domId: "preset3",
+        fov: 165,
+        cameraX: 0,
+        cameraY: 10,
+        cameraZ: 0,
+        sphereScale: 1,
+        zSwitch: false,
+        boxControlClickCountY: 0,
+        boxControlClickCountZ: -1,
+        sphereControlClickCountY: 0.5,
+        sphereControlClickCountZ: 0,
+        materialSwitch: false,
+        boxY0: true,
+        boxZ0: false,
+        sphereY0: false,
+        sphereZ0: true,
+        boxControlYSrc: "images/controls/box-control-y0",
+        boxControlZSrc: "images/controls/box-control-z1-rev",
+        sphereControlYSrc: "images/controls/sphere-control-y1",
+        sphereControlZSrc: "images/controls/sphere-control-z0",
+        cameraZoom: 0
+      },
+
+      preset4: {
+        domId: "preset4",
+        fov: 150,
+        cameraX: 90,
+        cameraY: 10,
+        cameraZ: 200,
+        sphereScale: 9,
+        zSwitch: true,
+        boxControlClickCountY: 1,
+        boxControlClickCountZ: 0,
+        sphereControlClickCountY: -0.5,
+        sphereControlClickCountZ: 0,
+        materialSwitch: true,
+        boxY0: false,
+        boxZ0: true,
+        sphereY0: false,
+        sphereZ0: true,
+        boxControlYSrc: "images/controls/box-control-y1",
+        boxControlZSrc: "images/controls/box-control-z0",
+        sphereControlYSrc: "images/controls/sphere-control-y1-rev",
+        sphereControlZSrc: "images/controls/sphere-control-z0",
+        cameraZoom: 0
+      },
+      preset5: {
+        domId: "preset5",
+        fov: 90,
+        cameraX: 60,
+        cameraY: -50,
+        cameraZ: 15,
+        sphereScale: 1,
+        zSwitch: false,
+        boxControlClickCountY: 0,
+        boxControlClickCountZ: 1,
+        sphereControlClickCountY: -1,
+        sphereControlClickCountZ: 0,
+        materialSwitch: false,
+        boxY0: true,
+        boxZ0: false,
+        sphereY0: false,
+        sphereZ0: true,
+        boxControlYSrc: "images/controls/box-control-y0",
+        boxControlZSrc: "images/controls/box-control-z1",
+        sphereControlYSrc: "images/controls/sphere-control-y1-rev",
+        sphereControlZSrc: "images/controls/sphere-control-z0",
+        cameraZoom: 0
+      },
+      preset6: {
+        domId: "preset6",
+        fov: 179,
+        cameraX: 0,
+        cameraY: 1,
+        cameraZ: 0,
+        sphereScale: 1,
+        zSwitch: false,
+        boxControlClickCountY: 0,
+        boxControlClickCountZ: 0.2,
+        sphereControlClickCountY: 0.2,
+        sphereControlClickCountZ: 0,
+        materialSwitch: true,
+        boxY0: true,
+        boxZ0: false,
+        sphereY0: false,
+        sphereZ0: true,
+        boxControlYSrc: "images/controls/box-control-y0",
+        boxControlZSrc: "images/controls/box-control-z1",
+        sphereControlYSrc: "images/controls/sphere-control-y1-rev",
+        sphereControlZSrc: "images/controls/sphere-control-z0",
+        cameraZoom: 0
+      },
+      preset7: {
+        domId: "preset7",
+        fov: 165,
+        cameraX: 0,
+        cameraY: 3,
+        cameraZ: 1,
+        sphereScale: 1,
+        zSwitch: true,
+        boxControlClickCountY: 0,
+        boxControlClickCountZ: 1,
+        sphereControlClickCountY: 0.4,
+        sphereControlClickCountZ: 0,
+        materialSwitch: true,
+        boxY0: true,
+        boxZ0: false,
+        sphereY0: false,
+        sphereZ0: true,
+        boxControlYSrc: "images/controls/box-control-y0",
+        boxControlZSrc: "images/controls/box-control-z1",
+        sphereControlYSrc: "images/controls/sphere-control-y1-rev",
+        sphereControlZSrc: "images/controls/sphere-control-z0",
+        cameraZoom: 1
+      }
+
+    }
+
+    const albums = {
+
+      maapAlbum: {        
+        texture: "images/maapImages/album-cube-texture",
+        starSphere1: "images/maapImages/galaxy-starfield.png",
+        starSphere2: "images/maapImages/iridescent-background.png",
+        imageId: "maapTitle",
+        divId: "maapDiv",
+        playlist: [
+          'siderialAudio',
+          'coordinumAudio',
+          'feltAudio',
+          'nobleAudio',
+          'roderickAudio',
+          'keepAudio',
+          'vertraumtAudio',
+          'abstractingAudio',
+          'syrinxAudio',
+          'someoneAudio'
+        ],
+        playlist2: [
+          'isthistheAudio',
+          'ninjangelesAudio',
+          'prometheusAudio',
+          'windAudio',
+          'chocolateAudio',
+          'lavenderAudio',
+          'soiseauAudio',
+          'shatterglassAudio',
+          'looperAudio',
+        ],
+        songs: {
+          siderialAudio: {
+            imageId: 'siderialImage',
+            audioId: 'siderialAudio',
+            pausedImg: "images/maapImages/siderial-paused.png",
+            playingImg: "images/maapImages/siderial-playing.png",
+            sphereTexture: "images/maapImages/siderial-texture.png",
+            elem: document.getElementById("siderialAudio"),
+            hex: "0xdffc03",
+            orbit: -690,
+            speed: 750
+          },
+          abstractingAudio: {
+            imageId: 'abstractingImage',
+            audioId: 'abstractingAudio',
+            pausedImg: "images/maapImages/abstracting-paused.png",
+            playingImg: "images/maapImages/abstracting-playing.png",
+            sphereTexture: "images/maapImages/abstracting-texture.png",
+            elem: document.getElementById("abstractingAudio"),
+            hex: "0x219bff",
+            orbit: -900,
+            speed: 400
+          },
+          feltAudio: {
+            imageId: 'feltImage',
+            audioId: 'feltAudio',
+            pausedImg: "images/maapImages/felt-paused.png",
+            playingImg: "images/maapImages/felt-playing.png",
+            sphereTexture: "images/maapImages/felt-texture.png",
+            elem: document.getElementById("feltAudio"),
+            hex: "0x36ff62",
+            orbit: -525,
+            speed: 800,
+          },
+          nobleAudio: {
+            imageId: 'nobleImage',
+            audioId: 'nobleAudio',
+            pausedImg: "images/maapImages/noble-paused.png",
+            playingImg: "images/maapImages/noble-playing.png",
+            sphereTexture: "images/maapImages/noble-texture.png",
+            elem: document.getElementById("nobleAudio"),
+            hex: "0xdffc03",
+            orbit: -615,
+            speed: 450
+          },
+          keepAudio: {
+            imageId: 'keepImage',
+            audioId: 'keepAudio',
+            pausedImg: "images/maapImages/keep-paused.png",
+            playingImg: "images/maapImages/keep-playing.png",
+            sphereTexture: "images/maapImages/keep-texture.png",
+            elem: document.getElementById("keepAudio"),
+            hex: "0x219bff",
+            orbit: -800,
+            speed: 400
+          },
+          syrinxAudio: {
+            imageId: 'syrinxImage',
+            audioId: 'syrinxAudio',
+            pausedImg: "images/maapImages/syrinx-paused.png",
+            playingImg: "images/maapImages/syrinx-playing.png",
+            sphereTexture: "images/maapImages/syrinx-texture.png",
+            elem: document.getElementById("syrinxAudio"),
+            hex: "0x267bff",
+            orbit: 800,
+            speed: 1300
+          },
+          vertraumtAudio: {
+            imageId: 'vertraumtImage',
+            audioId: 'vertraumtAudio',
+            pausedImg: "images/maapImages/vertraumt-paused.png",
+            playingImg: "images/maapImages/vertraumt-playing.png",
+            sphereTexture: "images/maapImages/vertraumt-texture.png",
+            elem: document.getElementById("vertraumtAudio"),
+            hex: "0x219bff",
+            orbit: 650,
+            speed: 1200
+          },
+          coordinumAudio: {
+            imageId: 'coordinumImage',
+            audioId: 'coordinumAudio',
+            pausedImg: "images/maapImages/coordinum-paused.png",
+            playingImg: "images/maapImages/coordinum-playing.png",
+            sphereTexture: "images/maapImages/coordinum-texture.png",
+            elem: document.getElementById("coordinumAudio"),
+            hex: "0x219bff",
+            orbit: -1200,
+            speed: 500
+          },
+          roderickAudio: {
+            imageId: 'roderickImage',
+            audioId: 'roderickAudio',
+            pausedImg: "images/maapImages/roderick-paused.png",
+            playingImg: "images/maapImages/roderick-playing.png",
+            sphereTexture: "images/maapImages/roderick-texture.png",
+            elem: document.getElementById("roderickAudio"),
+            hex: "0x36ff62",
+            orbit: 900,
+            speed: 700,
+          },
+          someoneAudio: {
+            imageId: 'someoneImage',
+            audioId: 'someoneAudio',
+            pausedImg: "images/maapImages/someone-paused.png",
+            playingImg: "images/maapImages/someone-playing.png",
+            sphereTexture: "images/maapImages/someone-texture.png",
+            elem: document.getElementById("someoneAudio"),
+            hex: "0x916b3d",
+            orbit: 1000,
+            speed: 400
+          },
+          ninjangelesAudio: {
+            imageId: 'ninjangelesImage',
+            audioId: 'ninjangelesAudio',
+            pausedImg: "images/maapImages/ninjangeles-paused.png",
+            playingImg: "images/maapImages/ninjangeles-playing.png",
+            sphereTexture: "images/maapImages/ninjangeles-texture.png",
+            elem: document.getElementById("ninjangelesAudio"),
+            hex: "0x9a36ff",
+            orbit: 500,
+            speed: 1500
+          },
+          prometheusAudio: {
+            imageId: 'prometheusImage',
+            audioId: 'prometheusAudio',
+            pausedImg: "images/maapImages/prometheus-paused.png",
+            playingImg: "images/maapImages/prometheus-playing.png",
+            sphereTexture: "images/maapImages/prometheus-texture.png",
+            elem: document.getElementById("prometheusAudio"),
+            hex: "0xdffc03",
+            orbit: 2500,
+            speed: 450
+          },
+          chocolateAudio: {
+            imageId: 'chocolateImage',
+            audioId: 'chocolateAudio',
+            pausedImg: "images/maapImages/chocolate-paused.png",
+            playingImg: "images/maapImages/chocolate-playing.png",
+            sphereTexture: "images/maapImages/chocolate-texture.png",
+            elem: document.getElementById("chocolateAudio"),
+            hex: "0x916b3d",
+            orbit: -650,
+            speed: 500
+          },
+          looperAudio: {
+            imageId: 'looperImage',
+            audioId: 'looperAudio',
+            pausedImg: "images/maapImages/looper-paused.png",
+            playingImg: "images/maapImages/looper-playing.png",
+            sphereTexture: "images/maapImages/looper-texture.png",
+            elem: document.getElementById("looperAudio"),
+            hex: "0x9a36ff",
+            orbit: -550,
+            speed: 1170
+          },
+          soiseauAudio: {
+            imageId: 'soiseauImage',
+            audioId: 'soiseauAudio',
+            pausedImg: "images/maapImages/soiseau-paused.png",
+            playingImg: "images/maapImages/soiseau-playing.png",
+            sphereTexture: "images/maapImages/soiseau-texture.png",
+            elem: document.getElementById("soiseauAudio"),
+            hex: "0x36ff62",
+            orbit: 900,
+            speed: 700,
+          },
+          isthistheAudio: {
+            imageId: 'isthistheImage',
+            audioId: 'isthistheAudio',
+            pausedImg: "images/maapImages/isthisthe-paused.png",
+            playingImg: "images/maapImages/isthisthe-playing.png",
+            sphereTexture: "images/maapImages/isthisthe-texture.png",
+            elem: document.getElementById("isthistheAudio"),
+            hex: "0x9a36ff",
+            orbit: 750,
+            speed: 1000
+          },
+          windAudio: {
+            imageId: 'windImage',
+            audioId: 'windAudio',
+            pausedImg: "images/maapImages/wind-paused.png",
+            playingImg: "images/maapImages/wind-playing.png",
+            sphereTexture: "images/maapImages/wind-texture.png",
+            elem: document.getElementById("windAudio"),
+            hex: "0x9a36ff",
+            orbit: -850,
+            speed: 1000
+          },
+          lavenderAudio: {
+            imageId: 'lavenderImage',
+            audioId: 'lavenderAudio',
+            pausedImg: "images/maapImages/lavender-paused.png",
+            playingImg: "images/maapImages/lavender-playing.png",
+            sphereTexture: "images/maapImages/lavender-texture.png",
+            elem: document.getElementById("lavenderAudio"),
+            hex: "0x9a36ff",
+            orbit: -790,
+            speed: 900
+          },
+          shatterglassAudio: {
+            imageId: 'shatterglassImage',
+            audioId: 'shatterglassAudio',
+            pausedImg: "images/maapImages/shatterglass-paused.png",
+            playingImg: "images/maapImages/shatterglass-playing.png",
+            sphereTexture: "images/maapImages/shatterglass-texture.png",
+            elem: document.getElementById("shatterglassAudio"),
+            hex: "0x219bff",
+            orbit: 1000,
+            speed: 700
+          }
+        }
+      },
+      sapientsAlbum: {        
+        imageId: "sapientsTitle",
+        divId: "sapientsDiv",
+        texture: "images/sapientsImages/album-cube-texture",
+        playlist: [
+          'moltenAudio',
+          'rocksAudio',
+          'lydianAudio',
+          'growthAudio',
+          'firedancersAudio',
+          'flourescentAudio'
+        ],
+        playlist2: [
+          'lugAudio',
+          'shippingAudio',
+          'discoveryAudio',
+          'zenoAudio'
+        ],
+        songs: {
+          moltenAudio: {
+            imageId: 'moltenImage',
+            audioId: 'moltenAudio',
+            pausedImg: "images/sapientsImages/molten-paused.png",
+            playingImg: "images/sapientsImages/molten-playing.png",
+            sphereTexture: "images/sapientsImages/molten-texture.png",
+            elem: document.getElementById("moltenAudio"),
+            hex: "0xdffc03",
+            orbit: -690,
+            speed: 750
+          },
+          rocksAudio: {
+            imageId: 'rocksImage',
+            audioId: 'rocksAudio',
+            pausedImg: "images/sapientsImages/rocks-paused.png",
+            playingImg: "images/sapientsImages/rocks-playing.png",
+            sphereTexture: "images/sapientsImages/rocks-texture.png",
+            elem: document.getElementById("rocksAudio"),
+            hex: "0x219bff",
+            orbit: -900,
+            speed: 400
+          },
+          lydianAudio: {
+            imageId: 'lydianImage',
+            audioId: 'lydianAudio',
+            pausedImg: "images/sapientsImages/lydian-paused.png",
+            playingImg: "images/sapientsImages/lydian-playing.png",
+            sphereTexture: "images/sapientsImages/lydian-texture.png",
+            elem: document.getElementById("lydianAudio"),
+            hex: "0x36ff62",
+            orbit: -525,
+            speed: 800,
+          },
+
+          firedancersAudio: {
+            imageId: 'firedancersImage',
+            audioId: 'firedancersAudio',
+            pausedImg: "images/sapientsImages/firedancers-paused.png",
+            playingImg: "images/sapientsImages/firedancers-playing.png",
+            sphereTexture: "images/sapientsImages/firedancers-texture.png",
+            elem: document.getElementById("firedancersAudio"),
+            hex: "0x219bff",
+            orbit: -800,
+            speed: 400
+          },
+
+          flourescentAudio: {
+            imageId: 'flourescentImage',
+            audioId: 'flourescentAudio',
+            pausedImg: "images/sapientsImages/flourescent-paused.png",
+            playingImg: "images/sapientsImages/flourescent-playing.png",
+            sphereTexture: "images/sapientsImages/flourescent-texture.png",
+            elem: document.getElementById("flourescentAudio"),
+            hex: "0x219bff",
+            orbit: -1200,
+            speed: 500
+          },
+
+          growthAudio: {
+            imageId: 'growthImage',
+            audioId: 'growthAudio',
+            pausedImg: "images/sapientsImages/growth-paused.png",
+            playingImg: "images/sapientsImages/growth-playing.png",
+            sphereTexture: "images/sapientsImages/growth-texture.png",
+            elem: document.getElementById("growthAudio"),
+            hex: "0x916b3d",
+            orbit: -650,
+            speed: 500
+          },
+          zenoAudio: {
+            imageId: 'zenoImage',
+            audioId: 'zenoAudio',
+            pausedImg: "images/sapientsImages/zeno-paused.png",
+            playingImg: "images/sapientsImages/zeno-playing.png",
+            sphereTexture: "images/sapientsImages/zeno-texture.png",
+            elem: document.getElementById("zenoAudio"),
+            hex: "0x9a36ff",
+            orbit: 500,
+            speed: 1500
+          },
+          shippingAudio: {
+            imageId: 'shippingImage',
+            audioId: 'shippingAudio',
+            pausedImg: "images/sapientsImages/shipping-paused.png",
+            playingImg: "images/sapientsImages/shipping-playing.png",
+            sphereTexture: "images/sapientsImages/shipping-texture.png",
+            elem: document.getElementById("shippingAudio"),
+            hex: "0x916b3d",
+            orbit: 1000,
+            speed: 400
+          },
+          lugAudio: {
+            imageId: 'lugImage',
+            audioId: 'lugAudio',
+            pausedImg: "images/sapientsImages/lug-paused.png",
+            playingImg: "images/sapientsImages/lug-playing.png",
+            sphereTexture: "images/sapientsImages/lug-texture.png",
+            elem: document.getElementById("lugAudio"),
+            hex: "0x36ff62",
+            orbit: 900,
+            speed: 700,
+          },
+          discoveryAudio: {
+            imageId: 'discoveryImage',
+            audioId: 'discoveryAudio',
+            pausedImg: "images/sapientsImages/discovery-paused.png",
+            playingImg: "images/sapientsImages/discovery-playing.png",
+            sphereTexture: "images/sapientsImages/discovery-texture.png",
+            elem: document.getElementById("discoveryAudio"),
+            hex: "0x9a36ff",
+            orbit: 750,
+            speed: 1000
+          }
+        }
+      },
+
+
+      symbioseAlbum: {        
+        imageId: "symbioseTitle",
+        starSphere1: "images/symbioseImages/daysky-background.jpg",
+        starSphere2: "images/symbioseImages/nebula-background.jpg",
+        divId: "symbioseDiv",
+        texture: "images/symbioseImages/album-cube-texture",
+        songs: {
+          sunDrinkersAudio: {
+            imageId: 'sunDrinkersImage',
+            audioId: 'sunDrinkersAudio',
+            pausedImg: "images/symbioseImages/sun-drinkers-paused.png",
+            playingImg: "images/symbioseImages/sun-drinkers-playing.png",
+            elem: document.getElementById("sunDrinkersAudio"),
+            sphereTexture: "images/symbioseImages/sundrinkers-texture.png"
+          },
+
+          fruitingBodyAudio: {
+            imageId: 'fruitingBodyImage',
+            audioId: 'fruitingBodyAudio',
+            pausedImg: "images/symbioseImages/fruiting-body-paused.png",
+            playingImg: "images/symbioseImages/fruiting-body-playing.png",
+            elem: document.getElementById("fruitingBodyAudio"),
+            sphereTexture: "images/symbioseImages/fruiting-texture.png"
+          },
+
+          animatingWaterAudio: {
+            imageId: 'animatingWaterImage',
+            audioId: 'animatingWaterAudio',
+            pausedImg: "images/symbioseImages/animating-water-paused.png",
+            playingImg: "images/symbioseImages/animating-water-playing.png",
+            elem: document.getElementById("animatingWaterAudio"),
+            sphereTexture: "images/symbioseImages/animating-texture.png"
+          },
+
+
+          resilientOrbAudio: {
+            imageId: 'resilientOrbImage',
+            audioId: 'resilientOrbAudio',
+            pausedImg: "images/symbioseImages/resilient-orb-paused.png",
+            playingImg: "images/symbioseImages/resilient-orb-playing.png",
+            elem: document.getElementById("resilientOrbAudio"),
+            sphereTexture: "images/symbioseImages/resilient-texture.png"
+          },
+
+          prophecyRelayAudio: {
+            imageId: 'prophecyRelayImage',
+            audioId: 'prophecyRelayAudio',
+            pausedImg: "images/symbioseImages/prophecy-relay-paused.png",
+            playingImg: "images/symbioseImages/prophecy-relay-playing.png",
+            elem: document.getElementById("prophecyRelayAudio"),
+            sphereTexture: "images/symbioseImages/prophecy-texture.png"
+          },
+
+          mycelliumAudio: {
+            imageId: 'mycelliumImage',
+            audioId: 'mycelliumAudio',
+            pausedImg: "images/symbioseImages/mycellium-paused.png",
+            playingImg: "images/symbioseImages/mycellium-playing.png",
+            elem: document.getElementById("mycelliumAudio"),
+            sphereTexture: "images/symbioseImages/mycellium-texture.png"
+          },
+
+          filamentsAudio: {
+            imageId: 'filamentsImage',
+            audioId: 'filamentsAudio',
+            pausedImg: "images/symbioseImages/filaments-paused.png",
+            playingImg: "images/symbioseImages/filaments-playing.png",
+            elem: document.getElementById("filamentsAudio"),
+            sphereTexture: "images/symbioseImages/filaments-texture.png"
+          },
+
+          allDigitalAudio: {
+            imageId: 'allDigitalImage',
+            audioId: 'allDigitalAudio',
+            pausedImg: "images/symbioseImages/all-digital-paused.png",
+            playingImg: "images/symbioseImages/all-digital-playing.png",
+            elem: document.getElementById("allDigitalAudio"),
+            sphereTexture: "images/symbioseImages/all-digital-texture.png"
+          },
+
+          inTheFleshAudio: {
+            imageId: 'inTheFleshImage',
+            audioId: 'inTheFleshAudio',
+            pausedImg: "images/symbioseImages/in-the-flesh-paused.png",
+            playingImg: "images/symbioseImages/in-the-flesh-playing.png",
+            elem: document.getElementById("inTheFleshAudio"),
+            sphereTexture: "images/symbioseImages/in-the-flesh-texture.png"
+          },
+
+          fungibleAudio: {
+            imageId: 'fungibleImage',
+            audioId: 'fungibleAudio',
+            pausedImg: "images/symbioseImages/fungible-paused.png",
+            playingImg: "images/symbioseImages/fungible-playing.png",
+            elem: document.getElementById("fungibleAudio"),
+            sphereTexture: "images/symbioseImages/fungible-texture.png"
+
+          },
+
+          inkSpreadsAudio: {
+            imageId: 'inkSpreadsImage',
+            audioId: 'inkSpreadsAudio',
+            pausedImg: "images/symbioseImages/ink-spreads-paused.png",
+            playingImg: "images/symbioseImages/ink-spreads-playing.png",
+            elem: document.getElementById("inkSpreadsAudio"),
+            sphereTexture: "images/symbioseImages/ink-spreads-texture.png"
+          }
+        },
+        playlist: [
+          'sunDrinkersAudio',
+          'fruitingBodyAudio',
+          'animatingWaterAudio',
+          'resilientOrbAudio',
+          'prophecyRelayAudio',
+          'mycelliumAudio'
+        ],
+        playlist2: [
+          'filamentsAudio',
+          'allDigitalAudio',
+          'inTheFleshAudio',
+          'fungibleAudio',
+          'inkSpreadsAudio'
+        ]
+      }
+
+    }
+
+    let currentSong = null
+
+    fov.addEventListener('input', () => {
+      camera.fov = fov.value
+      camera.updateProjectionMatrix()
+
+
+    })
+
+    z.addEventListener('click', () => {
+
+      if (zCameraSwitch == true) {
+        zCameraSwitch = false
+        z.src = "images/controls/z-false.png"
+
+      } else if (zCameraSwitch == false) {
+        zCameraSwitch = true
+        z.src = "images/controls/z-true.png"
+
+      }
+    })
+
+    rotateClockwise.addEventListener('click', () => {
+      if (controls.autoRotateSpeed == 0 || controls.autoRotateSpeed == -1.5) {
+        controls.autoRotateSpeed = 1.5
+        rotateClockwise.style.filter = "hue-rotate(180deg)"
+        rotateCounter.style.filter = "hue-rotate(0deg)"
+      }
+      else if (controls.autoRotateSpeed == 1.5) {
+        controls.autoRotateSpeed = 0
+        rotateClockwise.style.filter = "hue-rotate(0deg)"
+      }
+    })
+    rotateCounter.addEventListener('click', () => {
+      if (controls.autoRotateSpeed == 0 || controls.autoRotateSpeed == 1.5) {
+        controls.autoRotateSpeed = -1.5
+        rotateCounter.style.filter = "hue-rotate(180deg)"
+        rotateClockwise.style.filter = "hue-rotate(0deg)"
+      }
+      else if (controls.autoRotateSpeed == -1.5) {
+        controls.autoRotateSpeed = 0
+        rotateCounter.style.filter = "hue-rotate(0deg)"
+      }
+    })
+
+    const setViewPreset = (preset) => {
+
+      if (selectedPreset) {
+
+        if (preset != selectedPreset) {
+          selectedPreset = document.getElementById(selectedPreset.domId)
+          selectedPreset.src = "images/controls/view-preset-unselected.png"
+        }
+      }
+
+      camera.position.x = preset.cameraX
+      camera.position.y = preset.cameraY
+      camera.position.z = preset.cameraZ
+      camera.fov = preset.fov
+      fov.value = preset.fov
+
+      sphereScaleClickCount = preset.sphereScale
+      zCameraSwitch = preset.zSwitch
+      if (preset.zSwitch == false) {
+        zCameraSwitch = false
+        z.src = "images/controls/z-false.png"
+      } else if (preset.zSwitch == true) {
+        zCameraSwitch = true
+        z.src = "images/controls/z-true.png"
+
+      }
+
+      if (preset.boxY0 == true) {
+        boxControlY.src = preset.boxControlYSrc + pngDarkLightFile
+      } else {
+        boxControlY.src = preset.boxControlYSrc + ".png"
+      }
+      if (preset.boxZ0 == true) {
+        boxControlZ.src = preset.boxControlZSrc + pngDarkLightFile
+      } else {
+        boxControlZ.src = preset.boxControlZSrc + ".png"
+      }
+      if (preset.sphereY0 == true) {
+        sphereControlY.src = preset.sphereControlYSrc + pngDarkLightFile
+      } else {
+        sphereControlY.src = preset.sphereControlYSrc + ".png"
+      }
+      if (preset.sphereZ0 == true) {
+        sphereControlZ.src = preset.sphereControlZSrc + pngDarkLightFile
+      } else {
+        sphereControlZ.src = preset.sphereControlZSrc + ".png"
+      }
+
+      boxControlClickCountY = preset.boxControlClickCountY
+      boxControlClickCountZ = preset.boxControlClickCountZ
+      sphereControlClickCountY = preset.sphereControlClickCountY
+      sphereControlClickCountZ = preset.sphereControlClickCountZ
+
+      if (boxControlClickCountY < 0) {
+        boxControlFlipY == true
+      }
+      if (sphereControlClickCountY < 0) {
+        sphereControlFlipY == true
+      }
+      if (sphereControlClickCountY < 0) {
+        sphereControlFlipY == true
+      }
+      if (sphereControlClickCountZ < 0) {
+        sphereControlFlipZ == true
+      }
+
+      let materialSwitchTF = preset.materialSwitch
+
+      if (selected) {
+        if (materialSwitchTF == true) {
+          materialSwitched = true
+          materialSwitch.src = "images/controls/material-switch-true.png"
+          albumCube.material.map = loader.load(selected.sphereTexture)
+          if (cubeColorRainbow == true) {
+            songSphere.material.map = loader.load(currentTexture)
+          } else if (cubeColorRainbow == false) {
+            songSphere.material.map = loader.load(currentTexture2)
+          }
+
+        } else if (materialSwitchTF == false) {
+
+          materialSwitch.src = "images/controls/material-switch" + pngDarkLightFile
+          if (cubeColorRainbow == true) {
+            albumCube.material.map = loader.load(currentTexture)
+          } else if (cubeColorRainbow == false) {
+            albumCube.material.map = loader.load(currentTexture2)
+          }
+
+          materialSwitched = false
+          songSphere.material.map = loader.load(selected.sphereTexture)
+        }
+      }
+
+
+      var presetObject = document.getElementById(preset.domId)
+      presetObject.src = "images/controls/view-preset-selected" + pngDarkLightFile
+
+      selectedPreset = preset
+
+      boxViewPNG.src = "images/controls/box-view" + pngDarkLightFile
+      sphereViewPNG.src = "images/controls/sphere-view" + pngDarkLightFile
+      birdViewPNG.src = "images/controls/bird-view" + pngDarkLightFile
+
+      if (preset.cameraZoom >= 1) {
+        cameraZoomSwitch = true
+        cameraZoom = preset.cameraZoom
+      } else if (preset.cameraZoom !== 0){
+        cameraZoomSwitch = false
+        camera.zoom = preset.cameraZoom
+      } else if (preset.cameraZoom == 0){
+        cameraZoomSwitch = false
+        camera.zoom = 1
+      }
+
+    }
+
+    for (let preset in viewPresets) {
+      const presetElem = document.getElementById(viewPresets[preset].domId)
+      presetElem.addEventListener("click", event => {
+        setViewPreset(viewPresets[preset])
+      })
+    }
+
+
+    const setCurrentSong = (song) => {
+
+      if (song == selected && currentSongIsPlaying == true) {
+
+        if (pausedForShift == true) {
+          pausedForShift = false
+        }
+
+        console.log("can't reselect")
+
+      } else {
+
+        if (currentSong) {
+          currentSong.pause()
+          pausePlayPNGPaused == true
+          pausePlay.src = "images/play.png"
+        }
+
+        currentSong = song.elem
+        currentSong.play()
+        pausePlayPNGPaused == false
+        pausePlay.src = "images/pause.png"
+
+        songSelected = true
+        selected = song
+        selectedSphereTexture = song.sphereTexture
+        songSphere.material.map = loader.load(selectedSphereTexture)
+
+        currentSong.onended = playNext
+
+        var dur = document.getElementById("dur");
+        function mDur() {
+          dur.max = currentSong.duration
+        }
+        function mPlay() {
+          dur.value = currentSong.currentTime
+        }
+        function mSet() {
+          currentSong.currentTime = dur.value
+        }
+
+        dur.addEventListener("change", mSet);
+        currentSong.addEventListener("playing", mDur);
+        currentSong.addEventListener("timeupdate", mPlay);
+
+
+        var currentImage = song.imageId
+        var currentImageElem = document.getElementById(currentImage)
+        var playingImage = song.playingImg
+        var pausedImage = song.pausedImg
+
+
+        const setCurrentPlayingImage = function () {
+          currentImageElem.src = playingImage
+        }
+
+        const setCurrentPausedImage = function () {
+          currentImageElem.src = pausedImage
+
+
+        }
+
+        currentSong.addEventListener("play", setCurrentPlayingImage)
+        currentSong.addEventListener("pause", setCurrentPausedImage)
+      }
+
+    }
+
+    for (let album in albums) {
+      let songs = albums[album].songs
+      for (let song in songs) {
+        const image = document.getElementById(songs[song].imageId)
+        image.addEventListener("click", event => {
+          setCurrentSong(songs[event.target.dataset.song])
+          currentSongIsPlaying = false
+        })
+      }
+    }
+
+
+
+
+    const playNext = () => {
+
+
+      if (currentSong) {
+        let nextTrackIndex = currentPlaylist.indexOf(currentSong.id) + 1
+        if (nextTrackIndex >= currentPlaylist.length) {
+          nextTrackIndex = 0
+          if (currentPlaylist == currentPlaylist1){
+          currentPlaylist = currentPlaylist2
+          backgroundShift()
+          } else if (currentPlaylist == currentPlaylist2){
+          currentPlaylist = currentPlaylist1
+          backgroundShift()
+          }
+        }
+        const nextTrack = currentPlaylist[nextTrackIndex]
+
+
+        setCurrentSong(currentAlbum[nextTrack])
+
+        let previousTrackIndex = currentPlaylist.indexOf(currentSong.id) - 1
+        if (previousTrackIndex < 0) {
+          previousTrackIndex = currentPlaylist.length - 1
+        }
+        const previousTrack = currentPlaylist[previousTrackIndex]
+        const previousTrackId = currentAlbum[previousTrack].audioId
+        const previousTrackAudio = document.getElementById(previousTrackId)
+        previousTrackAudio.currentTime = 0
+
+      } else {
+        const firstTrack = currentPlaylist[0]
+        setCurrentSong(currentAlbum[firstTrack])
+      }
+
+    }
+    const playPrevious = () => {
+
+      if (currentSong) {
+        let previousTrackIndex = currentPlaylist.indexOf(currentSong.id) - 1
+
+        if (previousTrackIndex < 0) {
+          
+          if (currentPlaylist == currentPlaylist1){
+          currentPlaylist = currentPlaylist2
+          backgroundShift()
+          } else if (currentPlaylist == currentPlaylist2){
+          currentPlaylist = currentPlaylist1
+          backgroundShift()
+          }
+          previousTrackIndex = currentPlaylist.length - 1
+        }
+
+        const previousTrack = currentPlaylist[previousTrackIndex]
+        setCurrentSong(currentAlbum[previousTrack])
+
+        let nextTrackIndex = currentPlaylist.indexOf(currentSong.id) + 1
+        if (nextTrackIndex >= currentPlaylist.length) {
+          nextTrackIndex = 0
+          
+        }
+
+        const nextTrack = currentPlaylist[nextTrackIndex]
+        const nextTrackId = currentAlbum[nextTrack].audioId
+        const nextTrackAudio = document.getElementById(nextTrackId)
+
+        nextTrackAudio.currentTime = 0
+
+      } else {
+        setCurrentSong(currentAlbum[firstTrack])
+      }
+    }
+    document.getElementById("nextTrackArrow").onclick = playNext
+    document.getElementById("previousTrackArrow").onclick = playPrevious
+
+
+    const darkLightImgSet = () => {
+      var darkLightImgs = document.getElementsByClassName("darkLightImg")
+      for (let control of darkLightImgs) {
+        let stem = control.dataset.imgstem
+        control.src = stem + pngDarkLightFile
+      }
+      if (selectedAlbumTitleImage) {
+        currentTexture2 = currentTextureStem + pngDarkLightFile
+      }
+    }
+
+    darkLightImgSet()
+    boxControlY.src = "images/controls/box-control-y1.png"
+
+    //EventListeners for Controls
+
+
+
+    sphereControlY.addEventListener('click', () => {
+
+
+      sphereControlClickCountY += 1
+
+      if (sphereControlClickCountY > 1) {
+        sphereControlClickCountY = 0
+
+        if (sphereControlFlipY == false) {
+          sphereControlFlipY = true
+        }
+        else if (sphereControlFlipY == true) {
+          sphereControlFlipY = false
+        }
+      }
+
+      if (sphereControlFlipY == false) {
+
+
+        if (sphereControlClickCountY == 0) {
+          sphereControlY.src = "images/controls/sphere-control-y" + sphereControlClickCountY + pngDarkLightFile
+        }
+        else {
+
+          sphereControlY.src = "images/controls/sphere-control-y" + sphereControlClickCountY + ".png"
+        }
+      }
+
+      if (sphereControlFlipY == true) {
+        if (sphereControlClickCountY == 0) {
+
+          sphereControlY.src = "images/controls/sphere-control-y" + sphereControlClickCountY + "-rev" + pngDarkLightFile
+
+        }
+        else {
+          sphereControlY.src = "images/controls/sphere-control-y" + sphereControlClickCountY + "-rev" + ".png"
+        }
+
+      }
+
+    })
+
+    sphereControlZ.addEventListener('click', () => {
+
+
+      sphereControlClickCountZ += 1
+
+      if (sphereControlClickCountZ > 1) {
+        sphereControlClickCountZ = 0
+
+        if (sphereControlFlipZ == false) {
+          sphereControlFlipZ = true
+        }
+        else if (sphereControlFlipZ == true) {
+          sphereControlFlipZ = false
+        }
+      }
+
+      if (sphereControlFlipZ == false) {
+
+
+        if (sphereControlClickCountZ == 0) {
+          sphereControlZ.src = "images/controls/sphere-control-z" + sphereControlClickCountZ + pngDarkLightFile
+        }
+        else {
+
+          sphereControlZ.src = "images/controls/sphere-control-z" + sphereControlClickCountZ + ".png"
+        }
+      }
+
+      if (sphereControlFlipZ == true) {
+        if (sphereControlClickCountZ == 0) {
+          sphereControlZ.src = "images/controls/sphere-control-z" + sphereControlClickCountZ + "-rev" + pngDarkLightFile
+        }
+        else {
+          sphereControlZ.src = "images/controls/sphere-control-z" + sphereControlClickCountZ + "-rev" + ".png"
+        }
+
+      }
+    })
+
+    boxControlY.addEventListener('click', () => {
+
+
+      boxControlClickCountY += 1
+
+      if (boxControlClickCountY > 1) {
+        boxControlClickCountY = 0
+
+        if (boxControlFlipY == false) {
+          boxControlFlipY = true
+        }
+        else if (boxControlFlipY == true) {
+          boxControlFlipY = false
+        }
+      }
+
+      if (boxControlFlipY == false) {
+
+
+        if (boxControlClickCountY == 0) {
+          boxControlY.src = "images/controls/box-control-y" + boxControlClickCountY + pngDarkLightFile
+        }
+        else {
+
+          boxControlY.src = "images/controls/box-control-y" + boxControlClickCountY + ".png"
+        }
+      }
+
+      if (boxControlFlipY == true) {
+        if (boxControlClickCountY == 0) {
+
+          boxControlY.src = "images/controls/box-control-y" + boxControlClickCountY + "-rev" + pngDarkLightFile
+
+        }
+        else {
+          boxControlY.src = "images/controls/box-control-y" + boxControlClickCountY + "-rev" + ".png"
+        }
+
+
+
+      }
+
+    })
+    boxControlZ.addEventListener('click', () => {
+
+      boxControlClickCountZ += 1
+
+      if (boxControlClickCountZ > 1) {
+        boxControlClickCountZ = 0
+
+        if (boxControlFlipZ == false) {
+          boxControlFlipZ = true
+        }
+        else if (boxControlFlipZ == true) {
+          boxControlFlipZ = false
+        }
+      }
+
+
+
+      if (boxControlFlipZ == false) {
+
+
+        if (boxControlClickCountZ == 0) {
+          boxControlZ.src = "images/controls/box-control-z" + boxControlClickCountZ + pngDarkLightFile
+        }
+        else {
+
+          boxControlZ.src = "images/controls/box-control-z" + boxControlClickCountZ + ".png"
+        }
+      }
+
+      if (boxControlFlipZ == true) {
+        if (boxControlClickCountZ == 0) {
+
+          boxControlZ.src = "images/controls/box-control-z" + boxControlClickCountZ + "-rev" + pngDarkLightFile
+
+        }
+        else {
+          boxControlZ.src = "images/controls/box-control-z" + boxControlClickCountZ + "-rev" + ".png"
+        }
+      }
+
+    })
+    sphereExpand.addEventListener("click", () => {
+      if (sphereScaleClickCount <= 0.5) {
+        sphereScaleClickCount += 0.1
+      } else {
+        sphereScaleClickCount += 0.5
+      }
+    })
+    sphereContract.addEventListener("click", () => {
+      if (sphereScaleClickCount <= 0.5) {
+        sphereScaleClickCount -= 0.1
+      } else {
+        sphereScaleClickCount -= 0.5
+      }
+    })
+
+    boxViewPNG.addEventListener('click', () => {
+      camera.fov = 115
+      fov.value = 115
+      camera.updateProjectionMatrix()
+
+      camera.position.set(30, 0, 75)
+      controls.target = new THREE.Vector3(0, 0, 0)
+
+      controls.update()
+      boxView.src = "images/controls/box-view-true.png"
+      sphereView.src = "images/controls/sphere-view" + pngDarkLightFile
+      birdView.src = "images/controls/bird-view" + pngDarkLightFile
+
+      zCameraSwitch = false
+      z.src = "images/controls/z-false.png"
+
+    })
+    sphereViewPNG.addEventListener('click', () => {
+      camera.fov = 115
+      fov.value = 115
+      camera.updateProjectionMatrix()
+
+      camera.position.set(10, 0, 12)
+      controls.target = new THREE.Vector3(0, 0, 0)
+
+      controls.update()
+      sphereView.src = "images/controls/sphere-view-true.png"
+      boxView.src = "images/controls/box-view" + pngDarkLightFile
+      birdView.src = "images/controls/bird-view" + pngDarkLightFile
+      zCameraSwitch = false
+      z.src = "images/controls/z-false.png"
+
+    })
+    birdViewPNG.addEventListener('click', () => {
+      camera.fov = 55
+      fov.value = 55
+      camera.updateProjectionMatrix()
+
+      camera.position.set(300, 300, 300)
+      controls.target = new THREE.Vector3(0, 0, 0)
+
+      controls.update()
+      birdView.src = "images/controls/bird-view-true.png"
+      sphereView.src = "images/controls/sphere-view" + pngDarkLightFile
+      boxView.src = "images/controls/box-view" + pngDarkLightFile
+      zCameraSwitch = false
+      z.src = "images/controls/z-false.png"
+
+    })
+
+    init();
+    animate();
+    orientationDetect()
+
+    function init() {
+
+      scene = new THREE.Scene();
+      renderer = new THREE.WebGLRenderer(
+        { powerPreference: "high-performance" },
+      );
+
+      window.renderer = renderer
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+      document.getElementById("rendererContain").appendChild(renderer.domElement);
+      window.addEventListener('resize', onWindowResize, false);
+      SCREEN_WIDTH = rendererContain.clientWidth
+      SCREEN_HEIGHT = rendererContain.clientHeight
+      camera = new THREE.PerspectiveCamera(75, SCREEN_WIDTH / SCREEN_HEIGHT, 0.01, 10000);
+
+      controls = new OrbitControls(camera, renderer.domElement);
+      controls.enablePan = false
+      controls.autoRotate = true
+      controls.autoRotateSpeed = 0
+      camera.position.set(0, 35, 150)
+      camera.zoom = 1
+      controls.update()
+      scene.add(camera);
+      onWindowResize();
+      sunLight.position.set(5, 7, 10);
+      sunLight.lookAt(scene.position);
+      scene.add(sunLight);
+
+      var starTexture = new THREE.TextureLoader().load(transparentTexture)
+      var starMaterial = new THREE.MeshBasicMaterial({
+        map: starTexture,
+        side: THREE.BackSide,
+        transparent: true
+      })
+      var starGeometry = new THREE.SphereGeometry(1024, 128, 128)
+      starSphere = new THREE.Mesh(starGeometry, starMaterial)
+
+      scene.add(starSphere)
+
+      var albumCubeTexture = loader.load(transparentTexture)
+      // albumCubeTexture.needsUpdate = true
+      var albumCubeMaterial = new THREE.MeshBasicMaterial({
+        map: albumCubeTexture,
+        side: THREE.DoubleSide,
+        transparent: true,
+        alpha: true,
+        depthTest: false,
+        depthWrite: false
+      })
+      var albumCubeGeometry = new THREE.BoxBufferGeometry(128, 128, 128)
+      albumCube = new THREE.Mesh(albumCubeGeometry, albumCubeMaterial)
+      scene.add(albumCube)
+
+      var songSphereTexture = loader.load("images/transparent-texture.png")
+      // songSphereTexture.needsUpdate = true
+      var songSphereMaterial = new THREE.MeshBasicMaterial({
+        map: songSphereTexture,
+        side: THREE.BackSide,
+        transparent: true
+      })
+      var songSphereGeometry = new THREE.SphereBufferGeometry(32, 32, 32)
+      songSphere = new THREE.Mesh(songSphereGeometry, songSphereMaterial)
+      scene.add(songSphere)
+
+    }
+
+    function animate() {
+
+      if (boxControlFlipY == false) {
+        albumCube.rotation.y += boxControlClickCountY / 500
+      }
+      if (boxControlFlipZ == false) {
+        albumCube.rotation.x += boxControlClickCountZ / 500
+      }
+      if (boxControlFlipY == true) {
+        albumCube.rotation.y -= boxControlClickCountY / 500
+      }
+      if (boxControlFlipZ == true) {
+        albumCube.rotation.x -= boxControlClickCountZ / 500
+      }
+
+      if (sphereControlFlipY == false) {
+        songSphere.rotation.y += sphereControlClickCountY / 500
+      }
+      if (sphereControlFlipZ == false) {
+        songSphere.rotation.x += sphereControlClickCountZ / 500
+      }
+      if (sphereControlFlipY == true) {
+        songSphere.rotation.y -= sphereControlClickCountY / 500
+      }
+      if (sphereControlFlipZ == true) {
+        songSphere.rotation.x -= sphereControlClickCountZ / 500
+      }
+
+      if (cameraZoomSwitch == true) {
+        if (cameraZoomPos == true) {
+          camera.zoom += cameraZoom / 100
+        } else if (cameraZoomPos == false) {
+          camera.zoom -= cameraZoom / 100
+        }
+
+        if (camera.zoom < -5) {
+          cameraZoomPos = true
+        }
+        if (camera.zoom > 5) {
+          cameraZoomPos = false
+        }
+
+      } 
+
+
+      starSphere.rotation.y += 0.001
+      starSphere.rotation.x += 0.0005
+      starSphere.rotation.z += 0.0005
+
+      if (selected){
+      songSphere.scale.set(sphereScaleClickCount, sphereScaleClickCount, sphereScaleClickCount)
+      }
+      
+
+      controls.update()
+      renderer.render(scene, camera);
+      const canvas = renderer.domElement
+      camera.aspect = canvas.clientWidth / canvas.clientHeight
+      camera.updateProjectionMatrix()
+      requestAnimationFrame(animate);
+
+    };
+
+    function orientationDetect() {
+      if (window.innerHeight > window.innerWidth) {
+        orientationPortrait = true
+      } else if (window.innerHeight <= window.innerWidth) {
+        orientationPortrait = false
+      }
+    }
+
+    function onWindowResize() {
+
+      renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setPixelRatio(window.devicePixelRatio);
+      camera.aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
+      camera.updateProjectionMatrix();
+      orientationDetect()
+
+    }
+
+    for (let option of options) {
+
+      let image = document.getElementById(option.id)
+
+      image.addEventListener('click', event => {
+        openCurrentOption(option)
+      })
+    }
+
+    for (let album in albums) {
+
+      let image = document.getElementById(albums[album].imageId)
+
+
+      image.addEventListener('click', event => {
+
+        openCurrentAlbum(albums[album])
+
+      })
+
+    }
+
+    const openCurrentAlbum = (album) => {
+
+      selectedAlbumTitleImage = document.getElementById(album.imageId)
+      selectedAlbumDiv = document.getElementById(album.divId)
+      selectedAlbumDiv2 = document.getElementById(album.divId + "2")
+
+
+      if (backgroundBlack == true) {
+        currentPlaylist = album.playlist
+        selectedAlbumDiv.style.width = "100%"
+        albumDivsNavButtonLeft.style.visibility = "visible"
+      }
+      if (backgroundBlack == false) {
+        currentPlaylist = album.playlist2
+        selectedAlbumDiv2.style.width = "100%"
+        albumDivsNavButtonRight.style.visibility = "visible"
+      }
+
+      currentPlaylist1 = album.playlist
+      currentPlaylist2 = album.playlist2
+
+      currentAlbum = album.songs
+      currentTextureStem = album.texture
+      currentTexture = album.texture + ".png"
+      currentTexture2 = album.texture + pngDarkLightFile
+      albumCube.material.map = loader.load(currentTexture)
+      cubeColorSelect.src = currentTextureStem + "-icon.png"
+      starSphere1 = album.starSphere1
+      starSphere2 = album.starSphere2
+
+
+      albumsDiv.animate({
+        width: ["150%", "0%"],
+        left: ["-25%", "0%"]
+      }, {
+        duration: 1000,
+        easing: "ease",
+        fill: "forwards"
+      })
+
+
+
+      centerContainer.animate({
+        width: [centerContainerInitialWidth, "0%"],
+
+      }, {
+        duration: 2000,
+        easing: "ease",
+        fill: "forwards"
+      })
+
+
+      albumIsOpen = true
+
+      seekbarContain.style.visibility = "visible"
+      sideControlsNavButton.style.visibility = "visible"
+      topControlsContainer.style.visibility = "visible"
+      starSphere.material.map = loader.load(starSphere1)
+
+
+    }
+    const closeCurrentAlbum = (album) => {
+
+      centerContainer.animate({
+        width: ["0%", centerContainerInitialWidth],
+
+      }, {
+        duration: 10,
+        easing: "ease",
+        fill: "forwards"
+      })
+
+      sideControlsContainer.style.width = "0%"
+
+
+ 
+      if (currentSong) {
+        currentSong.pause()
+      }
+
+      albumsDiv.animate({
+        width: ["0", "150%"],
+        left: ["0%", "-25%"],
+      }, {
+        duration: 2000,
+        easing: "ease",
+        fill: "forwards"
+      })
+
+
+      selectedAlbumDiv.style.width = "0%"
+      selectedAlbumDiv = null
+      selectedAlbumDiv2.style.width = "0%"
+      selectedAlbumDiv = null
+
+      albumCube.material.map = loader.load(transparentTexture)
+      songSphere.material.map = loader.load(transparentTexture)
+      starSphere.material.map = loader.load(transparentTexture)
+      seekbarContain.style.visibility = "hidden"
+      topControlsContainer.style.visibility = "hidden"
+
+      albumDivsNavButtonLeft.style.visibility = "hidden"
+      albumDivsNavButtonRight.style.visibility = "hidden"
+      sideControlsNavButton.style.visibility = "hidden"
+    }
+
+    const openCurrentOption = (option) => {
+
+      // if (currentOption) {
+      //   currentOptionElem = document.getElementById(currentOption.id)
+      //   currentOptionElem.src = currentOption.dataset.imgstm + "-unselected.png"
+      //   console.log(currentOption)
+      //   console.log(currentOption.src)
+      // }
+
+      // // let selectedOption = document.getElementById(option.id)
+
+      // // selectedOption.src = option.dataset.imgstm + "-selected.png"
+      // // currentOption = option
+      // // console.log(selectedOption)
+      // // console.log(currentOption.id)
+
+      if (option.id == "musicOption") {
+        albumsOpen()
+      }
+      if (option.id == "aboutOption") {
+        aboutOpen()
+      }
+    }
+
+    const albumsOpen = () => {
+      albumsDiv.animate({
+        width: ["0%", "150%"],
+
+      }, {
+        duration: 1000,
+        fill: "forwards",
+        easing: "ease"
+      })
+      albumsAreOpen = true
+
+      optionsDiv.style.width = "0%"
+
+      backArrow.style.visibility = "visible"
+      backArrow.animate({
+        opacity: ["0", "0.5"]
+      }, {
+        duration: 1000,
+        fill: "forwards"
+      })
+
+    }
+    const aboutOpen = () => {
+
+
+      optionsDiv.style.width = "0%"
+      travisImage.style.visibility = "visible"
+      travisImage.animate({
+        opacity: ["0.5", "1", "0.8", "0"],
+        left: ["0%", "60%"],
+        transform: ["rotateY(180deg)", "rotateZ(360deg)"]
+      }, {
+        duration: 18000,
+        fill: "forwards"
+      })
+      habitatsScroll.style.visibility = "visible"
+      habitatsScroll.animate({
+        left: ["100%", "-600%"],
+        opacity: ["1", "1", "1", "1", "1", "1", "1", "0"]
+      }, {
+        duration: 18000,
+        fill: "forwards",
+      })
+
+      backArrow.style.visibility = "visible"
+      backArrow.animate({
+        opacity: ["0", "0.5"]
+      }, {
+        duration: 1000,
+        fill: "forwards"
+      })
+
+      aboutIsOpen = true
+
+    }
+
+    const aboutClose = () => {
+      albumCube.material.map = loader.load(transparentTexture)
+      optionsDiv.style.width = "100%"
+      aboutDiv.style.width = "0%"
+
+      habitatsScroll.style.visibility = "hidden"
+      travisImage.style.visibility = "hidden"
+
+      aboutIsOpen = false
+
+      backArrow.animate({
+        opacity: ["0.5", "0"]
+      }, {
+        duration: 1000,
+        fill: "forwards"
+      })
+
+    }
+
+    pausePlay.addEventListener('click', event => {
+      if (currentSong) {
+        if (pausePlayPNGPaused == false) {
+          currentSong.play()
+          pausePlayPNGPaused = true
+          pausePlay.src = "images/pause.png"
+        } else if (pausePlayPNGPaused == true) {
+          currentSong.pause()
+          pausePlayPNGPaused = false
+          pausePlay.src = "images/play.png"
+        }
+      }
+    })
+
+    backArrow.addEventListener('click', event => {
+
+
+      if (albumIsOpen == true) {
+
+        closeCurrentAlbum(selectedAlbumTitleImage)
+        albumIsOpen = false
+      } else if (albumsAreOpen == true) {
+        albumsDiv.animate({
+          width: ["150%", "0%"],
+
+        }, {
+          duration: 1000,
+          fill: "forwards",
+          easing: "ease"
+        })
+
+        optionsDiv.style.width = "100%"
+
+        albumsAreOpen = false
+        backArrow.animate({
+          opacity: ["0.5", "0"]
+        }, {
+          duration: 1000,
+          fill: "forwards"
+        })
+      } else if (aboutIsOpen == true) {
+        aboutClose()
+        aboutIsOpen = false
+      }
+
+    })
+
+    sideControlsNavButton.addEventListener('click', () => {
+
+      var sideControlsNavRotation = "rotate" + "(" + sideControlsNavRotationDegrees + "deg" + ")"
+
+      if (backgroundBlack == true) {
+        var filter1 = "hue-rotate(0deg)"
+        var filter2 = "hue-rotate(180deg)"
+      } else if (backgroundBlack == false) {
+        var filter1 = "brightness(0%)"
+        var filter2 = "brightness(0%)"
+      }
+
+      if (sideControlsOpen == true) {
+
+        sideControlsContainer.style.width = "0%"
+
+
+
+        sideControlsNavButton.animate({
+          transform: sideControlsNavRotation,
+          filter: [filter1, filter2],
+          marginRight: ["10px"]
+        }, {
+          duration: 1000,
+          iterations: 1,
+          fill: "both",
+          easing: "ease-out"
+        }
+        )
+        sideControlsOpen = false
+        sideControlsNavRotationDegrees += 180
+
+
+      } else if (sideControlsOpen == false) {
+
+        sideControlsContainer.style.width = "150px"
+
+        sideControlsDiv.animate({
+          left: ["100%", "0%"],
+          width: ["0%", "100%"]
+        }, {
+          duration: 1000,
+          fill: "forwards",
+          easing: "ease-out"
+        })
+
+        sideControlsNavButton.animate({
+          transform: sideControlsNavRotation,
+          filter: [filter2, filter1],
+          marginRight: ["10px", "10%"]
+        }, {
+          duration: 1000,
+          iterations: 1,
+          fill: "both",
+          easing: "ease-out"
+        }
+        )
+        sideControlsOpen = true
+        sideControlsNavRotationDegrees += 180
+      }
+
+
+
+
+    })
+
+    topControlsNavButton.addEventListener('click', () => {
+
+      if (topControlsOpen == true) {
+        topControlsDiv.style.height = "0%"
+        topControlsDiv.style.top = "-110%"
+        topControlsNavButton.animate({
+          transform: "rotate(0deg)"
+        }, {
+          duration: 1000,
+          iterations: 1,
+          fill: "forwards",
+          easing: "ease-out"
+        }
+        )
+        topControlsOpen = false
+      } else if (topControlsOpen == false) {
+
+        topControlsDiv.style.height = "100%"
+        topControlsDiv.style.top = "0%"
+        topControlsNavButton.animate({
+          transform: "rotate(180deg)"
+        }, {
+          duration: 1000,
+          iterations: 1,
+          fill: "forwards",
+          easing: "ease-out"
+        }
+        )
+        topControlsOpen = true
+      }
+
+
+    })
+
+    const backgroundShift = () => {
+
+      var sideControlsNavRotation = "rotate" + "(" + sideControlsNavRotationDegrees + "deg" + ")"
+      var navRotation = "rotate" + "(" + navRotationDegrees + "deg" + ")"
+
+      if (currentSong) {
+        currentSong.pause()
+        pausedForShift = true
+      }
+
+      if (backgroundBlack == true) {
+
+        currentPlaylist = currentPlaylist2
+
+        backArrow.style.filter = "invert(1)"
+        starSphere.material.map = loader.load(starSphere2)
+
+        albumDivsContainer.style.left = "auto"
+        albumDivsContainer.style.right = "45px"
+        albumDivsContainer.style.float = "right"
+
+        if (selectedAlbumDiv) {
+          selectedAlbumDiv2.style.width = "100%"
+          selectedAlbumDiv.style.width = "0%"
+          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+        } else {
+          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+        }
+
+        if (navOpen == true) {
+          albumDivsContainer.style.width = "200px"
+        } else if (navOpen == false) {
+          albumDivsContainer.style.width = "0%"
+        }
+
+        sideControlsContainer.style.left = "0%"
+        sideControlsDiv.style.left = "35%"
+        sideControlsNavButton.style.float = "left"
+        sideControlsNavButton.animate({
+          transform: sideControlsNavRotation,
+          filter: ["brightness(100%)", "brightness(0%)"]
+        }, {
+          duration: 1000,
+          iterations: 1,
+          fill: "both",
+          easing: "ease-out"
+        }
+        )
+        sideControlsNavRotationDegrees += 180
+
+        for (let control of sideControl) {
+          control.style.marginLeft = "50%"
+        }
+        materialSwitch.style.marginLeft = "45%"
+        presetControlsDiv.style.filter = "invert(1)"
+        fov.style.left = "-33%"
+        fov.style.width = "100%"
+        fov.style.filter = "brightness(0%)"
+        sideControlsNavButton.style.filter = "brightness(0%)"
+
+        document.body.style.backgroundColor = "#ffffff"
+
+        topControlsNavButton.style.filter = "invert(0)"
+
+        for (let option of options) {
+          option.style.filter = "invert(1)"
+        }
+
+        albumDivsNavButtonLeft.style.visibility = "hidden"
+        albumDivsNavButtonRight.style.visibility = "visible"
+
+        backgroundBlack = false
+        backgroundWhite = true
+
+      }
+
+      else if (backgroundWhite == true) {
+
+        currentPlaylist = currentPlaylist
+
+        backArrow.style.filter = "invert(0)"
+        starSphere.material.map = loader.load(starSphere1)
+        cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+
+        if (selectedAlbumDiv) {
+          selectedAlbumDiv.style.width = "100%"
+          selectedAlbumDiv2.style.width = "0%"
+          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+        } else {
+          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+        }
+
+        albumDivsContainer.style.left = "45px"
+        albumDivsContainer.style.right = "auto"
+        albumDivsContainer.style.float = "left"
+
+        if (navOpen == true) {
+          albumDivsContainer.style.width = "200px"
+        } else if (navOpen == false) {
+          albumDivsContainer.style.width = "0%"
+        }
+
+
+        sideControlsContainer.style.left = "auto"
+        sideControlsContainer.style.right = "5px"
+        sideControlsDiv.style.left = "auto"
+        sideControlsNavButton.style.left = "auto"
+        sideControlsNavButton.style.right = "0px"
+        sideControlsNavButton.style.float = "right"
+
+        sideControlsNavButton.animate({
+          transform: sideControlsNavRotation,
+          filter: ["hue-rotate(180deg)", "hue-rotate(0deg)"]
+        }, {
+          duration: 1000,
+          iterations: 1,
+          fill: "both",
+          easing: "ease-out"
+        }
+        )
+        sideControlsNavRotationDegrees -= 180
+
+        for (let control of sideControl) {
+          control.style.marginLeft = "20%"
+        }
+        materialSwitch.style.marginLeft = "15%"
+        presetControlsDiv.style.filter = "invert(0)"
+
+        fov.style.left = "33%"
+        fov.style.width = "auto"
+        fov.style.filter = "brightness(100%)"
+
+        backgroundBlack = true
+        backgroundWhite = false
+
+        topControlsNavButton.style.filter = "invert(1)"
+
+        for (let option of options) {
+          option.style.filter = "invert(0)"
+        }
+
+        albumDivsNavButtonLeft.style.visibility = "visible"
+        albumDivsNavButtonRight.style.visibility = "hidden"
+
+      }
+
+
+      albumCube.material.map = loader.load(currentTexture)
+      if (backgroundBlack == true) {
+        pngDarkLightFile = "-dark.png"
+      }
+      if (backgroundBlack == false) {
+        pngDarkLightFile = "-light.png"
+      }
+      darkLightImgSet()
+    }
+
+    circleBW.addEventListener('click', backgroundShift)
+
+
+    cubeColorSelect.addEventListener("click", () => {
+      if (currentTexture)
+        if (cubeColorRainbow == true) {
+          if (materialSwitched == true) {
+            songSphere.material.map = loader.load(currentTexture2)
+          } else if (materialSwitched == false) {
+            albumCube.material.map = loader.load(currentTexture2)
+          }
+          cubeColorSelect.src = currentTextureStem + "-icon.png"
+          cubeColorRainbow = false
+        } else if (cubeColorRainbow == false) {
+          if (materialSwitched == true) {
+            songSphere.material.map = loader.load(currentTexture)
+          } else if (materialSwitched == false) {
+            albumCube.material.map = loader.load(currentTexture)
+          }
+          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          cubeColorRainbow = true
+        }
+    })
+
+    materialSwitch.addEventListener("click", () => {
+      
+      if (songSphere) {
+        if (materialSwitched == false) {
+          materialSwitched = true
+          materialSwitch.src = "images/controls/material-switch-true.png"
+          albumCube.material.map = loader.load(selectedSphereTexture)
+          
+
+          if (cubeColorRainbow == true) {
+            songSphere.material.map = loader.load(currentTexture)
+          } else if (cubeColorRainbow == false) {
+            songSphere.material.map = loader.load(currentTexture2)
+          }
+
+        } else if (materialSwitched == true) {
+          materialSwitched = false
+          materialSwitch.src = "images/controls/material-switch" + pngDarkLightFile
+          songSphere.material.map = loader.load(selectedSphereTexture)
+          
+          if (cubeColorRainbow == true) {
+            albumCube.material.map = loader.load(currentTexture)
+          } else if (cubeColorRainbow == false) {
+            songSphere.material.map = loader.load(currentTexture2)
+          }
+        }
+      }
+    })
+
+    const navOpenClose = (LR, filter1, filter2) => {
+
+      var navRotation = "rotate" + "(" + navRotationDegrees + "deg" + ")"
+
+      var buttonLR = document.getElementById("albumDivsNavButton" + LR)
+
+      if (navOpen == true) {
+
+        albumDivsContainer.animate({
+          width: ["150px", "0px"]
+        }, {
+          duration: 1000,
+          fill: "forwards",
+          easing: "ease-out"
+        })
+
+        buttonLR.animate({
+          transform: navRotation,
+          filter: [filter1, filter2]
+        }, {
+          duration: 1000,
+          fill: "forwards",
+          easing: "ease-out"
+        }
+        )
+        navOpen = false
+        navRotationDegrees += 180
+
+      } else if (navOpen == false) {
+
+        albumDivsContainer.animate({
+          width: ["0px", "150px"]
+        }, {
+          duration: 1000,
+          fill: "forwards",
+          easing: "ease-out"
+        })
+
+        buttonLR.animate({
+          transform: navRotation,
+          filter: [filter1, filter2]
+        }, {
+          duration: 1000,
+          iterations: 1,
+          fill: "both",
+          easing: "ease-out"
+        }
+        )
+        navOpen = true
+        navRotationDegrees += 180
+      }
+
+
+    }
+
+    albumDivsNavButtonLeft.addEventListener("click", event => {
+      navOpenClose("Left", "hue-rotate(180deg)", "hue-rotate(0deg)")
+    })
+    albumDivsNavButtonRight.addEventListener("click", event => {
+      navOpenClose("Right", "brightness(0%)", "brightness(0%)")
+    })
+
+    window.addEventListener('mousemove', () => {
+      if (travisImage.style.visibility == "visible") {
+        travisImage.style.top = (mouse.y * 100) - 10 + "%"
+      }
+    })
+
+  </script>
+</body>
+
+</html>

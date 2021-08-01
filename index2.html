@@ -1,0 +1,391 @@
+<!DOCTYPE html5>
+
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <title>Trafis Visher</title> 
+  <link rel="stylesheet" href="./styles/homepage.css"> 
+  <link rel="icon" type="image/png" href="images/ocotillo2.JPG">
+
+</head>
+
+<body>
+  <div id="rendererContain">
+  </div>
+
+  <!--AUDIO TRACKS -->  
+
+  <!--SONGTITLEIMAGES-->
+  <div id="navigationContainer">
+    <div id="navigationDiv">
+      <img id="musicOption" src="images/music-unselected.png">
+      <img id="aboutOption" src="images/about-unselected.png">   
+    </div>
+  </div>
+
+  <div id="aboutContainer">
+    <div id="aboutDiv">  
+    stuffaboutme 
+  </div>
+  </div>
+
+  <div id="albumsContainer">
+    <div id="albumsDiv">  
+      <img id="maapTitle"  src="images/maap-title.png">   
+      <img id="sapientsTitle"  src="images/silver-tip-title.png">      
+      <img id="symbioseTitle" src="images/symbiose-title.png">
+      <!-- <img id="horseloverTitle" src="images/horselover-title.png"> -->
+      <img id="eukaliptosowyTitle" src="images/eukaliptosowy-title.png">
+  </div>
+  </div>
+
+
+
+
+  <script type="module">
+
+    import * as THREE from './build/three.module.js';
+    import { OrbitControls } from './jsm/controls/OrbitControls.js';
+    var camera, controls, scene, renderer;
+    var SCREEN_WIDTH
+    var SCREEN_HEIGHT
+    var sunLight = new THREE.AmbientLight('rgb(255,255,255)', 1);
+
+    const rendererContain = document.getElementById("rendererContain")
+   
+    const navigationDiv = document.getElementById("navigationDiv")
+    const navigationContainer = document.getElementById("navigationContainer")
+    const navigationOption = document.getElementById("navigationOption")
+
+    const albumsDiv = document.getElementById("albumsDiv")    
+    const albumsContainer = document.getElementById("albumsContainer")
+
+    const loader = new THREE.TextureLoader();
+      loader.crossOrigin = '';
+
+    let universeSphere
+    let sphere
+
+    let counter3 = 0
+
+    let cameraZoomIn = false
+
+    let currentOption = null
+    let currentOptionElem = null
+
+    let selected
+	let yReachedLimit = false
+	var renderer
+
+	let spheres = new THREE.Object3D();
+	let maapSphere, sapientsSphere, eukaliptosowySphere
+	var raycaster = new THREE.Raycaster();
+	var mouse = new THREE.Vector2(), INTERSECTED;
+	var mouseDown = new THREE.Vector2()
+	var radius = 2, theta = 0;
+	let isDown = false
+	let albumSelected = false
+  let spheresObject = []
+  function onMouseMove(event) {
+		mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+		mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+	}
+	window.addEventListener('mousemove', onMouseMove, false);
+
+    const navigationOptions = {
+      music: {
+        id: "musicOption",
+        selectedSrc: "images/music-selected.png",
+        unselectedSrc: "images/music-unselected.png",
+      },
+      about: {
+        id: "aboutOption",
+        selectedSrc: "images/about-selected.png",
+        unselectedSrc: "images/about-unselected.png",
+      }
+    }
+
+    const albums = {
+		maap: {
+			imageURL: "images/maap-background.png",
+			link: "www.trafisvisher.com/mind-as-a-prism-at-union-st.html",
+			id: "maapSphere",
+			title: "maapTitle",
+			xPos: 500			
+		},
+
+		symbiose: {
+			imageURL: "images/symbiose-background.jpeg",
+			link: "www.trafisvisher.com/symbiose.html",
+			id: "symbioseSphere",
+			title: "symbioseTitle",
+			xPos: 0
+			},
+
+      sapients: {
+			imageURL: "images/sapients-background.png",
+			link: "www.trafisvisher.com/sapients.html",
+			id: "sapientsSphere",
+			title: "sapientsTitle",
+			xPos: 250
+			},
+
+		eukaliptosowy: {
+			imageURL: "images/eucalyptus-forest-up.jpg",
+			link: "www.trafisvisher.com/eukaliptosowy-lasy.html",
+			id: "eukaliptosowySphere",
+			title: "eukaliptosowyTitle",
+			xPos: -500			
+		},
+	}
+
+const albumsOpen = () => {
+  if (albumsOpen == true){
+    albumsDiv.style.width = "0%"
+  } else if (albumsOpen == false){
+    albumsDiv.style.width = "100%"
+  }
+
+  cameraZoomIn = true
+
+
+}
+
+const aboutOpen = () => {
+  if (aboutOpen == true){
+    aboutTitle.style.width = "0%"
+  } else if (aboutOpen == false){
+    aboutTitle.style.width = "100%"
+  }
+  console.log("tried to open")
+
+
+}
+
+
+    init();
+    animate();
+
+    function init() {
+
+      scene = new THREE.Scene();
+
+      renderer = new THREE.WebGLRenderer(
+        { powerPreference: "high-performance" },
+      );
+
+      window.renderer = renderer
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+      document.getElementById("rendererContain").appendChild(renderer.domElement);
+      window.addEventListener('resize', onWindowResize, false);
+      SCREEN_WIDTH = rendererContain.clientWidth
+      SCREEN_HEIGHT = rendererContain.clientHeight
+      camera = new THREE.PerspectiveCamera(50, SCREEN_WIDTH / SCREEN_HEIGHT, 0.01, 10000);
+
+      controls = new OrbitControls(camera, renderer.domElement);
+      controls.enablePan = false      
+      camera.position.set(0, 1, 500)
+      camera.zoom = 0.5
+      controls.update()
+      scene.add(camera);
+      onWindowResize();
+      sunLight.position.set(5, 7, 10);
+      sunLight.lookAt(scene.position);
+      scene.add(sunLight);    
+
+      var starTexture = new THREE.TextureLoader().load("images/galaxy-starfield.png")
+		var starMaterial = new THREE.MeshPhongMaterial({
+			map: starTexture,
+			side: THREE.BackSide,
+			transparent: true
+		})
+		var starGeometry = new THREE.SphereGeometry(512, 128, 128)
+		var starSphere = new THREE.Mesh(starGeometry, starMaterial)
+
+		scene.add(starSphere)
+
+
+
+		const createSphere = (link, imageURL, id, title, xPos) => {
+			var texture = new THREE.TextureLoader().load(imageURL)
+			var material = new THREE.MeshLambertMaterial({ map: texture, transparent: true, side: THREE.DoubleSide })
+			var geometry = new THREE.SphereBufferGeometry(32, 32, 32)
+			sphere = new THREE.Mesh(geometry, material)
+			sphere.instanceId = id
+			sphere.songTitle = title
+			sphere.href = link
+			sphere.position.x = xPos
+			spheres.add(sphere)
+		}
+
+		for (let album in albums) {
+			createSphere(albums[album].link, albums[album].imageURL, albums[album].id,
+				albums[album].title, albums[album].xPos)
+		}
+
+		spheresObject.push(spheres);
+		scene.add(spheres);
+
+	}
+
+	function displaySongTitle(id) {
+		var sapientsTitle = document.getElementById("sapientsTitle")
+    var symbioseTitle = document.getElementById("symbioseTitle")
+		var maapTitle = document.getElementById("maapTitle")
+		var eukaliptosowyTitle = document.getElementById("eukaliptosowyTitle")
+
+		if (id == "sapientsSphere") {
+			sapientsTitle.style.visibility = "visible"
+		} else if (id == "eukaliptosowySphere") {
+			eukaliptosowyTitle.style.visibility = "visible"
+		} else if (id == "maapSphere") {
+			maapTitle.style.visibility = "visible"
+		} else if (id == "symbioseSphere") {
+			symbioseTitle.style.visibility = "visible"
+		}
+
+	}
+	function removeSongTitles() {
+		var sapientsTitle = document.getElementById("sapientsTitle")
+    var symbioseTitle = document.getElementById("symbioseTitle")
+		var maapTitle = document.getElementById("maapTitle")
+		var eukaliptosowyTitle = document.getElementById("eukaliptosowyTitle")
+		sapientsTitle.style.visibility = "hidden"
+    symbioseTitle.style.visibility = "hidden"
+		eukaliptosowyTitle.style.visibility = "hidden"
+		maapTitle.style.visibility = "hidden"
+
+	}
+
+    
+
+    function animate() {
+
+      
+        // sphere.rotation.y -= 1 / 500  
+
+
+
+      if (cameraZoomIn == true) {
+        camera.zoom += 0.05
+      }
+      if (camera.zoom > 4 && camera.zoom < 5){
+        camera.zoom += 0.01
+      }
+      if (camera.zoom >= 5){
+        camera.zoom += 0
+        cameraZoomIn = false
+      }
+          
+      
+      counter3 += 1
+      if (counter3 == 50){
+        console.log(camera.zoom)
+        counter3 = 0
+      }
+
+      raycaster.setFromCamera(mouse, camera);
+		var intersects = raycaster.intersectObjects(spheresObject, true);
+
+		if (intersects.length > 0) {
+			
+				if (INTERSECTED != intersects[0].object) {
+					if (INTERSECTED) INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex)
+					INTERSECTED = intersects[0].object;
+		
+					if (albumSelected == false) {
+						INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
+						INTERSECTED.material.emissive.setHex(0x1787e3);
+						displaySongTitle(INTERSECTED.instanceId)
+						window.addEventListener("click", (event) => {
+							event.preventDefault();
+							if (INTERSECTED != null) {
+								albumSelected = true
+								selected = INTERSECTED	
+								displaySongTitle(selected.instanceId)								
+								window.setTimeout(function () {
+									window.location = selected.href;
+								}, 12000);
+							}
+						})
+					}
+				}
+			
+		
+		} else {
+			if (INTERSECTED) INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex);
+			if (albumSelected == false) {
+				removeSongTitles()
+			}
+			INTERSECTED = null;
+		}
+
+
+      controls.update()
+      renderer.render(scene, camera);
+      const canvas = renderer.domElement
+      camera.aspect = canvas.clientWidth / canvas.clientHeight
+      camera.updateProjectionMatrix()
+      requestAnimationFrame(animate);
+
+    };
+
+
+    function onWindowResize() {
+
+      renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setPixelRatio(window.devicePixelRatio);
+      camera.aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
+      camera.updateProjectionMatrix();
+
+    }    
+
+
+for (let option in navigationOptions){
+
+  let theOption = navigationOptions[option]
+  let image = document.getElementById(navigationOptions[option].id)
+
+  image.addEventListener('click', event => {
+    setCurrentOption(theOption)
+  }) 
+}
+
+const setCurrentOption = (option) => {
+
+  console.log(option)
+  console.log(option.id)
+
+  if (currentOption){
+    currentOptionElem = document.getElementById(currentOption.id)
+      currentOptionElem.src = currentOption.unselectedSrc
+      console.log(currentOption)
+      console.log(currentOption.src)
+ 
+  }
+
+  let selectedOption = document.getElementById(option.id)
+
+  selectedOption.src = option.selectedSrc
+  currentOption = option
+  console.log(selectedOption)
+  console.log(currentOption.id)
+
+
+  if (currentOption.id == "musicOption"){
+    albumsOpen()
+  }
+
+  if (currentOption.id == "aboutOption"){
+    aboutOpen()
+  }
+
+
+}
+
+  </script>
+</body>
+
+</html>
