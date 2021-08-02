@@ -927,8 +927,6 @@
           }
         }
       },
-
-
       symbioseAlbum: {        
         imageId: "symbioseTitle",
         starSphere1: "images/symbioseImages/daysky-background.jpg",
@@ -1052,8 +1050,90 @@
           'fungibleAudio',
           'inkSpreadsAudio'
         ]
-      }
+      },
+      horseloverAlbum: {        
+        imageId: "horseloverTitle",
+        starSphere1: "images/horseloverImages/daysky-background.jpg",
+        starSphere2: "images/horseloverImages/background-texture-2.png",
+        divId: "horseloverDiv",
+        texture: "images/horseloverImages/album-cube-texture",
+        songs: {
+          stigmataAudio: {
+            imageId: 'stigmataImage',
+            audioId: 'stigmataAudio',
+            pausedImg: "images/horseloverImages/stigmata-paused.png",
+            playingImg: "images/horseloverImages/stigmata-playing.png",
+            elem: document.getElementById("stigmataAudio"),
+            sphereTexture: "images/horseloverImages/stigmata-texture.png"
+          },
 
+          shinyAudio: {
+            imageId: 'shinyImage',
+            audioId: 'shinyAudio',
+            pausedImg: "images/horseloverImages/shiny-paused.png",
+            playingImg: "images/horseloverImages/shiny-playing.png",
+            elem: document.getElementById("shinyAudio"),
+            sphereTexture: "images/horseloverImages/shiny-texture.png"
+          },
+
+          gubbleAudio: {
+            imageId: 'gubbleImage',
+            audioId: 'gubbleAudio',
+            pausedImg: "images/horseloverImages/gubble-paused.png",
+            playingImg: "images/horseloverImages/gubble-playing.png",
+            elem: document.getElementById("gubbleAudio"),
+            sphereTexture: "images/horseloverImages/gubble-texture.png"
+          },
+
+
+          flowAudio: {
+            imageId: 'flowImage',
+            audioId: 'flowAudio',
+            pausedImg: "images/horseloverImages/flow-paused.png",
+            playingImg: "images/horseloverImages/flow-playing.png",
+            elem: document.getElementById("flowAudio"),
+            sphereTexture: "images/horseloverImages/flow-texture.png"
+          },
+
+          ubikAudio: {
+            imageId: 'ubikImage',
+            audioId: 'ubikAudio',
+            pausedImg: "images/horseloverImages/ubik-paused.png",
+            playingImg: "images/horseloverImages/ubik-playing.png",
+            elem: document.getElementById("ubikAudio"),
+            sphereTexture: "images/horseloverImages/ubik-texture.png"
+          },
+
+          scannerAudio: {
+            imageId: 'scannerImage',
+            audioId: 'scannerAudio',
+            pausedImg: "images/horseloverImages/scanner-paused.png",
+            playingImg: "images/horseloverImages/scanner-playing.png",
+            elem: document.getElementById("scannerAudio"),
+            sphereTexture: "images/horseloverImages/scanner-texture.png"
+          },
+
+          valisAudio: {
+            imageId: 'valisImage',
+            audioId: 'valisAudio',
+            pausedImg: "images/horseloverImages/valis-paused.png",
+            playingImg: "images/horseloverImages/valis-playing.png",
+            elem: document.getElementById("valisAudio"),
+            sphereTexture: "images/horseloverImages/valis-texture.png"
+          }
+        },
+        playlist: [
+          'stigmataAudio',
+          'shinyAudio',
+          'gubbleAudio',
+          'flowAudio'
+        ],
+        playlist2: [
+          'ubikAudio',
+          'scannerAudio',
+          'valisAudio'
+        ]
+      }
     }
 
     let currentSong = null
