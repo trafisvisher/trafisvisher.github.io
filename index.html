@@ -46,17 +46,25 @@
   <audio id="discoveryAudio" preload="metadata" src="songs/sapientsSongs/discovery-of-the-emulated-nature.mp3"></audio>
   <audio id="zenoAudio" preload="metadata" src="songs/sapientsSongs/zeno-unzips-the-zeptosecond.mp3"></audio>
 
-  <audio id="sunDrinkersAudio" preload="auto" src="songs/symbioseSongs/sun-drinkers.mp3"></audio>
-  <audio id="fruitingBodyAudio" preload="auto" src="songs/symbioseSongs/fruiting-body.mp3"></audio>
-  <audio id="animatingWaterAudio" preload="auto" src="songs/symbioseSongs/animating-water.mp3"></audio>
-  <audio id="resilientOrbAudio" preload="auto" src="songs/symbioseSongs/resilient-orb.mp3"></audio>
-  <audio id="prophecyRelayAudio" preload="auto" src="songs/symbioseSongs/prophecy-relay.mp3"></audio>
-  <audio id="mycelliumAudio" preload="auto" src="songs/symbioseSongs/mycellium-running.mp3"></audio>
-  <audio id="filamentsAudio" preload="auto" src="songs/symbioseSongs/filaments.mp3"></audio>
-  <audio id="allDigitalAudio" preload="auto" src="songs/symbioseSongs/all-digital.mp3"></audio>
-  <audio id="inTheFleshAudio" preload="auto" src="songs/symbioseSongs/in-the-flesh.mp3"></audio>
-  <audio id="fungibleAudio" preload="auto" src="songs/symbioseSongs/fungible.mp3"></audio>
-  <audio id="inkSpreadsAudio" preload="auto" src="songs/symbioseSongs/ink-spreads.mp3"></audio>
+  <audio id="sunDrinkersAudio" preload="metadata" src="songs/symbioseSongs/sun-drinkers.mp3"></audio>
+  <audio id="fruitingBodyAudio" preload="metadata" src="songs/symbioseSongs/fruiting-body.mp3"></audio>
+  <audio id="animatingWaterAudio" preload="metadata" src="songs/symbioseSongs/animating-water.mp3"></audio>
+  <audio id="resilientOrbAudio" preload="metadata" src="songs/symbioseSongs/resilient-orb.mp3"></audio>
+  <audio id="prophecyRelayAudio" preload="metadata" src="songs/symbioseSongs/prophecy-relay.mp3"></audio>
+  <audio id="mycelliumAudio" preload="metadata" src="songs/symbioseSongs/mycellium-running.mp3"></audio>
+  <audio id="filamentsAudio" preload="metadata" src="songs/symbioseSongs/filaments.mp3"></audio>
+  <audio id="allDigitalAudio" preload="metadata" src="songs/symbioseSongs/all-digital.mp3"></audio>
+  <audio id="inTheFleshAudio" preload="metadata" src="songs/symbioseSongs/in-the-flesh.mp3"></audio>
+  <audio id="fungibleAudio" preload="metadata" src="songs/symbioseSongs/fungible.mp3"></audio>
+  <audio id="inkSpreadsAudio" preload="metadata" src="songs/symbioseSongs/ink-spreads.mp3"></audio>
+
+  <audio id="stigmataAudio" preload="metadata" src="songs/horseloverSongs/three-stigmata.mp3"></audio>
+  <audio id="shinyAudio" preload="metadata" src="songs/horseloverSongs/shiny-blue-crow.mp3"></audio>
+  <audio id="gubbleAudio" preload="metadata" src="songs/horseloverSongs/gubble.mp3"></audio>
+  <audio id="flowAudio" preload="metadata" src="songs/horseloverSongs/flow-my-tears.mp3"></audio>
+  <audio id="ubikAudio" preload="metadata" src="songs/horseloverSongs/ubik.mp3"></audio>
+  <audio id="scannerAudio" preload="metadata" src="songs/horseloverSongs/pulled-through-infinity.mp3"></audio>
+  <audio id="valisAudio" preload="metadata" src="songs/horseloverSongs/valis.mp3"></audio>
 
   <!--SONGTITLEIMAGES-->
 
@@ -69,8 +77,8 @@
 
   <div id="centerContainer">
     <div id="optionsDiv">
-      <img id="musicOption" class=option data-imgstm="images/music" src="images/music-unselected.png">
-      <img id="aboutOption" class=option data-imgstm="images/about" src="images/about-unselected.png">
+      <img id="musicOption" class="option" data-imgstm="images/music" src="images/music-unselected.png">
+      <img id="aboutOption" class="option" data-imgstm="images/about" src="images/about-unselected.png">
     </div>
     <div id="aboutDiv">
       <aboutText>it's not exactly what I mean to say,
@@ -78,11 +86,20 @@
         the steady occasion, (from time to time with regularity)) ... so what do I mean?</aboutText>
     </div>
 
+    <div id="div2D3D">
+      <img id="icon2D" class="option" src="images/2D.png">
+      <img id="icon3D" class="option" src="images/3D.png">
+    </div>
+
+    <div id="textDiv">
+    </div>
+
     <div id="albumsDiv">
       <img id="maapTitle" src="images/maap-title.png">
       <img id="sapientsTitle" src="images/silver-tip-title.png">
       <img id="symbioseTitle" src="images/symbiose-title.png">
       <img id="eukaliptosowyTitle" src="images/eukaliptosowy-title.png">
+      <img id="horseloverTitle" src="images/horselover-title.png">
     </div>
 
     <div id="seekbarContain" style="visibility: hidden;">
@@ -99,7 +116,25 @@
 
 
   <div id="albumDivsContainer">
-    <div id="maapDiv" class="albumDiv">
+    <div id="horseloverDiv">
+      <img class="horseloverTitleImage" id="stigmataImage" data-song="stigmataAudio"
+        src="images/horseloverImages/stigmata-paused.png">
+      <img class="horseloverTitleImage" id="shinyImage" data-song="shinyAudio"
+        src="images/horseloverImages/shiny-paused.png">
+      <img class="horseloverTitleImage" id="gubbleImage" data-song="gubbleAudio"
+        src="images/horseloverImages/gubble-paused.png">
+      <img class="horseloverTitleImage" id="flowImage" data-song="flowAudio"
+        src="images/horseloverImages/flow-paused.png">
+    </div>
+    <div id="horseloverDiv2">
+      <img class="horseloverTitleImage" id="ubikImage" data-song="ubikAudio"
+        src="images/horseloverImages/ubik-paused.png">
+      <img class="horseloverTitleImage" id="scannerImage" data-song="scannerAudio"
+        src="images/horseloverImages/scanner-paused.png">
+      <img class="horseloverTitleImage" id="valisImage" data-song="valisAudio"
+        src="images/horseloverImages/valis-paused.png">
+    </div>
+    <div id="maapDiv">
       <img class="maapTitleImage" id="siderialImage" data-song="siderialAudio"
         src="images/maapImages/siderial-paused.png">
       <img class="maapTitleImage" id="coordinumImage" data-song="coordinumAudio"
@@ -116,7 +151,7 @@
       <img class="maapTitleImage" id="syrinxImage" data-song="syrinxAudio" src="images/maapImages/syrinx-paused.png">
       <img class="maapTitleImage" id="someoneImage" data-song="someoneAudio" src="images/maapImages/someone-paused.png">
     </div>
-    <div id="maapDiv2" class="albumDiv">
+    <div id="maapDiv2">
       <img class="maapTitleImage" id="isthistheImage" data-song="isthistheAudio"
         src="images/maapImages/isthisthe-paused.png">
       <img class="maapTitleImage" id="ninjangelesImage" data-song="ninjangelesAudio"
@@ -134,7 +169,7 @@
       <img class="maapTitleImage" id="looperImage" data-song="looperAudio" src="images/maapImages/looper-paused.png">
     </div>
 
-    <div id="sapientsDiv" class="albumDiv">
+    <div id="sapientsDiv">
       <img class="sapientsTitleImage" id="moltenImage" data-song="moltenAudio"
         src="images/sapientsImages/molten-paused.png">
       <img class="sapientsTitleImage" id="rocksImage" data-song="rocksAudio"
@@ -148,7 +183,7 @@
       <img class="sapientsTitleImage" id="flourescentImage" data-song="flourescentAudio"
         src="images/sapientsImages/flourescent-paused.png">
     </div>
-    <div id="sapientsDiv2" class="albumDiv">
+    <div id="sapientsDiv2">
       <img class="sapientsTitleImage" id="shippingImage" data-song="shippingAudio"
         src="images/sapientsImages/lydian-paused.png">
       <img class="sapientsTitleImage" id="lugImage" data-song="lugAudio" src="images/sapientsImages/growth-paused.png">
@@ -158,7 +193,7 @@
         src="images/sapientsImages/molten-paused.png">
     </div>
 
-    <div id="symbioseDiv" class="albumDiv">
+    <div id="symbioseDiv">
       <img class="symbioseTitleImage" id="sunDrinkersImage" data-song="sunDrinkersAudio"
         src="images/symbioseImages/sun-drinkers-paused.png">
       <img class="symbioseTitleImage" id="fruitingBodyImage" data-song="fruitingBodyAudio"
@@ -172,7 +207,7 @@
       <img class="symbioseTitleImage" id="mycelliumImage" data-song="mycelliumAudio"
         src="images/symbioseImages/mycellium-paused.png">
     </div>
-    <div id="symbioseDiv2" class="albumDiv">
+    <div id="symbioseDiv2">
       <img class="symbioseTitleImage" id="filamentsImage" data-song="filamentsAudio"
         src="images/symbioseImages/filaments-paused.png">
       <img class="symbioseTitleImage" id="allDigitalImage" data-song="allDigitalAudio"
@@ -185,7 +220,7 @@
         src="images/symbioseImages/ink-spreads-paused.png">
     </div>
 
-    <div id="eukaliptosowyDiv" class="albumDiv">
+    <div id="eukaliptosowyDiv">
 
     </div>
   </div>
@@ -229,12 +264,12 @@
       <img id=preset2 class="presetControl" src="images/controls/view-preset-unselected.png">
       <img id=preset1 class="presetControl" src="images/controls/view-preset-unselected.png">
 
- 
-  
-   
 
-     
-      
+
+
+
+
+
     </div>
   </div>
 
@@ -247,7 +282,8 @@
     var camera, controls, scene, renderer;
     var SCREEN_WIDTH
     var SCREEN_HEIGHT
-    var sunLight = new THREE.AmbientLight('rgb(255,255,255)', 1);
+    var sunLight = new THREE.DirectionalLight('rgb(255,255,255)', 0.7);
+    var ambientLight = new THREE.AmbientLight('rgb(255,255,255)', 0.3);
 
     var mouse = new THREE.Vector2()
     function onMouseMove(event) {
@@ -331,6 +367,9 @@
     const albumsDiv = document.getElementById("albumsDiv")
     const optionsDiv = document.getElementById("optionsDiv")
     const aboutDiv = document.getElementById("aboutDiv")
+    const div2D3D = document.getElementById("div2D3D")
+    const icon2D = document.getElementById("icon2D")
+    const icon3D = document.getElementById("icon3D")
     const travisImage = document.getElementById("travisImage")
     const pausePlay = document.getElementById("pausePlay")
 
@@ -342,6 +381,7 @@
     let starSphere
     let starSphere1
     let starSphere2
+    let sunSphere
     let albumCube
     let songSphere
     let currentTexture
@@ -372,6 +412,9 @@
     let albumsAreOpen = false
     let albumIsOpen = false
     let aboutIsOpen = false
+    let dimensionSelectIsOpen = false
+    let dimension2D = false
+    let dimension3D = false
 
     const maapTitle = document.getElementById("maapTitle")
     const symbioseTitle = document.getElementById("symbioseTitle")
@@ -552,7 +595,7 @@
 
     const albums = {
 
-      maapAlbum: {        
+      maapAlbum: {
         texture: "images/maapImages/album-cube-texture",
         starSphere1: "images/maapImages/galaxy-starfield.png",
         starSphere2: "images/maapImages/iridescent-background.png",
@@ -793,7 +836,7 @@
           }
         }
       },
-      sapientsAlbum: {        
+      sapientsAlbum: {
         imageId: "sapientsTitle",
         divId: "sapientsDiv",
         texture: "images/sapientsImages/album-cube-texture",
@@ -927,10 +970,8 @@
           }
         }
       },
-      symbioseAlbum: {        
+      symbioseAlbum: {
         imageId: "symbioseTitle",
-        starSphere1: "images/symbioseImages/daysky-background.jpg",
-        starSphere2: "images/symbioseImages/nebula-background.jpg",
         divId: "symbioseDiv",
         texture: "images/symbioseImages/album-cube-texture",
         songs: {
@@ -940,7 +981,13 @@
             pausedImg: "images/symbioseImages/sun-drinkers-paused.png",
             playingImg: "images/symbioseImages/sun-drinkers-playing.png",
             elem: document.getElementById("sunDrinkersAudio"),
-            sphereTexture: "images/symbioseImages/sundrinkers-texture.png"
+            sphereTexture: "images/symbioseImages/sundrinkers-texture.png",
+            sphereRotation: 3,
+            cubeTexture: "images/transparent-texture.png",
+            starSphere: "images/symbioseImages/daysky-background.jpg",
+            sunSphereSize: 16,
+            sunSphereTexture: "images/symbioseImages/sunsphere-texture-1.png",
+            sunColor: new THREE.Color("rgb(255, 255, 100)")
           },
 
           fruitingBodyAudio: {
@@ -949,7 +996,12 @@
             pausedImg: "images/symbioseImages/fruiting-body-paused.png",
             playingImg: "images/symbioseImages/fruiting-body-playing.png",
             elem: document.getElementById("fruitingBodyAudio"),
-            sphereTexture: "images/symbioseImages/fruiting-texture.png"
+            sphereTexture: "images/symbioseImages/fruiting-texture.png",
+            cubeTexture: "images/transparent-texture.png",
+            starSphere: "images/symbioseImages/daysky-background-2.jpg",
+            sunSphereSize: 32,
+            sunSphereTexture: "images/symbioseImages/sunsphere-texture-2.png",
+            sunColor: new THREE.Color("rgb(255, 255, 0)")
           },
 
           animatingWaterAudio: {
@@ -958,7 +1010,12 @@
             pausedImg: "images/symbioseImages/animating-water-paused.png",
             playingImg: "images/symbioseImages/animating-water-playing.png",
             elem: document.getElementById("animatingWaterAudio"),
-            sphereTexture: "images/symbioseImages/animating-texture.png"
+            sphereTexture: "images/symbioseImages/animating-texture.png",
+            cubeTexture: "images/transparent-texture.png",
+            starSphere: "images/symbioseImages/daysky-background-3.jpg",
+            sunSphereSize: 64,
+            sunSphereTexture: "images/symbioseImages/sunsphere-texture-3.png",
+            sunColor: new THREE.Color("rgb(255, 200, 0)")
           },
 
 
@@ -968,7 +1025,12 @@
             pausedImg: "images/symbioseImages/resilient-orb-paused.png",
             playingImg: "images/symbioseImages/resilient-orb-playing.png",
             elem: document.getElementById("resilientOrbAudio"),
-            sphereTexture: "images/symbioseImages/resilient-texture.png"
+            sphereTexture: "images/symbioseImages/resilient-texture.png",
+            cubeTexture: "images/transparent-texture.png",
+            starSphere: "images/symbioseImages/daysky-background-4.jpg",
+            sunSphereSize: 128,
+            sunSphereTexture: "images/symbioseImages/sunsphere-texture-4.png",
+            sunColor: new THREE.Color("rgb(255, 100, 0)")
           },
 
           prophecyRelayAudio: {
@@ -977,7 +1039,12 @@
             pausedImg: "images/symbioseImages/prophecy-relay-paused.png",
             playingImg: "images/symbioseImages/prophecy-relay-playing.png",
             elem: document.getElementById("prophecyRelayAudio"),
-            sphereTexture: "images/symbioseImages/prophecy-texture.png"
+            sphereTexture: "images/symbioseImages/prophecy-texture.png",
+            cubeTexture: "images/transparent-texture.png",
+            starSphere: "images/symbioseImages/daysky-background-5.jpg",
+            sunSphereSize: 256,
+            sunSphereTexture: "images/symbioseImages/sunsphere-texture-5.png",
+            sunColor: new THREE.Color("rgb(255, 25, 0)")
           },
 
           mycelliumAudio: {
@@ -986,7 +1053,11 @@
             pausedImg: "images/symbioseImages/mycellium-paused.png",
             playingImg: "images/symbioseImages/mycellium-playing.png",
             elem: document.getElementById("mycelliumAudio"),
-            sphereTexture: "images/symbioseImages/mycellium-texture.png"
+            sphereTexture: "images/symbioseImages/mycellium-texture.png",
+            cubeTexture: "images/symbioseImages/album-cube-texture.png",
+            starSphere: "images/symbioseImages/daysky-background-6.jpg",
+            sunSphereSize: 320,
+            sunSphereTexture: "images/symbioseImages/sunsphere-texture-6.png",
           },
 
           filamentsAudio: {
@@ -995,7 +1066,10 @@
             pausedImg: "images/symbioseImages/filaments-paused.png",
             playingImg: "images/symbioseImages/filaments-playing.png",
             elem: document.getElementById("filamentsAudio"),
-            sphereTexture: "images/symbioseImages/filaments-texture.png"
+            sphereTexture: "images/symbioseImages/filaments-texture.png",
+            cubeTexture: "images/symbioseImages/album-cube-texture.png",
+            starSphere: "images/symbioseImages/nebula-background.jpg",
+            sunSphereSize: 0,
           },
 
           allDigitalAudio: {
@@ -1004,7 +1078,9 @@
             pausedImg: "images/symbioseImages/all-digital-paused.png",
             playingImg: "images/symbioseImages/all-digital-playing.png",
             elem: document.getElementById("allDigitalAudio"),
-            sphereTexture: "images/symbioseImages/all-digital-texture.png"
+            sphereTexture: "images/symbioseImages/all-digital-texture.png",
+            cubeTexture: "images/symbioseImages/album-cube-texture.png",
+            sunSphereSize: 0,
           },
 
           inTheFleshAudio: {
@@ -1013,7 +1089,9 @@
             pausedImg: "images/symbioseImages/in-the-flesh-paused.png",
             playingImg: "images/symbioseImages/in-the-flesh-playing.png",
             elem: document.getElementById("inTheFleshAudio"),
-            sphereTexture: "images/symbioseImages/in-the-flesh-texture.png"
+            sphereTexture: "images/symbioseImages/in-the-flesh-texture.png",
+            cubeTexture: "images/symbioseImages/album-cube-texture.png",
+            sunSphereSize: 0,
           },
 
           fungibleAudio: {
@@ -1022,7 +1100,9 @@
             pausedImg: "images/symbioseImages/fungible-paused.png",
             playingImg: "images/symbioseImages/fungible-playing.png",
             elem: document.getElementById("fungibleAudio"),
-            sphereTexture: "images/symbioseImages/fungible-texture.png"
+            sphereTexture: "images/symbioseImages/fungible-texture.png",
+            cubeTexture: "images/symbioseImages/album-cube-texture.png",
+            sunSphereSize: 0,
 
           },
 
@@ -1032,7 +1112,9 @@
             pausedImg: "images/symbioseImages/ink-spreads-paused.png",
             playingImg: "images/symbioseImages/ink-spreads-playing.png",
             elem: document.getElementById("inkSpreadsAudio"),
-            sphereTexture: "images/symbioseImages/ink-spreads-texture.png"
+            sphereTexture: "images/symbioseImages/ink-spreads-texture.png",
+            cubeTexture: "images/symbioseImages/album-cube-texture.png",
+            sunSphereSize: 0,
           }
         },
         playlist: [
@@ -1051,7 +1133,7 @@
           'inkSpreadsAudio'
         ]
       },
-      horseloverAlbum: {        
+      horseloverAlbum: {
         imageId: "horseloverTitle",
         starSphere1: "images/horseloverImages/daysky-background.jpg",
         starSphere2: "images/horseloverImages/background-texture-2.png",
@@ -1059,6 +1141,8 @@
         texture: "images/horseloverImages/album-cube-texture",
         songs: {
           stigmataAudio: {
+            titleText: "the three stigmata",
+            titleTextId: "threestigmata",
             imageId: 'stigmataImage',
             audioId: 'stigmataAudio',
             pausedImg: "images/horseloverImages/stigmata-paused.png",
@@ -1181,6 +1265,24 @@
       }
     })
 
+    const createSunSphere = (size, texture) => {
+
+      var sunSphereTexture = loader.load(texture)
+
+      var sunSphereMaterial = new THREE.MeshBasicMaterial({
+        map: sunSphereTexture,
+        side: THREE.DoubleSide,
+        depthTest: true,
+        depthWrite: true
+      })
+      var sunSphereGeometry = new THREE.SphereBufferGeometry(size, 64, 64)
+      sunSphere = new THREE.Mesh(sunSphereGeometry, sunSphereMaterial)
+      scene.add(sunSphere)
+      sunSphere.position.x = 600
+      console.log(sunSphere)
+
+    }
+
     const setViewPreset = (preset) => {
 
       if (selectedPreset) {
@@ -1287,10 +1389,10 @@
       if (preset.cameraZoom >= 1) {
         cameraZoomSwitch = true
         cameraZoom = preset.cameraZoom
-      } else if (preset.cameraZoom !== 0){
+      } else if (preset.cameraZoom !== 0) {
         cameraZoomSwitch = false
         camera.zoom = preset.cameraZoom
-      } else if (preset.cameraZoom == 0){
+      } else if (preset.cameraZoom == 0) {
         cameraZoomSwitch = false
         camera.zoom = 1
       }
@@ -1331,7 +1433,35 @@
         songSelected = true
         selected = song
         selectedSphereTexture = song.sphereTexture
+        
+        if (dimension3D == true){
         songSphere.material.map = loader.load(selectedSphereTexture)
+        
+        
+        if (song.starSphere) {
+          console.log("gotstarsphere")
+          starSphere.material.map = loader.load(song.starSphere)
+          scene.remove(sunSphere)
+          if (song.sunSphereSize !== 0) {
+            createSunSphere(song.sunSphereSize, song.sunSphereTexture)
+            sunLight.color.set(song.sunColor)
+          }
+          if (song.sunSphereSize == 0) {
+            console.log("twas0")
+            scene.remove(sunSphere)
+          }
+        }
+
+        if (song.cubeTexture) {
+          albumCube.material.map = loader.load(song.cubeTexture)
+
+          console.log(song.cubeTexture)
+        }
+
+        if (song.sphereRotation) {
+          sphereControlClickCountY = song.sphereRotation
+        }
+      }
 
         currentSong.onended = playNext
 
@@ -1347,7 +1477,7 @@
         }
 
         dur.addEventListener("change", mSet);
-        currentSong.addEventListener("playing", mDur);
+        currentSong.addEventListener("play", mDur);
         currentSong.addEventListener("timeupdate", mPlay);
 
 
@@ -1375,6 +1505,7 @@
 
     for (let album in albums) {
       let songs = albums[album].songs
+      if (dimension3D == true){
       for (let song in songs) {
         const image = document.getElementById(songs[song].imageId)
         image.addEventListener("click", event => {
@@ -1383,6 +1514,8 @@
         })
       }
     }
+  }
+    
 
 
 
@@ -1394,12 +1527,12 @@
         let nextTrackIndex = currentPlaylist.indexOf(currentSong.id) + 1
         if (nextTrackIndex >= currentPlaylist.length) {
           nextTrackIndex = 0
-          if (currentPlaylist == currentPlaylist1){
-          currentPlaylist = currentPlaylist2
-          backgroundShift()
-          } else if (currentPlaylist == currentPlaylist2){
-          currentPlaylist = currentPlaylist1
-          backgroundShift()
+          if (currentPlaylist == currentPlaylist1) {
+            currentPlaylist = currentPlaylist2
+            backgroundShift()
+          } else if (currentPlaylist == currentPlaylist2) {
+            currentPlaylist = currentPlaylist1
+            backgroundShift()
           }
         }
         const nextTrack = currentPlaylist[nextTrackIndex]
@@ -1428,13 +1561,13 @@
         let previousTrackIndex = currentPlaylist.indexOf(currentSong.id) - 1
 
         if (previousTrackIndex < 0) {
-          
-          if (currentPlaylist == currentPlaylist1){
-          currentPlaylist = currentPlaylist2
-          backgroundShift()
-          } else if (currentPlaylist == currentPlaylist2){
-          currentPlaylist = currentPlaylist1
-          backgroundShift()
+
+          if (currentPlaylist == currentPlaylist1) {
+            currentPlaylist = currentPlaylist2
+            backgroundShift()
+          } else if (currentPlaylist == currentPlaylist2) {
+            currentPlaylist = currentPlaylist1
+            backgroundShift()
           }
           previousTrackIndex = currentPlaylist.length - 1
         }
@@ -1445,7 +1578,7 @@
         let nextTrackIndex = currentPlaylist.indexOf(currentSong.id) + 1
         if (nextTrackIndex >= currentPlaylist.length) {
           nextTrackIndex = 0
-          
+
         }
 
         const nextTrack = currentPlaylist[nextTrackIndex]
@@ -1718,7 +1851,10 @@
 
       scene = new THREE.Scene();
       renderer = new THREE.WebGLRenderer(
-        { powerPreference: "high-performance" },
+        {
+          powerPreference: "high-performance",
+          alpha: true
+        }
       );
 
       window.renderer = renderer
@@ -1734,17 +1870,21 @@
       controls.enablePan = false
       controls.autoRotate = true
       controls.autoRotateSpeed = 0
+      controls.enableDamping = true
       camera.position.set(0, 35, 150)
       camera.zoom = 1
       controls.update()
       scene.add(camera);
       onWindowResize();
       sunLight.position.set(5, 7, 10);
-      sunLight.lookAt(scene.position);
+      sunLight.target.position.set(0, 0, 0);
       scene.add(sunLight);
+      scene.add(sunLight.target)
+      scene.add(ambientLight);
+
 
       var starTexture = new THREE.TextureLoader().load(transparentTexture)
-      var starMaterial = new THREE.MeshBasicMaterial({
+      var starMaterial = new THREE.MeshLambertMaterial({
         map: starTexture,
         side: THREE.BackSide,
         transparent: true
@@ -1754,86 +1894,105 @@
 
       scene.add(starSphere)
 
+      var songSphereTexture = loader.load("images/transparent-texture.png")
+      // songSphereTexture.needsUpdate = true
+      var songSphereMaterial = new THREE.MeshLambertMaterial({
+        map: songSphereTexture,
+        side: THREE.DoubleSide,
+        transparent: true,
+        depthTest: false,
+        depthWrite: true
+      })
+      var songSphereGeometry = new THREE.SphereBufferGeometry(32, 64, 64)
+      songSphere = new THREE.Mesh(songSphereGeometry, songSphereMaterial)
+      scene.add(songSphere)
+
       var albumCubeTexture = loader.load(transparentTexture)
       // albumCubeTexture.needsUpdate = true
-      var albumCubeMaterial = new THREE.MeshBasicMaterial({
+      var albumCubeMaterial = new THREE.MeshLambertMaterial({
         map: albumCubeTexture,
         side: THREE.DoubleSide,
         transparent: true,
-        alpha: true,
         depthTest: false,
-        depthWrite: false
+        depthWrite: true
       })
       var albumCubeGeometry = new THREE.BoxBufferGeometry(128, 128, 128)
       albumCube = new THREE.Mesh(albumCubeGeometry, albumCubeMaterial)
       scene.add(albumCube)
 
-      var songSphereTexture = loader.load("images/transparent-texture.png")
-      // songSphereTexture.needsUpdate = true
-      var songSphereMaterial = new THREE.MeshBasicMaterial({
-        map: songSphereTexture,
-        side: THREE.BackSide,
-        transparent: true
-      })
-      var songSphereGeometry = new THREE.SphereBufferGeometry(32, 32, 32)
-      songSphere = new THREE.Mesh(songSphereGeometry, songSphereMaterial)
-      scene.add(songSphere)
+
+
+      
+
+
 
     }
 
     function animate() {
 
-      if (boxControlFlipY == false) {
-        albumCube.rotation.y += boxControlClickCountY / 500
-      }
-      if (boxControlFlipZ == false) {
-        albumCube.rotation.x += boxControlClickCountZ / 500
-      }
-      if (boxControlFlipY == true) {
-        albumCube.rotation.y -= boxControlClickCountY / 500
-      }
-      if (boxControlFlipZ == true) {
-        albumCube.rotation.x -= boxControlClickCountZ / 500
-      }
+      var timestamp = Date.now() * 0.0001;
 
-      if (sphereControlFlipY == false) {
-        songSphere.rotation.y += sphereControlClickCountY / 500
-      }
-      if (sphereControlFlipZ == false) {
-        songSphere.rotation.x += sphereControlClickCountZ / 500
-      }
-      if (sphereControlFlipY == true) {
-        songSphere.rotation.y -= sphereControlClickCountY / 500
-      }
-      if (sphereControlFlipZ == true) {
-        songSphere.rotation.x -= sphereControlClickCountZ / 500
-      }
+      if (albumCube) {
 
-      if (cameraZoomSwitch == true) {
-        if (cameraZoomPos == true) {
-          camera.zoom += cameraZoom / 100
-        } else if (cameraZoomPos == false) {
-          camera.zoom -= cameraZoom / 100
+        if (boxControlFlipY == false) {
+          albumCube.rotation.y += boxControlClickCountY / 500
+        }
+        if (boxControlFlipZ == false) {
+          albumCube.rotation.x += boxControlClickCountZ / 500
+        }
+        if (boxControlFlipY == true) {
+          albumCube.rotation.y -= boxControlClickCountY / 500
+        }
+        if (boxControlFlipZ == true) {
+          albumCube.rotation.x -= boxControlClickCountZ / 500
         }
 
-        if (camera.zoom < -5) {
-          cameraZoomPos = true
+        if (sphereControlFlipY == false) {
+          songSphere.rotation.y += sphereControlClickCountY / 500
         }
-        if (camera.zoom > 5) {
-          cameraZoomPos = false
+        if (sphereControlFlipZ == false) {
+          songSphere.rotation.x += sphereControlClickCountZ / 500
+        }
+        if (sphereControlFlipY == true) {
+          songSphere.rotation.y -= sphereControlClickCountY / 500
+        }
+        if (sphereControlFlipZ == true) {
+          songSphere.rotation.x -= sphereControlClickCountZ / 500
         }
 
-      } 
+        if (cameraZoomSwitch == true) {
+          if (cameraZoomPos == true) {
+            camera.zoom += cameraZoom / 100
+          } else if (cameraZoomPos == false) {
+            camera.zoom -= cameraZoom / 100
+          }
+
+          if (camera.zoom < -5) {
+            cameraZoomPos = true
+          }
+          if (camera.zoom > 5) {
+            cameraZoomPos = false
+          }
+
+        }
 
 
-      starSphere.rotation.y += 0.001
-      starSphere.rotation.x += 0.0005
-      starSphere.rotation.z += 0.0005
+        starSphere.rotation.y += 0.001
+        starSphere.rotation.x += 0.0005
+        starSphere.rotation.z += 0.0005
 
-      if (selected){
-      songSphere.scale.set(sphereScaleClickCount, sphereScaleClickCount, sphereScaleClickCount)
+        if (selected) {
+          songSphere.scale.set(sphereScaleClickCount, sphereScaleClickCount, sphereScaleClickCount)
+        }
+
+        if (sunSphere) {
+          sunSphere.position.x = Math.cos(timestamp * 3) * 600;
+          sunSphere.position.z = Math.sin(timestamp * 3) * 600;
+          sunLight.position.set(sunSphere.position.x, 0, sunSphere.position.z);
+        }
+
       }
-      
+
 
       controls.update()
       renderer.render(scene, camera);
@@ -1860,6 +2019,22 @@
       camera.updateProjectionMatrix();
       orientationDetect()
 
+      if (dimension2D == true){
+        if (albumsAreOpen == true){
+        if (orientationPortrait == true){
+        albumDivsContainer.style.left = "37.5%"
+        albumDivsContainer.style.width = "25%"
+        } else if (orientationPortrait == false){
+          albumDivsContainer.style.left = "42.5%"
+        albumDivsContainer.style.width = "15%"
+        }
+      }
+      if (albumsAreOpen == false){        
+        albumDivsContainer.style.width = "0%"
+
+      }
+      }
+
     }
 
     for (let option of options) {
@@ -1878,10 +2053,27 @@
 
       image.addEventListener('click', event => {
 
-        openCurrentAlbum(albums[album])
+        if (dimension2D == true) {
+          openCurrentAlbum(albums[album])
+        }
+
+        if (dimension3D == true) {
+          openCurrentAlbum(albums[album])
+        }
 
       })
 
+    }
+
+
+    const openCurrentOption = (option) => {
+
+      if (option.id == "musicOption") {
+        open2D3D()
+      }
+      if (option.id == "aboutOption") {
+        aboutOpen()
+      }
     }
 
     const openCurrentAlbum = (album) => {
@@ -1890,22 +2082,28 @@
       selectedAlbumDiv = document.getElementById(album.divId)
       selectedAlbumDiv2 = document.getElementById(album.divId + "2")
 
-
       if (backgroundBlack == true) {
         currentPlaylist = album.playlist
         selectedAlbumDiv.style.width = "100%"
+        if (dimension3D == true){
         albumDivsNavButtonLeft.style.visibility = "visible"
+        }
       }
       if (backgroundBlack == false) {
         currentPlaylist = album.playlist2
         selectedAlbumDiv2.style.width = "100%"
+        if (dimension3D == true){
         albumDivsNavButtonRight.style.visibility = "visible"
+        }
       }
 
       currentPlaylist1 = album.playlist
       currentPlaylist2 = album.playlist2
 
       currentAlbum = album.songs
+
+      if (dimension3D == true){
+
       currentTextureStem = album.texture
       currentTexture = album.texture + ".png"
       currentTexture2 = album.texture + pngDarkLightFile
@@ -1913,7 +2111,39 @@
       cubeColorSelect.src = currentTextureStem + "-icon.png"
       starSphere1 = album.starSphere1
       starSphere2 = album.starSphere2
+      
 
+      sideControlsNavButton.style.visibility = "visible"
+      topControlsDiv.style.visibility = "visible"
+      topControlsNavButton.style.visibility = "visible"
+      presetControlsDiv.style.visibility = "visible"      
+      starSphere.material.map = loader.load(starSphere1)
+
+      }
+
+      if (dimension2D == true){
+        console.log(currentAlbum)
+        for (let song in album[songs]){
+          console.log(song)
+          var titleText = document.createTextNode(song.titleText);
+          titleText.id = song.titleTextId
+          textDiv.appendChild(titleText) 
+          console.log(titleText)
+          const textElem = document.getElementById(song.titleTextId)
+          textElem.addEventListener("click", event => {
+          setCurrentSong(song)
+          currentSongIsPlaying = false
+        })
+        }    
+
+        // if (orientationPortrait == true){
+        // albumDivsContainer.style.left = "37.5%"
+        // albumDivsContainer.style.width = "25%"
+        // } else if (orientationPortrait == false){
+        //   albumDivsContainer.style.left = "42.5%"
+        // albumDivsContainer.style.width = "15%"
+        // }
+      }
 
       albumsDiv.animate({
         width: ["150%", "0%"],
@@ -1924,24 +2154,19 @@
         fill: "forwards"
       })
 
-
-
       centerContainer.animate({
         width: [centerContainerInitialWidth, "0%"],
-
       }, {
         duration: 2000,
         easing: "ease",
         fill: "forwards"
       })
 
-
+      albumsAreOpen = false
       albumIsOpen = true
 
       seekbarContain.style.visibility = "visible"
-      sideControlsNavButton.style.visibility = "visible"
-      topControlsContainer.style.visibility = "visible"
-      starSphere.material.map = loader.load(starSphere1)
+      circleBW.style.visibility = "visible"    
 
 
     }
@@ -1956,76 +2181,54 @@
         fill: "forwards"
       })
 
-      sideControlsContainer.style.width = "0%"
+      albumDivsContainer.style.width = "0%"
 
+      
 
- 
       if (currentSong) {
         currentSong.pause()
       }
 
-      albumsDiv.animate({
-        width: ["0", "150%"],
-        left: ["0%", "-25%"],
-      }, {
-        duration: 2000,
-        easing: "ease",
-        fill: "forwards"
-      })
-
+      albumIsOpen = false
 
       selectedAlbumDiv.style.width = "0%"
       selectedAlbumDiv = null
       selectedAlbumDiv2.style.width = "0%"
       selectedAlbumDiv = null
 
-      albumCube.material.map = loader.load(transparentTexture)
-      songSphere.material.map = loader.load(transparentTexture)
-      starSphere.material.map = loader.load(transparentTexture)
-      seekbarContain.style.visibility = "hidden"
-      topControlsContainer.style.visibility = "hidden"
 
+      if (albumCube) {
+        albumCube.material.map = loader.load(transparentTexture)
+        songSphere.material.map = loader.load(transparentTexture)
+        starSphere.material.map = loader.load(transparentTexture)
+      }
+      seekbarContain.style.visibility = "hidden"
+      topControlsDiv.style.visibility = "hidden"
+      topControlsNavButton.style.visibility = "hidden"
+      presetControlsDiv.style.visibility = "hidden"
+      circleBW.style.visibility = "hidden"
+      sideControlsContainer.style.width = "0%"
       albumDivsNavButtonLeft.style.visibility = "hidden"
       albumDivsNavButtonRight.style.visibility = "hidden"
       sideControlsNavButton.style.visibility = "hidden"
     }
 
-    const openCurrentOption = (option) => {
+    const open2D3D = () => {
 
-      // if (currentOption) {
-      //   currentOptionElem = document.getElementById(currentOption.id)
-      //   currentOptionElem.src = currentOption.dataset.imgstm + "-unselected.png"
-      //   console.log(currentOption)
-      //   console.log(currentOption.src)
-      // }
+      dimension2D = false
+      dimension3D = false
 
-      // // let selectedOption = document.getElementById(option.id)
+      optionsDiv.style.width = "0%"
 
-      // // selectedOption.src = option.dataset.imgstm + "-selected.png"
-      // // currentOption = option
-      // // console.log(selectedOption)
-      // // console.log(currentOption.id)
-
-      if (option.id == "musicOption") {
-        albumsOpen()
-      }
-      if (option.id == "aboutOption") {
-        aboutOpen()
-      }
-    }
-
-    const albumsOpen = () => {
-      albumsDiv.animate({
-        width: ["0%", "150%"],
+      div2D3D.animate({
+        width: ["0%", "100%"],
 
       }, {
         duration: 1000,
         fill: "forwards",
         easing: "ease"
       })
-      albumsAreOpen = true
-
-      optionsDiv.style.width = "0%"
+      dimensionSelectIsOpen = true
 
       backArrow.style.visibility = "visible"
       backArrow.animate({
@@ -2036,6 +2239,80 @@
       })
 
     }
+    const close2D3D = () => {
+
+
+      optionsDiv.style.width = "100%"
+
+      div2D3D.animate({
+        width: ["100%", "0%"],
+
+      }, {
+        duration: 1000,
+        fill: "forwards",
+        easing: "ease"
+      })
+      dimensionSelectIsOpen = false
+
+
+      backArrow.animate({
+        opacity: ["0.5", "0"]
+      }, {
+        duration: 1000,
+        fill: "forwards"
+      })
+
+    }
+
+    const albumsOpen = () => {
+      albumsDiv.animate({
+        width: ["0%", "150%"],
+        left: ["0%", "-25%"],
+
+      }, {
+        duration: 1000,
+        fill: "forwards",
+        easing: "ease"
+      })
+
+
+      if (dimensionSelectIsOpen == true) {
+        div2D3D.animate({
+          width: ["100%", "0%"],
+
+        }, {
+          duration: 1000,
+          fill: "forwards",
+          easing: "ease"
+        })
+      }
+
+      dimensionSelectIsOpen = false
+      albumsAreOpen = true
+
+    }
+
+
+    const albumsClose = () => {
+
+      albumsDiv.animate({
+        width: ["150", "0%"],
+        left: ["-25%", "0%"],
+      }, {
+        duration: 1000,
+        easing: "ease",
+        fill: "forwards"
+      })
+      albumsAreOpen = false
+
+      albumDivsContainer.style.width = "0%"
+
+
+    }
+
+
+
+
     const aboutOpen = () => {
 
 
@@ -2069,7 +2346,6 @@
       aboutIsOpen = true
 
     }
-
     const aboutClose = () => {
       albumCube.material.map = loader.load(transparentTexture)
       optionsDiv.style.width = "100%"
@@ -2077,9 +2353,6 @@
 
       habitatsScroll.style.visibility = "hidden"
       travisImage.style.visibility = "hidden"
-
-      aboutIsOpen = false
-
       backArrow.animate({
         opacity: ["0.5", "0"]
       }, {
@@ -2088,6 +2361,18 @@
       })
 
     }
+
+    icon3D.addEventListener('click', event => {
+      albumsOpen()
+      dimension3D = true
+      rendererContain.style.visibility = "visible"
+    })
+
+    icon2D.addEventListener('click', event => {
+      albumsOpen()
+      dimension2D = true
+      // rendererContain.style.visibility = "hidden"
+    })
 
     pausePlay.addEventListener('click', event => {
       if (currentSong) {
@@ -2105,31 +2390,24 @@
 
     backArrow.addEventListener('click', event => {
 
-
       if (albumIsOpen == true) {
 
-        closeCurrentAlbum(selectedAlbumTitleImage)
-        albumIsOpen = false
-      } else if (albumsAreOpen == true) {
-        albumsDiv.animate({
-          width: ["150%", "0%"],
+        closeCurrentAlbum(selectedAlbumTitleImage);
+        albumsOpen()
 
-        }, {
-          duration: 1000,
-          fill: "forwards",
-          easing: "ease"
-        })
+      }
 
-        optionsDiv.style.width = "100%"
+      else if (albumsAreOpen == true) {
+        albumsClose()
+        open2D3D()
 
-        albumsAreOpen = false
-        backArrow.animate({
-          opacity: ["0.5", "0"]
-        }, {
-          duration: 1000,
-          fill: "forwards"
-        })
-      } else if (aboutIsOpen == true) {
+      }
+
+      else if (dimensionSelectIsOpen == true) {
+        close2D3D()
+      }
+
+      else if (aboutIsOpen == true) {
         aboutClose()
         aboutIsOpen = false
       }
@@ -2250,63 +2528,72 @@
 
         currentPlaylist = currentPlaylist2
 
-        backArrow.style.filter = "invert(1)"
-        starSphere.material.map = loader.load(starSphere2)
-
-        albumDivsContainer.style.left = "auto"
-        albumDivsContainer.style.right = "45px"
-        albumDivsContainer.style.float = "right"
 
         if (selectedAlbumDiv) {
           selectedAlbumDiv2.style.width = "100%"
           selectedAlbumDiv.style.width = "0%"
-          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          if (dimension3D == true) {
+            cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          }
         } else {
-          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          if (dimension3D == true) {
+            cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          }
         }
 
-        if (navOpen == true) {
-          albumDivsContainer.style.width = "200px"
-        } else if (navOpen == false) {
-          albumDivsContainer.style.width = "0%"
+
+        if (dimension3D == true) {
+
+          starSphere.material.map = loader.load(starSphere2)
+
+          albumDivsContainer.style.left = "auto"
+          albumDivsContainer.style.right = "45px"
+          albumDivsContainer.style.float = "right"
+
+          if (navOpen == true) {
+            albumDivsContainer.style.width = "200px"
+          } else if (navOpen == false) {
+            albumDivsContainer.style.width = "0%"
+          }
+
+          sideControlsContainer.style.left = "0%"
+          sideControlsDiv.style.left = "35%"
+          sideControlsNavButton.style.float = "left"
+          sideControlsNavButton.animate({
+            transform: sideControlsNavRotation,
+            filter: ["brightness(100%)", "brightness(0%)"]
+          }, {
+            duration: 1000,
+            iterations: 1,
+            fill: "both",
+            easing: "ease-out"
+          }
+          )
+          sideControlsNavRotationDegrees += 180
+
+          for (let control of sideControl) {
+            control.style.marginLeft = "50%"
+          }
+          materialSwitch.style.marginLeft = "45%"
+          presetControlsDiv.style.filter = "invert(1)"
+          fov.style.left = "-33%"
+          fov.style.width = "100%"
+          fov.style.filter = "brightness(0%)"
+          sideControlsNavButton.style.filter = "brightness(0%)"       
+
+          topControlsNavButton.style.filter = "invert(0)"  
+
+          albumDivsNavButtonLeft.style.visibility = "hidden"
+          albumDivsNavButtonRight.style.visibility = "visible"
+
         }
-
-        sideControlsContainer.style.left = "0%"
-        sideControlsDiv.style.left = "35%"
-        sideControlsNavButton.style.float = "left"
-        sideControlsNavButton.animate({
-          transform: sideControlsNavRotation,
-          filter: ["brightness(100%)", "brightness(0%)"]
-        }, {
-          duration: 1000,
-          iterations: 1,
-          fill: "both",
-          easing: "ease-out"
-        }
-        )
-        sideControlsNavRotationDegrees += 180
-
-        for (let control of sideControl) {
-          control.style.marginLeft = "50%"
-        }
-        materialSwitch.style.marginLeft = "45%"
-        presetControlsDiv.style.filter = "invert(1)"
-        fov.style.left = "-33%"
-        fov.style.width = "100%"
-        fov.style.filter = "brightness(0%)"
-        sideControlsNavButton.style.filter = "brightness(0%)"
-
-        document.body.style.backgroundColor = "#ffffff"
-
-        topControlsNavButton.style.filter = "invert(0)"
-
-        for (let option of options) {
-          option.style.filter = "invert(1)"
-        }
-
-        albumDivsNavButtonLeft.style.visibility = "hidden"
-        albumDivsNavButtonRight.style.visibility = "visible"
-
+        
+        document.body.style.backgroundColor = "#fffaf1"
+       rendererContain.style.backgroundColor = "#fffaf1"
+       for (let option of options) {
+            option.style.filter = "invert(1)"
+          }
+          backArrow.style.filter = "invert(1)" 
         backgroundBlack = false
         backgroundWhite = true
 
@@ -2314,84 +2601,96 @@
 
       else if (backgroundWhite == true) {
 
-        currentPlaylist = currentPlaylist
-
-        backArrow.style.filter = "invert(0)"
-        starSphere.material.map = loader.load(starSphere1)
-        cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+        currentPlaylist = currentPlaylist1
 
         if (selectedAlbumDiv) {
           selectedAlbumDiv.style.width = "100%"
           selectedAlbumDiv2.style.width = "0%"
-          cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          if (dimension3D == true) {
+            cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          }
         } else {
+          if (dimension3D == true) {
+            cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+          }
+        }
+
+
+        if (dimension3D == true) {
+          
+          starSphere.material.map = loader.load(starSphere1)
           cubeColorSelect.src = currentTextureStem + "-icon" + pngDarkLightFile
+
+          albumDivsContainer.style.left = "45px"
+          albumDivsContainer.style.right = "auto"
+          albumDivsContainer.style.float = "left"
+
+          if (navOpen == true) {
+            albumDivsContainer.style.width = "200px"
+          } else if (navOpen == false) {
+            albumDivsContainer.style.width = "0%"
+          }
+
+          sideControlsContainer.style.left = "auto"
+          sideControlsContainer.style.right = "5px"
+          sideControlsDiv.style.left = "auto"
+          sideControlsNavButton.style.left = "auto"
+          sideControlsNavButton.style.right = "0px"
+          sideControlsNavButton.style.float = "right"
+
+          sideControlsNavButton.animate({
+            transform: sideControlsNavRotation,
+            filter: ["hue-rotate(180deg)", "hue-rotate(0deg)"]
+          }, {
+            duration: 1000,
+            iterations: 1,
+            fill: "both",
+            easing: "ease-out"
+          }
+          )
+          sideControlsNavRotationDegrees -= 180
+
+          for (let control of sideControl) {
+            control.style.marginLeft = "20%"
+          }
+          materialSwitch.style.marginLeft = "15%"
+          presetControlsDiv.style.filter = "invert(0)"
+
+          fov.style.left = "33%"
+          fov.style.width = "auto"
+          fov.style.filter = "brightness(100%)"
+
+          topControlsNavButton.style.filter = "invert(1)"
+
+          
+
+          albumDivsNavButtonLeft.style.visibility = "visible"
+          albumDivsNavButtonRight.style.visibility = "hidden"
+
         }
 
-        albumDivsContainer.style.left = "45px"
-        albumDivsContainer.style.right = "auto"
-        albumDivsContainer.style.float = "left"
-
-        if (navOpen == true) {
-          albumDivsContainer.style.width = "200px"
-        } else if (navOpen == false) {
-          albumDivsContainer.style.width = "0%"
-        }
-
-
-        sideControlsContainer.style.left = "auto"
-        sideControlsContainer.style.right = "5px"
-        sideControlsDiv.style.left = "auto"
-        sideControlsNavButton.style.left = "auto"
-        sideControlsNavButton.style.right = "0px"
-        sideControlsNavButton.style.float = "right"
-
-        sideControlsNavButton.animate({
-          transform: sideControlsNavRotation,
-          filter: ["hue-rotate(180deg)", "hue-rotate(0deg)"]
-        }, {
-          duration: 1000,
-          iterations: 1,
-          fill: "both",
-          easing: "ease-out"
-        }
-        )
-        sideControlsNavRotationDegrees -= 180
-
-        for (let control of sideControl) {
-          control.style.marginLeft = "20%"
-        }
-        materialSwitch.style.marginLeft = "15%"
-        presetControlsDiv.style.filter = "invert(0)"
-
-        fov.style.left = "33%"
-        fov.style.width = "auto"
-        fov.style.filter = "brightness(100%)"
-
+        document.body.style.backgroundColor = "#010203"
+        rendererContain.style.backgroundColor = "#010203"
+        for (let option of options) {
+            option.style.filter = "invert(0)"
+          }
+          backArrow.style.filter = "invert(0)"
         backgroundBlack = true
         backgroundWhite = false
+      }
 
-        topControlsNavButton.style.filter = "invert(1)"
-
-        for (let option of options) {
-          option.style.filter = "invert(0)"
+      if (dimension3D == true) {
+        albumCube.material.map = loader.load(currentTexture)
+        if (backgroundBlack == true) {
+          pngDarkLightFile = "-dark.png"
         }
-
-        albumDivsNavButtonLeft.style.visibility = "visible"
-        albumDivsNavButtonRight.style.visibility = "hidden"
-
+        if (backgroundBlack == false) {
+          pngDarkLightFile = "-light.png"
+        }
+        darkLightImgSet()
       }
-
-
-      albumCube.material.map = loader.load(currentTexture)
-      if (backgroundBlack == true) {
-        pngDarkLightFile = "-dark.png"
-      }
-      if (backgroundBlack == false) {
-        pngDarkLightFile = "-light.png"
-      }
-      darkLightImgSet()
     }
+
 
     circleBW.addEventListener('click', backgroundShift)
 
@@ -2418,13 +2717,13 @@
     })
 
     materialSwitch.addEventListener("click", () => {
-      
+
       if (songSphere) {
         if (materialSwitched == false) {
           materialSwitched = true
           materialSwitch.src = "images/controls/material-switch-true.png"
           albumCube.material.map = loader.load(selectedSphereTexture)
-          
+
 
           if (cubeColorRainbow == true) {
             songSphere.material.map = loader.load(currentTexture)
@@ -2436,7 +2735,7 @@
           materialSwitched = false
           materialSwitch.src = "images/controls/material-switch" + pngDarkLightFile
           songSphere.material.map = loader.load(selectedSphereTexture)
-          
+
           if (cubeColorRainbow == true) {
             albumCube.material.map = loader.load(currentTexture)
           } else if (cubeColorRainbow == false) {
@@ -2508,11 +2807,12 @@
       navOpenClose("Right", "brightness(0%)", "brightness(0%)")
     })
 
-    window.addEventListener('mousemove', () => {
-      if (travisImage.style.visibility == "visible") {
+    
+    window.addEventListener('mousemove', () => {      
+      if (aboutIsOpen == true){
         travisImage.style.top = (mouse.y * 100) - 10 + "%"
-      }
-    })
+    }
+  })
 
   </script>
 </body>

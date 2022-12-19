@@ -1,0 +1,28 @@
+
+
+plaintext baby!
+
+no need for any other editor... 
+
+so ok here, a plan: 
+
+tonight: lush and unreachable... no hardly unreachable, just sloppy 
+(ha, thanks vs code for deeming 'unreachable' a term worthy of rememberance)
+
+tomorrow = {
+    morning: {
+        exercise: "brisk-walk up aspen-glade north, 100 pushups (20x5)",
+        food: "espresso(1)",
+        task: "8 measures of a Bach Fugue"
+    },
+    afternoon: {
+        exercise: "glute-activation",
+        food: "eggs and greens",
+        task: "ride to lavi/mariana/bella/brie and teach"
+    },
+    evening: {
+        exercise: "riding home",
+        food: "feta, greens, fish, olive oil, wine",
+        task: "start composition of 'fantasy no 2'"
+    }
+ }
