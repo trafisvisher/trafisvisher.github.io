@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Trafis Visher</title>
     <link rel="stylesheet" href="./styles/index3.css">
-    <link rel="icon" type="image/png" href="images/ocotillo2.JPG">
+    <link rel="icon" type="image/png" href="images\controls\bird-view-dark.png">
 
 </head>
 
@@ -60,6 +60,21 @@
     <audio id="fungibleAudio" preload="metadata" src="songs/symbioseSongs/fungible.mp3"></audio>
     <audio id="inkSpreadsAudio" preload="metadata" src="songs/symbioseSongs/ink-spreads.mp3"></audio>
 
+    <audio id="interferenceAudio" preload="metadata" src="songs/infinitySongs/interference.mp3"></audio>
+    <audio id="replicatorsAudio" preload="metadata" src="songs/infinitySongs/replicators.mp3"></audio>
+    <audio id="explainAudio" preload="metadata" src="songs/infinitySongs/explain.mp3"></audio>
+    <audio id="problemAudio" preload="metadata" src="songs/infinitySongs/problem.mp3"></audio>
+    <audio id="flipsAudio" preload="metadata" src="songs/infinitySongs/copying-flips.mp3"></audio>
+    <audio id="centralizationAudio" preload="metadata" src="songs/infinitySongs/centralization.mp3"></audio>
+    <audio id="sustainableAudio" preload="metadata" src="songs/infinitySongs/sustainable.mp3"></audio>
+    <audio id="decentralizationAudio" preload="metadata" src="songs/infinitySongs/decentralization.mp3"></audio>
+    <audio id="escapeAudio" preload="metadata" src="songs/infinitySongs/escape-velocity.mp3"></audio>
+    <audio id="interplanetaryAudio" preload="metadata" src="songs/infinitySongs/interplanetary.mp3"></audio>
+    <audio id="interstellarAudio" preload="metadata" src="songs/infinitySongs/interstellar.mp3"></audio>
+    <audio id="intergalacticAudio" preload="metadata" src="songs/infinitySongs/intergalactic.mp3"></audio>
+    <audio id="retreatAudio" preload="metadata" src="songs/infinitySongs/retreat-into-the-miniscule.mp3"></audio>
+    <audio id="unsustainableAudio" preload="metadata" src="songs/infinitySongs/unsustainable.mp3"></audio>
+
     <audio id="stigmataAudio" preload="metadata" src="songs/horseloverSongs/three-stigmata.mp3"></audio>
     <audio id="shinyAudio" preload="metadata" src="songs/horseloverSongs/shiny-blue-crow.mp3"></audio>
     <audio id="gubbleAudio" preload="metadata" src="songs/horseloverSongs/gubble.mp3"></audio>
@@ -75,9 +90,9 @@
     <div id="scrollContainer">        
         <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg">
         <img id="travisImage" src="images/travis-image.png">
-        <div id="aboutTextDiv">          
-        </div>
-        <div id="aboutDiv">
+        <!-- <div id="aboutTextDiv">          
+        </div> -->
+        <!-- <div id="aboutDiv">
             <div id="aboutText" class="aboutText">   
                 it's not exactly what I mean to say,
                 it's like...(aha, can we do it like this again? a vague phrase then clarifying, like,
@@ -94,13 +109,14 @@
             <div id="aboutText3" class="aboutText">   
                 bwaaaaaaaaaaah!!!
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div id="centerContainer">
         <div id="optionsDiv">
             <img id="musicOption" class="option" data-imgstm="images/music" src="images/music-unselected.png">
             <img id="aboutOption" class="option" data-imgstm="images/about" src="images/about-unselected.png">
+            <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/poems-unselected.png">
         </div>
         
 
@@ -116,8 +132,20 @@
             <img id="maapTitle" src="images/maap-title.png">
             <img id="sapientsTitle" src="images/sapients-title.png">
             <img id="symbioseTitle" src="images/symbiose-title.png">
-            <img id="eukaliptosowyTitle" src="images/eukaliptosowy-title.png">
+            <img id="infinityTitle" src="images/infinity-title.png">
             <img id="horseloverTitle" src="images/horselover-title.png">
+        </div>
+
+        <div id="poemsDiv">
+            <div class="myPoems">                
+                <img src="poems/what-sailed-thereon.png" style="width:100%">
+            </div>
+            <div class="myPoems">                
+                <img src="poems/sarajevo.png" style="width:100%">
+            </div>              
+            <a id="prev">❮</a>
+            <a id="next">❯</a>            
+
         </div>
 
         <div id="seekbarContain" style="visibility: hidden;">
@@ -134,6 +162,90 @@
 
 
     <div id="albumDivContainer">
+        <div id="sapientsDiv">
+            <img class="songTitleImage" id="moltenImage" data-song="moltenAudio"
+                src="images/sapientsImages/molten-paused.png">
+            <img class="songTitleImage" id="rocksImage" data-song="rocksAudio"
+                src="images/sapientsImages/rocks-paused.png">
+            <img class="songTitleImage" id="lydianImage" data-song="lydianAudio"
+                src="images/sapientsImages/lydian-paused.png">
+            <img class="songTitleImage" id="growthImage" data-song="growthAudio"
+                src="images/sapientsImages/growth-paused.png">
+            <img class="songTitleImage" id="firedancersImage" data-song="firedancersAudio"
+                src="images/sapientsImages/firedancers-paused.png">
+            <img class="songTitleImage" id="flourescentImage" data-song="flourescentAudio"
+                src="images/sapientsImages/flourescent-paused.png">
+        </div>
+        <div id="sapientsDiv2">            
+            <img class="songTitleImage" id="lugImage" data-song="lugAudio"
+                src="images/sapientsImages/lug-paused.png">
+                <img class="songTitleImage" id="shippingImage" data-song="shippingAudio"
+                src="images/sapientsImages/shipping-paused.png">
+            <img class="songTitleImage" id="discoveryImage" data-song="discoveryAudio"
+                src="images/sapientsImages/discovery-paused.png">
+            <img class="songTitleImage" id="zenoImage" data-song="zenoAudio"
+                src="images/sapientsImages/zeno-paused.png">
+        </div>
+
+        <div id="symbioseDiv">
+            <img class="songTitleImage" id="sunDrinkersImage" data-song="sunDrinkersAudio"
+                src="images/symbioseImages/sun-drinkers-paused.png">
+            <img class="songTitleImage" id="fruitingBodyImage" data-song="fruitingBodyAudio"
+                src="images/symbioseImages/fruiting-body-paused.png">
+            <img class="songTitleImage" id="animatingWaterImage" data-song="animatingWaterAudio"
+                src="images/symbioseImages/animating-water-paused.png">
+            <img class="songTitleImage" id="resilientOrbImage" data-song="resilientOrbAudio"
+                src="images/symbioseImages/resilient-orb-paused.png">
+            <img class="songTitleImage" id="prophecyRelayImage" data-song="prophecyRelayAudio"
+                src="images/symbioseImages/prophecy-relay-paused.png">
+            <img class="songTitleImage" id="mycelliumImage" data-song="mycelliumAudio"
+                src="images/symbioseImages/mycellium-paused.png">
+        </div>
+        <div id="symbioseDiv2">
+            <img class="songTitleImage" id="filamentsImage" data-song="filamentsAudio"
+                src="images/symbioseImages/filaments-paused.png">
+            <img class="songTitleImage" id="allDigitalImage" data-song="allDigitalAudio"
+                src="images/symbioseImages/all-digital-paused.png">
+            <img class="songTitleImage" id="inTheFleshImage" data-song="inTheFleshAudio"
+                src="images/symbioseImages/in-the-flesh-paused.png">
+            <img class="songTitleImage" id="fungibleImage" data-song="fungibleAudio"
+                src="images/symbioseImages/fungible-paused.png">
+            <img class="songTitleImage" id="inkSpreadsImage" data-song="inkSpreadsAudio"
+                src="images/symbioseImages/ink-spreads-paused.png">
+        </div>
+
+        <div id="infinityDiv">
+            <img class="songTitleImage" id="interferenceImage" data-song="interferenceAudio"
+                src="images/infinityImages/interference-paused.png">
+            <img class="songTitleImage" id="replicatorsImage" data-song="replicatorsAudio"
+                src="images/infinityImages/replicators-paused.png">
+            <img class="songTitleImage" id="explainImage" data-song="explainAudio"
+                src="images/infinityImages/explain-paused.png">
+            <img class="songTitleImage" id="problemImage" data-song="problemAudio"
+                src="images/infinityImages/problem-paused.png">
+                <img class="songTitleImage" id="flipsImage" data-song="flipsAudio"
+                src="images/infinityImages/flips-paused.png">
+            <img class="songTitleImage" id="centralizationImage" data-song="centralizationAudio"
+                src="images/infinityImages/centralization-paused.png">
+            <img class="songTitleImage" id="sustainableImage" data-song="sustainableAudio"
+                src="images/infinityImages/sustainable-paused.png">
+        </div>
+        <div id="infinityDiv2">
+            <img class="songTitleImage" id="decentralizationImage" data-song="decentralizationAudio"
+                src="images/infinityImages/decentralization-paused.png">
+            <img class="songTitleImage" id="escapeImage" data-song="escapeAudio"
+                src="images/infinityImages/escape-paused.png">
+            <img class="songTitleImage" id="interplanetaryImage" data-song="interplanetaryAudio"
+                src="images/infinityImages/interplanetary-paused.png">
+                <img class="songTitleImage" id="interstellarImage" data-song="interstellarAudio"
+                src="images/infinityImages/interstellar-paused.png">
+            <img class="songTitleImage" id="intergalacticImage" data-song="intergalacticAudio"
+                src="images/infinityImages/intergalactic-paused.png">
+            <img class="songTitleImage" id="retreatImage" data-song="retreatAudio"
+                src="images/infinityImages/retreat-paused.png">
+                <img class="songTitleImage" id="unsustainableImage" data-song="unsustainableAudio"
+                src="images/infinityImages/unsustainable-paused.png">
+        </div>
         <div id="horseloverDiv">
             <img class="songTitleImage" id="stigmataImage" data-song="stigmataAudio"
                 src="images/horseloverImages/stigmata-paused.png">
@@ -191,61 +303,7 @@
                 src="images/maapImages/looper-paused.png">
         </div>
 
-        <div id="sapientsDiv">
-            <img class="songTitleImage" id="moltenImage" data-song="moltenAudio"
-                src="images/sapientsImages/molten-paused.png">
-            <img class="songTitleImage" id="rocksImage" data-song="rocksAudio"
-                src="images/sapientsImages/rocks-paused.png">
-            <img class="songTitleImage" id="lydianImage" data-song="lydianAudio"
-                src="images/sapientsImages/lydian-paused.png">
-            <img class="songTitleImage" id="growthImage" data-song="growthAudio"
-                src="images/sapientsImages/growth-paused.png">
-            <img class="songTitleImage" id="firedancersImage" data-song="firedancersAudio"
-                src="images/sapientsImages/firedancers-paused.png">
-            <img class="songTitleImage" id="flourescentImage" data-song="flourescentAudio"
-                src="images/sapientsImages/flourescent-paused.png">
-        </div>
-        <div id="sapientsDiv2">
-            <img class="songTitleImage" id="shippingImage" data-song="shippingAudio"
-                src="images/sapientsImages/lydian-paused.png">
-            <img class="songTitleImage" id="lugImage" data-song="lugAudio"
-                src="images/sapientsImages/growth-paused.png">
-            <img class="songTitleImage" id="discoveryImage" data-song="discoveryAudio"
-                src="images/sapientsImages/firedancers-paused.png">
-            <img class="songTitleImage" id="zenoImage" data-song="zenoAudio"
-                src="images/sapientsImages/molten-paused.png">
-        </div>
-
-        <div id="symbioseDiv">
-            <img class="songTitleImage" id="sunDrinkersImage" data-song="sunDrinkersAudio"
-                src="images/symbioseImages/sun-drinkers-paused.png">
-            <img class="songTitleImage" id="fruitingBodyImage" data-song="fruitingBodyAudio"
-                src="images/symbioseImages/fruiting-body-paused.png">
-            <img class="songTitleImage" id="animatingWaterImage" data-song="animatingWaterAudio"
-                src="images/symbioseImages/animating-water-paused.png">
-            <img class="songTitleImage" id="resilientOrbImage" data-song="resilientOrbAudio"
-                src="images/symbioseImages/resilient-orb-paused.png">
-            <img class="songTitleImage" id="prophecyRelayImage" data-song="prophecyRelayAudio"
-                src="images/symbioseImages/prophecy-relay-paused.png">
-            <img class="songTitleImage" id="mycelliumImage" data-song="mycelliumAudio"
-                src="images/symbioseImages/mycellium-paused.png">
-        </div>
-        <div id="symbioseDiv2">
-            <img class="songTitleImage" id="filamentsImage" data-song="filamentsAudio"
-                src="images/symbioseImages/filaments-paused.png">
-            <img class="songTitleImage" id="allDigitalImage" data-song="allDigitalAudio"
-                src="images/symbioseImages/all-digital-paused.png">
-            <img class="songTitleImage" id="inTheFleshImage" data-song="inTheFleshAudio"
-                src="images/symbioseImages/in-the-flesh-paused.png">
-            <img class="songTitleImage" id="fungibleImage" data-song="fungibleAudio"
-                src="images/symbioseImages/fungible-paused.png">
-            <img class="songTitleImage" id="inkSpreadsImage" data-song="inkSpreadsAudio"
-                src="images/symbioseImages/ink-spreads-paused.png">
-        </div>
-
-        <div id="eukaliptosowyDiv">
-
-        </div>
+        
     </div>
 
 
@@ -267,7 +325,7 @@
     </div> -->
 
     <div id="topControlsContainer">
-        <input id="fov" type="range" name="rng" value="181" min="10" max="350" step="1">
+        <input id="fov" type="range" name="rng" min="20" max="350" step="1">
         <img id="circleBW" src="images/controls/circleBW.png">
         <img id="topControlsNavButton" src="images/controls/top-controls-nav-button.png">
         <div id="topControlsDiv">
@@ -386,7 +444,8 @@
         const albumTitlesDivChildren = albumTitlesDiv.children
         const optionsDiv = document.getElementById("optionsDiv")
         const aboutDiv = document.getElementById("aboutDiv")
-        const aboutTextDiv = document.getElementById("aboutTextDiv")
+        const poemsDiv = document.getElementById("poemsDiv")
+        // const aboutTextDiv = document.getElementById("aboutTextDiv")
         // const div2D3D = document.getElementById("div2D3D")
         // const icon2D = document.getElementById("icon2D")
         // const icon3D = document.getElementById("icon3D")
@@ -444,10 +503,14 @@
         let albumsAreOpen = false
         let albumIsOpen = false
         let aboutIsOpen = false
-        let aboutDivChildren = aboutDiv.children
-        let aboutTextCounter = 0 
-        let aboutTextsObject = []
-        let aboutText
+        let poemsIsOpen = false
+        let poemsDivChildren = poemsDiv.children
+        let poemCounter = 0
+        // let aboutDivChildren = aboutDiv.children
+        // let aboutTextCounter = 0 
+        // let aboutTextsObject = []
+        // let aboutText
+        let poemsObject = []
         let dimensionSelectIsOpen = false
         let dimension2D = false
         let dimension3D = false
@@ -455,7 +518,7 @@
         const maapTitle = document.getElementById("maapTitle")
         const symbioseTitle = document.getElementById("symbioseTitle")
         const sapientsTitle = document.getElementById("sapientsTitle")
-        const eukaliptosowyTitle = document.getElementById("eukaliptosowyTitle")
+        const infinityTitle = document.getElementById("infinityTitle")
 
 
         // const viewPresets = {
@@ -636,10 +699,10 @@
                 divId: "maapDiv",
                 div1Width: "100%",
                 div2Width: "100%",
-                div1Height: "100%",
-                div2Height: "100%",
-                div1HeightLandscape: "100%",
-                div2HeightLandscape: "100%",                
+                div1Height: "100",
+                div2Height: "100",
+                div1HeightLandscape: "100",
+                div2HeightLandscape: "100",                
                 div1Left: "0%",
                 div2Left: "0%",
                 playlist: [
@@ -886,10 +949,10 @@
                 div2Width: "100%",
                 div1Left: "0%",
                 div2Left: "0%",
-                div1Height: "100%",
-                div2Height: "100%",
-                div1HeightLandscape: "100%",
-                div2HeightLandscape: "100%",                 
+                div1Height: "80",
+                div2Height: "80",
+                div1HeightLandscape: "100",
+                div2HeightLandscape: "100",                 
                 playlist: [
                     'moltenAudio',
                     'rocksAudio',
@@ -1029,10 +1092,10 @@
                 div2Width: "100%",
                 div1Left: "0%",
                 div2Left: "0%",
-                div1Height: "100%",
-                div2Height: "100%",   
-                div1HeightLandscape: "100%",
-                div2HeightLandscape: "100%",             
+                div1Height: "75",
+                div2Height: "75",   
+                div1HeightLandscape: "100",
+                div2HeightLandscape: "100",             
                 songs: {
                     sunDrinkersAudio: {
                         imageId: 'sunDrinkersImage',
@@ -1192,6 +1255,138 @@
                     'inkSpreadsAudio'
                 ]
             },
+            infinityAlbum: {
+                imageId: "infinityTitle",
+                divId: "infinityDiv",
+                fov: 90,
+                texture: "images/infinityImages/album-cube-texture",
+                div1Width: "100%",
+                div2Width: "100%",
+                div1Left: "0%",
+                div2Left: "0%",
+                div1Height: "75",
+                div2Height: "75",   
+                div1HeightLandscape: "100",
+                div2HeightLandscape: "100",             
+                songs: {
+                    interferenceAudio: {
+                        imageId: 'interferenceImage',
+                        audioId: 'interferenceAudio',
+                        pausedImg: "images/infinityImages/interference-paused.png",
+                        playingImg: "images/infinityImages/interference-playing.png",
+                        elem: document.getElementById("interferenceAudio"),                
+                    },    
+                    replicatorsAudio: {
+                        imageId: 'replicatorsImage',
+                        audioId: 'replicatorsAudio',
+                        pausedImg: "images/infinityImages/replicators-paused.png",
+                        playingImg: "images/infinityImages/replicators-playing.png",
+                        elem: document.getElementById("replicatorsAudio"),                
+                    },  
+                    problemAudio: {
+                        imageId: 'problemImage',
+                        audioId: 'problemAudio',
+                        pausedImg: "images/infinityImages/problem-paused.png",
+                        playingImg: "images/infinityImages/problem-playing.png",
+                        elem: document.getElementById("problemAudio"),                
+                    }, 
+                    explainAudio: {
+                        imageId: 'explainImage',
+                        audioId: 'explainAudio',
+                        pausedImg: "images/infinityImages/explain-paused.png",
+                        playingImg: "images/infinityImages/explain-playing.png",
+                        elem: document.getElementById("explainAudio"),                
+                    },   
+                    flipsAudio: {
+                        imageId: 'flipsImage',
+                        audioId: 'flipsAudio',
+                        pausedImg: "images/infinityImages/flips-paused.png",
+                        playingImg: "images/infinityImages/flips-playing.png",
+                        elem: document.getElementById("flipsAudio"),                
+                    }, 
+                    centralizationAudio: {
+                        imageId: 'centralizationImage',
+                        audioId: 'centralizationAudio',
+                        pausedImg: "images/infinityImages/centralization-paused.png",
+                        playingImg: "images/infinityImages/centralization-playing.png",
+                        elem: document.getElementById("centralizationAudio"),                
+                    }, 
+                    sustainableAudio: {
+                        imageId: 'sustainableImage',
+                        audioId: 'sustainableAudio',
+                        pausedImg: "images/infinityImages/sustainable-paused.png",
+                        playingImg: "images/infinityImages/sustainable-playing.png",
+                        elem: document.getElementById("sustainableAudio"),                
+                    },
+                    decentralizationAudio: {
+                        imageId: 'decentralizationImage',
+                        audioId: 'decentralizationAudio',
+                        pausedImg: "images/infinityImages/decentralization-paused.png",
+                        playingImg: "images/infinityImages/decentralization-playing.png",
+                        elem: document.getElementById("decentralizationAudio"),                
+                    }, 
+                    escapeAudio: {
+                        imageId: 'escapeImage',
+                        audioId: 'escapeAudio',
+                        pausedImg: "images/infinityImages/escape-paused.png",
+                        playingImg: "images/infinityImages/escape-playing.png",
+                        elem: document.getElementById("escapeAudio"),                
+                    },
+                    interplanetaryAudio: {
+                        imageId: 'interplanetaryImage',
+                        audioId: 'interplanetaryAudio',
+                        pausedImg: "images/infinityImages/interplanetary-paused.png",
+                        playingImg: "images/infinityImages/interplanetary-playing.png",
+                        elem: document.getElementById("interplanetaryAudio"),                
+                    },
+                    interstellarAudio: {
+                        imageId: 'interstellarImage',
+                        audioId: 'interstellarAudio',
+                        pausedImg: "images/infinityImages/interstellar-paused.png",
+                        playingImg: "images/infinityImages/interstellar-playing.png",
+                        elem: document.getElementById("interstellarAudio"),                
+                    },        
+                    intergalacticAudio: {
+                        imageId: 'intergalacticImage',
+                        audioId: 'intergalacticAudio',
+                        pausedImg: "images/infinityImages/intergalactic-paused.png",
+                        playingImg: "images/infinityImages/intergalactic-playing.png",
+                        elem: document.getElementById("intergalacticAudio"),                
+                    },  
+                    retreatAudio: {
+                        imageId: 'retreatImage',
+                        audioId: 'retreatAudio',
+                        pausedImg: "images/infinityImages/retreat-paused.png",
+                        playingImg: "images/infinityImages/retreat-playing.png",
+                        elem: document.getElementById("retreatAudio"),                
+                    },    
+                    unsustainableAudio: {
+                        imageId: 'unsustainableImage',
+                        audioId: 'unsustainableAudio',
+                        pausedImg: "images/infinityImages/unsustainable-paused.png",
+                        playingImg: "images/infinityImages/unsustainable-playing.png",
+                        elem: document.getElementById("unsustainableAudio"),                
+                    },                         
+                },
+                playlist: [
+                    'interferenceAudio',
+                    'replicatorsAudio',
+                    'problemAudio',
+                    'explainAudio',
+                    'flipsAudio',
+                    'centralizationAudio',
+                    'sustainableAudio'
+                ],
+                playlist2: [
+                    'decentralizationAudio',
+                    'escapeAudio',
+                    'interplanetaryAudio',
+                    'interstellarAudio',
+                    'intergalacticAudio',
+                    'retreatAudio',
+                    'unsustainableAudio'
+                ]
+            },
             horseloverAlbum: {
                 imageId: "horseloverTitle",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
@@ -1201,10 +1396,10 @@
                 div2Width: "100%",
                 div1Left: "0%",
                 div2Left: "0%",
-                div1Height: "33%",
-                div2Height: "33%",
-                div1HeightLandscape: "75%",
-                div2HeightLandscape: "75%",                 
+                div1Height: "33",
+                div2Height: "33",
+                div1HeightLandscape: "75",
+                div2HeightLandscape: "75",                 
                 texture: "images/horseloverImages/cambodia-stick-angel-dark",
                 texture2: "images/horseloverImages/cambodia-stick-angel-light",
                 fov: 250,
@@ -1487,6 +1682,8 @@
                 }
 
                 console.log("can't reselect")
+                currentSong.pause()
+                currentSongIsPlaying = false
 
             } else {
 
@@ -1498,6 +1695,7 @@
 
                 currentSong = song.elem
                 currentSong.play()
+                currentSongIsPlaying = true
                 pausePlayPNGPaused == false
                 pausePlay.src = "images/pause.png"
 
@@ -1580,8 +1778,7 @@
                 for (let song in songs) {
                     const image = document.getElementById(songs[song].imageId)
                     image.addEventListener("click", event => {
-                        setCurrentSong(songs[event.target.dataset.song])
-                        currentSongIsPlaying = false
+                        setCurrentSong(songs[event.target.dataset.song])                        
                     })
                 }
             
@@ -2221,6 +2418,9 @@
             if (option.id == "aboutOption") {
                 openAbout()
             }
+            if (option.id == "poemsOption") {
+                openPoems()
+            }
         }
 
         const openCurrentAlbum = (album) => {
@@ -2230,21 +2430,24 @@
             selectedAlbumDiv2 = document.getElementById(album.divId + "2")
             selectedAlbumDiv1Width = album.div1Width
             selectedAlbumDiv2Width = album.div2Width
-            selectedAlbumDiv1Height = album.div1Height
-            selectedAlbumDiv2Height = album.div2Height
-            selectedAlbumDiv1HeightLandscape = album.div1HeightLandscape
-            selectedAlbumDiv2HeightLandscape = album.div2HeightLandscape
+            selectedAlbumDiv1Height = album.div1Height + "%"
+            selectedAlbumDiv2Height = album.div2Height + "%"
+            selectedAlbumDiv1HeightLandscape = album.div1HeightLandscape + "%"
+            selectedAlbumDiv2HeightLandscape = album.div2HeightLandscape + "%"
             selectedAlbumDiv1Left = album.div1Left
             selectedAlbumDiv2Left = album.div2Left
-            selectedAlbumDiv1Top = (100 - album.div1Height)/2
-            selectedAlbumDiv2Top = (100 - album.div2Height)/2
-            selectedAlbumDiv1TopLandscape = (100 - album.div1HeightLandscape)/2
-            selectedAlbumDiv2TopLandscape = (100 - album.div2HeightLandscape)/2
+            selectedAlbumDiv1Top = (100 - album.div1Height)/2 + "%"
+            console.log(selectedAlbumDiv1Top)
+            
+            selectedAlbumDiv2Top = (100 - album.div2Height)/2 + "%"
+            selectedAlbumDiv1TopLandscape = (100 - album.div1HeightLandscape)/2 + "%"
+            selectedAlbumDiv2TopLandscape = (100 - album.div2HeightLandscape)/2 + "%"
             camera.fov = album.fov
             fov.value = album.fov
 
             if (backgroundBlack == true) {
                 currentPlaylist = album.playlist
+                selectedAlbumDiv1.style.display = "block"
                 selectedAlbumDiv1.style.width = selectedAlbumDiv1Width                
                 selectedAlbumDiv1.style.left = selectedAlbumDiv1Left
                 if (orientationPortrait == true){
@@ -2262,6 +2465,7 @@
             }
             if (backgroundBlack == false) {
                 currentPlaylist = album.playlist2
+                selectedAlbumDiv2.style.display = "block"
                 selectedAlbumDiv2.style.width = selectedAlbumDiv2Width               
                 selectedAlbumDiv2.style.left = selectedAlbumDiv2Left
                 if (orientationPortrait == true){
@@ -2295,9 +2499,11 @@
                     albumCube.material.map = loader.load(currentTexture2)
                     starSphere.material.map = loader.load(starSphere2)   
                 }
-                cubeColorSelect.src = currentTextureStem + "-icon.png"
-                starSphere1 = album.starSphere1
+                // cubeColorSelect.src = currentTextureStem + "-icon.png"
+                if (album.starsphere){
+                    starSphere1 = album.starSphere1
                 starSphere2 = album.starSphere2
+                }
 
                 fov.style.visibility = "visible"
                    
@@ -2335,6 +2541,8 @@
             seekbarContain.style.visibility = "visible"
             circleBW.style.visibility = "visible"
 
+            console.log(selectedAlbumDiv1.style.top, "top")
+
 
         }
 
@@ -2347,9 +2555,11 @@
             albumIsOpen = false
             selectedAlbumDiv1.style.width = "0%"
             selectedAlbumDiv1.style.height = "0%"
+            selectedAlbumDiv1.style.display = "none"
             selectedAlbumDiv1 = null
             selectedAlbumDiv2.style.width = "0%"
             selectedAlbumDiv2.style.height = "0%"
+            selectedAlbumDiv2.style.display = "none"
             selectedAlbumDiv2 = null
 
 
@@ -2478,7 +2688,7 @@
         const closeAlbums = () => {
 
             albumTitlesDiv.animate({
-                height: [albumTitlesDiv.style.height, "0%"]
+                height: ["50%", "0%"]
             }, {
                 duration: 1000,
                 easing: "ease",
@@ -2499,24 +2709,24 @@
         }
 
 
-        let aboutTextRetrieved
+    //     let aboutTextRetrieved
 
-        for (let textChild of aboutDivChildren) {
-        aboutTextRetrieved = textChild.innerHTML 
-        aboutTextsObject.push(aboutTextRetrieved)
-    }        
-        aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]
+    //     for (let textChild of aboutDivChildren) {
+    //     aboutTextRetrieved = textChild.innerHTML 
+    //     aboutTextsObject.push(aboutTextRetrieved)
+    // }        
+    //     aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]
 
          
 
         const openAbout = () => {
 
-            if (orientationPortrait == true){
-                aboutTextDiv.style.fontSize = "70%"
-            }
-            if (orientationPortrait == false){
-                aboutTextDiv.style.fontSize = "100%"
-            }
+            // if (orientationPortrait == true){
+            //     aboutTextDiv.style.fontSize = "70%"
+            // }
+            // if (orientationPortrait == false){
+            //     aboutTextDiv.style.fontSize = "100%"
+            // }
 
             optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
@@ -2547,29 +2757,72 @@
             })
 
             aboutIsOpen = true
-            aboutTextDiv.style.width = "100%"  
-            aboutTextDiv.style.visibility = "visible"                      
+            // aboutTextDiv.style.width = "100%"  
+            // aboutTextDiv.style.visibility = "visible"                      
 
         }
         
 
         
-            window.addEventListener("click", ()=> {
+    //         window.addEventListener("click", ()=> {
 
-                if (aboutIsOpen == true){
+    //             if (aboutIsOpen == true){
                 
-                aboutTextCounter += 1
-                if (aboutTextCounter == 4){
-                    aboutTextCounter = 0
-                }            
+    //             aboutTextCounter += 1
+    //             if (aboutTextCounter == 4){
+    //                 aboutTextCounter = 0
+    //             }            
                 
             
-            aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]           
+    //         aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]           
             
-        }
-    }
-            )
-    
+    //     }
+    // }
+    //         )             
+                               
+            
+            const openPoems = () => {
+
+                optionsDiv.style.width = "0%"
+            optionsDiv.style.height = "0%"
+
+            poemsDiv.style.display = "block"
+            
+                poemsIsOpen = true
+                console.log(poemsIsOpen)
+                backArrow.style.visibility = "visible"
+            backArrow.animate({
+                opacity: ["0", "0.5"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            }
+
+            let poemIndex = 1;
+
+const prev = document.getElementById("prev") 
+console.log(prev)
+prev.addEventListener('click', () => {
+  showPoems(poemIndex += -1);
+})
+const next = document.getElementById("next")
+next.addEventListener('click', () => {
+  showPoems(poemIndex += 1);
+})
+
+
+function showPoems(n) {
+  let i;
+  let poems = document.getElementsByClassName("myPoems");  
+  if (n > poems.length) {poemIndex = 1}    
+  if (n < 1) {poemIndex = poems.length}
+  for (i = 0; i < poems.length; i++) {
+    poems[i].style.display = "none";  
+  }  
+  poems[poemIndex-1].style.display = "block";    
+}    
+showPoems(poemIndex);
 
             
 
@@ -2578,7 +2831,11 @@
             aboutTextDiv.style.visibility = "hidden"
             albumCube.material.map = loader.load(transparentTexture)
             optionsDiv.style.width = "100%"
-            optionsDiv.style.height = "15%"
+            if (orientationPortrait == true){
+                optionsDiv.style.height = "33%"
+            } else {
+                optionsDiv.style.height = "25%"}
+            
             aboutTextDiv.style.width = "0%"
 
             habitatsScroll.style.visibility = "hidden"
@@ -2594,6 +2851,29 @@
             aboutIsOpen = false
 
         }
+        const closePoems = () => {
+            poemsDiv.animate({
+                height: ["50%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+            optionsDiv.style.width = "100%"
+            if (orientationPortrait == true){
+                optionsDiv.style.height = "33%"
+            } else {
+                optionsDiv.style.height = "25%"}
+                backArrow.animate({
+                opacity: ["0.5", "0"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            poemsDiv.style.display = "none"
+poemsIsOpen = false
+
+}
 
         pausePlay.addEventListener('click', event => {
             if (currentSong) {
@@ -2626,6 +2906,10 @@
             else if (aboutIsOpen == true) {
                 closeAbout()
                 aboutIsOpen = false
+            }
+            else if (poemsIsOpen == true) {
+                closePoems()
+                poemsIsOpen = false
             }
 
         })

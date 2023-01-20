@@ -45,16 +45,31 @@
       }
 
     #maapDiv {
-      display: block;
+      display: none;
       position: relative;
-      float: left;
       width: 0%;
       height: 0%;
       transition: 1s ease;
 
     }
     #maapDiv2 {
-      display: block;
+      display: none;
+      position: relative;
+      width: 0%;
+      height: 0%;
+      transition: 1s ease;
+    }
+
+    #infinityDiv {
+      display: none;
+      position: relative;
+      width: 0%;
+      height: 0%;
+      transition: 1s ease;
+
+    }
+    #infinityDiv2 {
+      display: none;
       position: relative;
       width: 0%;
       height: 0%;
@@ -64,7 +79,7 @@
 
 
     #sapientsDiv {
-      display: block;
+      display: none;
       position: relative;
       float: right;
       width: 0%;
@@ -74,7 +89,7 @@
     }
 
     #sapientsDiv2 {
-      display: block;
+      display: none;
       position: relative;
       float: right;
       width: 0%;
@@ -84,14 +99,14 @@
     }
 
     #symbioseDiv {
-      display: block;
+      display: none;
       position: relative;
       width: 0%;
       height: 0%;
       transition: 1s ease;
     }
     #symbioseDiv2 {
-      display: block;
+      display: none;
       position: relative;
       width: 0%;
       height: 0%;
@@ -133,8 +148,8 @@
   #optionsDiv {
     position: relative;
     transition: 1s;
-    top: 42.5%;
-    height: 15%;
+    top: 37.5%;
+    height: 25%;
     width: auto;    
   }
   #optionsDiv img {
@@ -142,7 +157,7 @@
     transition: 1s ease;
     width: 100%;
     opacity: 0.8;
-    height: 50%;
+    height: auto;
     
   }
        
@@ -154,8 +169,10 @@
 }
 
 
+
+
 #horseloverDiv {
-  display: block;
+  display: none;
   position: relative;
   float: left;
   width: 0%;
@@ -164,7 +181,7 @@
   top: 33%
 }
 #horseloverDiv2 {
-  display: block;
+  display: none;
   position: relative;
   float: left;
   width: 0%;
@@ -173,12 +190,47 @@
   top: 33%
 }
 
-  
+#pausePlay {
+  width: 10%;
+  position: absolute;
+  left: 45%;
+}
+
+#next {
+  right: -20%;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev {
+  left: -20%;
+  border-radius: 3px 0 0 3px;
+}
+
+#poemsDiv {
+	width: 100%;
+	height: 50%;
+	top: 25%;
+	display: none;
+	position: relative;
+}
 
 
   }
 
+
+
+
   @media (orientation: landscape) {   
+
+    #next {
+      right: -50%;
+      border-radius: 3px 0 0 3px;
+    }
+  
+    #prev {
+      left: -50%;
+      border-radius: 3px 0 0 3px;
+    }
 
     
 
@@ -221,17 +273,18 @@
         left: 33%;
     }
     #maapDiv {
-      display: block;
+      display: none;
       position: relative;
-      float: right;
       width: 0%;
+      height: 0%;
       transition: 1s ease;
  
     }
     #maapDiv2 {
-      display: block;
+      display: none;
       position: relative;
       width: 0%;
+      height: 0%;
       transition: 1s ease;
 
     }
@@ -239,29 +292,33 @@
 
 
     #sapientsDiv {
-      display: block;
+      display: none;
       position: relative;
       width: 0%;
+      height: 0%;
       transition: 1s ease;
 
     }
     #sapientsDiv2 {
-      display: block;
+      display: none;
       position: relative;
       width: 0%;
+      height: 0%;
       transition: 1s ease;
 
     }
     #symbioseDiv {
-      display: block;
+      display: none;
       position: relative;
       width: 0%;
+      height: 0%;
       transition: 1s ease;
     }
     #symbioseDiv2 {
-      display: block;
+      display: none;
       position: relative;
       width: 0%;
+      height: 0%;
       transition: 1s ease;
     }
 
@@ -287,8 +344,8 @@
   #optionsDiv {
     position: relative;
     transition: 1s;
-    top: 37.5%;
-    height: 25%;
+    top: 33%;
+    height: 33%;
     width: auto;
   }
 
@@ -309,22 +366,51 @@
 }
 
 #horseloverDiv {
-  display: block;
+  display: none;
   position: relative;
   float: left;
   width: 0%;
   transition: 1s ease;
-  height: 75%;
-  top: 12.5%
+  height: 0%;
+  top: 0%
 }
 #horseloverDiv2 {
-  display: block;
+  display: none;
   position: relative;
   float: left;
   width: 0%;
   transition: 1s ease;
-  height: 75%;
-  top: 12.5%
+  height: 0%;
+  top: 0%
+}
+
+#infinityDiv {
+  display: none;
+  position: relative;
+  width: 0%;
+  height: 0%;
+  transition: 1s ease;
+
+}
+#infinityDiv2 {
+  display: none;
+  position: relative;
+  width: 0%;
+  height: 0%;
+  transition: 1s ease;
+}
+
+#pausePlay {
+  width: 5%;
+  position: absolute;
+  left: 47.5%;
+}
+
+#poemsDiv {
+	height: 100%;
+	width: 100%;
+	display: none;
+	position: relative;
 }
 
   }
@@ -334,6 +420,155 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  #prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }  
+  
+  
+  #prev:hover, #next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .myPoems {
+    display: none;
+  filter: invert(1)
+  }
+
+  #poemsDiv img {
+    height: 100%;
+    position:relative
+  }
   
   .sideControl {
     opacity: 1;
@@ -393,6 +628,9 @@
     opacity: 0.4
 
   }
+
+  
+  
 
   #aboutDiv {
     height: 0%;
@@ -494,14 +732,7 @@
         position: absolute;
         right: 0%;
         top: 30%
-      }  
-      
-      #pausePlay {
-        width: 33;
-        top: 90%;
-        position: absolute;
-        left: 33%;
-      }
+      }             
 
       #backArrow {
         position: absolute;
