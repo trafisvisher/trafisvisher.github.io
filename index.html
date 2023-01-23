@@ -14,6 +14,29 @@
     <div id="rendererContain">
     </div>
 
+    <div id="imagesDiv">
+        <div class="myimages">                
+            <img src="images/images/cambodia.png" style="width:50%; left:25%">
+        </div>
+        <div class="myimages">                
+            <img src="images/images/ocean.jpg" style="width:50%; left: 25%">
+        </div>           
+        <div class="myimages">                
+            <img src="images/images/grandpa.jpg" style="width:50%; left: 25%">
+        </div>    
+        <div class="myimages">                
+            <img src="images/images/travis.jpeg" style="width:80%; left: 10%">
+        </div> 
+        <div class="myimages">                
+            <img src="images/images/serbians.jpg" style="width:80%; left: 10%">
+        </div>                   
+
+
+        <a id="prev2">❮</a>
+        <a id="next2">❯</a>            
+
+    </div>
+
     <!--AUDIO TRACKS -->
     <audio id="siderialAudio" preload="metadata" src="songs/maapSongs/siderial.mp3"> </audio>
     <audio id="abstractingAudio" preload="metadata" src="songs/maapSongs/abstracting-abstractions.mp3"> </audio>
@@ -64,7 +87,6 @@
     <audio id="replicatorsAudio" preload="metadata" src="songs/infinitySongs/replicators.mp3"></audio>
     <audio id="explainAudio" preload="metadata" src="songs/infinitySongs/explain.mp3"></audio>
     <audio id="problemAudio" preload="metadata" src="songs/infinitySongs/problem.mp3"></audio>
-    <audio id="flipsAudio" preload="metadata" src="songs/infinitySongs/copying-flips.mp3"></audio>
     <audio id="centralizationAudio" preload="metadata" src="songs/infinitySongs/centralization.mp3"></audio>
     <audio id="sustainableAudio" preload="metadata" src="songs/infinitySongs/sustainable.mp3"></audio>
     <audio id="decentralizationAudio" preload="metadata" src="songs/infinitySongs/decentralization.mp3"></audio>
@@ -116,7 +138,8 @@
         <div id="optionsDiv">
             <img id="musicOption" class="option" data-imgstm="images/music" src="images/music-unselected.png">
             <img id="aboutOption" class="option" data-imgstm="images/about" src="images/about-unselected.png">
-            <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/poems-unselected.png">
+            <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/words-unselected.png">
+            <img id="imagesOption" class="option" data-imgstm="images/images" src="images/images-unselected.png">
         </div>
         
 
@@ -146,7 +169,7 @@
             <a id="prev">❮</a>
             <a id="next">❯</a>            
 
-        </div>
+        </div>        
 
         <div id="seekbarContain" style="visibility: hidden;">
             <input id="dur" class="seekbar" type="range" name="rng" value="50" min="0" step=".1">
@@ -223,8 +246,6 @@
                 src="images/infinityImages/explain-paused.png">
             <img class="songTitleImage" id="problemImage" data-song="problemAudio"
                 src="images/infinityImages/problem-paused.png">
-                <img class="songTitleImage" id="flipsImage" data-song="flipsAudio"
-                src="images/infinityImages/flips-paused.png">
             <img class="songTitleImage" id="centralizationImage" data-song="centralizationAudio"
                 src="images/infinityImages/centralization-paused.png">
             <img class="songTitleImage" id="sustainableImage" data-song="sustainableAudio"
@@ -445,6 +466,7 @@
         const optionsDiv = document.getElementById("optionsDiv")
         const aboutDiv = document.getElementById("aboutDiv")
         const poemsDiv = document.getElementById("poemsDiv")
+        const imagesDiv = document.getElementById("imagesDiv")
         // const aboutTextDiv = document.getElementById("aboutTextDiv")
         // const div2D3D = document.getElementById("div2D3D")
         // const icon2D = document.getElementById("icon2D")
@@ -506,11 +528,15 @@
         let poemsIsOpen = false
         let poemsDivChildren = poemsDiv.children
         let poemCounter = 0
+        let imagesIsOpen = false
+        let imagesDivChildren = imagesDiv.children
+        let imageCounter = 0
         // let aboutDivChildren = aboutDiv.children
         // let aboutTextCounter = 0 
         // let aboutTextsObject = []
         // let aboutText
         let poemsObject = []
+        let imagesObject = []
         let dimensionSelectIsOpen = false
         let dimension2D = false
         let dimension3D = false
@@ -697,14 +723,14 @@
                 fov: 60,
                 imageId: "maapTitle",
                 divId: "maapDiv",
-                div1Width: "100%",
-                div2Width: "100%",
-                div1Height: "100",
-                div2Height: "100",
+                div1Width: "80%",
+                div2Width: "80%",
+                div1Height: "75",
+                div2Height: "75",
                 div1HeightLandscape: "100",
                 div2HeightLandscape: "100",                
-                div1Left: "0%",
-                div2Left: "0%",
+                div1Left: "10%",
+                div2Left: "10%",
                 playlist: [
                     'siderialAudio',
                     'coordinumAudio',
@@ -945,12 +971,12 @@
                 divId: "sapientsDiv",
                 fov: 120,
                 texture: "images/sapientsImages/album-cube-texture",
-                div1Width: "100%",
-                div2Width: "100%",
-                div1Left: "0%",
-                div2Left: "0%",
-                div1Height: "80",
-                div2Height: "80",
+                div1Width: "80%",
+                div2Width: "80%",
+                div1Left: "10%",
+                div2Left: "10%",
+                div1Height: "75",
+                div2Height: "75",
                 div1HeightLandscape: "100",
                 div2HeightLandscape: "100",                 
                 playlist: [
@@ -1088,11 +1114,11 @@
                 divId: "symbioseDiv",
                 fov: 90,
                 texture: "images/symbioseImages/album-cube-texture",
-                div1Width: "100%",
-                div2Width: "100%",
-                div1Left: "0%",
-                div2Left: "0%",
-                div1Height: "75",
+                div1Width: "80%",
+                div2Width: "80%",
+                div1Left: "10%",
+                div2Left: "10%",
+                div1Height: "50",
                 div2Height: "75",   
                 div1HeightLandscape: "100",
                 div2HeightLandscape: "100",             
@@ -1260,12 +1286,12 @@
                 divId: "infinityDiv",
                 fov: 90,
                 texture: "images/infinityImages/album-cube-texture",
-                div1Width: "100%",
-                div2Width: "100%",
-                div1Left: "0%",
-                div2Left: "0%",
-                div1Height: "75",
-                div2Height: "75",   
+                div1Width: "80%",
+                div2Width: "80%",
+                div1Left: "10%",
+                div2Left: "10%",
+                div1Height: "50",
+                div2Height: "50",   
                 div1HeightLandscape: "100",
                 div2HeightLandscape: "100",             
                 songs: {
@@ -1296,14 +1322,7 @@
                         pausedImg: "images/infinityImages/explain-paused.png",
                         playingImg: "images/infinityImages/explain-playing.png",
                         elem: document.getElementById("explainAudio"),                
-                    },   
-                    flipsAudio: {
-                        imageId: 'flipsImage',
-                        audioId: 'flipsAudio',
-                        pausedImg: "images/infinityImages/flips-paused.png",
-                        playingImg: "images/infinityImages/flips-playing.png",
-                        elem: document.getElementById("flipsAudio"),                
-                    }, 
+                    },                      
                     centralizationAudio: {
                         imageId: 'centralizationImage',
                         audioId: 'centralizationAudio',
@@ -1372,8 +1391,7 @@
                     'interferenceAudio',
                     'replicatorsAudio',
                     'problemAudio',
-                    'explainAudio',
-                    'flipsAudio',
+                    'explainAudio',  
                     'centralizationAudio',
                     'sustainableAudio'
                 ],
@@ -1392,10 +1410,10 @@
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/maapImages/iridescent-background.png",
                 divId: "horseloverDiv",
-                div1Width: "100%",
-                div2Width: "100%",
-                div1Left: "0%",
-                div2Left: "0%",
+                div1Width: "80%",
+                div2Width: "80%",
+                div1Left: "10%",
+                div2Left: "10%",
                 div1Height: "33",
                 div2Height: "33",
                 div1HeightLandscape: "75",
@@ -1545,7 +1563,7 @@
         //     sunSphere = new THREE.Mesh(sunSphereGeometry, sunSphereMaterial)
         //     scene.add(sunSphere)
         //     sunSphere.position.x = 600
-        //     console.log(sunSphere)
+        //     
 
         // }
 
@@ -1680,8 +1698,7 @@
                 if (pausedForShift == true) {
                     pausedForShift = false
                 }
-
-                console.log("can't reselect")
+                
                 currentSong.pause()
                 currentSongIsPlaying = false
 
@@ -1707,16 +1724,14 @@
                     songSphere.material.map = loader.load(selectedSphereTexture)
 
 
-                    if (song.starSphere) {
-                        console.log("gotstarsphere")
+                    if (song.starSphere) {                        
                         starSphere.material.map = loader.load(song.starSphere)
                         scene.remove(sunSphere)
                         if (song.sunSphereSize !== 0) {
                             createSunSphere(song.sunSphereSize, song.sunSphereTexture)
                             // sunLight.color.set(song.sunColor)
                         }
-                        if (song.sunSphereSize == 0) {
-                            console.log("twas0")
+                        if (song.sunSphereSize == 0) {                            
                             scene.remove(sunSphere)
                         }
                     }
@@ -1724,7 +1739,7 @@
                     if (song.cubeTexture) {
                         albumCube.material.map = loader.load(song.cubeTexture)
 
-                        console.log(song.cubeTexture)
+                        
                     }
 
                     if (song.sphereRotation) {
@@ -2198,27 +2213,27 @@
         for (let child of albumTitlesDivChildren) {
             child.style.height = 100 / albumTitlesDivChildren.length + "%"
             child.style.width = 100 + "%"
-            console.log(child.style.height)
+            
         }        
 
         for (let album of albumDivContainerChildren){            
             anAlbum = album.children            
             for (let title of anAlbum){            
                 let titleHeight = 100/anAlbum.length
-                console.log(titleHeight)
+                
                 let titleWidth
-                console.log(orientationPortrait)
+                
                 if (orientationPortrait == true){
                 titleWidth = (titleHeight * 8)
                 }
                 if (orientationPortrait == false){
                 titleWidth = (titleHeight * 4)
-                console.log("twasfalse")
+                
                 }
                 if (titleWidth >= 100){
                     titleWidth = 100
                 }
-                console.log(titleWidth)
+                
                 let titleLeft = (100-titleWidth)/2
 
                 title.style.height = titleHeight + "%"              
@@ -2328,25 +2343,24 @@
 
                     for (let album of albumDivContainerChildren){            
             anAlbum = album.children
-            console.log(anAlbum)
+            
             for (let title of anAlbum){                
                 
                 let titleHeight = 100/anAlbum.length
-                console.log(titleHeight)
+                
                 let titleWidth
                 if (orientationPortrait == true){
                 titleWidth = (titleHeight * 8)
                 }
                 if (orientationPortrait == false){
                 titleWidth = (titleHeight * 4)
-                console.log("orientationportaitFALSE")
-                console.log(titleWidth)
+               
                 }
                 if (titleWidth >= 100){
                     titleWidth = 100
-                    console.log("twasgreater")
+                    
                 }
-                console.log(titleWidth)
+                
                 let titleLeft = (100-titleWidth)/2
 
                 title.style.height = titleHeight + "%"              
@@ -2421,6 +2435,9 @@
             if (option.id == "poemsOption") {
                 openPoems()
             }
+            if (option.id == "imagesOption") {
+                openImages()
+            }
         }
 
         const openCurrentAlbum = (album) => {
@@ -2437,7 +2454,7 @@
             selectedAlbumDiv1Left = album.div1Left
             selectedAlbumDiv2Left = album.div2Left
             selectedAlbumDiv1Top = (100 - album.div1Height)/2 + "%"
-            console.log(selectedAlbumDiv1Top)
+            
             
             selectedAlbumDiv2Top = (100 - album.div2Height)/2 + "%"
             selectedAlbumDiv1TopLandscape = (100 - album.div1HeightLandscape)/2 + "%"
@@ -2446,8 +2463,7 @@
             fov.value = album.fov
 
             if (backgroundBlack == true) {
-                currentPlaylist = album.playlist
-                selectedAlbumDiv1.style.display = "block"
+                currentPlaylist = album.playlist                
                 selectedAlbumDiv1.style.width = selectedAlbumDiv1Width                
                 selectedAlbumDiv1.style.left = selectedAlbumDiv1Left
                 if (orientationPortrait == true){
@@ -2464,8 +2480,7 @@
                 }
             }
             if (backgroundBlack == false) {
-                currentPlaylist = album.playlist2
-                selectedAlbumDiv2.style.display = "block"
+                currentPlaylist = album.playlist2                
                 selectedAlbumDiv2.style.width = selectedAlbumDiv2Width               
                 selectedAlbumDiv2.style.left = selectedAlbumDiv2Left
                 if (orientationPortrait == true){
@@ -2525,6 +2540,10 @@
                 easing: "ease",
                 fill: "forwards"
             })
+
+            setTimeout(() => {
+                albumTitlesDiv.style.display = "none";              
+              }, 1000)
           
 
             centerContainer.animate({
@@ -2541,7 +2560,7 @@
             seekbarContain.style.visibility = "visible"
             circleBW.style.visibility = "visible"
 
-            console.log(selectedAlbumDiv1.style.top, "top")
+            
 
 
         }
@@ -2555,11 +2574,15 @@
             albumIsOpen = false
             selectedAlbumDiv1.style.width = "0%"
             selectedAlbumDiv1.style.height = "0%"
-            selectedAlbumDiv1.style.display = "none"
+            setTimeout(() => {
+                selectedAlbumDiv1.style.display = "none";              
+              }, 1000)
             selectedAlbumDiv1 = null
             selectedAlbumDiv2.style.width = "0%"
             selectedAlbumDiv2.style.height = "0%"
-            selectedAlbumDiv2.style.display = "none"
+            setTimeout(() => {
+                selectedAlbumDiv2.style.display = "none";              
+              }, 1000)
             selectedAlbumDiv2 = null
 
 
@@ -2643,6 +2666,7 @@
         // }
 
         const openAlbums = () => {
+            albumTitlesDiv.style.display = "block"
             if (orientationPortrait == true){
             albumTitlesDiv.animate({
                 height: ["0%", "50%"],
@@ -2682,6 +2706,14 @@
             }
             albumsAreOpen = true
 
+            
+
+            for (let album of albumDivContainerChildren){
+                console.log(album.id)
+                let blockAlbum = document.getElementById(album.id)
+                blockAlbum.style.display = "block"
+            }
+
         }
 
 
@@ -2705,6 +2737,7 @@
             })
 
             albumDivContainer.style.width = "0%"
+            albumTitlesDiv.style.display = "none"
 
         }
 
@@ -2788,8 +2821,7 @@
 
             poemsDiv.style.display = "block"
             
-                poemsIsOpen = true
-                console.log(poemsIsOpen)
+                poemsIsOpen = true                
                 backArrow.style.visibility = "visible"
             backArrow.animate({
                 opacity: ["0", "0.5"]
@@ -2802,7 +2834,7 @@
             let poemIndex = 1;
 
 const prev = document.getElementById("prev") 
-console.log(prev)
+
 prev.addEventListener('click', () => {
   showPoems(poemIndex += -1);
 })
@@ -2824,11 +2856,53 @@ function showPoems(n) {
 }    
 showPoems(poemIndex);
 
+const openImages = () => {
+
+optionsDiv.style.width = "0%"
+optionsDiv.style.height = "0%"
+
+imagesDiv.style.display = "block"
+
+imagesIsOpen = true                
+backArrow.style.visibility = "visible"
+backArrow.animate({
+opacity: ["0", "0.5"]
+}, {
+duration: 1000,
+fill: "forwards"
+})
+}
+
+let imageIndex = 1;
+
+const prev2 = document.getElementById("prev2") 
+
+prev2.addEventListener('click', () => {
+showImages(poemIndex += -1);
+})
+const next2 = document.getElementById("next2")
+next2.addEventListener('click', () => {
+showImages(poemIndex += 1);
+})
+
+
+function showImages(n) {
+let i;
+let Images = document.getElementsByClassName("myImages");  
+if (n > Images.length) {poemIndex = 1}    
+if (n < 1) {poemIndex = Images.length}
+for (i = 0; i < Images.length; i++) {
+Images[i].style.display = "none";  
+}  
+Images[poemIndex-1].style.display = "block";    
+}    
+showImages(poemIndex);
+
             
 
         const closeAbout = () => {
 
-            aboutTextDiv.style.visibility = "hidden"
+            
             albumCube.material.map = loader.load(transparentTexture)
             optionsDiv.style.width = "100%"
             if (orientationPortrait == true){
@@ -2836,7 +2910,7 @@ showPoems(poemIndex);
             } else {
                 optionsDiv.style.height = "25%"}
             
-            aboutTextDiv.style.width = "0%"
+            
 
             habitatsScroll.style.visibility = "hidden"
             travisImage.style.visibility = "hidden"
@@ -3028,8 +3102,7 @@ poemsIsOpen = false
 
                 currentPlaylist = currentPlaylist2
 
-
-                if (selectedAlbumDiv1) {
+                if (selectedAlbumDiv1) {                    
                     selectedAlbumDiv2.style.width = selectedAlbumDiv2Width
                     selectedAlbumDiv2.style.left = selectedAlbumDiv2Left
                     if (orientationPortrait == true){
@@ -3041,16 +3114,10 @@ poemsIsOpen = false
                     }
                     selectedAlbumDiv1.style.width = "0%"
                     selectedAlbumDiv1.style.height = "0%"
+                    selectedAlbumDiv1.style.left = "100%"                    
                 }                 
 
-                    starSphere.material.map = loader.load(starSphere2)
-                    
-
-                    // albumDivContainer.style.left = "auto"
-                    // albumDivContainer.style.right = "45px"
-                    // albumDivContainer.style.float = "right"
-                    // albumDivContainer.style.width = "200px"
-
+                    starSphere.material.map = loader.load(starSphere2)                  
 
                     // sideControlsContainer.style.left = "0%"
                     // sideControlsDiv.style.left = "35%"
@@ -3104,7 +3171,7 @@ poemsIsOpen = false
 
                 currentPlaylist = currentPlaylist1
 
-                if (selectedAlbumDiv1) {
+                if (selectedAlbumDiv1) {                    
                     selectedAlbumDiv1.style.width = selectedAlbumDiv1Width
                     selectedAlbumDiv1.style.left = selectedAlbumDiv1Left
                     if (orientationPortrait == true){
@@ -3115,7 +3182,7 @@ poemsIsOpen = false
                     selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
                     }
                     selectedAlbumDiv2.style.height = "0%"
-                    selectedAlbumDiv2.style.width = "0%"                
+                    selectedAlbumDiv2.style.width = "0%"                        
                 } 
 
                     starSphere.material.map = loader.load(starSphere1)                   
