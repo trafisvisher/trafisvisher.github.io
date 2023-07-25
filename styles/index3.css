@@ -14,6 +14,61 @@
       background-color: black;
       background-size: 300px;
     }
+
+    #optionsDiv {
+      display: none;
+      transition: 1s;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    #imagesDiv {
+      overflow: hidden;
+    }
+
+    #poemsDiv {
+      overflow: hidden;
+    }
+
+    #aboutDiv {
+      overflow: hidden;
+    }
+
+    
+
+    #loadingScreen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 9999;
+  }
+  
+  .loader {
+      border: 6px solid #104647;
+      border-top: 6px solid #34db4a;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+  
+  #loadingScreen p {
+    color: white;    
+    font-family: 'Courier New', Courier, monospace;
+      margin-top: 20px;
+  }
         
     @media (orientation: portrait) {   
 
@@ -200,12 +255,12 @@
 }
 
 #next {
-  right: -20%;
+  right: -10%;
   border-radius: 3px 0 0 3px;
 }
 
 #prev {
-  left: -20%;
+  left: -10%;
   border-radius: 3px 0 0 3px;
 }
 
@@ -222,8 +277,8 @@
 
 #poemsDiv {
 	width: 100%;
-	height: 50%;
-	top: 25%;
+	height: 75%;
+	top: 12.5%;
 	display: none;
 	position: relative;
 }
@@ -253,6 +308,14 @@
   height: 80%;
   top: 10%;
   left: 10%;
+  position: relative
+}
+
+#sphereImage {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
   position: relative
 }
 
@@ -324,6 +387,14 @@
       left: 25%;
       position: relative
       
+    }
+
+    #sphereImage {
+      width: 60%;
+      height: 100%;
+      top: 0%;
+      left: 20%;
+      position: relative
     }
 
     #flowersImage {
@@ -729,6 +800,7 @@
 
 
   #prev, #next, #prev2, #next2 {
+    display: none;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -744,7 +816,7 @@
   
   .myPoems {
     display: none;
-  filter: invert(1)
+    height: 100%
   }
 
   #poemsDiv img {

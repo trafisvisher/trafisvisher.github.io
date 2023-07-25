@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 
 <head>
 
@@ -12,6 +12,11 @@
 
 <body>
     <div id="rendererContain">
+    </div>
+
+    <div id="loadingScreen">
+        <div class="loader"></div>
+        <p>loading...</p>
     </div>
 
     <div id="imagesDiv">
@@ -30,6 +35,10 @@
         </div> 
             <div class="myimages">                
                 <img id="language2Image" src="images/images/language2.png">
+                </div> 
+
+                <div class="myimages">                
+                    <img id="sphereImage" src="images/images/sphere.png">
                 </div> 
         </div>                   
 
@@ -140,7 +149,7 @@
         <div id="optionsDiv">
             <img id="musicOption" class="option" data-imgstm="images/music" src="images/music-unselected.png">
             <img id="aboutOption" class="option" data-imgstm="images/about" src="images/about-unselected.png">
-            <!-- <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/words-unselected.png"> -->
+            <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/words-unselected.png">
             <img id="imagesOption" class="option" data-imgstm="images/images" src="images/images-unselected.png">
         </div>
         
@@ -161,17 +170,29 @@
             <img id="horseloverTitle" src="images/horselover-title.png">
         </div>
 
-        <!-- <div id="poemsDiv">
+        <div id="poemsDiv">
             <div class="myPoems">                
-                <img src="poems/what-sailed-thereon.png" style="width:100%">
+                <img src="poems/castles.jpg" style="width:100%">
             </div>
             <div class="myPoems">                
-                <img src="poems/sarajevo.png" style="width:100%">
-            </div>              
+                <img src="poems/vltava.jpg" style="width:100%">
+            </div>     
+            <div class="myPoems">                
+                <img src="poems/whisked.jpg" style="width:100%">
+            </div>     
+            <div class="myPoems">                
+                <img src="poems/insect.jpg" style="width:100%">
+            </div>     
+            
+            <div class="myPoems">                
+                <img src="poems/sarajevo.png" style="width:100%; filter: invert(1);">
+            </div>            
+            
+
             <a id="prev">❮</a>
             <a id="next">❯</a>            
 
-        </div>         -->
+        </div>        
 
         <div id="seekbarContain" style="visibility: hidden;">
             <input id="dur" class="seekbar" type="range" name="rng" value="50" min="0" step=".1">
@@ -399,6 +420,18 @@
         const loader = new THREE.TextureLoader();
         loader.crossOrigin = '';
 
+        window.onload = function() {
+    // This function will run when everything is loaded and ready
+    enableInteraction();
+};
+
+function enableInteraction(){
+    optionsDiv.style.display = "block"
+    optionsDiv.style.pointerEvents = "auto"
+    const loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.style.display = 'none';
+}
+
         // let sphereScaleClickCount = 1
 
         let pngDarkLightFile = "-dark.png"
@@ -469,7 +502,7 @@
         const albumTitlesDivChildren = albumTitlesDiv.children
         const optionsDiv = document.getElementById("optionsDiv")
         const aboutDiv = document.getElementById("aboutDiv")
-        // const poemsDiv = document.getElementById("poemsDiv")
+        const poemsDiv = document.getElementById("poemsDiv")
         const imagesDiv = document.getElementById("imagesDiv")
         // const aboutTextDiv = document.getElementById("aboutTextDiv")
         // const div2D3D = document.getElementById("div2D3D")
@@ -532,9 +565,9 @@
         let albumsAreOpen = false
         let albumIsOpen = false
         let aboutIsOpen = false
-        // let poemsIsOpen = false
-        // let poemsDivChildren = poemsDiv.children
-        // let poemCounter = 0
+        let poemsIsOpen = false
+        let poemsDivChildren = poemsDiv.children
+        let poemCounter = 0
         let imagesIsOpen = false
         let imagesDivChildren = imagesDiv.children
         let imageCounter = 0
@@ -542,7 +575,7 @@
         // let aboutTextCounter = 0 
         // let aboutTextsObject = []
         // let aboutText
-        // let poemsObject = []
+        let poemsObject = []
         let imagesObject = []
         let dimensionSelectIsOpen = false
         let dimension2D = false
@@ -2445,9 +2478,9 @@
             if (option.id == "aboutOption") {
                 openAbout()
             }
-            // if (option.id == "poemsOption") {
-            //     openPoems()
-            // }
+            if (option.id == "poemsOption") {
+                openPoems()
+            }
             if (option.id == "imagesOption") {
                 openImages()
             }
@@ -2830,47 +2863,49 @@
     //         )             
                                
             
-//             const openPoems = () => {
+            const openPoems = () => {
 
-//                 optionsDiv.style.width = "0%"
-//             optionsDiv.style.height = "0%"
+                optionsDiv.style.width = "0%"
+            optionsDiv.style.height = "0%"
 
-//             poemsDiv.style.display = "block"
+            poemsDiv.style.display = "block"
             
-//                 poemsIsOpen = true                
-//                 backArrow.style.visibility = "visible"
-//             backArrow.animate({
-//                 opacity: ["0", "0.5"]
-//             }, {
-//                 duration: 1000,
-//                 fill: "forwards"
-//             })
-//             }
+                poemsIsOpen = true                
+                backArrow.style.visibility = "visible"
+            backArrow.animate({
+                opacity: ["0", "0.5"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            }
 
-//             let poemIndex = 1;
+            let poemIndex = 1;
 
-// const prev = document.getElementById("prev") 
+const prev = document.getElementById("prev") 
+prev.style.display = "block"
 
-// prev.addEventListener('click', () => {
-//   showPoems(poemIndex += -1);
-// })
-// const next = document.getElementById("next")
-// next.addEventListener('click', () => {
-//   showPoems(poemIndex += 1);
-// })
+prev.addEventListener('click', () => {
+  showPoems(poemIndex += -1);
+})
+const next = document.getElementById("next")
+next.style.display = "block"
+next.addEventListener('click', () => {
+  showPoems(poemIndex += 1);
+})
 
 
-// function showPoems(n) {
-//   let i;
-//   let poems = document.getElementsByClassName("myPoems");  
-//   if (n > poems.length) {poemIndex = 1}    
-//   if (n < 1) {poemIndex = poems.length}
-//   for (i = 0; i < poems.length; i++) {
-//     poems[i].style.display = "none";  
-//   }  
-//   poems[poemIndex-1].style.display = "block";    
-// }    
-// showPoems(poemIndex);
+function showPoems(n) {
+  let i;
+  let poems = document.getElementsByClassName("myPoems");  
+  if (n > poems.length) {poemIndex = 1}    
+  if (n < 1) {poemIndex = poems.length}
+  for (i = 0; i < poems.length; i++) {
+    poems[i].style.display = "none";  
+  }  
+  poems[poemIndex-1].style.display = "block";    
+}    
+showPoems(poemIndex);
 
 const openImages = () => {
 
@@ -2880,6 +2915,8 @@ const openImages = () => {
 
 optionsDiv.style.width = "0%"
 optionsDiv.style.height = "0%"
+
+showImages(imageIndex);
 
 
 
@@ -2902,7 +2939,9 @@ fill: "forwards"
 
 
 imagesDiv.addEventListener('touchstart', handleTouchStart, false);
-imagesDiv.addEventListener('touchmove', handleTouchMove, false);
+imagesDiv.addEventListener('touchmove', handleTouchEnd, false);
+poemsDiv.addEventListener('touchstart', handleTouchStart, false);
+poemsDiv.addEventListener('touchmove', handleTouchEnd2, false);
 
 // Handle touch start
 function handleTouchStart(event) {
@@ -2910,18 +2949,46 @@ function handleTouchStart(event) {
     startY = event.touches[0].clientY;
 }
 
-// Handle touch move
-function handleTouchMove(event) {
+function handleTouchEnd(event) {
     if (!startX || !startY) return;
-    const deltaX = event.touches[0].clientX - startX;
-    const deltaY = event.touches[0].clientY - startY;
+
+    const endX = event.changedTouches[0].clientX;
+    const endY = event.changedTouches[0].clientY;
+
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
 
     // Check if the swipe is horizontal (left or right) and long enough
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {        
+        
         if (deltaX > 0) {
             showImages(imageIndex += -1)
         } else {
             showImages(imageIndex += 1)
+        }
+    }
+
+    // Reset the start coordinates to prevent multiple swipes in one touch event
+    startX = null;
+    startY = null;
+}
+
+function handleTouchEnd2(event) {
+    if (!startX || !startY) return;
+
+    const endX = event.changedTouches[0].clientX;
+    const endY = event.changedTouches[0].clientY;
+
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+
+    // Check if the swipe is horizontal (left or right) and long enough
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {        
+        
+        if (deltaX > 0) {
+            showPoems(poemIndex += -1)
+        } else {
+            showPoems(poemIndex += 1)
         }
     }
 
@@ -2956,7 +3023,7 @@ Images[i].style.display = "none";
 }  
 Images[imageIndex-1].style.display = "block";
 }    
-showImages(imageIndex);
+
 
             
 
@@ -2987,30 +3054,33 @@ showImages(imageIndex);
             centerContainer.style.display = "block"
 
         }
-//         const closePoems = () => {
-//             poemsDiv.animate({
-//                 height: ["50%", "0%"]
-//             }, {
-//                 duration: 1000,
-//                 easing: "ease",
-//                 fill: "forwards"
-//             })
-//             optionsDiv.style.width = "100%"
-//             if (orientationPortrait == true){
-//                 optionsDiv.style.height = "33%"
-//             } else {
-//                 optionsDiv.style.height = "25%"}
-//                 backArrow.animate({
-//                 opacity: ["0.5", "0"]
-//             }, {
-//                 duration: 1000,
-//                 fill: "forwards"
-//             })
-//             poemsDiv.style.display = "none"
-// poemsIsOpen = false
-// centerContainer.style.display = "block"
+        const closePoems = () => {
+            poemsDiv.animate({
+                height: ["50%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+            optionsDiv.style.width = "100%"
+            if (orientationPortrait == true){
+                optionsDiv.style.height = "33%"
+            } else {
+                optionsDiv.style.height = "25%"}
+                backArrow.animate({
+                opacity: ["0.5", "0"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            poemsDiv.style.display = "none"
+poemsIsOpen = false
 
-// }
+prev.style.display = "none"
+next.style.display = "none"
+centerContainer.style.display = "block"
+
+}
 
 const closeImages = () => {
             imagesDiv.animate({
@@ -3071,10 +3141,10 @@ next2.style.display = "none"
                 closeAbout()
                 aboutIsOpen = false
             }
-            // else if (poemsIsOpen == true) {
-            //     closePoems()
-            //     poemsIsOpen = false
-            // }
+            else if (poemsIsOpen == true) {
+                closePoems()
+                poemsIsOpen = false
+            }
             else if (imagesIsOpen == true) {
                 closeImages()
                 imagesIsOpen = false
