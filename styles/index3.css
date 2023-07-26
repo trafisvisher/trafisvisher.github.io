@@ -274,7 +274,7 @@
 #poemsDiv {
 	height: 100vh;
 	display: none;
-	position: relative;
+	position: fixed;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -283,7 +283,7 @@
 #imagesDiv {
 	height: 100vh;
 	display: none;
-	position: relative;
+	position: fixed;
   align-items: center;
   justify-content: center;
 }
