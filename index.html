@@ -2482,6 +2482,9 @@ let userIsMobile = isMobileDevice()
             selectedAlbumDiv2Left = album.div2Left
             selectedAlbumDiv1Top = (100 - album.div1Height) / 2 + "%"
 
+            selectedAlbumDiv1.style.display = "block"
+            selectedAlbumDiv2.style.display = "block"
+
 
             selectedAlbumDiv2Top = (100 - album.div2Height) / 2 + "%"
             selectedAlbumDiv1TopLandscape = (100 - album.div1HeightLandscape) / 2 + "%"
@@ -2532,13 +2535,20 @@ let userIsMobile = isMobileDevice()
 
             currentTextureStem = album.texture
             currentTexture = album.texture + ".png"
+            if (album.texture2){
             currentTexture2 = album.texture2 + ".png"
+            }
             if (backgroundBlack == true) {
                 albumCube.material.map = loader.load(currentTexture)
                 starSphere.material.map = loader.load(starSphere1)
             }
             if (backgroundBlack == false) {
+                if (album.texture2){
                 albumCube.material.map = loader.load(currentTexture2)
+                }
+                else {
+                    albumCube.material.map = loader.load(currentTexture)
+                }
                 starSphere.material.map = loader.load(starSphere2)
             }
             // cubeColorSelect.src = currentTextureStem + "-icon.png"
@@ -3031,7 +3041,7 @@ let userIsMobile = isMobileDevice()
         const closeAbout = () => {
 
 
-            albumCube.material.map = loader.load(transparentTexture)
+            // albumCube.material.map = loader.load(transparentTexture)
             optionsDiv.style.width = "100%"
             optionsDiv.style.height = "33%"
                 optionsDiv.style.top = "33%"
@@ -3080,13 +3090,6 @@ let userIsMobile = isMobileDevice()
         }
 
         const closeImages = () => {
-            imagesDiv.animate({
-                height: ["50%", "0%"]
-            }, {
-                duration: 1000,
-                easing: "ease",
-                fill: "forwards"
-            })
             optionsDiv.style.width = "100%"
             optionsDiv.style.height = "33%"
                 optionsDiv.style.top = "33%"
