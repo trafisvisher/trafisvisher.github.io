@@ -145,26 +145,6 @@
     <div id="scrollContainer">
         <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg" loading="lazy">
         <img id="travisImage" src="images/travis-image.png">
-        <!-- <div id="aboutTextDiv">          
-        </div> -->
-        <!-- <div id="aboutDiv">
-            <div id="aboutText" class="aboutText">   
-                it's not exactly what I mean to say,
-                it's like...(aha, can we do it like this again? a vague phrase then clarifying, like,
-                the steady occasion, (from time to time with regularity)) ... so what do I mean? 
-            </div>
-            <div id="aboutText2" class="aboutText">   
-                yet you gave then no poke like hey, you there? which I interpreted as, 
-                well best I guess to go our separate ways at least a while ... was that a leap? 
-                sweep me soundly, distance is so real, at least then. anyhow that I did, separately swept, 
-                not without sensing a constant gravity, fluctuating between ghost-dreamt-vagary to 
-                what-a-link-to-lose-I-should-reachout, daily strengthening the tension, so here we are at that 
-                pinnacle (factor, factor, factor, blah), but I really do wonder --
-            </div>
-            <div id="aboutText3" class="aboutText">   
-                bwaaaaaaaaaaah!!!
-            </div>
-        </div> -->
     </div>
 
     <div id="centerContainer">
@@ -174,15 +154,6 @@
             <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/words-unselected.png">
             <img id="imagesOption" class="option" data-imgstm="images/images" src="images/images-unselected.png">
         </div>
-
-
-        <!-- <div id="div2D3D">
-      <img id="icon2D" class="option" src="images/2D.png">
-      <img id="icon3D" class="option" src="images/3D.png">
-    </div> -->
-
-        <!-- <div id="textDiv">
-    </div> -->
 
         <div id="albumTitlesDiv">
             <img id="maapTitle" src="images/maap-title.png" loading="lazy">
@@ -2354,6 +2325,11 @@
             }
         }
 
+        function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+let userIsMobile = isMobileDevice()
+
         function onWindowResize() {
 
             renderer.setSize(window.innerWidth, window.innerHeight)
@@ -2900,13 +2876,20 @@
         let poemIndex = 1;
 
         const prev = document.getElementById("prev")
-        prev.style.display = "block"
+        const next = document.getElementById("next")
+       
+        console.log(userIsMobile)
+        
+        if (userIsMobile == false){
+            prev.style.display = "block"
+            next.style.display = "block"
+        }
 
         prev.addEventListener('click', () => {
             showPoems(poemIndex += -1);
         })
-        const next = document.getElementById("next")
-        next.style.display = "block"
+        
+        
         next.addEventListener('click', () => {
             showPoems(poemIndex += 1);
         })
@@ -2927,8 +2910,10 @@
         const openImages = () => {
 
             centerContainer.style.display = "none"
+            if (userIsMobile == false){
             prev2.style.display = "block"
             next2.style.display = "block"
+        }
             optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
 

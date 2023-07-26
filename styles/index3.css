@@ -4,7 +4,7 @@
       background-color: #000000; 
       overflow: hidden;
       height: 100%;
-      margin-top: 0;
+      margin: 0;
     }
 
     #rendererContain {
@@ -281,6 +281,7 @@
 }
 
 #imagesDiv {
+  overflow: hidden;
 	height: 100vh;
 	display: none;
 	position: fixed;
