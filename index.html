@@ -19,35 +19,6 @@
         <p>loading...</p>
     </div>
 
-    <div id="imagesDiv">
-        <div class="myimages">                
-            <img id="meImage" src="images/images/travis.jpg">
-        </div> 
-        <div class="myimages">                
-            <img id="cambodiaImage" src="images/images/cambodia.png">
-        </div>
-            
-        <div class="myimages">                
-            <img id="flowersImage" src="images/images/flowers.png">
-        </div>           
-        <div class="myimages">                
-            <img id="language1Image" src="images/images/language1.png">
-        </div> 
-            <div class="myimages">                
-                <img id="language2Image" src="images/images/language2.png">
-                </div> 
-
-                <div class="myimages">                
-                    <img id="sphereImage" src="images/images/sphere.png">
-                </div> 
-        </div>                   
-
-
-        <a id="prev2">❮</a>
-        <a id="next2">❯</a>            
-
-    </div>
-
     <!--AUDIO TRACKS -->
     <audio id="siderialAudio" preload="metadata" src="songs/maapSongs/siderial.mp3"> </audio>
     <audio id="abstractingAudio" preload="metadata" src="songs/maapSongs/abstracting-abstractions.mp3"> </audio>
@@ -120,7 +91,58 @@
 
     <img id="backArrow" src="images/back-arrow.png">
 
-    <div id="scrollContainer">        
+    <div id="imagesDiv">
+        <div class="myImages">
+            <img id="meImage" src="images/images/travis.jpg">
+        </div>
+        <div class="myImages">
+            <img id="cambodiaImage" src="images/images/cambodia.png">
+        </div>
+
+        <div class="myImages">
+            <img id="flowersImage" src="images/images/flowers.png">
+        </div>
+        <div class="myImages">
+            <img id="language1Image" src="images/images/language1.png">
+        </div>
+        <div class="myImages">
+            <img id="language2Image" src="images/images/language2.png">
+        </div>
+
+        <div class="myImages">
+            <img id="sphereImage" src="images/images/sphere.png">
+        </div>
+
+
+        <a id="prev2">❮</a>
+        <a id="next2">❯</a>
+    </div>
+
+    <div id="poemsDiv">
+        <div class="myPoems">
+            <img src="poems/castles.jpg" style="width:100%">
+        </div>
+        <div class="myPoems">
+            <img src="poems/vltava.jpg" style="width:100%">
+        </div>
+        <div class="myPoems">
+            <img src="poems/whisked.jpg" style="width:100%">
+        </div>
+        <div class="myPoems">
+            <img src="poems/insect.jpg" style="width:100%">
+        </div>
+
+        <div class="myPoems">
+            <img src="poems/sarajevo.png" style="width:100%; filter: invert(1);">
+        </div>
+
+
+        <a id="prev">❮</a>
+        <a id="next">❯</a>
+
+    </div>
+
+    <div id="scrollContainer">
         <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg">
         <img id="travisImage" src="images/travis-image.png">
         <!-- <div id="aboutTextDiv">          
@@ -152,7 +174,7 @@
             <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/words-unselected.png">
             <img id="imagesOption" class="option" data-imgstm="images/images" src="images/images-unselected.png">
         </div>
-        
+
 
         <!-- <div id="div2D3D">
       <img id="icon2D" class="option" src="images/2D.png">
@@ -169,30 +191,6 @@
             <img id="infinityTitle" src="images/infinity-title.png">
             <img id="horseloverTitle" src="images/horselover-title.png">
         </div>
-
-        <div id="poemsDiv">
-            <div class="myPoems">                
-                <img src="poems/castles.jpg" style="width:100%">
-            </div>
-            <div class="myPoems">                
-                <img src="poems/vltava.jpg" style="width:100%">
-            </div>     
-            <div class="myPoems">                
-                <img src="poems/whisked.jpg" style="width:100%">
-            </div>     
-            <div class="myPoems">                
-                <img src="poems/insect.jpg" style="width:100%">
-            </div>     
-            
-            <div class="myPoems">                
-                <img src="poems/sarajevo.png" style="width:100%; filter: invert(1);">
-            </div>            
-            
-
-            <a id="prev">❮</a>
-            <a id="next">❯</a>            
-
-        </div>        
 
         <div id="seekbarContain" style="visibility: hidden;">
             <input id="dur" class="seekbar" type="range" name="rng" value="50" min="0" step=".1">
@@ -222,10 +220,9 @@
             <img class="songTitleImage" id="flourescentImage" data-song="flourescentAudio"
                 src="images/sapientsImages/flourescent-paused.png">
         </div>
-        <div id="sapientsDiv2">            
-            <img class="songTitleImage" id="lugImage" data-song="lugAudio"
-                src="images/sapientsImages/lug-paused.png">
-                <img class="songTitleImage" id="shippingImage" data-song="shippingAudio"
+        <div id="sapientsDiv2">
+            <img class="songTitleImage" id="lugImage" data-song="lugAudio" src="images/sapientsImages/lug-paused.png">
+            <img class="songTitleImage" id="shippingImage" data-song="shippingAudio"
                 src="images/sapientsImages/shipping-paused.png">
             <img class="songTitleImage" id="discoveryImage" data-song="discoveryAudio"
                 src="images/sapientsImages/discovery-paused.png">
@@ -281,13 +278,13 @@
                 src="images/infinityImages/escape-paused.png">
             <img class="songTitleImage" id="interplanetaryImage" data-song="interplanetaryAudio"
                 src="images/infinityImages/interplanetary-paused.png">
-                <img class="songTitleImage" id="interstellarImage" data-song="interstellarAudio"
+            <img class="songTitleImage" id="interstellarImage" data-song="interstellarAudio"
                 src="images/infinityImages/interstellar-paused.png">
             <img class="songTitleImage" id="intergalacticImage" data-song="intergalacticAudio"
                 src="images/infinityImages/intergalactic-paused.png">
             <img class="songTitleImage" id="retreatImage" data-song="retreatAudio"
                 src="images/infinityImages/retreat-paused.png">
-                <img class="songTitleImage" id="unsustainableImage" data-song="unsustainableAudio"
+            <img class="songTitleImage" id="unsustainableImage" data-song="unsustainableAudio"
                 src="images/infinityImages/unsustainable-paused.png">
         </div>
         <div id="horseloverDiv">
@@ -347,7 +344,7 @@
                 src="images/maapImages/looper-paused.png">
         </div>
 
-        
+
     </div>
 
 
@@ -392,7 +389,7 @@
             <img id=preset1 class="presetControl" src="images/controls/view-preset-unselected.png">
         </div> -->
     </div>
-    
+
 
 
 
@@ -420,17 +417,17 @@
         const loader = new THREE.TextureLoader();
         loader.crossOrigin = '';
 
-        window.onload = function() {
-    // This function will run when everything is loaded and ready
-    enableInteraction();
-};
+        window.onload = function () {
+            // This function will run when everything is loaded and ready
+            enableInteraction();
+        };
 
-function enableInteraction(){
-    optionsDiv.style.display = "block"
-    optionsDiv.style.pointerEvents = "auto"
-    const loadingScreen = document.getElementById('loadingScreen');
-    loadingScreen.style.display = 'none';
-}
+        function enableInteraction() {
+            optionsDiv.style.display = "block"
+            optionsDiv.style.pointerEvents = "auto"
+            const loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.style.display = 'none';
+        }
 
         // let sphereScaleClickCount = 1
 
@@ -468,7 +465,7 @@ function enableInteraction(){
 
         const options = document.getElementsByClassName("option")
         const albumTitleImages = document.getElementsByClassName("albumTitleImage")
-        let anAlbum        
+        let anAlbum
 
         // const topControlsNavButton = document.getElementById("topControlsNavButton")
         // const albumDivNavButtonLeft = document.getElementById("albumDivNavButtonLeft")
@@ -531,6 +528,8 @@ function enableInteraction(){
 
         let startX = null
         let startY = null
+
+        let imageIndex = 1;
 
         let currentOption = null
         let currentOptionElem = null
@@ -768,7 +767,7 @@ function enableInteraction(){
                 div1Height: "75",
                 div2Height: "75",
                 div1HeightLandscape: "100",
-                div2HeightLandscape: "100",                
+                div2HeightLandscape: "100",
                 div1Left: "10%",
                 div2Left: "10%",
                 playlist: [
@@ -1018,7 +1017,7 @@ function enableInteraction(){
                 div1Height: "75",
                 div2Height: "75",
                 div1HeightLandscape: "100",
-                div2HeightLandscape: "100",                 
+                div2HeightLandscape: "100",
                 playlist: [
                     'moltenAudio',
                     'rocksAudio',
@@ -1159,9 +1158,9 @@ function enableInteraction(){
                 div1Left: "10%",
                 div2Left: "10%",
                 div1Height: "50",
-                div2Height: "75",   
+                div2Height: "75",
                 div1HeightLandscape: "100",
-                div2HeightLandscape: "100",             
+                div2HeightLandscape: "100",
                 songs: {
                     sunDrinkersAudio: {
                         imageId: 'sunDrinkersImage',
@@ -1331,107 +1330,107 @@ function enableInteraction(){
                 div1Left: "10%",
                 div2Left: "10%",
                 div1Height: "50",
-                div2Height: "50",   
+                div2Height: "50",
                 div1HeightLandscape: "100",
-                div2HeightLandscape: "100",             
+                div2HeightLandscape: "100",
                 songs: {
                     interferenceAudio: {
                         imageId: 'interferenceImage',
                         audioId: 'interferenceAudio',
                         pausedImg: "images/infinityImages/interference-paused.png",
                         playingImg: "images/infinityImages/interference-playing.png",
-                        elem: document.getElementById("interferenceAudio"),                
-                    },    
+                        elem: document.getElementById("interferenceAudio"),
+                    },
                     replicatorsAudio: {
                         imageId: 'replicatorsImage',
                         audioId: 'replicatorsAudio',
                         pausedImg: "images/infinityImages/replicators-paused.png",
                         playingImg: "images/infinityImages/replicators-playing.png",
-                        elem: document.getElementById("replicatorsAudio"),                
-                    },  
+                        elem: document.getElementById("replicatorsAudio"),
+                    },
                     problemAudio: {
                         imageId: 'problemImage',
                         audioId: 'problemAudio',
                         pausedImg: "images/infinityImages/problem-paused.png",
                         playingImg: "images/infinityImages/problem-playing.png",
-                        elem: document.getElementById("problemAudio"),                
-                    }, 
+                        elem: document.getElementById("problemAudio"),
+                    },
                     explainAudio: {
                         imageId: 'explainImage',
                         audioId: 'explainAudio',
                         pausedImg: "images/infinityImages/explain-paused.png",
                         playingImg: "images/infinityImages/explain-playing.png",
-                        elem: document.getElementById("explainAudio"),                
-                    },                      
+                        elem: document.getElementById("explainAudio"),
+                    },
                     centralizationAudio: {
                         imageId: 'centralizationImage',
                         audioId: 'centralizationAudio',
                         pausedImg: "images/infinityImages/centralization-paused.png",
                         playingImg: "images/infinityImages/centralization-playing.png",
-                        elem: document.getElementById("centralizationAudio"),                
-                    }, 
+                        elem: document.getElementById("centralizationAudio"),
+                    },
                     sustainableAudio: {
                         imageId: 'sustainableImage',
                         audioId: 'sustainableAudio',
                         pausedImg: "images/infinityImages/sustainable-paused.png",
                         playingImg: "images/infinityImages/sustainable-playing.png",
-                        elem: document.getElementById("sustainableAudio"),                
+                        elem: document.getElementById("sustainableAudio"),
                     },
                     decentralizationAudio: {
                         imageId: 'decentralizationImage',
                         audioId: 'decentralizationAudio',
                         pausedImg: "images/infinityImages/decentralization-paused.png",
                         playingImg: "images/infinityImages/decentralization-playing.png",
-                        elem: document.getElementById("decentralizationAudio"),                
-                    }, 
+                        elem: document.getElementById("decentralizationAudio"),
+                    },
                     escapeAudio: {
                         imageId: 'escapeImage',
                         audioId: 'escapeAudio',
                         pausedImg: "images/infinityImages/escape-paused.png",
                         playingImg: "images/infinityImages/escape-playing.png",
-                        elem: document.getElementById("escapeAudio"),                
+                        elem: document.getElementById("escapeAudio"),
                     },
                     interplanetaryAudio: {
                         imageId: 'interplanetaryImage',
                         audioId: 'interplanetaryAudio',
                         pausedImg: "images/infinityImages/interplanetary-paused.png",
                         playingImg: "images/infinityImages/interplanetary-playing.png",
-                        elem: document.getElementById("interplanetaryAudio"),                
+                        elem: document.getElementById("interplanetaryAudio"),
                     },
                     interstellarAudio: {
                         imageId: 'interstellarImage',
                         audioId: 'interstellarAudio',
                         pausedImg: "images/infinityImages/interstellar-paused.png",
                         playingImg: "images/infinityImages/interstellar-playing.png",
-                        elem: document.getElementById("interstellarAudio"),                
-                    },        
+                        elem: document.getElementById("interstellarAudio"),
+                    },
                     intergalacticAudio: {
                         imageId: 'intergalacticImage',
                         audioId: 'intergalacticAudio',
                         pausedImg: "images/infinityImages/intergalactic-paused.png",
                         playingImg: "images/infinityImages/intergalactic-playing.png",
-                        elem: document.getElementById("intergalacticAudio"),                
-                    },  
+                        elem: document.getElementById("intergalacticAudio"),
+                    },
                     retreatAudio: {
                         imageId: 'retreatImage',
                         audioId: 'retreatAudio',
                         pausedImg: "images/infinityImages/retreat-paused.png",
                         playingImg: "images/infinityImages/retreat-playing.png",
-                        elem: document.getElementById("retreatAudio"),                
-                    },    
+                        elem: document.getElementById("retreatAudio"),
+                    },
                     unsustainableAudio: {
                         imageId: 'unsustainableImage',
                         audioId: 'unsustainableAudio',
                         pausedImg: "images/infinityImages/unsustainable-paused.png",
                         playingImg: "images/infinityImages/unsustainable-playing.png",
-                        elem: document.getElementById("unsustainableAudio"),                
-                    },                         
+                        elem: document.getElementById("unsustainableAudio"),
+                    },
                 },
                 playlist: [
                     'interferenceAudio',
                     'replicatorsAudio',
                     'problemAudio',
-                    'explainAudio',  
+                    'explainAudio',
                     'centralizationAudio',
                     'sustainableAudio'
                 ],
@@ -1457,7 +1456,7 @@ function enableInteraction(){
                 div1Height: "33",
                 div2Height: "33",
                 div1HeightLandscape: "75",
-                div2HeightLandscape: "75",                 
+                div2HeightLandscape: "75",
                 texture: "images/horseloverImages/cambodia-stick-angel-dark",
                 texture2: "images/horseloverImages/cambodia-stick-angel-light",
                 fov: 250,
@@ -1542,7 +1541,7 @@ function enableInteraction(){
             }
         }
 
-        
+
 
 
         let currentSong = null
@@ -1623,11 +1622,11 @@ function enableInteraction(){
         //         }
         //     }
 
-            // camera.position.x = preset.cameraX
-            // camera.position.y = preset.cameraY
-            // camera.position.z = preset.cameraZ
-            // camera.fov = preset.fov
-            // fov.value = preset.fov
+        // camera.position.x = preset.cameraX
+        // camera.position.y = preset.cameraY
+        // camera.position.z = preset.cameraZ
+        // camera.fov = preset.fov
+        // fov.value = preset.fov
 
         //     sphereScaleClickCount = preset.sphereScale
         //     zCameraSwitch = preset.zSwitch
@@ -1744,7 +1743,7 @@ function enableInteraction(){
                 if (pausedForShift == true) {
                     pausedForShift = false
                 }
-                
+
                 currentSong.pause()
                 currentSongIsPlaying = false
 
@@ -1770,14 +1769,14 @@ function enableInteraction(){
                     songSphere.material.map = loader.load(selectedSphereTexture)
 
 
-                    if (song.starSphere) {                        
+                    if (song.starSphere) {
                         starSphere.material.map = loader.load(song.starSphere)
                         scene.remove(sunSphere)
                         if (song.sunSphereSize !== 0) {
                             createSunSphere(song.sunSphereSize, song.sunSphereTexture)
                             // sunLight.color.set(song.sunColor)
                         }
-                        if (song.sunSphereSize == 0) {                            
+                        if (song.sunSphereSize == 0) {
                             scene.remove(sunSphere)
                         }
                     }
@@ -1785,7 +1784,7 @@ function enableInteraction(){
                     if (song.cubeTexture) {
                         albumCube.material.map = loader.load(song.cubeTexture)
 
-                        
+
                     }
 
                     if (song.sphereRotation) {
@@ -1819,7 +1818,7 @@ function enableInteraction(){
 
                 const setCurrentPlayingImage = function () {
                     currentImageElem.src = playingImage
-                    
+
                 }
 
                 const setCurrentPausedImage = function () {
@@ -1835,14 +1834,14 @@ function enableInteraction(){
         }
 
         for (let album in albums) {
-            let songs = albums[album].songs   
-                for (let song in songs) {
-                    const image = document.getElementById(songs[song].imageId)
-                    image.addEventListener("click", event => {
-                        setCurrentSong(songs[event.target.dataset.song])                        
-                    })
-                }
-            
+            let songs = albums[album].songs
+            for (let song in songs) {
+                const image = document.getElementById(songs[song].imageId)
+                image.addEventListener("click", event => {
+                    setCurrentSong(songs[event.target.dataset.song])
+                })
+            }
+
         }
 
 
@@ -2156,7 +2155,7 @@ function enableInteraction(){
         // // birdViewPNG.addEventListener('click', () => {
         //     // camera.fov = 55
         //     // fov.value = 55
-            
+
         //     camera.updateProjectionMatrix()
         //     camera.position.set(300, 300, 300)
         //     controls.target = new THREE.Vector3(0, 0, 0)
@@ -2170,7 +2169,7 @@ function enableInteraction(){
 
         // })
 
-        init();        
+        init();
         // createAlbumDiv()
         animate();
         orientationDetect()
@@ -2178,7 +2177,7 @@ function enableInteraction(){
         // function createAlbumDiv() {        
         //     albumDivContainer.appendChild(albumTitlesDiv)
         // }
-        
+
         function init() {
 
             scene = new THREE.Scene();
@@ -2254,41 +2253,41 @@ function enableInteraction(){
             scene.add(albumCube)
 
 
-        //size calibrations   
-    
-        for (let child of albumTitlesDivChildren) {
-            child.style.height = 100 / albumTitlesDivChildren.length + "%"
-            child.style.width = 100 + "%"
-            
-        }        
+            //size calibrations   
 
-        for (let album of albumDivContainerChildren){            
-            anAlbum = album.children            
-            for (let title of anAlbum){            
-                let titleHeight = 100/anAlbum.length
-                
-                let titleWidth
-                
-                if (orientationPortrait == true){
-                titleWidth = (titleHeight * 8)
-                }
-                if (orientationPortrait == false){
-                titleWidth = (titleHeight * 4)
-                
-                }
-                if (titleWidth >= 100){
-                    titleWidth = 100
-                }
-                
-                let titleLeft = (100-titleWidth)/2
+            for (let child of albumTitlesDivChildren) {
+                child.style.height = 100 / albumTitlesDivChildren.length + "%"
+                child.style.width = 100 + "%"
 
-                title.style.height = titleHeight + "%"              
-                title.style.width = titleWidth + "%"                
-                title.style.left = titleLeft + "%"
-
-                
             }
-        }
+
+            for (let album of albumDivContainerChildren) {
+                anAlbum = album.children
+                for (let title of anAlbum) {
+                    let titleHeight = 100 / anAlbum.length
+
+                    let titleWidth
+
+                    if (orientationPortrait == true) {
+                        titleWidth = (titleHeight * 8)
+                    }
+                    if (orientationPortrait == false) {
+                        titleWidth = (titleHeight * 4)
+
+                    }
+                    if (titleWidth >= 100) {
+                        titleWidth = 100
+                    }
+
+                    let titleLeft = (100 - titleWidth) / 2
+
+                    title.style.height = titleHeight + "%"
+                    title.style.width = titleWidth + "%"
+                    title.style.left = titleLeft + "%"
+
+
+                }
+            }
 
         }
 
@@ -2298,9 +2297,9 @@ function enableInteraction(){
 
             if (albumCube) {
 
-                    albumCube.rotation.y += 1/500
-                    albumCube.rotation.x += 1/500
-           
+                albumCube.rotation.y += 1 / 500
+                albumCube.rotation.x += 1 / 500
+
                 if (cameraZoomSwitch == true) {
                     if (cameraZoomPos == true) {
                         camera.zoom += 1 / 100
@@ -2322,8 +2321,8 @@ function enableInteraction(){
                 starSphere.rotation.x += 0.0005
                 starSphere.rotation.z += 0.0005
 
-                
-                
+
+
 
                 // if (selected) {
                 //     songSphere.scale.set(sphereScaleClickCount, sphereScaleClickCount, sphereScaleClickCount)
@@ -2364,91 +2363,103 @@ function enableInteraction(){
             orientationDetect()
 
 
-                if (albumIsOpen == true) {
-                    if (orientationPortrait == true) {
-                        albumDivContainer.style.left = "16.6%"
-                        albumDivContainer.style.width = "66%"
-                        if (backgroundBlack == false){
-                selectedAlbumDiv2.style.height = selectedAlbumDiv2Height
-                selectedAlbumDiv2.style.top = selectedAlbumDiv2Top
-                } else if (backgroundBlack == true){
-                selectedAlbumDiv1.style.height = selectedAlbumDiv1Height
-                selectedAlbumDiv1.style.top = selectedAlbumDiv1Top
+            if (albumIsOpen == true) {
+                if (orientationPortrait == true) {
+                    albumDivContainer.style.left = "16.6%"
+                    albumDivContainer.style.width = "66%"
+                    if (backgroundBlack == false) {
+                        selectedAlbumDiv2.style.height = selectedAlbumDiv2Height
+                        selectedAlbumDiv2.style.top = selectedAlbumDiv2Top
+                    } else if (backgroundBlack == true) {
+                        selectedAlbumDiv1.style.height = selectedAlbumDiv1Height
+                        selectedAlbumDiv1.style.top = selectedAlbumDiv1Top
+                    }
+                } else if (orientationPortrait == false) {
+                    albumDivContainer.style.left = "25%"
+                    albumDivContainer.style.width = "50%"
+                    if (backgroundBlack == false) {
+                        selectedAlbumDiv2.style.height = selectedAlbumDiv2HeightLandscape
+                        selectedAlbumDiv2.style.top = selectedAlbumDiv2TopLandscape
+                    } else if (backgroundBlack == true) {
+                        selectedAlbumDiv1.style.height = selectedAlbumDiv1HeightLandscape
+                        selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
+                    }
                 }
-                    } else if (orientationPortrait == false) {
-                        albumDivContainer.style.left = "25%"
-                        albumDivContainer.style.width = "50%"
-                        if (backgroundBlack == false){
-                selectedAlbumDiv2.style.height = selectedAlbumDiv2HeightLandscape
-                selectedAlbumDiv2.style.top = selectedAlbumDiv2TopLandscape
-                } else if (backgroundBlack == true){
-                    selectedAlbumDiv1.style.height = selectedAlbumDiv1HeightLandscape
-                selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
-                }
-                    }                
 
-                    for (let album of albumDivContainerChildren){            
-            anAlbum = album.children
-            
-            for (let title of anAlbum){                
-                
-                let titleHeight = 100/anAlbum.length
-                
-                let titleWidth
-                if (orientationPortrait == true){
-                titleWidth = (titleHeight * 8)
-                }
-                if (orientationPortrait == false){
-                titleWidth = (titleHeight * 4)
-               
-                }
-                if (titleWidth >= 100){
-                    titleWidth = 100
-                    
-                }
-                
-                let titleLeft = (100-titleWidth)/2
+                for (let album of albumDivContainerChildren) {
+                    anAlbum = album.children
 
-                title.style.height = titleHeight + "%"              
-                title.style.width = titleWidth + "%"                
-                title.style.left = titleLeft + "%"
+                    for (let title of anAlbum) {
 
-                
+                        let titleHeight = 100 / anAlbum.length
+
+                        let titleWidth
+                        if (orientationPortrait == true) {
+                            titleWidth = (titleHeight * 8)
+                        }
+                        if (orientationPortrait == false) {
+                            titleWidth = (titleHeight * 4)
+
+                        }
+                        if (titleWidth >= 100) {
+                            titleWidth = 100
+
+                        }
+
+                        let titleLeft = (100 - titleWidth) / 2
+
+                        title.style.height = titleHeight + "%"
+                        title.style.width = titleWidth + "%"
+                        title.style.left = titleLeft + "%"
+
+
+                    }
+                }
+            }
+
+
+            if (albumIsOpen == false) {
+                albumDivContainer.style.width = "0%"
+            }
+
+            if (albumsAreOpen == true) {
+
+                if (orientationPortrait == true) {
+
+                    albumTitlesDiv.animate({
+                        height: ["0%", "50%"],
+                        width: ["0%", "100%"]
+                    }, {
+                        duration: 1000,
+                        fill: "forwards",
+                        easing: "ease"
+                    })
+                    albumTitlesDiv.style.top = "25%"
+                } else {
+                    albumTitlesDiv.animate({
+                        height: ["0%", "75%"],
+                        width: ["0%", "100%"]
+                    }, {
+                        duration: 1000,
+                        fill: "forwards",
+                        easing: "ease"
+                    })
+                    albumTitlesDiv.style.top = "12.5%"
+                }
+            }
+
+            if (orientationPortrait == true) {
+                optionsDiv.style.height = "50%"
+                optionsDiv.style.top = "25%"
+            }
+            if (orientationPortrait == false) {
+                optionsDiv.style.height = "33%"
+                optionsDiv.style.top = "33%"
             }
         }
-                }
 
-                
-                if (albumIsOpen == false) {
-                    albumDivContainer.style.width = "0%"
-                }
 
-                if (albumsAreOpen == true){
-                    
-                    if (orientationPortrait == true){
-                        
-            albumTitlesDiv.animate({
-                height: ["0%", "50%"],
-                width: ["0%", "100%"]
-            }, {
-                duration: 1000,
-                fill: "forwards",
-                easing: "ease"
-            })
-            albumTitlesDiv.style.top = "25%"  
-        } else {
-            albumTitlesDiv.animate({
-                height: ["0%", "75%"],
-                width: ["0%", "100%"]
-            }, {
-                duration: 1000,
-                fill: "forwards",
-                easing: "ease"
-            })
-            albumTitlesDiv.style.top = "12.5%"  
-        }
-    }
-        }
+
 
         for (let option of options) {
 
@@ -2464,7 +2475,7 @@ function enableInteraction(){
             let image = document.getElementById(albums[album].imageId)
 
             image.addEventListener('click', event => {
-                    openCurrentAlbum(albums[album])
+                openCurrentAlbum(albums[album])
             })
 
         }
@@ -2499,45 +2510,45 @@ function enableInteraction(){
             selectedAlbumDiv2HeightLandscape = album.div2HeightLandscape + "%"
             selectedAlbumDiv1Left = album.div1Left
             selectedAlbumDiv2Left = album.div2Left
-            selectedAlbumDiv1Top = (100 - album.div1Height)/2 + "%"
-            
-            
-            selectedAlbumDiv2Top = (100 - album.div2Height)/2 + "%"
-            selectedAlbumDiv1TopLandscape = (100 - album.div1HeightLandscape)/2 + "%"
-            selectedAlbumDiv2TopLandscape = (100 - album.div2HeightLandscape)/2 + "%"
+            selectedAlbumDiv1Top = (100 - album.div1Height) / 2 + "%"
+
+
+            selectedAlbumDiv2Top = (100 - album.div2Height) / 2 + "%"
+            selectedAlbumDiv1TopLandscape = (100 - album.div1HeightLandscape) / 2 + "%"
+            selectedAlbumDiv2TopLandscape = (100 - album.div2HeightLandscape) / 2 + "%"
             camera.fov = album.fov
             fov.value = album.fov
 
             if (backgroundBlack == true) {
-                currentPlaylist = album.playlist                
-                selectedAlbumDiv1.style.width = selectedAlbumDiv1Width                
+                currentPlaylist = album.playlist
+                selectedAlbumDiv1.style.width = selectedAlbumDiv1Width
                 selectedAlbumDiv1.style.left = selectedAlbumDiv1Left
-                if (orientationPortrait == true){
-                selectedAlbumDiv1.style.height = selectedAlbumDiv1Height
-                selectedAlbumDiv1.style.top = selectedAlbumDiv1Top
+                if (orientationPortrait == true) {
+                    selectedAlbumDiv1.style.height = selectedAlbumDiv1Height
+                    selectedAlbumDiv1.style.top = selectedAlbumDiv1Top
                 }
-                if(orientationPortrait == false){
-                selectedAlbumDiv1.style.height = selectedAlbumDiv1HeightLandscape
-                selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
+                if (orientationPortrait == false) {
+                    selectedAlbumDiv1.style.height = selectedAlbumDiv1HeightLandscape
+                    selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
                 }
-                
+
                 if (dimension3D == true) {
                     albumDivNavButtonLeft.style.visibility = "visible"
                 }
             }
             if (backgroundBlack == false) {
-                currentPlaylist = album.playlist2                
-                selectedAlbumDiv2.style.width = selectedAlbumDiv2Width               
+                currentPlaylist = album.playlist2
+                selectedAlbumDiv2.style.width = selectedAlbumDiv2Width
                 selectedAlbumDiv2.style.left = selectedAlbumDiv2Left
-                if (orientationPortrait == true){
-                selectedAlbumDiv2.style.height = selectedAlbumDiv2Height
-                selectedAlbumDiv2.style.top = selectedAlbumDiv2Top
+                if (orientationPortrait == true) {
+                    selectedAlbumDiv2.style.height = selectedAlbumDiv2Height
+                    selectedAlbumDiv2.style.top = selectedAlbumDiv2Top
                 }
-                if(orientationPortrait == false){
-                selectedAlbumDiv2.style.height = selectedAlbumDiv2HeightLandscape
-                selectedAlbumDiv2.style.top = selectedAlbumDiv2TopLandscape
+                if (orientationPortrait == false) {
+                    selectedAlbumDiv2.style.height = selectedAlbumDiv2HeightLandscape
+                    selectedAlbumDiv2.style.top = selectedAlbumDiv2TopLandscape
                 }
-                
+
                 if (dimension3D == true) {
                     albumDivNavButtonRight.style.visibility = "visible"
                 }
@@ -2545,43 +2556,43 @@ function enableInteraction(){
 
             currentPlaylist1 = album.playlist
             currentPlaylist2 = album.playlist2
-            currentAlbumSongs = album.songs 
+            currentAlbumSongs = album.songs
             currentAlbum = album
-                   
 
-                currentTextureStem = album.texture
-                currentTexture = album.texture + ".png"
-                currentTexture2 = album.texture2 + ".png"
-                if (backgroundBlack == true){
+
+            currentTextureStem = album.texture
+            currentTexture = album.texture + ".png"
+            currentTexture2 = album.texture2 + ".png"
+            if (backgroundBlack == true) {
                 albumCube.material.map = loader.load(currentTexture)
-                starSphere.material.map = loader.load(starSphere1)   
-                } 
-                if (backgroundBlack == false){
-                    albumCube.material.map = loader.load(currentTexture2)
-                    starSphere.material.map = loader.load(starSphere2)   
-                }
-                // cubeColorSelect.src = currentTextureStem + "-icon.png"
-                if (album.starsphere){
-                    starSphere1 = album.starSphere1
+                starSphere.material.map = loader.load(starSphere1)
+            }
+            if (backgroundBlack == false) {
+                albumCube.material.map = loader.load(currentTexture2)
+                starSphere.material.map = loader.load(starSphere2)
+            }
+            // cubeColorSelect.src = currentTextureStem + "-icon.png"
+            if (album.starsphere) {
+                starSphere1 = album.starSphere1
                 starSphere2 = album.starSphere2
-                }
+            }
 
-                fov.style.visibility = "visible"
-                fovX.style.display = "block"
-                   
+            fov.style.visibility = "visible"
+            fovX.style.display = "block"
 
 
-                if (orientationPortrait == true){
+
+            if (orientationPortrait == true) {
                 albumDivContainer.style.left = "17%"
                 albumDivContainer.style.width = "66%"
-                } else if (orientationPortrait == false){
-                  albumDivContainer.style.left = "25%"
+            } else if (orientationPortrait == false) {
+                albumDivContainer.style.left = "25%"
                 albumDivContainer.style.width = "50%"
-                }           
+            }
 
-                
+
             albumTitlesDiv.animate({
-                height: ["66%", "0%"]   
+                height: ["66%", "0%"]
             }, {
                 duration: 1000,
                 easing: "ease",
@@ -2589,9 +2600,9 @@ function enableInteraction(){
             })
 
             setTimeout(() => {
-                albumTitlesDiv.style.display = "none";              
-              }, 1000)
-          
+                albumTitlesDiv.style.display = "none";
+            }, 500)
+
 
             centerContainer.animate({
                 width: [centerContainerInitialWidth, "0%"],
@@ -2607,12 +2618,12 @@ function enableInteraction(){
             seekbarContain.style.visibility = "visible"
             circleBW.style.visibility = "visible"
 
-            
+
 
 
         }
 
-        const closeCurrentAlbum = (album) => { 
+        const closeCurrentAlbum = (album) => {
 
             if (currentSong) {
                 currentSong.pause()
@@ -2622,14 +2633,14 @@ function enableInteraction(){
             selectedAlbumDiv1.style.width = "0%"
             selectedAlbumDiv1.style.height = "0%"
             setTimeout(() => {
-                selectedAlbumDiv1.style.display = "none"                           
-              }, 1000)            
+                selectedAlbumDiv1.style.display = "none"
+            }, 500)
             selectedAlbumDiv2.style.width = "0%"
             selectedAlbumDiv2.style.height = "0%"
             setTimeout(() => {
-                selectedAlbumDiv2.style.display = "none";                      
-              }, 1000)
-            
+                selectedAlbumDiv2.style.display = "none";
+            }, 500)
+
 
 
             if (albumCube) {
@@ -2680,7 +2691,7 @@ function enableInteraction(){
         //     backArrow.style.visibility = "visible"
         //     backArrow.animate({
         //         opacity: ["0", "0.5"]
-        
+
         //     }, {
         //         duration: 1000,
         //         fill: "forwards"
@@ -2714,25 +2725,25 @@ function enableInteraction(){
 
         const openAlbums = () => {
             albumTitlesDiv.style.display = "block"
-            if (orientationPortrait == true){
-            albumTitlesDiv.animate({
-                height: ["0%", "50%"],
-                width: ["0%", "100%"]
-            }, {
-                duration: 1000,
-                fill: "forwards",
-                easing: "ease"
-            })
-        } else {
-            albumTitlesDiv.animate({
-                height: ["0%", "75%"],
-                width: ["0%", "100%"]
-            }, {
-                duration: 1000,
-                fill: "forwards",
-                easing: "ease"
-            })
-        }
+            if (orientationPortrait == true) {
+                albumTitlesDiv.animate({
+                    height: ["0%", "50%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            } else {
+                albumTitlesDiv.animate({
+                    height: ["0%", "75%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            }
             optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
             backArrow.style.visibility = "visible"
@@ -2743,19 +2754,19 @@ function enableInteraction(){
                 fill: "forwards"
             })
 
-            for (let albumTitle of albumTitlesDivChildren){
-                if (backgroundBlack == false){
+            for (let albumTitle of albumTitlesDivChildren) {
+                if (backgroundBlack == false) {
                     albumTitle.style.filter = "invert(1)"
                 }
-                if (backgroundBlack == true){
+                if (backgroundBlack == true) {
                     albumTitle.style.filter = "invert(0)"
                 }
             }
             albumsAreOpen = true
 
-            
 
-            for (let album of albumDivContainerChildren){
+
+            for (let album of albumDivContainerChildren) {
                 console.log(album.id)
                 let blockAlbum = document.getElementById(album.id)
                 blockAlbum.style.display = "block"
@@ -2774,8 +2785,16 @@ function enableInteraction(){
                 fill: "forwards"
             })
             albumsAreOpen = false
-                optionsDiv.style.width = "100%"
-                optionsDiv.style.height = "15%"
+            optionsDiv.style.width = "100%"
+            if (orientationPortrait == true) {
+                optionsDiv.style.height = "50%"
+                optionsDiv.style.top = "25%"
+            }
+            if (orientationPortrait == false) {
+                optionsDiv.style.height = "33%"
+                optionsDiv.style.top = "33%"
+            }
+
             backArrow.animate({
                 opacity: ["0.5", "0"]
             }, {
@@ -2789,15 +2808,15 @@ function enableInteraction(){
         }
 
 
-    //     let aboutTextRetrieved
+        //     let aboutTextRetrieved
 
-    //     for (let textChild of aboutDivChildren) {
-    //     aboutTextRetrieved = textChild.innerHTML 
-    //     aboutTextsObject.push(aboutTextRetrieved)
-    // }        
-    //     aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]
+        //     for (let textChild of aboutDivChildren) {
+        //     aboutTextRetrieved = textChild.innerHTML 
+        //     aboutTextsObject.push(aboutTextRetrieved)
+        // }        
+        //     aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]
 
-         
+
 
         const openAbout = () => {
 
@@ -2843,201 +2862,209 @@ function enableInteraction(){
             // aboutTextDiv.style.visibility = "visible"                      
 
         }
-        
 
-        
-    //         window.addEventListener("click", ()=> {
 
-    //             if (aboutIsOpen == true){
-                
-    //             aboutTextCounter += 1
-    //             if (aboutTextCounter == 4){
-    //                 aboutTextCounter = 0
-    //             }            
-                
-            
-    //         aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]           
-            
-    //     }
-    // }
-    //         )             
-                               
-            
-            const openPoems = () => {
 
-                optionsDiv.style.width = "0%"
+        //         window.addEventListener("click", ()=> {
+
+        //             if (aboutIsOpen == true){
+
+        //             aboutTextCounter += 1
+        //             if (aboutTextCounter == 4){
+        //                 aboutTextCounter = 0
+        //             }            
+
+
+        //         aboutTextDiv.innerHTML = aboutTextsObject[aboutTextCounter]           
+
+        //     }
+        // }
+        //         )             
+
+
+        const openPoems = () => {
+
+            optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
 
             poemsDiv.style.display = "block"
-            
-                poemsIsOpen = true                
-                backArrow.style.visibility = "visible"
+
+            poemsDiv.animate({
+                height: ["0%", "100%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+
+            poemsIsOpen = true
+            backArrow.style.visibility = "visible"
             backArrow.animate({
                 opacity: ["0", "0.5"]
             }, {
                 duration: 1000,
                 fill: "forwards"
             })
+        }
+
+        let poemIndex = 1;
+
+        const prev = document.getElementById("prev")
+        prev.style.display = "block"
+
+        prev.addEventListener('click', () => {
+            showPoems(poemIndex += -1);
+        })
+        const next = document.getElementById("next")
+        next.style.display = "block"
+        next.addEventListener('click', () => {
+            showPoems(poemIndex += 1);
+        })
+
+
+        function showPoems(n) {
+            let i;
+            let poems = document.getElementsByClassName("myPoems");
+            if (n > poems.length) { poemIndex = 1 }
+            if (n < 1) { poemIndex = poems.length }
+            for (i = 0; i < poems.length; i++) {
+                poems[i].style.display = "none";
+            }
+            poems[poemIndex - 1].style.display = "block";
+        }
+        showPoems(poemIndex);
+
+        const openImages = () => {
+
+            centerContainer.style.display = "none"
+            prev2.style.display = "block"
+            next2.style.display = "block"
+            optionsDiv.style.width = "0%"
+            optionsDiv.style.height = "0%"
+
+            showImages(imageIndex);
+
+
+
+            imagesDiv.style.display = "flex"
+            imagesIsOpen = true
+
+            backArrow.style.visibility = "visible"
+            backArrow.animate({
+                opacity: ["0", "0.5"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+
+
+        }
+
+
+
+
+        imagesDiv.addEventListener('touchstart', handleTouchStart, false);
+        imagesDiv.addEventListener('touchmove', handleTouchEnd, false);
+        poemsDiv.addEventListener('touchstart', handleTouchStart, false);
+        poemsDiv.addEventListener('touchmove', handleTouchEnd2, false);
+
+        // Handle touch start
+        function handleTouchStart(event) {
+            startX = event.touches[0].clientX;
+            startY = event.touches[0].clientY;
+        }
+
+        function handleTouchEnd(event) {
+            if (!startX || !startY) return;
+
+            const endX = event.changedTouches[0].clientX;
+            const endY = event.changedTouches[0].clientY;
+
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+
+            // Check if the swipe is horizontal (left or right) and long enough
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+
+                if (deltaX > 0) {
+                    showImages(imageIndex += -1)
+                } else {
+                    showImages(imageIndex += 1)
+                }
             }
 
-            let poemIndex = 1;
-
-const prev = document.getElementById("prev") 
-prev.style.display = "block"
-
-prev.addEventListener('click', () => {
-  showPoems(poemIndex += -1);
-})
-const next = document.getElementById("next")
-next.style.display = "block"
-next.addEventListener('click', () => {
-  showPoems(poemIndex += 1);
-})
-
-
-function showPoems(n) {
-  let i;
-  let poems = document.getElementsByClassName("myPoems");  
-  if (n > poems.length) {poemIndex = 1}    
-  if (n < 1) {poemIndex = poems.length}
-  for (i = 0; i < poems.length; i++) {
-    poems[i].style.display = "none";  
-  }  
-  poems[poemIndex-1].style.display = "block";    
-}    
-showPoems(poemIndex);
-
-const openImages = () => {
-
-    centerContainer.style.display = "none"
-    prev2.style.display = "block"
-    next2.style.display = "block"
-
-optionsDiv.style.width = "0%"
-optionsDiv.style.height = "0%"
-
-showImages(imageIndex);
-
-
-
-imagesDiv.style.display = "block"
-
-imagesIsOpen = true               
-
-backArrow.style.visibility = "visible"
-backArrow.animate({
-opacity: ["0", "0.5"]
-}, {
-duration: 1000,
-fill: "forwards"
-})
-
-
-}
-
-
-
-
-imagesDiv.addEventListener('touchstart', handleTouchStart, false);
-imagesDiv.addEventListener('touchmove', handleTouchEnd, false);
-poemsDiv.addEventListener('touchstart', handleTouchStart, false);
-poemsDiv.addEventListener('touchmove', handleTouchEnd2, false);
-
-// Handle touch start
-function handleTouchStart(event) {
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
-}
-
-function handleTouchEnd(event) {
-    if (!startX || !startY) return;
-
-    const endX = event.changedTouches[0].clientX;
-    const endY = event.changedTouches[0].clientY;
-
-    const deltaX = endX - startX;
-    const deltaY = endY - startY;
-
-    // Check if the swipe is horizontal (left or right) and long enough
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {        
-        
-        if (deltaX > 0) {
-            showImages(imageIndex += -1)
-        } else {
-            showImages(imageIndex += 1)
+            // Reset the start coordinates to prevent multiple swipes in one touch event
+            startX = null;
+            startY = null;
         }
-    }
 
-    // Reset the start coordinates to prevent multiple swipes in one touch event
-    startX = null;
-    startY = null;
-}
+        function handleTouchEnd2(event) {
+            if (!startX || !startY) return;
 
-function handleTouchEnd2(event) {
-    if (!startX || !startY) return;
+            const endX = event.changedTouches[0].clientX;
+            const endY = event.changedTouches[0].clientY;
 
-    const endX = event.changedTouches[0].clientX;
-    const endY = event.changedTouches[0].clientY;
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
 
-    const deltaX = endX - startX;
-    const deltaY = endY - startY;
+            // Check if the swipe is horizontal (left or right) and long enough
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
 
-    // Check if the swipe is horizontal (left or right) and long enough
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {        
-        
-        if (deltaX > 0) {
-            showPoems(poemIndex += -1)
-        } else {
-            showPoems(poemIndex += 1)
+                if (deltaX > 0) {
+                    showPoems(poemIndex += -1)
+                } else {
+                    showPoems(poemIndex += 1)
+                }
+            }
+
+            // Reset the start coordinates to prevent multiple swipes in one touch event
+            startX = null;
+            startY = null;
         }
-    }
-
-    // Reset the start coordinates to prevent multiple swipes in one touch event
-    startX = null;
-    startY = null;
-}
 
 
-let imageIndex = 1;
-
-const prev2 = document.getElementById("prev2") 
 
 
-prev2.addEventListener('click', () => {
-showImages(imageIndex += -1);
-})
-const next2 = document.getElementById("next2")
-
-next2.addEventListener('click', () => {
-showImages(imageIndex += 1);
-})
+        const prev2 = document.getElementById("prev2")
 
 
-function showImages(n) {
-let i;
-let Images = document.getElementsByClassName("myImages");  
-if (n > Images.length) {imageIndex = 1}    
-if (n < 1) {imageIndex = Images.length}
-for (i = 0; i < Images.length; i++) {
-Images[i].style.display = "none";  
-}  
-Images[imageIndex-1].style.display = "block";
-}    
+        prev2.addEventListener('click', () => {
+            showImages(imageIndex += -1);
+        })
+        const next2 = document.getElementById("next2")
+
+        next2.addEventListener('click', () => {
+            showImages(imageIndex += 1);
+        })
 
 
-            
+        function showImages(n) {
+            let i;
+            let Images = document.getElementsByClassName("myImages");
+            if (n > Images.length) { imageIndex = 1 }
+            if (n < 1) { imageIndex = Images.length }
+            for (i = 0; i < Images.length; i++) {
+                Images[i].style.display = "none";
+            }
+
+            Images[imageIndex - 1].style.display = "block";
+        }
+
+
+
 
         const closeAbout = () => {
 
-            
+
             albumCube.material.map = loader.load(transparentTexture)
             optionsDiv.style.width = "100%"
-            if (orientationPortrait == true){
+            if (orientationPortrait == true) {
                 optionsDiv.style.height = "33%"
             } else {
-                optionsDiv.style.height = "25%"}
-            
-            
+                optionsDiv.style.height = "25%"
+            }
+
+
 
             habitatsScroll.style.visibility = "hidden"
             travisImage.style.visibility = "hidden"
@@ -3048,41 +3075,42 @@ Images[imageIndex-1].style.display = "block";
                 fill: "forwards"
             })
 
-            
+
             aboutIsOpen = false
-            scrollContainer.style.display = "block"
+            scrollContainer.style.display = "none"
             centerContainer.style.display = "block"
 
         }
         const closePoems = () => {
             poemsDiv.animate({
-                height: ["50%", "0%"]
+                height: ["100%", "0%"]
             }, {
                 duration: 1000,
                 easing: "ease",
                 fill: "forwards"
             })
             optionsDiv.style.width = "100%"
-            if (orientationPortrait == true){
+            if (orientationPortrait == true) {
                 optionsDiv.style.height = "33%"
             } else {
-                optionsDiv.style.height = "25%"}
-                backArrow.animate({
+                optionsDiv.style.height = "25%"
+            }
+            backArrow.animate({
                 opacity: ["0.5", "0"]
             }, {
                 duration: 1000,
                 fill: "forwards"
             })
             poemsDiv.style.display = "none"
-poemsIsOpen = false
+            poemsIsOpen = false
 
-prev.style.display = "none"
-next.style.display = "none"
-centerContainer.style.display = "block"
+            prev.style.display = "none"
+            next.style.display = "none"
+            centerContainer.style.display = "block"
 
-}
+        }
 
-const closeImages = () => {
+        const closeImages = () => {
             imagesDiv.animate({
                 height: ["50%", "0%"]
             }, {
@@ -3091,23 +3119,24 @@ const closeImages = () => {
                 fill: "forwards"
             })
             optionsDiv.style.width = "100%"
-            if (orientationPortrait == true){
+            if (orientationPortrait == true) {
                 optionsDiv.style.height = "33%"
             } else {
-                optionsDiv.style.height = "25%"}
-                backArrow.animate({
+                optionsDiv.style.height = "25%"
+            }
+            backArrow.animate({
                 opacity: ["0.5", "0"]
             }, {
                 duration: 1000,
                 fill: "forwards"
             })
             imagesDiv.style.display = "none"
-imagesIsOpen = false
-centerContainer.style.display = "block"
-prev2.style.display = "none"
-next2.style.display = "none"
+            imagesIsOpen = false
+            centerContainer.style.display = "block"
+            prev2.style.display = "none"
+            next2.style.display = "none"
 
-}
+        }
 
         pausePlay.addEventListener('click', event => {
             if (currentSong) {
@@ -3133,7 +3162,7 @@ next2.style.display = "none"
             }
 
             else if (albumsAreOpen == true) {
-                closeAlbums()                
+                closeAlbums()
 
             }
 
@@ -3266,60 +3295,60 @@ next2.style.display = "none"
 
                 currentPlaylist = currentPlaylist2
 
-                if (selectedAlbumDiv1) {                    
+                if (selectedAlbumDiv1) {
                     selectedAlbumDiv2.style.width = selectedAlbumDiv2Width
                     selectedAlbumDiv2.style.left = selectedAlbumDiv2Left
-                    if (orientationPortrait == true){
-                    selectedAlbumDiv2.style.height = selectedAlbumDiv2Height
-                    selectedAlbumDiv2.style.top = selectedAlbumDiv2Top
-                    } else if (orientationPortrait == false){
-                    selectedAlbumDiv2.style.height = selectedAlbumDiv2HeightLandscape
-                    selectedAlbumDiv2.style.top = selectedAlbumDiv2TopLandscape
+                    if (orientationPortrait == true) {
+                        selectedAlbumDiv2.style.height = selectedAlbumDiv2Height
+                        selectedAlbumDiv2.style.top = selectedAlbumDiv2Top
+                    } else if (orientationPortrait == false) {
+                        selectedAlbumDiv2.style.height = selectedAlbumDiv2HeightLandscape
+                        selectedAlbumDiv2.style.top = selectedAlbumDiv2TopLandscape
                     }
                     selectedAlbumDiv1.style.width = "0%"
                     selectedAlbumDiv1.style.height = "0%"
-                    selectedAlbumDiv1.style.left = "100%"                    
-                }                 
+                    selectedAlbumDiv1.style.left = "100%"
+                }
 
-                    starSphere.material.map = loader.load(starSphere2)     
-                    fovX.style.filter = "invert(1)"             
+                starSphere.material.map = loader.load(starSphere2)
+                fovX.style.filter = "invert(1)"
 
-                    // sideControlsContainer.style.left = "0%"
-                    // sideControlsDiv.style.left = "35%"
-                    // sideControlsNavButton.style.float = "left"
-                    // sideControlsNavButton.animate({
-                    //     transform: sideControlsNavRotation,
-                    //     filter: ["brightness(100%)", "brightness(0%)"]
-                    // }, {
-                    //     duration: 1000,
-                    //     iterations: 1,
-                    //     fill: "both",
-                    //     easing: "ease-out"
-                    // }
-                    // )
-                    // sideControlsNavRotationDegrees += 180
+                // sideControlsContainer.style.left = "0%"
+                // sideControlsDiv.style.left = "35%"
+                // sideControlsNavButton.style.float = "left"
+                // sideControlsNavButton.animate({
+                //     transform: sideControlsNavRotation,
+                //     filter: ["brightness(100%)", "brightness(0%)"]
+                // }, {
+                //     duration: 1000,
+                //     iterations: 1,
+                //     fill: "both",
+                //     easing: "ease-out"
+                // }
+                // )
+                // sideControlsNavRotationDegrees += 180
 
-                    // for (let control of sideControl) {
-                    //     control.style.marginLeft = "50%"
-                    // }
-                    // materialSwitch.style.marginLeft = "45%"
-                    // presetControlsDiv.style.filter = "invert(1)"
-                    // fov.style.left = "-33%"
-                    // fov.style.width = "100%"
-                    // fov.style.filter = "brightness(0%)"
-                    // sideControlsNavButton.style.filter = "brightness(0%)"
+                // for (let control of sideControl) {
+                //     control.style.marginLeft = "50%"
+                // }
+                // materialSwitch.style.marginLeft = "45%"
+                // presetControlsDiv.style.filter = "invert(1)"
+                // fov.style.left = "-33%"
+                // fov.style.width = "100%"
+                // fov.style.filter = "brightness(0%)"
+                // sideControlsNavButton.style.filter = "brightness(0%)"
 
-                    // topControlsNavButton.style.filter = "invert(0)"
+                // topControlsNavButton.style.filter = "invert(0)"
 
-                    // albumDivNavButtonLeft.style.visibility = "hidden"
-                    // albumDivNavButtonRight.style.visibility = "visible"
+                // albumDivNavButtonLeft.style.visibility = "hidden"
+                // albumDivNavButtonRight.style.visibility = "visible"
 
-                    
 
-                    if (currentAlbum.texture2) {
-                        albumCube.material.map = loader.load(currentTexture2)
-                    }
-                
+
+                if (currentAlbum.texture2) {
+                    albumCube.material.map = loader.load(currentTexture2)
+                }
+
 
                 document.body.style.backgroundColor = "#fffaf1"
                 rendererContain.style.backgroundColor = "#fffaf1"
@@ -3336,70 +3365,70 @@ next2.style.display = "none"
 
                 currentPlaylist = currentPlaylist1
 
-                if (selectedAlbumDiv1) {                    
+                if (selectedAlbumDiv1) {
                     selectedAlbumDiv1.style.width = selectedAlbumDiv1Width
                     selectedAlbumDiv1.style.left = selectedAlbumDiv1Left
-                    if (orientationPortrait == true){
-                    selectedAlbumDiv1.style.height = selectedAlbumDiv1Height
-                    selectedAlbumDiv1.style.top = selectedAlbumDiv1Top
-                    } else if (orientationPortrait == false){
-                    selectedAlbumDiv1.style.height = selectedAlbumDiv1HeightLandscape
-                    selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
+                    if (orientationPortrait == true) {
+                        selectedAlbumDiv1.style.height = selectedAlbumDiv1Height
+                        selectedAlbumDiv1.style.top = selectedAlbumDiv1Top
+                    } else if (orientationPortrait == false) {
+                        selectedAlbumDiv1.style.height = selectedAlbumDiv1HeightLandscape
+                        selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
                     }
                     selectedAlbumDiv2.style.height = "0%"
-                    selectedAlbumDiv2.style.width = "0%"                        
-                } 
+                    selectedAlbumDiv2.style.width = "0%"
+                }
 
-                    starSphere.material.map = loader.load(starSphere1)                   
+                starSphere.material.map = loader.load(starSphere1)
 
-                    // albumDivContainer.style.left = "45px"
-                    // albumDivContainer.style.right = "auto"
-                    // albumDivContainer.style.float = "left"
+                // albumDivContainer.style.left = "45px"
+                // albumDivContainer.style.right = "auto"
+                // albumDivContainer.style.float = "left"
 
-                    // if (navOpen == true) {
-                    //     albumDivContainer.style.width = "200px"
-                    // } else if (navOpen == false) {
-                    //     albumDivContainer.style.width = "0%"
-                    // }
+                // if (navOpen == true) {
+                //     albumDivContainer.style.width = "200px"
+                // } else if (navOpen == false) {
+                //     albumDivContainer.style.width = "0%"
+                // }
 
-                    // sideControlsContainer.style.left = "auto"
-                    // sideControlsContainer.style.right = "5px"
-                    // sideControlsDiv.style.left = "auto"
-                    // sideControlsNavButton.style.left = "auto"
-                    // sideControlsNavButton.style.right = "0px"
-                    // sideControlsNavButton.style.float = "right"
+                // sideControlsContainer.style.left = "auto"
+                // sideControlsContainer.style.right = "5px"
+                // sideControlsDiv.style.left = "auto"
+                // sideControlsNavButton.style.left = "auto"
+                // sideControlsNavButton.style.right = "0px"
+                // sideControlsNavButton.style.float = "right"
 
-                    // sideControlsNavButton.animate({
-                    //     transform: sideControlsNavRotation,
-                    //     filter: ["hue-rotate(180deg)", "hue-rotate(0deg)"]
-                    // }, {
-                    //     duration: 1000,
-                    //     iterations: 1,
-                    //     fill: "both",
-                    //     easing: "ease-out"
-                    // }
-                    // )
-                    // sideControlsNavRotationDegrees -= 180
+                // sideControlsNavButton.animate({
+                //     transform: sideControlsNavRotation,
+                //     filter: ["hue-rotate(180deg)", "hue-rotate(0deg)"]
+                // }, {
+                //     duration: 1000,
+                //     iterations: 1,
+                //     fill: "both",
+                //     easing: "ease-out"
+                // }
+                // )
+                // sideControlsNavRotationDegrees -= 180
 
-                    // for (let control of sideControl) {
-                    //     control.style.marginLeft = "20%"
-                    // }
-                    // materialSwitch.style.marginLeft = "15%"
-                    // presetControlsDiv.style.filter = "invert(0)"
+                // for (let control of sideControl) {
+                //     control.style.marginLeft = "20%"
+                // }
+                // materialSwitch.style.marginLeft = "15%"
+                // presetControlsDiv.style.filter = "invert(0)"
 
-                    // fov.style.left = "33%"
-                    // fov.style.width = "auto"
-                    fov.style.filter = "brightness(100%)"
-                    fovX.style.filter = "invert(0)"
+                // fov.style.left = "33%"
+                // fov.style.width = "auto"
+                fov.style.filter = "brightness(100%)"
+                fovX.style.filter = "invert(0)"
 
-                    // topControlsNavButton.style.filter = "invert(1)"
-                    // albumDivNavButtonLeft.style.visibility = "visible"
-                    // albumDivNavButtonRight.style.visibility = "hidden"
+                // topControlsNavButton.style.filter = "invert(1)"
+                // albumDivNavButtonLeft.style.visibility = "visible"
+                // albumDivNavButtonRight.style.visibility = "hidden"
 
-                    if (currentAlbum.texture2) {
-                        albumCube.material.map = loader.load(currentTexture)
-                    }                               
-                
+                if (currentAlbum.texture2) {
+                    albumCube.material.map = loader.load(currentTexture)
+                }
+
 
                 document.body.style.backgroundColor = "#010203"
                 rendererContain.style.backgroundColor = "#010203"
@@ -3421,11 +3450,11 @@ next2.style.display = "none"
             //         pngDarkLightFile = "-light.png"
             //     }
 
-            
-            
-                
-                
-            
+
+
+
+
+
         }
 
 
