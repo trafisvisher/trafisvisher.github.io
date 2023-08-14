@@ -61,6 +61,88 @@
     font-family: 'Courier New', Courier, monospace;
       margin-top: 20px;
   }
+
+  #maapDiv {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+
+  }
+  #maapDiv2 {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
+  #luzDiv {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+
+  }
+  #luzDiv2 {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
+
+
+  #sapientsDiv {
+    display: none;
+    position: relative;
+    float: right;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+
+  }
+
+  #sapientsDiv2 {
+    display: none;
+    position: relative;
+    float: right;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+
+  }
+
+  #symbioseDiv {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
+  #symbioseDiv2 {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
+
+  #maasDiv {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
+  #maasDiv2 {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
         
     @media (orientation: portrait) {   
 
@@ -80,7 +162,7 @@
         
       }
 
-      #circleBW {
+      #albumSelect {
         cursor: pointer;
         position: absolute;
         top: -50%;
@@ -98,21 +180,7 @@
         left: 12.5%;
       }
 
-    #maapDiv {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
 
-    }
-    #maapDiv2 {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-    }
 
     #infinityDiv {
       display: none;
@@ -132,40 +200,7 @@
 
 
 
-    #sapientsDiv {
-      display: none;
-      position: relative;
-      float: right;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
 
-    }
-
-    #sapientsDiv2 {
-      display: none;
-      position: relative;
-      float: right;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-
-    }
-
-    #symbioseDiv {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-    }
-    #symbioseDiv2 {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-    }
 
 
   #topControlsDiv {
@@ -362,7 +397,7 @@
       visibility: hidden;
     }
 
-    #circleBW {
+    #albumSelect {
       cursor: pointer;
       position: absolute;
       top: -50%;
@@ -379,55 +414,7 @@
         top: 0%;
         left: 33%;
     }
-    #maapDiv {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
- 
-    }
-    #maapDiv2 {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
 
-    }
-
-
-
-    #sapientsDiv {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-
-    }
-    #sapientsDiv2 {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-
-    }
-    #symbioseDiv {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-    }
-    #symbioseDiv2 {
-      display: none;
-      position: relative;
-      width: 0%;
-      height: 0%;
-      transition: 1s ease;
-    }
 
 
   #topControlsDiv {
