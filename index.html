@@ -3090,7 +3090,10 @@ let userIsMobile = isMobileDevice()
             albumIsOpen = true
 
             seekbarContain.style.visibility = "visible"
+            console.log(selectedAlbumDiv1)
+            if (selectedAlbumDiv1.id !== "luzDiv"){
             albumSelect.style.visibility = "visible"
+            }
 
 
 
@@ -3189,7 +3192,6 @@ let userIsMobile = isMobileDevice()
 
 
             for (let album of albumDivContainerChildren) {
-                console.log(album.id)
                 let blockAlbum = document.getElementById(album.id)
                 blockAlbum.style.display = "block"
             }
