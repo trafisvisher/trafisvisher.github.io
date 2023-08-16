@@ -2256,7 +2256,9 @@
                     }
                 }
 
-                currentSong.onended = playNext
+                currentSong.onended = playNext          
+
+                
 
                 var dur = document.getElementById("dur");
                 function mDur() {
@@ -2267,10 +2269,16 @@
                 }
                 function mSet() {
                     currentSong.currentTime = dur.value
+                    console.log("value", dur.value, "durMax", dur.max)
                 }
 
-                dur.addEventListener("change", mSet);
-                currentSong.addEventListener("play", mDur);
+                currentSong.addEventListener('loadedmetadata', function() {
+                console.log('Duration:', currentSong.duration);
+                mDur()
+                console.log(dur.max)
+                })
+
+                dur.addEventListener("change", mSet);                
                 currentSong.addEventListener("timeupdate", mPlay);
 
 
@@ -3677,7 +3685,7 @@ let userIsMobile = isMobileDevice()
 
             if (backgroundBlack == true) {
 
-                albumSelect.src = "images/albumSelectA.png"
+                albumSelect.src = "images/albumSelectA.png"               
 
                 currentPlaylist = currentPlaylist2
 
