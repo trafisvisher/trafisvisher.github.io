@@ -150,8 +150,11 @@
         <div class="myImages">
             <img id="language4Image" src="images/images/language4.png" loading="lazy">
         </div>
+        <div class="myImages">
+            <img id="travisRabbitImage" src="images/images/travis-rabbit.png" loading="lazy">
+        </div>
 
-        
+         
 
 
         <a id="prev2">❮</a>
@@ -862,9 +865,7 @@
                     'chatsAudio',
                     'writhingAudio',
                     'palabraAudio'
-                ],
-                playlist2: [
-                ],
+                ],                
                 songs: {
                     luzAudio: {
                         imageId: 'luzImage',
@@ -2324,6 +2325,7 @@
                 let nextTrackIndex = currentPlaylist.indexOf(currentSong.id) + 1
                 if (nextTrackIndex >= currentPlaylist.length) {
                     nextTrackIndex = 0
+                    if (currentAlbum.playlist2){
                     if (currentPlaylist == currentPlaylist1) {
                         currentPlaylist = currentPlaylist2
                         backgroundShift()
@@ -2331,6 +2333,7 @@
                         currentPlaylist = currentPlaylist1
                         backgroundShift()
                     }
+                }
                 }
                 const nextTrack = currentPlaylist[nextTrackIndex]
 
@@ -2360,6 +2363,8 @@
 
                 if (previousTrackIndex < 0) {
 
+                    if (currentAlbum.playlist2){
+
                     if (currentPlaylist == currentPlaylist1) {
                         currentPlaylist = currentPlaylist2
                         backgroundShift()
@@ -2367,8 +2372,10 @@
                         currentPlaylist = currentPlaylist1
                         backgroundShift()
                     }
-                    previousTrackIndex = currentPlaylist.length - 1
                 }
+                    previousTrackIndex = currentPlaylist.length - 1
+                
+            }
 
                 const previousTrack = currentPlaylist[previousTrackIndex]
                 setCurrentSong(currentAlbumSongs[previousTrack])
@@ -3011,7 +3018,10 @@ let userIsMobile = isMobileDevice()
                 }
             }
             if (backgroundBlack == false) {
+                if (album.playlist2){
+                    console.log(album, album.playlist2)
                 currentPlaylist = album.playlist2
+                
                 selectedAlbumDiv2.style.width = selectedAlbumDiv2Width
                 selectedAlbumDiv2.style.left = selectedAlbumDiv2Left
                 if (orientationPortrait == true) {
@@ -3022,6 +3032,21 @@ let userIsMobile = isMobileDevice()
                     selectedAlbumDiv2.style.height = selectedAlbumDiv2HeightLandscape
                     selectedAlbumDiv2.style.top = selectedAlbumDiv2TopLandscape
                 }
+            } else {
+                currentPlaylist = album.playlist
+                selectedAlbumDiv1.style.width = selectedAlbumDiv1Width
+                selectedAlbumDiv1.style.left = selectedAlbumDiv1Left
+                if (orientationPortrait == true) {
+                    selectedAlbumDiv1.style.height = selectedAlbumDiv1Height
+                    selectedAlbumDiv1.style.top = selectedAlbumDiv1Top
+                }
+                if (orientationPortrait == false) {
+                    selectedAlbumDiv1.style.height = selectedAlbumDiv1HeightLandscape
+                    selectedAlbumDiv1.style.top = selectedAlbumDiv1TopLandscape
+                }
+
+            }
+
 
                 if (dimension3D == true) {
                     albumDivNavButtonRight.style.visibility = "visible"
@@ -3029,7 +3054,9 @@ let userIsMobile = isMobileDevice()
             }
 
             currentPlaylist1 = album.playlist
+            if (album.playlist2){
             currentPlaylist2 = album.playlist2
+            }
             currentAlbumSongs = album.songs
             currentAlbum = album
 
@@ -3687,7 +3714,9 @@ let userIsMobile = isMobileDevice()
 
                 albumSelect.src = "images/albumSelectA.png"               
 
+                if (currentAlbum.playlist2){
                 currentPlaylist = currentPlaylist2
+                }
 
                 if (selectedAlbumDiv1) {
                     selectedAlbumDiv2.style.width = selectedAlbumDiv2Width
