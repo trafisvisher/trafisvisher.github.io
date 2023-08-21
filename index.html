@@ -70,6 +70,16 @@
     <audio id="chatsAudio" preload="none" src="songs/luzSongs/les-chats.mp3"> </audio>
     <audio id="palabraAudio" preload="none" src="songs/luzSongs/palabra.mp3"> </audio>
 
+    <audio id="inertiaAudio" preload="none" src="songs/inertiaSongs/inertia.mp3"> </audio>
+    <audio id="ligatureAudio" preload="none" src="songs/inertiaSongs/speeding-through-your-ligature.mp3"> </audio>
+    <audio id="papyrusAudio" preload="none" src="songs/inertiaSongs/papyrus.mp3"> </audio>    
+    <audio id="fremontAudio" preload="none" src="songs/inertiaSongs/fremont-cut.mp3"> </audio>
+    <audio id="franticsAudio" preload="none" src="songs/inertiaSongs/nothing-frantics-me.mp3"> </audio>
+    <audio id="returnAudio" preload="none" src="songs/inertiaSongs/return.mp3"> </audio>
+    <audio id="frozenAudio" preload="none" src="songs/inertiaSongs/frozen-fingers.mp3"> </audio>
+    <audio id="breatheAudio" preload="none" src="songs/inertiaSongs/breathe-hard.mp3"> </audio>    
+    <audio id="earthboundAudio" preload="none" src="songs/inertiaSongs/earthbound.mp3"> </audio>
+
     <audio id="moltenAudio" preload="none" src="songs/sapientsSongs/molten-glass.mp3"></audio>
     <audio id="rocksAudio" preload="none" src="songs/sapientsSongs/rocks-and-waterbuckets.mp3"></audio>
     <audio id="lydianAudio" preload="none" src="songs/sapientsSongs/lydian-coins.mp3"></audio>
@@ -203,7 +213,8 @@
         <div id="albumTitlesDiv">
             <img id="maapTitle" src="images/maap-title.png" loading="lazy">
             <img id="maasTitle" src="images/maas-title.png" loading="lazy">
-            <img id="luzTitle" src="images/luz-title.png" loading="lazy">     
+            <img id="luzTitle" src="images/luz-title.png" loading="lazy">  
+            <img id="inertiaTitle" src="images/inertia-title.png" loading="lazy">   
             <img id="sapientsTitle" src="images/sapients-title.png" loading="lazy">
             <img id="symbioseTitle" src="images/symbiose-title.png" loading="lazy">  
             <img id="infinityTitle" src="images/infinity-title.png" loading="lazy">
@@ -320,18 +331,28 @@
                 <img class="songTitleImage" id="palabraImage" data-song="palabraAudio"
                 src="images/luzImages/palabra-paused.png" loading="lazy">
         </div>
-        <div id="luzDiv2">
-            <img class="songTitleImage" id="luzImage" data-song="luzAudio"
-                src="images/luzImages/luz-paused.png" loading="lazy">
-            <img class="songTitleImage" id="aguasImage" data-song="aguasAudio"
-                src="images/luzImages/aguas-paused.png" loading="lazy">
-            <img class="songTitleImage" id="ramificandoImage" data-song="ramificandoAudio"
-                src="images/luzImages/ramificando-paused.png" loading="lazy">
-            <img class="songTitleImage" id="writhingImage" data-song="writhingAudio"
-                src="images/luzImages/writhing-paused.png" loading="lazy">
-                <img class="songTitleImage" id="palabraImage" data-song="palabraAudio"
-                src="images/luzImages/palabra-paused.png" loading="lazy">
+        <div id="luzDiv2"></div>
+        <div id="inertiaDiv">
+            <img class="songTitleImage" id="inertiaImage" data-song="inertiaAudio"
+                src="images/inertiaImages/inertia-paused.png" loading="lazy">
+            <img class="songTitleImage" id="ligatureImage" data-song="ligatureAudio"
+                src="images/inertiaImages/ligature-paused.png" loading="lazy">
+            <img class="songTitleImage" id="papyrusImage" data-song="papyrusAudio"
+                src="images/inertiaImages/papyrus-paused.png" loading="lazy">
+            <img class="songTitleImage" id="fremontImage" data-song="fremontAudio"
+                src="images/inertiaImages/fremont-paused.png" loading="lazy">
+                <img class="songTitleImage" id="franticsImage" data-song="franticsAudio"
+                src="images/inertiaImages/frantics-paused.png" loading="lazy">
+                <img class="songTitleImage" id="returnImage" data-song="returnAudio"
+                src="images/inertiaImages/return-paused.png" loading="lazy">
+            <img class="songTitleImage" id="frozenImage" data-song="frozenAudio"
+                src="images/inertiaImages/frozen-paused.png" loading="lazy">
+                <img class="songTitleImage" id="breatheImage" data-song="breatheAudio"
+                src="images/inertiaImages/breathe-paused.png" loading="lazy">
+                <img class="songTitleImage" id="earthboundImage" data-song="earthboundAudio"
+                src="images/inertiaImages/earthbound-paused.png" loading="lazy">
         </div>
+        <div id="inertiaDiv2"></div>
         <div id="horseloverDiv">
             <img class="songTitleImage" id="stigmataImage" data-song="stigmataAudio"
                 src="images/horseloverImages/stigmata-paused.png" loading="lazy">
@@ -933,6 +954,136 @@
                         orbit: -800,
                         speed: 400
                     },
+                }
+            },
+
+            inertiaAlbum: {
+                texture: "images/inertiaImages/album-cube-texture.png",
+                starSphere1: "images/maapImages/galaxy-starfield.png",
+                starSphere2: "images/iridescent-background-white.png",
+                fov: 250,
+                imageId: "inertiaTitle",
+                divId: "inertiaDiv",
+                div1Width: "100%",
+                div2Width: "100%",
+                div1Height: "50",
+                div2Height: "50",
+                div1HeightLandscape: "80",
+                div2HeightLandscape: "80",
+                div1Left: "0%",
+                div2Left: "0%",
+                playlist: [
+                    'inertiaAudio',
+                    'ligatureAudio',
+                    'papyrusAudio',
+                    'fremontAudio',
+                    'franticsAudio',
+                    'returnAudio',
+                    'frozenAudio',
+                    'breatheAudio',
+                    'earthboundAudio'
+                ],                
+                songs: {
+                    inertiaAudio: {
+                        imageId: 'inertiaImage',
+                        audioId: 'inertiaAudio',
+                        pausedImg: "images/inertiaImages/inertia-paused.png",
+                        playingImg: "images/inertiaImages/inertia-playing.png",
+                        sphereTexture: "images/inertiaImages/inertia-texture.png",
+                        elem: document.getElementById("inertiaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                    ligatureAudio: {
+                        imageId: 'ligatureImage',
+                        audioId: 'ligatureAudio',
+                        pausedImg: "images/inertiaImages/ligature-paused.png",
+                        playingImg: "images/inertiaImages/ligature-playing.png",
+                        sphereTexture: "images/inertiaImages/ligature-texture.png",
+                        elem: document.getElementById("ligatureAudio"),
+                        hex: "0x219bff",
+                        orbit: -900,
+                        speed: 400
+                    },
+                    papyrusAudio: {
+                        imageId: 'papyrusImage',
+                        audioId: 'papyrusAudio',
+                        pausedImg: "images/inertiaImages/papyrus-paused.png",
+                        playingImg: "images/inertiaImages/papyrus-playing.png",
+                        sphereTexture: "images/inertiaImages/papyrus-texture.png",
+                        elem: document.getElementById("papyrusAudio"),
+                        hex: "0x36ff62",
+                        orbit: -525,
+                        speed: 800,
+                    },
+                    franticsAudio: {
+                        imageId: 'franticsImage',
+                        audioId: 'franticsAudio',
+                        pausedImg: "images/inertiaImages/frantics-paused.png",
+                        playingImg: "images/inertiaImages/frantics-playing.png",
+                        sphereTexture: "images/inertiaImages/frantics-texture.png",
+                        elem: document.getElementById("franticsAudio"),
+                        hex: "0xdffc03",
+                        orbit: -615,
+                        speed: 450
+                    },
+                    returnAudio: {
+                        imageId: 'returnImage',
+                        audioId: 'returnAudio',
+                        pausedImg: "images/inertiaImages/return-paused.png",
+                        playingImg: "images/inertiaImages/return-playing.png",
+                        sphereTexture: "images/inertiaImages/return-texture.png",
+                        elem: document.getElementById("returnAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    fremontAudio: {
+                        imageId: 'fremontImage',
+                        audioId: 'fremontAudio',
+                        pausedImg: "images/inertiaImages/fremont-paused.png",
+                        playingImg: "images/inertiaImages/fremont-playing.png",
+                        sphereTexture: "images/inertiaImages/fremont-texture.png",
+                        elem: document.getElementById("fremontAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    frozenAudio: {
+                        imageId: 'frozenImage',
+                        audioId: 'frozenAudio',
+                        pausedImg: "images/inertiaImages/frozen-paused.png",
+                        playingImg: "images/inertiaImages/frozen-playing.png",
+                        sphereTexture: "images/inertiaImages/frozen-texture.png",
+                        elem: document.getElementById("frozenAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    breatheAudio: {
+                        imageId: 'breatheImage',
+                        audioId: 'breatheAudio',
+                        pausedImg: "images/inertiaImages/breathe-paused.png",
+                        playingImg: "images/inertiaImages/breathe-playing.png",
+                        sphereTexture: "images/inertiaImages/breathe-texture.png",
+                        elem: document.getElementById("breatheAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    earthboundAudio: {
+                        imageId: 'earthboundImage',
+                        audioId: 'earthboundAudio',
+                        pausedImg: "images/inertiaImages/earthbound-paused.png",
+                        playingImg: "images/inertiaImages/earthbound-playing.png",
+                        sphereTexture: "images/inertiaImages/earthbound-texture.png",
+                        elem: document.getElementById("earthboundAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    
                 }
             },
 
@@ -3127,7 +3278,7 @@ let userIsMobile = isMobileDevice()
 
             seekbarContain.style.visibility = "visible"
             console.log(selectedAlbumDiv1)
-            if (selectedAlbumDiv1.id !== "luzDiv"){
+            if (selectedAlbumDiv1.id !== "luzDiv" && selectedAlbumDiv1.id !== "inertiaDiv" ){
             albumSelect.style.visibility = "visible"
             }
 
