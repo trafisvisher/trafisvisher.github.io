@@ -161,7 +161,7 @@
         
     @media (orientation: portrait) {   
 
-      #prev, #next, #prev2, #next2 {
+      #prev, #next, #prev2, #next2, #prev3, #next3 {
         top: 90%;
       }    
 
@@ -321,6 +321,18 @@
   border-radius: 3px 0 0 3px;
 }
 
+#next3 {
+  right: 5%;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev3 {
+  left: 5%;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
 #poemsDiv {
 	height: 100vh;
 	display: none;
@@ -331,6 +343,15 @@
 }
 
 #imagesDiv {
+  overflow: hidden;
+	height: 100vh;
+	display: none;
+	position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+#hiddenDiv {
   overflow: hidden;
 	height: 100vh;
 	display: none;
@@ -385,6 +406,15 @@
     }
   
     #prev2 {
+      left: 5%;
+      border-radius: 3px 0 0 3px;
+    }
+    #next3 {
+      right: 5%;
+      border-radius: 3px 0 0 3px;
+    }
+  
+    #prev3 {
       left: 5%;
       border-radius: 3px 0 0 3px;
     }
@@ -533,8 +563,16 @@
   align-items: center;
   justify-content: center;
 }
+#hiddenDiv {
+	height: 100%;
+	width: auto;
+	display: none;
+	position: relative;
+  align-items: center;
+  justify-content: center;
+}
 
-#prev, #next, #prev2, #next2 {
+#prev, #next, #prev2, #next2, #prev3, #next3 {
   top: 50%;
 }    
 
@@ -584,7 +622,7 @@
 
 
 
-  #prev, #next, #prev2, #next2 {
+  #prev, #next, #prev2, #next2, #prev3, #next3 {
     display: none;
     cursor: pointer;
     position: absolute;
@@ -622,6 +660,13 @@
   }
 
   #imagesDiv img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: contain;
+    display: block;
+  }
+
+  #hiddenDiv img {
     height: 100vh;
     width: 100vw;
     object-fit: contain;

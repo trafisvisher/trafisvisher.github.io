@@ -131,11 +131,43 @@
 
     <img id="backArrow" src="images/back-arrow.png">
 
+    <div id="hiddenDiv">
+        <div class="hiddenImages">
+            <img id="language3Image" src="images/hiddenLanguage/language3.jpg" loading="lazy">
+        </div>
+        <div class="hiddenImages">
+            <img id="language1Image" src="images/hiddenLanguage/language1.png" loading="lazy">
+        </div>
+        <div class="hiddenImages">
+            <img id="language2Image" src="images/hiddenLanguage/language2.png" loading="lazy">
+        </div>
+        <div class="hiddenImages">
+            <img id="language4Image" src="images/hiddenLanguage/language4.png" loading="lazy">
+        </div>
+
+        <a id="prev3">❮</a>
+        <a id="next3">❯</a>
+
+    </div>
+    
+
     <div id="imagesDiv">
+        <div class="myImages">
+            <img id="travisCambodiaImage" src="images/images/travis-cambodia.jpg" loading="lazy">
+        </div>        
+        <div class="myImages">
+            <img id="travisCoonskinImage" src="images/images/travis-coonskin.jpg" loading="lazy">
+        </div>
         <div class="myImages">
             <img id="meImage" src="images/images/travis.jpg" loading="lazy">
         </div>
         <div class="myImages">
+            <img id="travisTreeImage" src="images/images/travis-tree.jpg" loading="lazy">
+        </div>
+        <div class="myImages">
+            <img id="travisScarfImage" src="images/images/travis-scarf.jpg" loading="lazy">
+        </div>
+        <!-- <div class="myImages">
             <img id="cambodiaImage" src="images/images/cambodia.png" loading="lazy">
         </div>
         <div class="myImages">
@@ -144,38 +176,21 @@
         <div class="myImages">
             <img id="sphereImage" src="images/images/sphere.png" loading="lazy">
         </div>
-
         <div class="myImages">
             <img id="flowersImage" src="images/images/flowers.png" loading="lazy">
-        </div>
+        </div>        -->
         <div class="myImages">
-            <img id="language3Image" src="images/images/language3.jpg" loading="lazy">
-        </div>
-        <div class="myImages">
-            <img id="language1Image" src="images/images/language1.png" loading="lazy">
-        </div>
-        <div class="myImages">
-            <img id="language2Image" src="images/images/language2.png" loading="lazy">
-        </div>
-        <div class="myImages">
-            <img id="language4Image" src="images/images/language4.png" loading="lazy">
-        </div>
-        <div class="myImages">
-            <img id="travisCoonskinImage" src="images/images/travis-coonskin.jpg" loading="lazy">
+            <img id="travisBatikImage" src="images/images/travis-batik.jpg" loading="lazy">
         </div>
         <div class="myImages">
             <img id="travisRabbitImage" src="images/images/travis-rabbit.png" loading="lazy">
-        </div>
-
-         
-
+        </div> 
 
         <a id="prev2">❮</a>
         <a id="next2">❯</a>
     </div>
 
-    <div id="poemsDiv">
-        
+    <div id="poemsDiv">       
         
         <div class="myPoems">
             <img src="poems/whisked.jpg" style="width:100%" loading="lazy">
@@ -202,7 +217,7 @@
 
     <div id="scrollContainer">
         <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg" loading="lazy">
-        <img id="travisImage" src="images/travis-image.png" loading="lazy">
+        <img id="travisImage" src="images/travis-image.png" loading="lazy">&
     </div>
 
     <div id="centerContainer">
@@ -211,7 +226,9 @@
             <img id="aboutOption" class="option" data-imgstm="images/about" src="images/about-unselected.png">
             <img id="poemsOption" class="option" data-imgstm="images/poems" src="images/words-unselected.png">
             <img id="imagesOption" class="option" data-imgstm="images/images" src="images/images-unselected.png">
+            <img id="hiddenOption" class="option" data-imgstm="images/hidden" src="images/hidden-option.png">
         </div>
+
 
         <div id="albumTitlesDiv">
             <img id="maapTitle" src="images/maap-title.png" loading="lazy">
@@ -641,6 +658,7 @@
         let startY = null
 
         let imageIndex = 1;
+        let hiddenIndex = 1;
 
         let currentOption = null
         let currentOptionElem = null
@@ -676,6 +694,7 @@
         let albumIsOpen = false
         let aboutIsOpen = false
         let poemsIsOpen = false
+        let hiddenIsOpen = false
         let poemsDivChildren = poemsDiv.children
         let poemCounter = 0
         let imagesIsOpen = false
@@ -3127,6 +3146,9 @@ let userIsMobile = isMobileDevice()
             if (option.id == "imagesOption") {
                 openImages()
             }
+            if (option.id == "hiddenOption") {
+                openHidden()
+            }
         }
 
         const openCurrentAlbum = (album) => {
@@ -3480,6 +3502,8 @@ let userIsMobile = isMobileDevice()
                 duration: 1000,
                 fill: "forwards"
             })
+
+            showPoems(poemIndex);
         }
 
         let poemIndex = 1;
@@ -3514,7 +3538,17 @@ let userIsMobile = isMobileDevice()
             }
             poems[poemIndex - 1].style.display = "block";
         }
-        showPoems(poemIndex);
+        
+        function showHidden(n) {
+            let i;
+            let hidden = document.getElementsByClassName("hiddenImages");
+            if (n > hidden.length) { hiddenIndex = 1 }
+            if (n < 1) { hiddenIndex = hidden.length }
+            for (i = 0; i < hidden.length; i++) {
+                hidden[i].style.display = "none";
+            }
+            hidden[hiddenIndex - 1].style.display = "block";
+        }
 
         const openImages = () => {
 
@@ -3544,6 +3578,34 @@ let userIsMobile = isMobileDevice()
 
         }
 
+        const openHidden = () => {
+
+centerContainer.style.display = "none"
+if (userIsMobile == false){
+prev3.style.display = "block"
+next3.style.display = "block"
+}
+optionsDiv.style.width = "0%"
+optionsDiv.style.height = "0%"
+
+showHidden(hiddenIndex);
+
+
+
+hiddenDiv.style.display = "flex"
+hiddenIsOpen = true
+
+backArrow.style.visibility = "visible"
+backArrow.animate({
+    opacity: ["0", "0.5"]
+}, {
+    duration: 1000,
+    fill: "forwards"
+})
+
+
+}
+
 
 
 
@@ -3551,6 +3613,8 @@ let userIsMobile = isMobileDevice()
         imagesDiv.addEventListener('touchmove', handleTouchEnd, false);
         poemsDiv.addEventListener('touchstart', handleTouchStart, false);
         poemsDiv.addEventListener('touchmove', handleTouchEnd2, false);
+        hiddenDiv.addEventListener('touchstart', handleTouchStart, false);
+        hiddenDiv.addEventListener('touchmove', handleTouchEnd3, false);
 
         // Handle touch start
         function handleTouchStart(event) {
@@ -3606,6 +3670,30 @@ let userIsMobile = isMobileDevice()
             startY = null;
         }
 
+        function handleTouchEnd3(event) {
+            if (!startX || !startY) return;
+
+            const endX = event.changedTouches[0].clientX;
+            const endY = event.changedTouches[0].clientY;
+
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+
+            // Check if the swipe is horizontal (left or right) and long enough
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+
+                if (deltaX > 0) {
+                    showHidden(hiddenIndex += -1)
+                } else {
+                    showHidden(hiddenIndex += 1)
+                }
+            }
+
+            // Reset the start coordinates to prevent multiple swipes in one touch event
+            startX = null;
+            startY = null;
+        }
+
 
 
 
@@ -3619,6 +3707,18 @@ let userIsMobile = isMobileDevice()
 
         next2.addEventListener('click', () => {
             showImages(imageIndex += 1);
+        })
+
+        
+        const prev3 = document.getElementById("prev3")
+
+        prev3.addEventListener('click', () => {
+            showHidden(hiddenIndex += -1);
+        })
+        const next3 = document.getElementById("next3")
+
+        next3.addEventListener('click', () => {
+            showHidden(hiddenIndex += 1);
         })
 
 
@@ -3693,6 +3793,32 @@ let userIsMobile = isMobileDevice()
 
         }
 
+        const closeHidden = () => {
+            hiddenDiv.animate({
+                height: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+            optionsDiv.style.width = "100%"
+            optionsDiv.style.height = "33%"
+                optionsDiv.style.top = "33%"
+            backArrow.animate({
+                opacity: ["0.5", "0"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            hiddenDiv.style.display = "none"
+            hiddenIsOpen = false
+
+            prev3.style.display = "none"
+            next3.style.display = "none"
+            centerContainer.style.display = "block"
+
+        }
+
         const closeImages = () => {
             optionsDiv.style.width = "100%"
             optionsDiv.style.height = "33%"
@@ -3750,6 +3876,10 @@ let userIsMobile = isMobileDevice()
             else if (imagesIsOpen == true) {
                 closeImages()
                 imagesIsOpen = false
+            }
+            else if (hiddenIsOpen == true) {
+                closeHidden()
+                hiddenIsOpen = false
             }
 
         })
