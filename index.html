@@ -144,10 +144,8 @@
         <div class="hiddenImages">
             <img id="language4Image" src="images/hiddenLanguage/language4.png" loading="lazy">
         </div>
-
         <a id="prev3">❮</a>
         <a id="next3">❯</a>
-
     </div>
     
 
@@ -185,13 +183,11 @@
         <div class="myImages">
             <img id="travisRabbitImage" src="images/images/travis-rabbit.png" loading="lazy">
         </div> 
-
         <a id="prev2">❮</a>
         <a id="next2">❯</a>
     </div>
 
-    <div id="poemsDiv">       
-        
+    <div id="poemsDiv">               
         <div class="myPoems">
             <img src="poems/whisked.jpg" style="width:100%" loading="lazy">
         </div>
@@ -204,23 +200,20 @@
         <div class="myPoems">
             <img src="poems/blank.jpg" style="width:100%" loading="lazy">
         </div>
-
         <div class="myPoems">
             <img src="poems/sarajevo.png" style="width:50%; left:25%; filter: invert(1); position:relative" loading="lazy">
         </div>
-
-
         <a id="prev">❮</a>
         <a id="next">❯</a>
-
     </div>
 
     <div id="scrollContainer">
         <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg" loading="lazy">
-        <img id="travisImage" src="images/travis-image.png" loading="lazy">&
+        <img id="travisImage" src="images/travis-image.png" loading="lazy">
     </div>
 
     <div id="centerContainer">
+        
         <div id="optionsDiv">
             <img id="musicOption" class="option" data-imgstm="images/music" src="images/music-unselected.png">
             <img id="aboutOption" class="option" data-imgstm="images/about" src="images/about-unselected.png">
@@ -228,7 +221,6 @@
             <img id="imagesOption" class="option" data-imgstm="images/images" src="images/images-unselected.png">
             <img id="hiddenOption" class="option" data-imgstm="images/hidden" src="images/hidden-option.png">
         </div>
-
 
         <div id="albumTitlesDiv">
             <img id="maapTitle" src="images/maap-title.png" loading="lazy">
@@ -249,10 +241,8 @@
         </div>
     </div>
 
-
     <img id="albumDivNavButtonLeft" src="images/controls/back-button.png">
     <img id="albumDivNavButtonRight" src="images/controls/forward-button.png">
-
 
     <div id="albumDivContainer">
         <div id="sapientsDiv">
@@ -474,8 +464,6 @@
         </div>
     </div>
 
-
-
     <!-- <div id="sideControlsContainer">
     <div id="sideControlsDiv">
 
@@ -487,7 +475,6 @@
       <img id="sphereContract" class="sideControl darkLightImg" data-imgStem="images/controls/sphere-contract">
       <img id="sideControlsNavButton" src="images/controls/back-button.png">
       <img id="materialSwitch" class="materialControl darkLightImg" data-imgStem="images/controls/material-switch">
-      
 
     </div>
     </div> -->
@@ -516,9 +503,6 @@
             <img id=preset1 class="presetControl" src="images/controls/view-preset-unselected.png">
         </div> -->
     </div>
-
-
-
 
     <script type="module">
 
@@ -2443,13 +2427,13 @@
                 }
                 function mSet() {
                     currentSong.currentTime = dur.value
-                    console.log("value", dur.value, "durMax", dur.max)
+                    
                 }
 
                 currentSong.addEventListener('loadedmetadata', function() {
-                console.log('Duration:', currentSong.duration);
+                
                 mDur()
-                console.log(dur.max)
+                
                 })
 
                 dur.addEventListener("change", mSet);                
@@ -3195,7 +3179,7 @@ let userIsMobile = isMobileDevice()
             }
             if (backgroundBlack == false) {
                 if (album.playlist2){
-                    console.log(album, album.playlist2)
+                    
                 currentPlaylist = album.playlist2
                 
                 selectedAlbumDiv2.style.width = selectedAlbumDiv2Width
@@ -3302,7 +3286,7 @@ let userIsMobile = isMobileDevice()
             albumIsOpen = true
 
             seekbarContain.style.visibility = "visible"
-            console.log(selectedAlbumDiv1)
+            
             if (selectedAlbumDiv1.id !== "luzDiv" && selectedAlbumDiv1.id !== "inertiaDiv" ){
             albumSelect.style.visibility = "visible"
             }
@@ -3511,7 +3495,7 @@ let userIsMobile = isMobileDevice()
         const prev = document.getElementById("prev")
         const next = document.getElementById("next")
        
-        console.log(userIsMobile)
+        
         
         if (userIsMobile == false){
             prev.style.display = "block"

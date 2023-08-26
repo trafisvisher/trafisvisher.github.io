@@ -158,6 +158,39 @@
     height: 0%;
     transition: 1s ease;
   }
+
+  #fovX{
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: -50%;
+  }
+
+
+
+  @media (max-width:767px){
+    #fovX {
+      left: 47.5%;
+      width: 5%;
+    }
+    #pausePlay {
+      width: 10%;
+      position: absolute;
+      left: 45%;
+    }
+  }
+
+  @media (min-width:768px){
+    #fovX {
+      left: 49%;
+      width: 2%;
+    }
+    #pausePlay {
+      width: 5%;
+      position: absolute;
+      left: 47.5%;
+    }
+  }
         
     @media (orientation: portrait) {   
 
@@ -295,11 +328,6 @@
   top: 33%
 }
 
-#pausePlay {
-  width: 10%;
-  position: absolute;
-  left: 45%;
-}
 
 #next {
   right: 5%;
@@ -361,15 +389,6 @@
 }
 
 
-#fovX {
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  left: 47.5%;
-  width: 5%;
-  top: -50%;
-
-}
 
 
   }
@@ -379,16 +398,6 @@
 
   @media (orientation: landscape) {       
     
-
-    
-  #fovX {
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    left: 49%;
-    width: 2%;
-    top: -50%;
-  }
 
     #next {
       right: 5%;
@@ -540,11 +549,6 @@
   transition: 1s ease;
 }
 
-#pausePlay {
-  width: 5%;
-  position: absolute;
-  left: 47.5%;
-}
 
 #poemsDiv {
 	height: 100%;
