@@ -3332,9 +3332,7 @@ let userIsMobile = isMobileDevice()
             }
         }
 
-        const openCurrentAlbum = (album) => {
-
-            debugger
+        const openCurrentAlbum = (album) => {            
 
             selectedAlbumTitleImage = document.getElementById(album.imageId)
             selectedAlbumDiv1 = document.getElementById(album.divId)
@@ -3461,7 +3459,7 @@ let userIsMobile = isMobileDevice()
 
 
             albumTitlesDiv.animate({
-                height: ["66%", "0%"]
+                height: ["80%", "0%"]
             }, {
                 duration: 1000,
                 easing: "ease",
@@ -3547,7 +3545,7 @@ let userIsMobile = isMobileDevice()
             albumTitlesDiv.style.display = "block"
             if (orientationPortrait == true) {
                 albumTitlesDiv.animate({
-                    height: ["0%", "50%"],
+                    height: ["0%", "80%"],
                     width: ["0%", "100%"]
                 }, {
                     duration: 1000,
@@ -3556,7 +3554,7 @@ let userIsMobile = isMobileDevice()
                 })
             } else {
                 albumTitlesDiv.animate({
-                    height: ["0%", "75%"],
+                    height: ["0%", "80%"],
                     width: ["0%", "100%"]
                 }, {
                     duration: 1000,
@@ -3597,7 +3595,7 @@ let userIsMobile = isMobileDevice()
         const closeAlbums = () => {
 
             albumTitlesDiv.animate({
-                height: ["50%", "0%"]
+                height: ["80%", "0%"]
             }, {
                 duration: 1000,
                 easing: "ease",
