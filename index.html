@@ -3776,6 +3776,14 @@ showHidden(hiddenIndex);
 hiddenDiv.style.display = "flex"
 hiddenIsOpen = true
 
+hiddenDiv.animate({
+                height: ["0%", "100%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+
 backArrow.style.visibility = "visible"
 backArrow.animate({
     opacity: ["0", "0.5"]
