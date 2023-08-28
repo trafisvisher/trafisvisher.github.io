@@ -209,6 +209,16 @@
         
     @media (orientation: portrait) {   
 
+      #albumDivContainer {
+        position: fixed;
+        height: 75%;
+        width: 66%;
+        transition: 0.5s;
+        top: 12.5%;
+        left: 17%;
+        transition: 1s ease
+      }
+
       #prev, #next, #prev2, #next2, #prev3, #next3 {
         top: 90%;
       }    
@@ -408,11 +418,25 @@
 
   }
 
-
+  #albumDivContainer div {
+    transition: 1s;
+  }
+  
 
 
   @media (orientation: landscape) {       
-    
+
+    #albumDivContainer {
+      position: fixed;
+      height: 75%;
+      width: 50%;
+      transition: 0.5s;
+      top: 12.5%;
+      left: 25%;
+      transition: 1s ease
+    }
+  
+
 
     #next {
       right: 5%;
@@ -716,19 +740,7 @@
     top: 5%
   }
 
-  #albumDivContainer {
-    position: fixed;
-    height: 75%;
-    width: 66%;
-    transition: 0.5s;
-    top: 12.5%;
-    left: 17%;
-    transition: 1s ease
-  }
 
-  #albumDivContainer div {
-    transition: 1s;
-  }
 
 #albumDivNavButtonLeft { 
   position: absolute;           
