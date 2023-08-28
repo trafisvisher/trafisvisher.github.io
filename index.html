@@ -49,9 +49,8 @@
     <audio id="laAudio" preload="none" src="songs/maasSongs/la-la-la.mp3"> </audio>
     <audio id="inklingsAudio" preload="none" src="songs/maasSongs/inklings.mp3"> </audio>    
     <audio id="homeAudio" preload="none" src="songs/maasSongs/ill-be-home.mp3"> </audio>
-    <audio id="childAudio" preload="none" src="songs/maasSongs/child-trials.mp3"> </audio>
-    <audio id="flyAudio" preload="none" src="songs/maasSongs/fly-face-to-the-sky.mp3"> </audio>
-    <audio id="wantAudio" preload="none" src="songs/maasSongs/i-only-want-you.mp3"> </audio>
+    <audio id="lightAudio" preload="none" src="songs/maasSongs/light-gulping orb.mp3"> </audio>
+    <audio id="flyAudio" preload="none" src="songs/maasSongs/fly-face-to-the-sky.mp3"> </audio>    
     <audio id="fruitAudio" preload="none" src="songs/maasSongs/fruit-of-the-inference.mp3"> </audio>
     <audio id="coldAudio" preload="none" src="songs/maasSongs/it-was-really-cold-today.mp3"> </audio>
     <audio id="mythAudio" preload="none" src="songs/maasSongs/the-myth-of-the-myth.mp3"> </audio>
@@ -82,13 +81,15 @@
 
     <audio id="braidingAudio" preload="none" src="songs/braidingSongs/braiding-the-blood.mp3"> </audio>
     <audio id="traceAudio" preload="none" src="songs/braidingSongs/trace-the-beat.mp3"> </audio>
-    <audio id="catchAudio" preload="none" src="songs/braidingSongs/cant-catch-you.mp3"> </audio>    
+    <audio id="catchAudio" preload="none" src="songs/braidingSongs/cant-catch-you.mp3"> </audio>
+    <audio id="childAudio" preload="none" src="songs/braidingSongs/child-trials.mp3"> </audio>     
     <audio id="snowAudio" preload="none" src="songs/braidingSongs/snow-fastballs.mp3"> </audio>
     <audio id="evenAudio" preload="none" src="songs/braidingSongs/even-now-it-falls.mp3"> </audio>
     <audio id="optimalismAudio" preload="none" src="songs/braidingSongs/optimalism.mp3"> </audio>
     <audio id="katAudio" preload="none" src="songs/braidingSongs/kat-latie.mp3"> </audio>
     <audio id="macroAudio" preload="none" src="songs/braidingSongs/macro.mp3"> </audio>    
-    <audio id="lightAudio" preload="none" src="songs/braidingSongs/light-gulping orb.mp3"> </audio>
+    <audio id="wantAudio" preload="none" src="songs/braidingSongs/i-only-want-you.mp3"> </audio>  
+    <audio id="upsideAudio" preload="none" src="songs/braidingSongs/upside-down-under-a-log.mp3"> </audio>    
 
     <audio id="moltenAudio" preload="none" src="songs/sapientsSongs/molten-glass.mp3"></audio>
     <audio id="rocksAudio" preload="none" src="songs/sapientsSongs/rocks-and-waterbuckets.mp3"></audio>
@@ -394,6 +395,8 @@
                 src="images/braidingImages/trace-paused.png" loading="lazy">
             <img class="songTitleImage" id="catchImage" data-song="catchAudio"
                 src="images/braidingImages/catch-paused.png" loading="lazy">
+                <img class="songTitleImage" id="childImage" data-song="childAudio"
+                src="images/braidingImages/child-paused.png" loading="lazy">
             <img class="songTitleImage" id="snowImage" data-song="snowAudio"
                 src="images/braidingImages/snow-paused.png" loading="lazy">
                 <img class="songTitleImage" id="evenImage" data-song="evenAudio"
@@ -404,8 +407,11 @@
                 src="images/braidingImages/kat-paused.png" loading="lazy">
                 <img class="songTitleImage" id="macroImage" data-song="macroAudio"
                 src="images/braidingImages/macro-paused.png" loading="lazy">
-                <img class="songTitleImage" id="lightImage" data-song="lightAudio"
-                src="images/braidingImages/light-paused.png" loading="lazy">
+                <img class="songTitleImage" id="wantImage" data-song="wantAudio"
+                src="images/braidingImages/want-paused.png" loading="lazy">
+                <img class="songTitleImage" id="upsideImage" data-song="upsideAudio"
+                src="images/braidingImages/upside-paused.png" loading="lazy">
+                
         </div>
         <div id="braidingDiv2"></div>
 
@@ -486,8 +492,8 @@
                 src="images/maasImages/home-paused.png" loading="lazy">
         </div>
         <div id="maasDiv2">
-            <img class="songTitleImage" id="childImage" data-song="childAudio"
-                src="images/maasImages/child-paused.png" loading="lazy">
+            <img class="songTitleImage" id="lightImage" data-song="lightAudio"
+                src="images/maasImages/light-paused.png" loading="lazy">            
             <img class="songTitleImage" id="mythImage" data-song="mythAudio"
                 src="images/maasImages/myth-paused.png" loading="lazy">
             <img class="songTitleImage" id="surfactantImage" data-song="surfactantAudio"
@@ -496,9 +502,8 @@
             <img class="songTitleImage" id="fruitImage" data-song="fruitAudio"
                 src="images/maasImages/fruit-paused.png" loading="lazy">
             <img class="songTitleImage" id="springImage" data-song="springAudio"
-                src="images/maasImages/spring-paused.png" loading="lazy">            
-            <img class="songTitleImage" id="wantImage" data-song="wantAudio"
-                src="images/maasImages/want-paused.png" loading="lazy">
+                src="images/maasImages/spring-paused.png" loading="lazy">           
+            
             <img class="songTitleImage" id="coldImage" data-song="coldAudio"
                 src="images/maasImages/cold-paused.png" loading="lazy">
                 <img class="songTitleImage" id="pushImage" data-song="pushAudio"
@@ -1148,8 +1153,8 @@
                 divId: "braidingDiv",
                 div1Width: "100%",
                 div2Width: "100%",
-                div1Height: "75",
-                div2Height: "75",
+                div1Height: "85",
+                div2Height: "85",
                 div1HeightLandscape: "80",
                 div2HeightLandscape: "80",
                 div1Left: "0%",
@@ -1158,12 +1163,14 @@
                     'braidingAudio',
                     'traceAudio',
                     'catchAudio',
+                    'childAudio',
                     'snowAudio',
                     'evenAudio',
                     'optimalismAudio',
                     'katAudio',
                     'macroAudio',
-                    'lightAudio'
+                    'wantAudio',
+                    'upsideAudio'
                 ],                
                 songs: {
                     braidingAudio: {
@@ -1198,6 +1205,17 @@
                         hex: "0x36ff62",
                         orbit: -525,
                         speed: 800,
+                    },
+                    childAudio: {
+                        imageId: 'childImage',
+                        audioId: 'childAudio',
+                        pausedImg: "images/braidingImages/child-paused.png",
+                        playingImg: "images/braidingImages/child-playing.png",
+                        sphereTexture: "images/braidingImages/child-texture.png",
+                        elem: document.getElementById("childAudio"),
+                        hex: "0x9a36ff",
+                        orbit: 750,
+                        speed: 1000
                     },
                     snowAudio: {
                         imageId: 'snowImage',
@@ -1254,17 +1272,30 @@
                         orbit: -800,
                         speed: 400
                     },
-                    lightAudio: {
-                        imageId: 'lightImage',
-                        audioId: 'lightAudio',
-                        pausedImg: "images/braidingImages/light-paused.png",
-                        playingImg: "images/braidingImages/light-playing.png",
-                        sphereTexture: "images/braidingImages/light-texture.png",
-                        elem: document.getElementById("lightAudio"),
+
+                    wantAudio: {
+                        imageId: 'wantImage',
+                        audioId: 'wantAudio',
+                        pausedImg: "images/braidingImages/want-paused.png",
+                        playingImg: "images/braidingImages/want-playing.png",
+                        sphereTexture: "images/braidingImages/want-texture.png",
+                        elem: document.getElementById("wantAudio"),
                         hex: "0x219bff",
-                        orbit: -800,
-                        speed: 400
+                        orbit: 1000,
+                        speed: 700
                     },
+                    upsideAudio: {
+                        imageId: 'upsideImage',
+                        audioId: 'upsideAudio',
+                        pausedImg: "images/braidingImages/upside-paused.png",
+                        playingImg: "images/braidingImages/upside-playing.png",
+                        sphereTexture: "images/braidingImages/upside-texture.png",
+                        elem: document.getElementById("upsideAudio"),
+                        hex: "0x219bff",
+                        orbit: 1000,
+                        speed: 700
+                    },
+                    
                     
                 }
             },
@@ -1298,14 +1329,13 @@
 
                 ],
                 playlist2: [
-                    'childAudio',
+                    'lightAudio',
                     'mythAudio',
                     'surfactantAudio',
                     'flyAudio',
                     'fruitAudio',
                     'springAudio',
-                    'robinAudio',
-                    'wantAudio',
+                    'robinAudio',                    
                     'coldAudio',
                     'pushAudio',
                     'paleAudio',
@@ -1411,6 +1441,17 @@
                         orbit: 900,
                         speed: 700,
                     },
+                    lightAudio: {
+                        imageId: 'lightImage',
+                        audioId: 'lightAudio',
+                        pausedImg: "images/maasImages/light-paused.png",
+                        playingImg: "images/maasImages/light-playing.png",
+                        sphereTexture: "images/maasImages/light-texture.png",
+                        elem: document.getElementById("lightAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
                     mythAudio: {
                         imageId: 'mythImage',
                         audioId: 'mythAudio',
@@ -1466,17 +1507,7 @@
                         orbit: 900,
                         speed: 700,
                     },
-                    childAudio: {
-                        imageId: 'childImage',
-                        audioId: 'childAudio',
-                        pausedImg: "images/maasImages/child-paused.png",
-                        playingImg: "images/maasImages/child-playing.png",
-                        sphereTexture: "images/maasImages/child-texture.png",
-                        elem: document.getElementById("childAudio"),
-                        hex: "0x9a36ff",
-                        orbit: 750,
-                        speed: 1000
-                    },
+                    
                     flyAudio: {
                         imageId: 'flyImage',
                         audioId: 'flyAudio',
@@ -1498,18 +1529,7 @@
                         hex: "0x9a36ff",
                         orbit: -790,
                         speed: 900
-                    },
-                    wantAudio: {
-                        imageId: 'wantImage',
-                        audioId: 'wantAudio',
-                        pausedImg: "images/maasImages/want-paused.png",
-                        playingImg: "images/maasImages/want-playing.png",
-                        sphereTexture: "images/maasImages/want-texture.png",
-                        elem: document.getElementById("wantAudio"),
-                        hex: "0x219bff",
-                        orbit: 1000,
-                        speed: 700
-                    },
+                    },                    
                     pushAudio: {
                         imageId: 'pushImage',
                         audioId: 'pushAudio',
@@ -3466,7 +3486,7 @@ let userIsMobile = isMobileDevice()
 
             seekbarContain.style.visibility = "visible"
             
-            if (selectedAlbumDiv1.id !== "luzDiv" && selectedAlbumDiv1.id !== "inertiaDiv" ){
+            if (selectedAlbumDiv1.id !== "luzDiv" && selectedAlbumDiv1.id !== "inertiaDiv" && selectedAlbumDiv1.id !== "braidingDiv" ){
             albumSelect.style.visibility = "visible"
             }
 
