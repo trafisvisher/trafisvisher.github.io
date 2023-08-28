@@ -80,6 +80,16 @@
     <audio id="breatheAudio" preload="none" src="songs/inertiaSongs/breathe-hard.mp3"> </audio>    
     <audio id="earthboundAudio" preload="none" src="songs/inertiaSongs/earthbound.mp3"> </audio>
 
+    <audio id="braidingAudio" preload="none" src="songs/braidingSongs/braiding-the-blood.mp3"> </audio>
+    <audio id="traceAudio" preload="none" src="songs/braidingSongs/trace-the-beat.mp3"> </audio>
+    <audio id="catchAudio" preload="none" src="songs/braidingSongs/cant-catch-you.mp3"> </audio>    
+    <audio id="snowAudio" preload="none" src="songs/braidingSongs/snow-fastballs.mp3"> </audio>
+    <audio id="evenAudio" preload="none" src="songs/braidingSongs/even-now-it-falls.mp3"> </audio>
+    <audio id="optimalismAudio" preload="none" src="songs/braidingSongs/optimalism.mp3"> </audio>
+    <audio id="katAudio" preload="none" src="songs/braidingSongs/kat-latie.mp3"> </audio>
+    <audio id="macroAudio" preload="none" src="songs/braidingSongs/macro.mp3"> </audio>    
+    <audio id="lightAudio" preload="none" src="songs/braidingSongs/light-gulping orb.mp3"> </audio>
+
     <audio id="moltenAudio" preload="none" src="songs/sapientsSongs/molten-glass.mp3"></audio>
     <audio id="rocksAudio" preload="none" src="songs/sapientsSongs/rocks-and-waterbuckets.mp3"></audio>
     <audio id="lydianAudio" preload="none" src="songs/sapientsSongs/lydian-coins.mp3"></audio>
@@ -154,7 +164,7 @@
 
     <div id="imagesDiv">
         <div class="myImages">
-            <img id="travisCambodiaImage" src="images/images/travis-cambodia.jpg" loading="lazy">
+            <img id="travisCambodiaImage" src="images/images/travis-cambodia-mirror.jpg" loading="lazy">
         </div>        
         <div class="myImages">
             <img id="travisCoonskinImage" src="images/images/travis-coonskin.jpg" loading="lazy">
@@ -184,9 +194,9 @@
         <div class="myImages">
             <img id="travisRabbitImage" src="images/images/travis-rabbit.png" loading="lazy">
         </div> 
-        <div class="myImages">
+        <!-- <div class="myImages">
             <img id="travisBatikImage" src="images/images/travis-batik.jpg" loading="lazy">
-        </div>
+        </div> -->
         <a id="prev2">❮</a>
         <a id="next2">❯</a>
     </div>
@@ -238,6 +248,7 @@
         <div id="albumTitlesDiv">
             <img id="maapTitle" src="images/maap-title.png" loading="lazy">
             <img id="maasTitle" src="images/maas-title.png" loading="lazy">
+            <img id="braidingTitle" src="images/braiding-title.png" loading="lazy">  
             <img id="luzTitle" src="images/luz-title.png" loading="lazy">  
             <img id="inertiaTitle" src="images/inertia-title.png" loading="lazy">   
             <img id="sapientsTitle" src="images/sapients-title.png" loading="lazy">
@@ -376,6 +387,28 @@
                 src="images/inertiaImages/earthbound-paused.png" loading="lazy">
         </div>
         <div id="inertiaDiv2"></div>
+        <div id="braidingDiv">
+            <img class="songTitleImage" id="braidingImage" data-song="braidingAudio"
+                src="images/braidingImages/braiding-paused.png" loading="lazy">
+            <img class="songTitleImage" id="traceImage" data-song="traceAudio"
+                src="images/braidingImages/trace-paused.png" loading="lazy">
+            <img class="songTitleImage" id="catchImage" data-song="catchAudio"
+                src="images/braidingImages/catch-paused.png" loading="lazy">
+            <img class="songTitleImage" id="snowImage" data-song="snowAudio"
+                src="images/braidingImages/snow-paused.png" loading="lazy">
+                <img class="songTitleImage" id="evenImage" data-song="evenAudio"
+                src="images/braidingImages/even-paused.png" loading="lazy">
+                <img class="songTitleImage" id="optimalismImage" data-song="optimalismAudio"
+                src="images/braidingImages/optimalism-paused.png" loading="lazy">
+            <img class="songTitleImage" id="katImage" data-song="katAudio"
+                src="images/braidingImages/kat-paused.png" loading="lazy">
+                <img class="songTitleImage" id="macroImage" data-song="macroAudio"
+                src="images/braidingImages/macro-paused.png" loading="lazy">
+                <img class="songTitleImage" id="lightImage" data-song="lightAudio"
+                src="images/braidingImages/light-paused.png" loading="lazy">
+        </div>
+        <div id="braidingDiv2"></div>
+
         <div id="horseloverDiv">
             <img class="songTitleImage" id="stigmataImage" data-song="stigmataAudio"
                 src="images/horseloverImages/stigmata-paused.png" loading="lazy">
@@ -1098,6 +1131,136 @@
                         playingImg: "images/inertiaImages/earthbound-playing.png",
                         sphereTexture: "images/inertiaImages/earthbound-texture.png",
                         elem: document.getElementById("earthboundAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    
+                }
+            },
+
+            braidingAlbum: {
+                texture: "images/braidingImages/album-cube-texture.png",
+                starSphere1: "images/maapImages/galaxy-starfield.png",
+                starSphere2: "images/iridescent-background-white.png",
+                fov: 250,
+                imageId: "braidingTitle",
+                divId: "braidingDiv",
+                div1Width: "100%",
+                div2Width: "100%",
+                div1Height: "75",
+                div2Height: "75",
+                div1HeightLandscape: "80",
+                div2HeightLandscape: "80",
+                div1Left: "0%",
+                div2Left: "0%",
+                playlist: [
+                    'braidingAudio',
+                    'traceAudio',
+                    'catchAudio',
+                    'snowAudio',
+                    'evenAudio',
+                    'optimalismAudio',
+                    'katAudio',
+                    'macroAudio',
+                    'lightAudio'
+                ],                
+                songs: {
+                    braidingAudio: {
+                        imageId: 'braidingImage',
+                        audioId: 'braidingAudio',
+                        pausedImg: "images/braidingImages/braiding-paused.png",
+                        playingImg: "images/braidingImages/braiding-playing.png",
+                        sphereTexture: "images/braidingImages/braiding-texture.png",
+                        elem: document.getElementById("braidingAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                    traceAudio: {
+                        imageId: 'traceImage',
+                        audioId: 'traceAudio',
+                        pausedImg: "images/braidingImages/trace-paused.png",
+                        playingImg: "images/braidingImages/trace-playing.png",
+                        sphereTexture: "images/braidingImages/trace-texture.png",
+                        elem: document.getElementById("traceAudio"),
+                        hex: "0x219bff",
+                        orbit: -900,
+                        speed: 400
+                    },
+                    catchAudio: {
+                        imageId: 'catchImage',
+                        audioId: 'catchAudio',
+                        pausedImg: "images/braidingImages/catch-paused.png",
+                        playingImg: "images/braidingImages/catch-playing.png",
+                        sphereTexture: "images/braidingImages/catch-texture.png",
+                        elem: document.getElementById("catchAudio"),
+                        hex: "0x36ff62",
+                        orbit: -525,
+                        speed: 800,
+                    },
+                    snowAudio: {
+                        imageId: 'snowImage',
+                        audioId: 'snowAudio',
+                        pausedImg: "images/braidingImages/snow-paused.png",
+                        playingImg: "images/braidingImages/snow-playing.png",
+                        sphereTexture: "images/braidingImages/snow-texture.png",
+                        elem: document.getElementById("snowAudio"),
+                        hex: "0xdffc03",
+                        orbit: -615,
+                        speed: 450
+                    },
+                    evenAudio: {
+                        imageId: 'evenImage',
+                        audioId: 'evenAudio',
+                        pausedImg: "images/braidingImages/even-paused.png",
+                        playingImg: "images/braidingImages/even-playing.png",
+                        sphereTexture: "images/braidingImages/even-texture.png",
+                        elem: document.getElementById("evenAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    optimalismAudio: {
+                        imageId: 'optimalismImage',
+                        audioId: 'optimalismAudio',
+                        pausedImg: "images/braidingImages/optimalism-paused.png",
+                        playingImg: "images/braidingImages/optimalism-playing.png",
+                        sphereTexture: "images/braidingImages/optimalism-texture.png",
+                        elem: document.getElementById("optimalismAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    katAudio: {
+                        imageId: 'katImage',
+                        audioId: 'katAudio',
+                        pausedImg: "images/braidingImages/kat-paused.png",
+                        playingImg: "images/braidingImages/kat-playing.png",
+                        sphereTexture: "images/braidingImages/kat-texture.png",
+                        elem: document.getElementById("katAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    macroAudio: {
+                        imageId: 'macroImage',
+                        audioId: 'macroAudio',
+                        pausedImg: "images/braidingImages/macro-paused.png",
+                        playingImg: "images/braidingImages/macro-playing.png",
+                        sphereTexture: "images/braidingImages/macro-texture.png",
+                        elem: document.getElementById("macroAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
+                    },
+                    lightAudio: {
+                        imageId: 'lightImage',
+                        audioId: 'lightAudio',
+                        pausedImg: "images/braidingImages/light-paused.png",
+                        playingImg: "images/braidingImages/light-playing.png",
+                        sphereTexture: "images/braidingImages/light-texture.png",
+                        elem: document.getElementById("lightAudio"),
                         hex: "0x219bff",
                         orbit: -800,
                         speed: 400

@@ -107,6 +107,21 @@
     height: 0%;
     transition: 1s ease;
   }
+  #braidingDiv {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+
+  }
+  #braidingDiv2 {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
 
 
   #sapientsDiv {
