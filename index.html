@@ -2,7 +2,7 @@
 
 <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta charset="utf-8">
     <title>Trafis Visher</title>
     <link rel="stylesheet" href="./styles/index3.css">
@@ -203,7 +203,7 @@
     </div>
 
     <div id="poemsDiv">               
-        <div class="myPoems">
+        <!-- <div class="myPoems">
             <img src="images/poems/whisked.jpg" style="width:100%" loading="lazy">
         </div>
         <div class="myPoems">
@@ -214,9 +214,35 @@
         </div>
         <div class="myPoems">
             <img src="images/poems/blank.jpg" style="width:100%" loading="lazy">
+        </div> -->
+           
+        <div class="myPoems">
+            <img src="images/poems/grey.png" style="width:80%; left:10%; position:relative" loading="lazy">
         </div>
         <div class="myPoems">
-            <img src="images/poems/sarajevo.png" style="width:50%; left:25%; filter: invert(1); position:relative" loading="lazy">
+            <img src="images/poems/gun.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/tranqulized.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/cruel.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/branch.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/density.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/fleeting.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/sarajevo.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>     
+        
+        <div class="myPoems">
+            <img src="images/poems/palabra.png" style="width:80%; left:10%; position:relative" loading="lazy">
         </div>
         <div class="myPoems">
             <img src="images/poems/tree.jpg" style="width:100%" loading="lazy">
@@ -247,15 +273,15 @@
         </div>
 
         <div id="albumTitlesDiv">
-            <img id="maapTitle" src="images/maap-title.png" loading="lazy">
-            <img id="maasTitle" src="images/maas-title.png" loading="lazy">
-            <img id="braidingTitle" src="images/braiding-title.png" loading="lazy">  
-            <img id="luzTitle" src="images/luz-title.png" loading="lazy">  
-            <img id="inertiaTitle" src="images/inertia-title.png" loading="lazy">   
-            <img id="sapientsTitle" src="images/sapients-title.png" loading="lazy">
-            <img id="symbioseTitle" src="images/symbiose-title.png" loading="lazy">  
             <img id="infinityTitle" src="images/infinity-title.png" loading="lazy">
             <img id="horseloverTitle" src="images/horselover-title.png" loading="lazy">
+            <img id="maapTitle" src="images/maap-title.png" loading="lazy">
+            <img id="maasTitle" src="images/maas-title.png" loading="lazy">
+            <img id="sapientsTitle" src="images/sapients-title.png" loading="lazy">
+            <img id="symbioseTitle" src="images/symbiose-title.png" loading="lazy">
+            <img id="braidingTitle" src="images/braiding-title.png" loading="lazy">  
+            <img id="luzTitle" src="images/luz-title.png" loading="lazy">            
+            <img id="inertiaTitle" src="images/inertia-title.png" loading="lazy">                 
         </div>
 
         <div id="seekbarContain" style="visibility: hidden;">
@@ -361,8 +387,7 @@
                 src="images/luzImages/ramificando-paused.png" loading="lazy">
             <img class="songTitleImage" id="writhingImage" data-song="writhingAudio"
                 src="images/luzImages/writhing-paused.png" loading="lazy">
-                <!-- <img class="songTitleImage" id="chatsImage" data-song="chatsAudio"
-                src="images/luzImages/chats-paused.png" loading="lazy"> -->
+
                 <img class="songTitleImage" id="palabraImage" data-song="palabraAudio"
                 src="images/luzImages/palabra-paused.png" loading="lazy">
         </div>
@@ -3716,6 +3741,12 @@ let userIsMobile = isMobileDevice()
             if (n < 1) { poemIndex = poems.length }
             for (i = 0; i < poems.length; i++) {
                 poems[i].style.display = "none";
+                if (backgroundBlack == true){
+                    poems[i].style.filter = "invert(0)";
+                }
+                if (backgroundBlack == false){
+                    poems[i].style.filter = "invert(1)";
+                }
             }
             poems[poemIndex - 1].style.display = "block";
         }
