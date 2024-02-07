@@ -3968,6 +3968,14 @@ backArrow.animate({
         e.preventDefault();
         pz.zoomWithWheel(e);
     });
+    imagesDiv.addEventListener('touchstart', function (e) {
+            pz.zoomWithTouch(e);
+        });
+
+        // Prevent default touchmove to avoid scrolling
+        imagesDiv.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        });
 
         }
 
