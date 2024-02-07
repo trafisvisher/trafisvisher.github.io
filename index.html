@@ -7,6 +7,7 @@
     <title>Trafis Visher</title>
     <link rel="stylesheet" href="./styles/index3.css">
     <link rel="icon" type="image/png" href="images\controls\bird-view-dark.png">
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
 
 </head>
 
@@ -3957,7 +3958,22 @@ backArrow.animate({
             }
 
             Images[imageIndex - 1].style.display = "block";
+            var zoomableImage = Images[imageIndex - 1]
+    var pz = Panzoom(zoomableImage, {
+        zoomSpeed: 0.065,
+        maxZoom: 3
+    });
+
+    imagesDiv.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        pz.zoomWithWheel(e);
+    });
+
         }
+
+
+
+        
 
 
 
