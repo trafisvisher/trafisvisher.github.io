@@ -62,13 +62,14 @@
     <audio id="robinAudio" preload="none" src="songs/maasSongs/robin-recalling-miriam.mp3"> </audio>
     <audio id="springAudio" preload="none" src="songs/maasSongs/spring-sghetti.mp3"> </audio>   
     <audio id="surfactantAudio" preload="none" src="songs/maasSongs/surfactant.mp3"> </audio>
+    <audio id="palabraAudio" preload="none" src="songs/maasSongs/palabra.mp3"> </audio>
 
     <audio id="luzAudio" preload="none" src="songs/luzSongs/la-luz.mp3"> </audio>
     <audio id="aguasAudio" preload="none" src="songs/luzSongs/las-aguas-de-litio.mp3"> </audio>
     <audio id="ramificandoAudio" preload="none" src="songs/luzSongs/ramificando.mp3"> </audio>    
     <audio id="writhingAudio" preload="none" src="songs/luzSongs/writhing-in-the-dark.mp3"> </audio>
     <!-- <audio id="chatsAudio" preload="none" src="songs/luzSongs/les-chats.mp3"> </audio> -->
-    <audio id="palabraAudio" preload="none" src="songs/luzSongs/palabra.mp3"> </audio>
+    
 
     <audio id="inertiaAudio" preload="none" src="songs/inertiaSongs/inertia.mp3"> </audio>
     <audio id="ligatureAudio" preload="none" src="songs/inertiaSongs/speeding-through-your-ligature.mp3"> </audio>
@@ -389,8 +390,7 @@
             <img class="songTitleImage" id="writhingImage" data-song="writhingAudio"
                 src="images/luzImages/writhing-paused.png" loading="lazy">
 
-                <img class="songTitleImage" id="palabraImage" data-song="palabraAudio"
-                src="images/luzImages/palabra-paused.png" loading="lazy">
+                
         </div>
         <div id="luzDiv2"></div>
         <div id="inertiaDiv">
@@ -524,6 +524,8 @@
                 src="images/maasImages/myth-paused.png" loading="lazy">
             <img class="songTitleImage" id="surfactantImage" data-song="surfactantAudio"
                 src="images/maasImages/surfactant-paused.png" loading="lazy">
+                <img class="songTitleImage" id="palabraImage" data-song="palabraAudio"
+                src="images/maasImages/palabra-paused.png" loading="lazy">
             <img class="songTitleImage" id="flyImage" data-song="flyAudio" src="images/maasImages/fly-paused.png" loading="lazy">
             <img class="songTitleImage" id="fruitImage" data-song="fruitAudio"
                 src="images/maasImages/fruit-paused.png" loading="lazy">
@@ -966,9 +968,7 @@
                     'luzAudio',
                     'aguasAudio',
                     'ramificandoAudio',
-                    // 'chatsAudio',
-                    'writhingAudio',
-                    'palabraAudio'
+                    'writhingAudio'
                 ],                
                 songs: {
                     luzAudio: {
@@ -1014,29 +1014,8 @@
                         hex: "0xdffc03",
                         orbit: -615,
                         speed: 450
-                    },
-                    palabraAudio: {
-                        imageId: 'palabraImage',
-                        audioId: 'palabraAudio',
-                        pausedImg: "images/luzImages/palabra-paused.png",
-                        playingImg: "images/luzImages/palabra-playing.png",
-                        sphereTexture: "images/luzImages/palabra-texture.png",
-                        elem: document.getElementById("palabraAudio"),
-                        hex: "0x219bff",
-                        orbit: -800,
-                        speed: 400
-                    },
-                    // chatsAudio: {
-                    //     imageId: 'chatsImage',
-                    //     audioId: 'chatsAudio',
-                    //     pausedImg: "images/luzImages/chats-paused.png",
-                    //     playingImg: "images/luzImages/chats-playing.png",
-                    //     sphereTexture: "images/luzImages/chats-texture.png",
-                    //     elem: document.getElementById("chatsAudio"),
-                    //     hex: "0x219bff",
-                    //     orbit: -800,
-                    //     speed: 400
-                    // },
+                    }
+
                 }
             },
 
@@ -1358,6 +1337,7 @@
                     'lightAudio',
                     'mythAudio',
                     'surfactantAudio',
+                    'palabraAudio',
                     'flyAudio',
                     'fruitAudio',
                     'springAudio',
@@ -1532,6 +1512,17 @@
                         hex: "0x36ff62",
                         orbit: 900,
                         speed: 700,
+                    },
+                    palabraAudio: {
+                        imageId: 'palabraImage',
+                        audioId: 'palabraAudio',
+                        pausedImg: "images/maasImages/palabra-paused.png",
+                        playingImg: "images/maasImages/palabra-playing.png",
+                        sphereTexture: "images/maasImages/palabra-texture.png",
+                        elem: document.getElementById("palabraAudio"),
+                        hex: "0x219bff",
+                        orbit: -800,
+                        speed: 400
                     },
                     
                     flyAudio: {
@@ -3855,9 +3846,9 @@ backArrow.animate({
             // Check if the swipe is horizontal (left or right) and long enough
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
 
-                if (deltaX > 0) {
+                if (deltaX > 50) {
                     showImages(imageIndex += -1)
-                } else {
+                } else if (deltaX < -50) {
                     showImages(imageIndex += 1)
                 }
             }
@@ -3960,7 +3951,7 @@ backArrow.animate({
             Images[imageIndex - 1].style.display = "block";
             var zoomableImage = Images[imageIndex - 1]
     var pz = Panzoom(zoomableImage, {
-        zoomSpeed: 0.065,
+        zoomSpeed: 0.25,
         maxZoom: 3
     });
 
