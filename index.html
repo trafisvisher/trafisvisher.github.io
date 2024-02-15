@@ -69,6 +69,7 @@
     <audio id="ramificandoAudio" preload="none" src="songs/luzSongs/ramificando.mp3"> </audio>    
     <audio id="writhingAudio" preload="none" src="songs/luzSongs/writhing-in-the-dark.mp3"> </audio>
     <!-- <audio id="chatsAudio" preload="none" src="songs/luzSongs/les-chats.mp3"> </audio> -->
+    <audio id="valentine24Audio" preload="none" src="songs/luzSongs/2-14-24.mp3"> </audio>
     
 
     <audio id="inertiaAudio" preload="none" src="songs/inertiaSongs/inertia.mp3"> </audio>
@@ -168,10 +169,8 @@
     <div id="imagesDiv">
         <div class="myImages">
             <img id="travisCambodiaImage" src="images/images/travis-cambodia-mirror.jpg" loading="lazy">
-        </div>        
-        <div class="myImages">
-            <img id="travisCoonskinImage" src="images/images/travis-coonskin.jpg" loading="lazy">
-        </div>
+        </div>       
+        
         <div class="myImages">
             <img id="meImage" src="images/images/travis.jpg" loading="lazy">
         </div>
@@ -180,6 +179,9 @@
         </div>
         <div class="myImages">
             <img id="travisScarfImage" src="images/images/travis-scarf.jpg" loading="lazy">
+        </div>
+        <div class="myImages">
+            <img id="travisCoonskinImage" src="images/images/travis-coonskin.jpg" loading="lazy">
         </div>
         <!-- <div class="myImages">
             <img id="cambodiaImage" src="images/images/cambodia.png" loading="lazy">
@@ -389,6 +391,8 @@
                 src="images/luzImages/ramificando-paused.png" loading="lazy">
             <img class="songTitleImage" id="writhingImage" data-song="writhingAudio"
                 src="images/luzImages/writhing-paused.png" loading="lazy">
+                <img class="songTitleImage" id="valentine24Image" data-song="valentine24Audio"
+                src="images/luzImages/2-14-24-paused.png" loading="lazy">
 
                 
         </div>
@@ -968,7 +972,8 @@
                     'luzAudio',
                     'aguasAudio',
                     'ramificandoAudio',
-                    'writhingAudio'
+                    'writhingAudio',
+                    'valentine24'
                 ],                
                 songs: {
                     luzAudio: {
@@ -1011,6 +1016,17 @@
                         playingImg: "images/luzImages/writhing-playing.png",
                         sphereTexture: "images/luzImages/writhing-texture.png",
                         elem: document.getElementById("writhingAudio"),
+                        hex: "0xdffc03",
+                        orbit: -615,
+                        speed: 450
+                    },
+                    valentine24Audio: {
+                        imageId: 'valentine24Image',
+                        audioId: 'valentine24Audio',
+                        pausedImg: "images/luzImages/2-14-24-paused.png",
+                        playingImg: "images/luzImages/2-14-24-playing.png",
+                        sphereTexture: "images/luzImages/valentine24-texture.png",
+                        elem: document.getElementById("valentine24Audio"),
                         hex: "0xdffc03",
                         orbit: -615,
                         speed: 450
@@ -3741,6 +3757,16 @@ let userIsMobile = isMobileDevice()
                 }
             }
             poems[poemIndex - 1].style.display = "block";
+
+            poems[poemIndex - 1].animate({                    
+                    filter: ["hue-rotate(180deg)", "hue-rotate(-180deg)"]
+                }, {
+                    duration: 10000,
+                    iterations: 50,
+                    fill: "both",
+                    easing: "ease-out"
+                }
+                )
         }
         
         function showHidden(n) {
