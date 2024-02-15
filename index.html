@@ -3875,9 +3875,9 @@ backArrow.animate({
             // Check if the swipe is horizontal (left or right) and long enough
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
 
-                if (deltaX > 50) {
+                if (deltaX > 25) {
                     showImages(imageIndex += -1)
-                } else if (deltaX < -50) {
+                } else if (deltaX < -25) {
                     showImages(imageIndex += 1)
                 }
             }
