@@ -7,7 +7,7 @@
     <title>Trafis Visher</title>
     <link rel="stylesheet" href="./styles/index3.css">
     <link rel="icon" type="image/png" href="images\controls\bird-view-dark.png">
-    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <!-- <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script> -->
 
 </head>
 
@@ -729,6 +729,8 @@
 
         let imageIndex = 1;
         let hiddenIndex = 1;
+              
+       let poemIndex = 1;  
 
         let currentOption = null
         let currentOptionElem = null
@@ -3169,26 +3171,39 @@
                 albumCube.rotation.y += 1 / 500
                 albumCube.rotation.x += 1 / 500
 
-                if (cameraZoomSwitch == true) {
-                    if (cameraZoomPos == true) {
-                        camera.zoom += 1 / 100
-                    } else if (cameraZoomPos == false) {
-                        camera.zoom -= 1 / 100
-                    }
+                // if (cameraZoomSwitch == true) {
+                //     if (cameraZoomPos == true) {
+                //         camera.zoom += 1 / 100
+                //     } else if (cameraZoomPos == false) {
+                //         camera.zoom -= 1 / 100
+                //     }
 
-                    if (camera.zoom < -5) {
-                        cameraZoomPos = true
-                    }
-                    if (camera.zoom > 5) {
-                        cameraZoomPos = false
-                    }
+                //     if (camera.zoom < -5) {
+                //         cameraZoomPos = true
+                //     }
+                //     if (camera.zoom > 5) {
+                //         cameraZoomPos = false
+                //     }
 
-                }
+                // }
 
 
                 starSphere.rotation.y += 0.001
                 starSphere.rotation.x += 0.0005
                 starSphere.rotation.z += 0.0005
+                
+                // var fovVal = .0001                
+                
+                // if (fov.value >= 349){
+                // fovVal = -.0001
+                // }
+                // if (fov.value <= 26){
+                // fovVal = .0001
+                // }
+                // console.log(fovVal)
+                // fov.value += fovVal
+                // camera.fov = fov.value
+                // console.log(fov.value)
 
 
 
@@ -3695,8 +3710,15 @@ let userIsMobile = isMobileDevice()
 
 
 
-
+      
+   
         const openPoems = () => {
+
+            if (userIsMobile == false){
+            prev.style.display = "block"
+            next.style.display = "block"
+            console.log("userwasntmobile")
+        }
 
             optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
@@ -3720,29 +3742,10 @@ let userIsMobile = isMobileDevice()
                 fill: "forwards"
             })
 
-            showPoems(poemIndex);
-        }
+            showPoems(poemIndex);   
 
-        let poemIndex = 1;
+    }
 
-        const prev = document.getElementById("prev")
-        const next = document.getElementById("next")
-       
-        
-        
-        if (userIsMobile == false){
-            prev.style.display = "block"
-            next.style.display = "block"
-        }
-
-        prev.addEventListener('click', () => {
-            showPoems(poemIndex += -1);
-        })
-        
-        
-        next.addEventListener('click', () => {
-            showPoems(poemIndex += 1);
-        })
 
 
         function showPoems(n) {
@@ -3752,24 +3755,21 @@ let userIsMobile = isMobileDevice()
             if (n < 1) { poemIndex = poems.length }
             for (i = 0; i < poems.length; i++) {
                 poems[i].style.display = "none";
-                if (backgroundBlack == true){
-                    poems[i].style.filter = "invert(0)";
-                }
-                if (backgroundBlack == false){
-                    poems[i].style.filter = "invert(1)";
-                }
+                if (backgroundBlack == true) {
+                    poems[poemIndex - 1].classList.remove('hue-rotate-animation-white');
+                    poems[poemIndex - 1].classList.add('hue-rotate-animation-black');
+} else {
+    poems[poemIndex - 1].classList.remove('hue-rotate-animation-black');
+    poems[poemIndex - 1].classList.add('hue-rotate-animation-white');
+};
+console.log(poems[i].style.filter)
+
             }
             poems[poemIndex - 1].style.display = "block";
+            
+            
+                
 
-            poems[poemIndex - 1].animate({                    
-                    filter: ["hue-rotate(180deg)", "hue-rotate(-180deg)"]
-                }, {
-                    duration: 10000,
-                    iterations: 50,
-                    fill: "both",
-                    easing: "ease-out"
-                }
-                )
         }
         
         function showHidden(n) {
@@ -3937,6 +3937,18 @@ backArrow.animate({
 
 
 
+        
+    const prev = document.getElementById("prev")
+        const next = document.getElementById("next")
+        
+        prev.addEventListener('click', () => {
+            showPoems(poemIndex += -1);
+        })
+        
+        
+        next.addEventListener('click', () => {
+            showPoems(poemIndex += 1);
+        })
 
         const prev2 = document.getElementById("prev2")
 
@@ -3978,11 +3990,11 @@ backArrow.animate({
             }
 
             Images[imageIndex - 1].style.display = "block";
-            var zoomableImage = Images[imageIndex - 1]
-    var pz = Panzoom(zoomableImage, {
-        zoomSpeed: 0.25,
-        maxZoom: 3
-    });
+    //         var zoomableImage = Images[imageIndex - 1]
+    // var pz = Panzoom(zoomableImage, {
+    //     zoomSpeed: 0.25,
+    //     maxZoom: 3
+    // });
 
     imagesDiv.addEventListener('wheel', function (e) {
         e.preventDefault();
@@ -4283,6 +4295,13 @@ backArrow.animate({
 
                 starSphere.material.map = loader.load(starSphere2)
                 fovX.style.filter = "invert(1)"
+                prev.style.filter = "invert(1)"
+                prev2.style.filter = "invert(1)"
+                prev3.style.filter = "invert(1)"
+                next.style.filter = "invert(1)"
+                next2.style.filter = "invert(1)"
+                next3.style.filter = "invert(1)"
+
 
                 // sideControlsContainer.style.left = "0%"
                 // sideControlsDiv.style.left = "35%"
@@ -4394,6 +4413,12 @@ backArrow.animate({
                 // fov.style.width = "auto"
                 fov.style.filter = "brightness(100%)"
                 fovX.style.filter = "invert(0)"
+                prev.style.filter = "invert(0)"
+                prev2.style.filter = "invert(0)"
+                prev3.style.filter = "invert(0)"
+                next.style.filter = "invert(0)"
+                next2.style.filter = "invert(0)"
+                next3.style.filter = "invert(0)"
 
                 // topControlsNavButton.style.filter = "invert(1)"
                 // albumDivNavButtonLeft.style.visibility = "visible"

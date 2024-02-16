@@ -678,6 +678,36 @@
     position: relative;
     align-items: center;
     justify-content: center;
+    will-change: filter;
+
+  }
+  /* .poem.inverted {
+    filter: invert(1)
+  } */
+
+  .hue-rotate-animation-black {
+    animation: hueRotateAnimationBlack 10s linear infinite; /* Animation for hue-rotate */
+  }
+  
+  @keyframes hueRotateAnimationBlack {
+    0% {
+      filter: invert(0) hue-rotate(0deg);
+    }
+    100% {
+      filter: invert(0) hue-rotate(360deg);
+    }
+  }
+  .hue-rotate-animation-white {
+    animation: hueRotateAnimationWhite 10s linear infinite; /* Animation for hue-rotate */
+  }
+  
+  @keyframes hueRotateAnimationWhite {
+    0% {
+      filter: invert(1) hue-rotate(0deg);
+    }
+    100% {
+      filter: invert(1) hue-rotate(360deg);
+    }
   }
 
   .myImages {
