@@ -220,6 +220,12 @@
             <img src="images/poems/blank.jpg" style="width:100%" loading="lazy">
         </div> -->
         <div class="myPoems">
+            <img src="images/poems/praha.jpg" style="width:100%" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/orion.jpg" style="width:100%" loading="lazy">
+        </div>
+        <div class="myPoems">
             <img src="images/poems/serbian.png" style="width:80%; left:10%; position:relative" loading="lazy">
         </div>
            
@@ -254,12 +260,7 @@
         <div class="myPoems">
             <img src="images/poems/tree.jpg" style="width:100%" loading="lazy">
         </div>
-        <div class="myPoems">
-            <img src="images/poems/praha.jpg" style="width:100%" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/orion.jpg" style="width:100%" loading="lazy">
-        </div>
+        
         <a id="prev">❮</a>
         <a id="next">❯</a>
     </div>
@@ -3875,9 +3876,9 @@ backArrow.animate({
             // Check if the swipe is horizontal (left or right) and long enough
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
 
-                if (deltaX > 25) {
+                if (deltaX > 0) {
                     showImages(imageIndex += -1)
-                } else if (deltaX < -25) {
+                } else {
                     showImages(imageIndex += 1)
                 }
             }
