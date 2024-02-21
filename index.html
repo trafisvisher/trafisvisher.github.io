@@ -226,6 +226,16 @@
             <img src="images/poems/orion.jpg" style="width:100%" loading="lazy">
         </div>
         <div class="myPoems">
+            <img src="images/poems/palabra.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+
+        <div class="myPoems">
+            <img src="images/poems/tranqulized.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
+            <img src="images/poems/cruel.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        </div>
+        <div class="myPoems">
             <img src="images/poems/serbian.png" style="width:80%; left:10%; position:relative" loading="lazy">
         </div>
            
@@ -234,12 +244,6 @@
         </div>
         <div class="myPoems">
             <img src="images/poems/gun.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/tranqulized.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/cruel.png" style="width:80%; left:10%; position:relative" loading="lazy">
         </div>
         <!-- <div class="myPoems">
             <img src="images/poems/branch.png" style="width:80%; left:10%; position:relative" loading="lazy">
@@ -254,9 +258,7 @@
             <img src="images/poems/sarajevo.png" style="width:80%; left:10%; position:relative" loading="lazy">
         </div>     
         
-        <div class="myPoems">
-            <img src="images/poems/palabra.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
+
         <div class="myPoems">
             <img src="images/poems/tree.jpg" style="width:100%" loading="lazy">
         </div>
@@ -4576,7 +4578,12 @@ backArrow.animate({
 
         window.addEventListener('mousemove', () => {
             if (aboutIsOpen == true) {
+            if (userIsMobile == false){
                 travisImage.style.top = (mouse.y * 100) - 10 + "%"
+            }
+            if (userIsMobile == true){
+                travisImage.style.top = (event.touches[0].clientY * 100) - 10 + "%"
+            }
             }
         })
 
