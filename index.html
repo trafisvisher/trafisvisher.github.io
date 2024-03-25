@@ -25,6 +25,8 @@
     <audio id="microreciaAudio" preload="none" src="songs/pianoSongs/microrecia.mp3"> </audio>
     <audio id="limineticaAudio" preload="none" src="songs/pianoSongs/liminetica.mp3"> </audio>
     <audio id="nyxophoniaAudio" preload="none" src="songs/pianoSongs/nyxophonia.mp3"> </audio>
+    <audio id="aphasiaAudio" preload="none" src="songs/pianoSongs/aphasia.mp3"> </audio>
+    <audio id="antechroniaAudio" preload="none" src="songs/pianoSongs/antechronia.mp3"> </audio>
 
     <audio id="siderialAudio" preload="none" src="songs/maapSongs/siderial.mp3"> </audio>
     <audio id="abstractingAudio" preload="none" src="songs/maapSongs/abstracting-abstractions.mp3"> </audio>
@@ -420,6 +422,10 @@
                 src="images/pianoImages/liminetica-paused.png" loading="lazy">
             <img class="songTitleImage" id="nyxophoniaImage" data-song="nyxophoniaAudio"
                 src="images/pianoImages/nyxophonia-paused.png" loading="lazy">
+                <img class="songTitleImage" id="aphasiaImage" data-song="aphasiaAudio"
+                src="images/pianoImages/aphasia-paused.png" loading="lazy">
+            <img class="songTitleImage" id="antechroniaImage" data-song="antechroniaAudio"
+                src="images/pianoImages/antechronia-paused.png" loading="lazy">
                 
         </div>
         <div id="pianoDiv2"></div>
@@ -992,16 +998,18 @@
                 divId: "pianoDiv",
                 div1Width: "100%",
                 div2Width: "100%",
-                div1Height: "20",
-                div2Height: "20",
-                div1HeightLandscape: "40",
-                div2HeightLandscape: "40",
+                div1Height: "40",
+                div2Height: "40",
+                div1HeightLandscape: "50",
+                div2HeightLandscape: "50",
                 div1Left: "0%",
                 div2Left: "0%",
                 playlist: [
                     'microreciaAudio',
                     'limineticaAudio',
-                    'nyxophoniaAudio'
+                    'nyxophoniaAudio',
+                    'aphasiaAudio',
+                    'antechroniaAudio'
                 ],                
                 songs: {
                     microreciaAudio: {
@@ -1033,6 +1041,28 @@
                         playingImg: "images/pianoImages/nyxophonia-playing.png",
                         sphereTexture: "images/luzImages/luz-texture.png",
                         elem: document.getElementById("nyxophoniaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                    aphasiaAudio: {
+                        imageId: 'aphasiaImage',
+                        audioId: 'aphasiaAudio',
+                        pausedImg: "images/pianoImages/aphasia-paused.png",
+                        playingImg: "images/pianoImages/aphasia-playing.png",
+                        sphereTexture: "images/luzImages/luz-texture.png",
+                        elem: document.getElementById("aphasiaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                    antechroniaAudio: {
+                        imageId: 'antechroniaImage',
+                        audioId: 'antechroniaAudio',
+                        pausedImg: "images/pianoImages/antechronia-paused.png",
+                        playingImg: "images/pianoImages/antechronia-playing.png",
+                        sphereTexture: "images/luzImages/luz-texture.png",
+                        elem: document.getElementById("antechroniaAudio"),
                         hex: "0xdffc03",
                         orbit: -690,
                         speed: 750
@@ -3627,7 +3657,8 @@ let userIsMobile = isMobileDevice()
 
             seekbarContain.style.visibility = "visible"
             
-            if (selectedAlbumDiv1.id !== "luzDiv" && selectedAlbumDiv1.id !== "inertiaDiv" && selectedAlbumDiv1.id !== "braidingDiv" ){
+            if (selectedAlbumDiv1.id !== "luzDiv" && selectedAlbumDiv1.id !== "inertiaDiv" 
+            && selectedAlbumDiv1.id !== "braidingDiv" && selectedAlbumDiv1.id !== "pianoDiv"){
             albumSelect.style.visibility = "visible"
             }
 
