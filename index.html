@@ -991,6 +991,7 @@
         const albums = {
 
             pianoWorks: {
+                filter: "yes",
                 texture: "images/pianoImages/album-cube-texture.png",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
@@ -999,10 +1000,10 @@
                 divId: "pianoDiv",
                 div1Width: "100%",
                 div2Width: "100%",
-                div1Height: "40",
-                div2Height: "40",
-                div1HeightLandscape: "50",
-                div2HeightLandscape: "50",
+                div1Height: "25",
+                div2Height: "25",
+                div1HeightLandscape: "30",
+                div2HeightLandscape: "30",
                 div1Left: "0%",
                 div2Left: "0%",
                 playlist: [
@@ -1154,6 +1155,7 @@
             },
 
             inertiaAlbum: {
+                filter: "yes",
                 texture: "images/inertiaImages/album-cube-texture.png",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
@@ -1284,6 +1286,7 @@
             },
 
             braidingAlbum: {
+                filter: "yes",
                 texture: "images/braidingImages/album-cube-texture.png",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
@@ -3244,6 +3247,7 @@
                 child.style.width = 100 + "%"
 
             }
+            
 
             for (let album of albumDivContainerChildren) {
                 anAlbum = album.children
@@ -3812,6 +3816,26 @@ let userIsMobile = isMobileDevice()
                     albumTitle.style.filter = "invert(0)"
                 }
             }
+
+
+    
+        for (let album in albums) {
+            if (albums[album].filter == "yes"){
+            let songs = albums[album].songs
+            for (let song in songs) {
+                const title = document.getElementById(songs[song].imageId)
+                    if (backgroundBlack == false){
+                    title.style.filter = "invert(1)"
+                    }
+                    if (backgroundBlack == true){
+                        title.style.filter = "invert(0)"
+                    }
+                }
+    }
+}
+                
+            
+        
             albumsAreOpen = true
             musicOptionsAreOpen = false
 
@@ -4519,7 +4543,7 @@ backArrow.animate({
 
                 if (currentAlbum.texture2) {
                     albumCube.material.map = loader.load(currentTexture2)
-                }
+                }                           
 
 
                 document.body.style.backgroundColor = "#fffaf1"
@@ -4609,7 +4633,6 @@ backArrow.animate({
                 if (currentAlbum.texture2) {
                     albumCube.material.map = loader.load(currentTexture)
                 }
-
 
                 document.body.style.backgroundColor = "#010203"
                 rendererContain.style.backgroundColor = "#010203"
