@@ -21,6 +21,9 @@
       transition: 1s;
       pointer-events: none;
     }
+    #musicOptionsDiv {  
+      display:none
+    }
 
     #aboutDiv {
       overflow: hidden;
@@ -92,6 +95,14 @@
     height: 0%;
     transition: 1s ease;
   }
+  #pianoDiv {
+    display: none;
+    position: relative;
+    width: 0%;
+    height: 0%;
+    transition: 1s ease;
+  }
+
   #inertiaDiv {
     display: none;
     position: relative;
@@ -322,6 +333,21 @@
     opacity: 0.8;   
     
   }
+
+  #musicOptionsDiv {
+    position: relative;
+    transition: 1s;
+    top: 37.5%;
+    height: 25%;
+    width: auto;
+  }
+  #musicOptionsDiv img {
+    position: relative;
+    transition: 1s ease;
+    width: 100%;
+    opacity: 0.8;   
+    
+  }
        
 #albumTitlesDiv {
   display: none;
@@ -543,6 +569,23 @@
     position: relative;
     height: 22.5%
   }
+
+  #musicOptionsDiv {    
+    position: relative;
+    transition: 1s;
+    top: 40%;
+    height: 20%;
+    width: auto;
+  }
+
+  #musicOptionsDiv img {
+    transition: 1s ease;
+    width: 100%;
+    opacity: 0.8;
+    position: relative;
+  }
+
+
 
        
 #albumTitlesDiv {

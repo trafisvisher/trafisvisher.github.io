@@ -4,7 +4,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta charset="utf-8">
-    <title>Trafis Visher</title>
+    <title>travis kalastaja</title>
     <link rel="stylesheet" href="./styles/index3.css">
     <link rel="icon" type="image/png" href="images\controls\background-icon.png">
     <!-- <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script> -->
@@ -21,6 +21,10 @@
     </div>
 
     <!--AUDIO TRACKS -->
+
+    <audio id="limineticaAudio" preload="none" src="songs/pianoSongs/liminetica.mp3"> </audio>
+    <audio id="nyxophoniaAudio" preload="none" src="songs/pianoSongs/nyxophonia.mp3"> </audio>
+
     <audio id="siderialAudio" preload="none" src="songs/maapSongs/siderial.mp3"> </audio>
     <audio id="abstractingAudio" preload="none" src="songs/maapSongs/abstracting-abstractions.mp3"> </audio>
     <audio id="feltAudio" preload="none" src="songs/maapSongs/felt-filter.mp3"> </audio>
@@ -147,19 +151,19 @@
 
     <div id="hiddenDiv">
         <div class="hiddenImages">
-            <img id="language3Image" src="images/hiddenLanguage/language3.jpg" loading="lazy">
+            <img id="language3Image" src="images/hiddenLanguage/language3.jpg" loading="preload">
         </div>
         <div class="hiddenImages">
-            <img id="language1Image" src="images/hiddenLanguage/language1.png" loading="lazy">
+            <img id="language1Image" src="images/hiddenLanguage/language1.png" loading="preload">
         </div>
         <div class="hiddenImages">
-            <img id="language2Image" src="images/hiddenLanguage/language2.png" loading="lazy">
+            <img id="language2Image" src="images/hiddenLanguage/language2.png" loading="preload">
         </div>
         <div class="hiddenImages">
-            <img id="language4Image" src="images/hiddenLanguage/language4.png" loading="lazy">
+            <img id="language4Image" src="images/hiddenLanguage/language4.png" loading="preload">
         </div>
         <div class="hiddenImages">
-            <img id="language5Image" src="images/hiddenLanguage/language5.jpg" loading="lazy">
+            <img id="language5Image" src="images/hiddenLanguage/language5.jpg" loading="preload">
         </div>
         <a id="prev3">❮</a>
         <a id="next3">❯</a>
@@ -168,20 +172,20 @@
 
     <div id="imagesDiv">
         <div class="myImages">
-            <img id="travisCambodiaImage" src="images/images/travis-cambodia-mirror.jpg" loading="lazy">
+            <img id="travisCambodiaImage" src="images/images/travis-cambodia-mirror.jpg" loading="preload">
         </div>       
         
         <div class="myImages">
-            <img id="meImage" src="images/images/travis.jpg" loading="lazy">
+            <img id="meImage" src="images/images/travis.jpg" loading="preload">
         </div>
         <div class="myImages">
-            <img id="travisTreeImage" src="images/images/travis-tree.jpg" loading="lazy">
+            <img id="travisTreeImage" src="images/images/travis-tree.jpg" loading="preload">
         </div>
         <div class="myImages">
-            <img id="travisScarfImage" src="images/images/travis-scarf.jpg" loading="lazy">
+            <img id="travisScarfImage" src="images/images/travis-scarf.jpg" loading="preload">
         </div>
         <div class="myImages">
-            <img id="travisCoonskinImage" src="images/images/travis-coonskin.jpg" loading="lazy">
+            <img id="travisCoonskinImage" src="images/images/travis-coonskin.jpg" loading="preload">
         </div>
         <!-- <div class="myImages">
             <img id="cambodiaImage" src="images/images/cambodia.png" loading="lazy">
@@ -197,7 +201,7 @@
         </div>        -->
         
         <div class="myImages">
-            <img id="travisRabbitImage" src="images/images/travis-rabbit.png" loading="lazy">
+            <img id="travisRabbitImage" src="images/images/travis-rabbit.png" loading="preload">
         </div> 
         <!-- <div class="myImages">
             <img id="travisBatikImage" src="images/images/travis-batik.jpg" loading="lazy">
@@ -280,6 +284,11 @@
             <img id="imagesOption" class="option" data-imgstm="images/images" src="images/images-unselected.png">
             <img id="hiddenOption" class="option" data-imgstm="images/hidden" src="images/hidden-option.png">
             <img id="aboutOption" class="option" data-imgstm="images/about" src="images/about-unselected.png">
+        </div>
+
+        <div id="musicOptionsDiv">
+            <img id="rockOption" class="option" data-imgstm="images/music" src="images/psychedelic-art-rock.png">            
+            <img id="pianoTitle" class="option" data-imgstm="images/poems" src="images/piano-works.png">
         </div>
 
         <div id="albumTitlesDiv">
@@ -403,6 +412,14 @@
                 
         </div>
         <div id="luzDiv2"></div>
+        <div id="pianoDiv">
+            <img class="songTitleImage" id="limineticaImage" data-song="limineticaAudio"
+                src="images/pianoImages/liminetica-paused.png" loading="lazy">
+            <img class="songTitleImage" id="nyxophoniaImage" data-song="nyxophoniaAudio"
+                src="images/pianoImages/nyxophonia-paused.png" loading="lazy">
+                
+        </div>
+        <div id="pianoDiv2"></div>
         <div id="inertiaDiv">
             <img class="songTitleImage" id="inertiaImage" data-song="inertiaAudio"
                 src="images/inertiaImages/inertia-paused.png" loading="lazy">
@@ -597,6 +614,7 @@
 
         import * as THREE from './build/three.module.js';
         import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
         var camera, controls, scene, renderer;
         var SCREEN_WIDTH
         var SCREEN_HEIGHT
@@ -765,6 +783,7 @@
         let pausePlayPNGPaused = false
         let pausedForShift = false
 
+        let musicOptionsAreOpen = false
         let albumsAreOpen = false
         let albumIsOpen = false
         let aboutIsOpen = false
@@ -960,6 +979,51 @@
         // }
 
         const albums = {
+
+            pianoWorks: {
+                texture: "images/pianoImages/album-cube-texture.png",
+                starSphere1: "images/maapImages/galaxy-starfield.png",
+                starSphere2: "images/iridescent-background-white.png",
+                fov: 220,
+                imageId: "pianoTitle",
+                divId: "pianoDiv",
+                div1Width: "100%",
+                div2Width: "100%",
+                div1Height: "20",
+                div2Height: "20",
+                div1HeightLandscape: "40",
+                div2HeightLandscape: "40",
+                div1Left: "0%",
+                div2Left: "0%",
+                playlist: [
+                    'limineticaAudio',
+                    'nyxophoniaAudio'
+                ],                
+                songs: {
+                    limineticaAudio: {
+                        imageId: 'limineticaImage',
+                        audioId: 'limineticaAudio',
+                        pausedImg: "images/pianoImages/liminetica-paused.png",
+                        playingImg: "images/pianoImages/liminetica-playing.png",
+                        sphereTexture: "images/luzImages/luz-texture.png",
+                        elem: document.getElementById("limineticaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                    nyxophoniaAudio: {
+                        imageId: 'nyxophoniaImage',
+                        audioId: 'nyxophoniaAudio',
+                        pausedImg: "images/pianoImages/nyxophonia-paused.png",
+                        playingImg: "images/pianoImages/nyxophonia-playing.png",
+                        sphereTexture: "images/luzImages/luz-texture.png",
+                        elem: document.getElementById("nyxophoniaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                }
+            },
 
             luzAlbum: {
                 texture: "images/luzImages/album-cube-texture.png",
@@ -3370,8 +3434,18 @@ let userIsMobile = isMobileDevice()
         const openCurrentOption = (option) => {
 
             if (option.id == "musicOption") {
-                openAlbums()
+                openMusicOptions()
             }
+
+            if (option.id == "rockOption") {
+                openRockAlbums()
+            }
+
+            if (option.id == "pianoTitle") {
+                openCurrentAlbum(albums.pianoWorks)
+                musicOptionsAreOpen = false
+            }
+
             if (option.id == "aboutOption") {
                 openAbout()
             }
@@ -3595,7 +3669,71 @@ let userIsMobile = isMobileDevice()
             albumDivContainer.style.width = "0%"
         }
 
-        const openAlbums = () => {
+        const openMusicOptions = () => {
+            musicOptionsDiv.style.display = "block"
+            optionsDiv.style.width = "0%"
+            optionsDiv.style.height = "0%"
+            if (orientationPortrait == true) {
+                musicOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            } else {
+                musicOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            }
+            backArrow.style.visibility = "visible"
+            backArrow.animate({
+                opacity: ["0", "0.5"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+
+           musicOptionsAreOpen = true
+        }
+
+        const closeMusicOptions = () => {
+
+            
+            musicOptionsDiv.animate({
+                height: ["20%", "0%"],
+                width: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+
+            backArrow.animate({
+                opacity: ["0.5", "0"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            optionsDiv.style.width = "100%"
+
+                optionsDiv.style.height = "33%"
+                optionsDiv.style.top = "33%"
+
+                musicOptionsAreOpen = false
+
+                
+        }
+        
+        
+        const openRockAlbums = () => {
+            musicOptionsDiv.style.display = "none"
             albumTitlesDiv.style.display = "block"
             if (orientationPortrait == true) {
                 albumTitlesDiv.animate({
@@ -3616,15 +3754,8 @@ let userIsMobile = isMobileDevice()
                     easing: "ease"
                 })
             }
-            optionsDiv.style.width = "0%"
-            optionsDiv.style.height = "0%"
-            backArrow.style.visibility = "visible"
-            backArrow.animate({
-                opacity: ["0", "0.5"]
-            }, {
-                duration: 1000,
-                fill: "forwards"
-            })
+            
+
 
             for (let albumTitle of albumTitlesDivChildren) {
                 if (backgroundBlack == false) {
@@ -3635,6 +3766,7 @@ let userIsMobile = isMobileDevice()
                 }
             }
             albumsAreOpen = true
+            musicOptionsAreOpen = false
 
 
 
@@ -3646,7 +3778,7 @@ let userIsMobile = isMobileDevice()
         }
 
 
-        const closeAlbums = () => {
+        const closeRockAlbums = () => {
 
             albumTitlesDiv.animate({
                 height: ["80%", "0%"]
@@ -3655,22 +3787,14 @@ let userIsMobile = isMobileDevice()
                 easing: "ease",
                 fill: "forwards"
             })
-            albumsAreOpen = false
-            optionsDiv.style.width = "100%"
+            albumsAreOpen = false  
+            
 
-                optionsDiv.style.height = "33%"
-                optionsDiv.style.top = "33%"
-
-
-            backArrow.animate({
-                opacity: ["0.5", "0"]
-            }, {
-                duration: 1000,
-                fill: "forwards"
-            })
 
             albumDivContainer.style.width = "0%"
             albumTitlesDiv.style.display = "none"
+            openMusicOptions()
+
 
         }
 
@@ -4135,12 +4259,20 @@ backArrow.animate({
             if (albumIsOpen == true) {
 
                 closeCurrentAlbum(selectedAlbumTitleImage);
-                openAlbums()
+                if (currentAlbum == albums.pianoWorks){
+                    openMusicOptions()
+                } else {
+                    openRockAlbums()
+                }
 
             }
 
+            else if (musicOptionsAreOpen == true){
+                closeMusicOptions()
+            }
+
             else if (albumsAreOpen == true) {
-                closeAlbums()
+                closeRockAlbums()
 
             }
 
