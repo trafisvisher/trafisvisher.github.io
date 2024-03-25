@@ -22,6 +22,7 @@
 
     <!--AUDIO TRACKS -->
 
+    <audio id="microreciaAudio" preload="none" src="songs/pianoSongs/microrecia.mp3"> </audio>
     <audio id="limineticaAudio" preload="none" src="songs/pianoSongs/liminetica.mp3"> </audio>
     <audio id="nyxophoniaAudio" preload="none" src="songs/pianoSongs/nyxophonia.mp3"> </audio>
 
@@ -413,6 +414,8 @@
         </div>
         <div id="luzDiv2"></div>
         <div id="pianoDiv">
+            <img class="songTitleImage" id="microreciaImage" data-song="microreciaAudio"
+                src="images/pianoImages/microrecia-paused.png" loading="lazy">
             <img class="songTitleImage" id="limineticaImage" data-song="limineticaAudio"
                 src="images/pianoImages/liminetica-paused.png" loading="lazy">
             <img class="songTitleImage" id="nyxophoniaImage" data-song="nyxophoniaAudio"
@@ -996,10 +999,22 @@
                 div1Left: "0%",
                 div2Left: "0%",
                 playlist: [
+                    'microreciaAudio',
                     'limineticaAudio',
                     'nyxophoniaAudio'
                 ],                
                 songs: {
+                    microreciaAudio: {
+                        imageId: 'microreciaImage',
+                        audioId: 'microreciaAudio',
+                        pausedImg: "images/pianoImages/microrecia-paused.png",
+                        playingImg: "images/pianoImages/microrecia-playing.png",
+                        sphereTexture: "images/luzImages/luz-texture.png",
+                        elem: document.getElementById("microreciaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
                     limineticaAudio: {
                         imageId: 'limineticaImage',
                         audioId: 'limineticaAudio',
