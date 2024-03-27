@@ -149,7 +149,6 @@
     <audio id="scannerAudio" preload="none" src="songs/horseloverSongs/pulled-through-infinity.mp3"></audio>
     <audio id="valisAudio" preload="none" src="songs/horseloverSongs/valis.mp3"></audio>
 
-    <!--SONGTITLEIMAGES-->
 
     <img id="backArrow" src="images/back-arrow.png">
 
@@ -694,6 +693,7 @@
 
         const options = document.getElementsByClassName("option")
         const albumTitleImages = document.getElementsByClassName("albumTitleImage")
+        const songTitleImages = document.getElementsByClassName("songTitleImage")
         let anAlbum
 
         // const topControlsNavButton = document.getElementById("topControlsNavButton")
@@ -3374,6 +3374,9 @@
             }
 
 
+            
+
+
             controls.update()
             renderer.render(scene, camera);
             const canvas = renderer.domElement
@@ -3382,6 +3385,19 @@
             requestAnimationFrame(animate);
 
         };
+
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Apply random animation duration to each pulsating element
+        document.addEventListener('DOMContentLoaded', function() {
+            const pulsatingElements = document.querySelectorAll('.songTitleImage');
+            pulsatingElements.forEach(function(element) {
+                const duration = getRandomNumber(3000, 6000); // Random duration between 800ms and 1200ms
+                element.style.animationDuration = duration + 'ms';
+            });
+        });
 
         function orientationDetect() {
             if (window.innerHeight > window.innerWidth) {

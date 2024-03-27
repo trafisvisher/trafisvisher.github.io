@@ -1012,6 +1012,7 @@
       .songTitleImage {
         position: relative;
         display: block;
+        animation: pulsate 5s ease-in-out infinite alternate;
       }
       .songTitleImage:hover{
         opacity: 0.5;
