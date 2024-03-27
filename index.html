@@ -21,7 +21,9 @@
 
     <!--AUDIO TRACKS -->
 
+    
     <audio id="microreciaAudio" preload="none" src="songs/pianoSongs/microrecia.mp3"> </audio>
+    <audio id="hypnostadiaAudio" preload="none" src="songs/pianoSongs/hypnostadia.mp3"> </audio>
     <audio id="kyklopalmaAudio" preload="none" src="songs/pianoSongs/kyklopalma.mp3"> </audio>
     <audio id="limineticaAudio" preload="none" src="songs/pianoSongs/liminetica.mp3"> </audio>
     <audio id="kathariaAudio" preload="none" src="songs/pianoSongs/katharia.mp3"> </audio>
@@ -403,6 +405,8 @@
         <div id="pianoDiv">
             <img class="songTitleImage" id="microreciaImage" data-song="microreciaAudio"
                 src="images/pianoImages/microrecia-paused.png" loading="lazy">
+                <img class="songTitleImage" id="hypnostadiaImage" data-song="hypnostadiaAudio"
+                src="images/pianoImages/hypnostadia-paused.png" loading="lazy">
             <img class="songTitleImage" id="limineticaImage" data-song="limineticaAudio"
                 src="images/pianoImages/liminetica-paused.png" loading="lazy">
             <img class="songTitleImage" id="nyxophoniaImage" data-song="nyxophoniaAudio"
@@ -1004,6 +1008,7 @@
                 div2Left: "0%",
                 playlist: [
                     'microreciaAudio',
+                    'hypnostadiaAudio',
                     'limineticaAudio',
                     'nyxophoniaAudio',
                     'kathariaAudio',
@@ -1019,6 +1024,17 @@
                         playingImg: "images/pianoImages/microrecia-playing.png",
                         sphereTexture: "images/luzImages/luz-texture.png",
                         elem: document.getElementById("microreciaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                    hypnostadiaAudio: {
+                        imageId: 'hypnostadiaImage',
+                        audioId: 'hypnostadiaAudio',
+                        pausedImg: "images/pianoImages/hypnostadia-paused.png",
+                        playingImg: "images/pianoImages/hypnostadia-playing.png",
+                        sphereTexture: "images/luzImages/luz-texture.png",
+                        elem: document.getElementById("hypnostadiaAudio"),
                         hex: "0xdffc03",
                         orbit: -690,
                         speed: 750
