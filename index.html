@@ -235,6 +235,9 @@
     <div class="myBalkan">
         <img src="images/poems/gun.png" style="width:80%; left:10%; position:relative" loading="lazy">
     </div>
+    <div class="myBalkan">
+        <img src="images/poems/marbled.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
 
     <div class="myBalkan">
         <img src="images/poems/density.png" style="width:80%; left:10%; position:relative" loading="lazy">
@@ -253,6 +256,12 @@
 <div id="sonnetsDiv">
     <div class="mySonnets">        
         <img src="images/sonnets/fox.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="mySonnets">
+        <img src="images/sonnets/equivocation.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="mySonnets">
+        <img src="images/sonnets/cosmo.png" style="width:80%; left:10%; position:relative" loading="lazy">
     </div>
     <div class="mySonnets">
         <img src="images/sonnets/peaks.png" style="width:80%; left:10%; position:relative" loading="lazy">
@@ -4236,7 +4245,7 @@ sonnets[sonnetsIndex - 1].style.display = "block";
 
         const openImages = () => {
 
-            centerContainer.style.display = "none"
+ 
             if (userIsMobile == false) {
                 prevImage.style.display = "block"
                 nextImage.style.display = "block"
@@ -4269,19 +4278,10 @@ sonnets[sonnetsIndex - 1].style.display = "block";
                 prevHidden.style.display = "block"
                 nextHidden.style.display = "block"
             }
-            optionsDiv.animate({
-                    height: ["80%", "0%"],
-                    width: ["80%", "0%"]
-                }, {
-                    duration: 1000,
-                    fill: "forwards",
-                    easing: "ease"
-                })
-
+            optionsDiv.style.width = "0%"
+            optionsDiv.style.height = "0%"
 
             showHidden(hiddenIndex);
-
-
 
             hiddenDiv.style.display = "flex"
             hiddenIsOpen = true
@@ -4304,9 +4304,6 @@ sonnets[sonnetsIndex - 1].style.display = "block";
 
 
         }
-
-
-
 
         imagesDiv.addEventListener('touchstart', handleTouchStart, false);
         imagesDiv.addEventListener('touchmove', handleTouchEndImages, false);
@@ -4644,15 +4641,9 @@ sonnets[sonnetsIndex - 1].style.display = "block";
                 easing: "ease",
                 fill: "forwards"
             })
-            optionsDiv.animate({
-                    height: ["0%", "33%"],
-                    width: ["0%", "100%"]
-                }, {
-                    duration: 1000,
-                    fill: "forwards",
-                    easing: "ease"
-                })
+            optionsDiv.style.width = "100%"
 
+            optionsDiv.style.height = "33%"
             optionsDiv.style.top = "33%"
             backArrow.animate({
                 opacity: ["0.5", "0"]
