@@ -168,8 +168,8 @@
         <div class="hiddenImages">
             <img id="language5Image" src="images/hiddenLanguage/language5.jpg" loading="preload">
         </div>
-        <a id="prev3">❮</a>
-        <a id="next3">❯</a>
+        <a id="prevHidden">❮</a>
+        <a id="nextHidden">❯</a>
     </div>
 
 
@@ -195,68 +195,72 @@
             <img id="travisRabbitImage" src="images/images/travis-rabbit.png" loading="preload">
         </div>
 
-        <a id="prev2">❮</a>
-        <a id="next2">❯</a>
+        <a id="prevImage">❮</a>
+        <a id="nextImage">❯</a>
     </div>
 
-    <div id="poemsDiv">
-        <!-- <div class="myPoems">
-            <img src="images/poems/whisked.jpg" style="width:100%" loading="lazy">
+    <div id="doodlesDiv">
+        <div class="myDoodles">
+            <img src="images/doodles/satiate.png" style="width:100%" loading="lazy">
         </div>
-        <div class="myPoems">
-            <img src="images/poems/insect.jpg" style="width:100%" loading="lazy">
+        <div class="myDoodles">
+            <img src="images/doodles/praha.jpg" style="width:100%" loading="lazy">
         </div>
-        <div class="myPoems">
-            <img src="images/poems/vltava.jpg" style="width:100%" loading="lazy">
+        <div class="myDoodles">
+            <img src="images/doodles/orion.jpg" style="width:100%" loading="lazy">
         </div>
-        <div class="myPoems">
-            <img src="images/poems/blank.jpg" style="width:100%" loading="lazy">
-        </div> -->
-        <div class="myPoems">
-            <img src="images/poems/praha.jpg" style="width:100%" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/orion.jpg" style="width:100%" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/palabra.png" style="width:80%; left:10%; position:relative" loading="lazy">
+        
+        <div class="myDoodles">
+            <img src="images/doodles/tree.jpg" style="width:100%" loading="lazy">
         </div>
 
-        <div class="myPoems">
-            <img src="images/poems/tranqulized.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/cruel.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/serbian.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-
-        <div class="myPoems">
-            <img src="images/poems/grey.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/gun.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-
-        <div class="myPoems">
-            <img src="images/poems/density.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/fleeting.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-        <div class="myPoems">
-            <img src="images/poems/sarajevo.png" style="width:80%; left:10%; position:relative" loading="lazy">
-        </div>
-
-
-        <div class="myPoems">
-            <img src="images/poems/tree.jpg" style="width:100%" loading="lazy">
-        </div>
-
-        <a id="prev">❮</a>
-        <a id="next">❯</a>
+        <a id="prevDoodle">❮</a>
+        <a id="nextDoodle">❯</a>
     </div>
+
+    <div id="balkanDiv">
+    <div class="myBalkan">
+        <img src="images/poems/tranqulized.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="myBalkan">
+        <img src="images/poems/cruel.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="myBalkan">
+        <img src="images/poems/serbian.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+
+    <div class="myBalkan">
+        <img src="images/poems/grey.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="myBalkan">
+        <img src="images/poems/gun.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+
+    <div class="myBalkan">
+        <img src="images/poems/density.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="myBalkan">
+        <img src="images/poems/fleeting.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="myBalkan">
+        <img src="images/poems/sarajevo.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+
+    <a id="prevBalkan">❮</a>
+    <a id="nextBalkan">❯</a>
+</div>
+
+<div id="sonnetsDiv">
+    <div class="mySonnets">        
+        <img src="images/sonnets/fox.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    <div class="mySonnets">
+        <img src="images/sonnets/peaks.png" style="width:80%; left:10%; position:relative" loading="lazy">
+    </div>
+    
+    <a id="prevSonnets">❮</a>
+    <a id="nextSonnets">❯</a>
+</div>
 
     <div id="scrollContainer">
         <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg" loading="lazy">
@@ -267,16 +271,22 @@
 
         <div id="optionsDiv">
             <img id="musicOption" class="option optionSlow" data-imgstm="images/music" src="images/music-unselected.png">
-            <img id="poemsOption" class="option optionFast" data-imgstm="images/poems" src="images/words-unselected.png">
+            <img id="wordsOption" class="option optionFast" data-imgstm="images/words" src="images/words-unselected.png">
             <img id="imagesOption" class="option optionSlow" data-imgstm="images/images" src="images/images-unselected.png">
             <img id="hiddenOption" class="option optionFast" data-imgstm="images/hidden" src="images/hidden-option.png">
             <img id="aboutOption" class="option optionSlow" data-imgstm="images/about" src="images/about-unselected.png">
         </div>
 
         <div id="musicOptionsDiv">
-            <img id="pianoTitle" class="option" data-imgstm="images/poems" src="images/piano-works.png">
-            <img id="rockOption" class="option" data-imgstm="images/music" src="images/art-rock.png">
+            <img id="pianoTitle" class="option" src="images/piano-works.png">
+            <img id="rockOption" class="option" src="images/art-rock.png">
+        </div>
 
+        <div id="wordsOptionsDiv">
+            <img id="doodlesOption" class="option" src="images/doodles.png">
+            <img id="balkanOption" class="option" src="images/balkan.png">
+            <img id="sonnetsOption" class="option" src="images/sonnets.png">
+            
         </div>
 
         <div id="albumTitlesDiv">
@@ -728,7 +738,9 @@
         const albumTitlesDivChildren = albumTitlesDiv.children
         const optionsDiv = document.getElementById("optionsDiv")
         const aboutDiv = document.getElementById("aboutDiv")
-        const poemsDiv = document.getElementById("poemsDiv")
+        const doodlesDiv = document.getElementById("doodlesDiv")
+        const balkanDiv = document.getElementById("balkanDiv")
+        const sonnetsDiv = document.getElementById("sonnetsDiv")
         const imagesDiv = document.getElementById("imagesDiv")
         // const aboutTextDiv = document.getElementById("aboutTextDiv")
         // const div2D3D = document.getElementById("div2D3D")
@@ -761,7 +773,9 @@
         let imageIndex = 1;
         let hiddenIndex = 1;
 
-        let poemIndex = 1;
+        let doodleIndex = 1;
+        let balkanIndex = 1;
+        let sonnetsIndex = 1;
 
         let currentOption = null
         let currentOptionElem = null
@@ -794,13 +808,20 @@
         let pausedForShift = false
 
         let musicOptionsAreOpen = false
+        let wordsOptionsAreOpen = false
         let albumsAreOpen = false
         let albumIsOpen = false
         let aboutIsOpen = false
-        let poemsIsOpen = false
+        let doodlesIsOpen = false
+        let balkanIsOpen = false
+        let sonnetsIsOpen = false
         let hiddenIsOpen = false
-        let poemsDivChildren = poemsDiv.children
-        let poemCounter = 0
+        let doodlesDivChildren = doodlesDiv.children
+        let balkanDivChildren = balkanDiv.children
+        let sonnetsDivChildren = sonnetsDiv.children
+        let doodlesCounter = 0
+        let balkanCounter = 0
+        let sonnetsCounter = 0
         let imagesIsOpen = false
         let imagesDivChildren = imagesDiv.children
         let imageCounter = 0
@@ -808,7 +829,9 @@
         // let aboutTextCounter = 0 
         // let aboutTextsObject = []
         // let aboutText
-        let poemsObject = []
+        let doodlesObject = []
+        let balkanObject = []
+        let sonnetsObject = []
         let imagesObject = []
         let dimensionSelectIsOpen = false
         let dimension2D = false
@@ -3515,6 +3538,8 @@
 
         for (let option of options) {
 
+            console.log(options)
+
             let image = document.getElementById(option.id)
 
             image.addEventListener('click', event => {
@@ -3548,12 +3573,28 @@
                 musicOptionsAreOpen = false
             }
 
+            if (option.id == "wordsOption") {
+                console.log("tryin")
+                openWordsOptions()
+            }
+
+            if (option.id == "doodlesOption") {
+
+                openDoodles()
+            }
+
+            if (option.id == "sonnetsOption") {
+                openSonnets()
+            }
+
+            if (option.id == "balkanOption") {
+                openBalkan()
+            }
+
             if (option.id == "aboutOption") {
                 openAbout()
             }
-            if (option.id == "poemsOption") {
-                openPoems()
-            }
+            
             if (option.id == "imagesOption") {
                 openImages()
             }
@@ -3960,30 +4001,20 @@
 
 
 
-
-
-        const openPoems = () => {
-
-            if (userIsMobile == false) {
-                prev.style.display = "block"
-                next.style.display = "block"
-                console.log("userwasntmobile")
-            }
-
+const openWordsOptions = () => {
+    wordsOptionsDiv.style.display = "block"
             optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
 
-            poemsDiv.style.display = "block"
+                wordsOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
 
-            poemsDiv.animate({
-                height: ["0%", "100%"]
-            }, {
-                duration: 1000,
-                easing: "ease",
-                fill: "forwards"
-            })
-
-            poemsIsOpen = true
             backArrow.style.visibility = "visible"
             backArrow.animate({
                 opacity: ["0", "0.5"]
@@ -3992,35 +4023,205 @@
                 fill: "forwards"
             })
 
-            showPoems(poemIndex);
+            wordsOptionsAreOpen = true
+        }
+        
+
+        const closeWordsOptions = () => {
+
+
+            wordsOptionsDiv.animate({
+                height: ["20%", "0%"],
+                width: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+
+            backArrow.animate({
+                opacity: ["0.5", "0"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            optionsDiv.style.width = "100%"
+
+            optionsDiv.style.height = "33%"
+            optionsDiv.style.top = "33%"
+
+            wordsOptionsAreOpen = false
+
 
         }
 
 
 
-        function showPoems(n) {
+        const openDoodles = () => {
+
+            if (userIsMobile == false) {
+                prevDoodle.style.display = "block"
+                nextDoodle.style.display = "block"
+                console.log("userwasntmobile")
+            }
+            
+            wordsOptionsDiv.animate({
+                    height: ["80%", "0%"],
+                    width: ["80%", "0%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+
+            doodlesDiv.style.display = "block"
+
+            doodlesDiv.animate({
+                height: ["0%", "100%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+
+            wordsOptionsAreOpen = false
+            doodlesIsOpen = true
+
+            showDoodles(doodleIndex);
+
+        }
+
+        function showDoodles(n) {
             let i;
-            let poems = document.getElementsByClassName("myPoems");
-            if (n > poems.length) { poemIndex = 1 }
-            if (n < 1) { poemIndex = poems.length }
-            for (i = 0; i < poems.length; i++) {
-                poems[i].style.display = "none";
+            let doodles = document.getElementsByClassName("myDoodles");
+            if (n > doodles.length) { doodleIndex = 1 }
+            if (n < 1) { doodleIndex = doodles.length }
+            for (i = 0; i < doodles.length; i++) {
+                doodles[i].style.display = "none";
                 if (backgroundBlack == true) {
-                    poems[poemIndex - 1].classList.remove('hue-rotate-animation-white');
-                    poems[poemIndex - 1].classList.add('hue-rotate-animation-black');
+                    doodles[doodleIndex - 1].classList.remove('hue-rotate-animation-white');
+                    doodles[doodleIndex - 1].classList.add('hue-rotate-animation-black');
                 } else {
-                    poems[poemIndex - 1].classList.remove('hue-rotate-animation-black');
-                    poems[poemIndex - 1].classList.add('hue-rotate-animation-white');
+                    doodles[doodleIndex - 1].classList.remove('hue-rotate-animation-black');
+                    doodles[doodleIndex - 1].classList.add('hue-rotate-animation-white');
                 };
-                console.log(poems[i].style.filter)
+                console.log(doodles[i].style.filter)
 
             }
-            poems[poemIndex - 1].style.display = "block";
-
-
-
+            doodles[doodleIndex - 1].style.display = "block";
 
         }
+
+        const openBalkan = () => {
+
+if (userIsMobile == false) {
+    prevBalkan.style.display = "block"
+    nextBalkan.style.display = "block"
+    console.log("userwasntmobile")
+}
+
+
+wordsOptionsDiv.animate({
+                    height: ["80%", "0%"],
+                    width: ["80%", "0%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+
+balkanDiv.style.display = "block"
+
+balkanDiv.animate({
+    height: ["0%", "100%"]
+}, {
+    duration: 1000,
+    easing: "ease",
+    fill: "forwards"
+})
+
+balkanIsOpen = true
+wordsOptionsAreOpen = false
+
+showBalkan(balkanIndex);
+
+}
+
+function showBalkan(n) {
+let i;
+let balkan = document.getElementsByClassName("myBalkan");
+if (n > balkan.length) { balkanIndex = 1 }
+if (n < 1) { balkanIndex = balkan.length }
+for (i = 0; i < balkan.length; i++) {
+    balkan[i].style.display = "none";
+    if (backgroundBlack == true) {
+        balkan[balkanIndex - 1].classList.remove('hue-rotate-animation-white');
+        balkan[balkanIndex - 1].classList.add('hue-rotate-animation-black');
+    } else {
+        balkan[balkanIndex - 1].classList.remove('hue-rotate-animation-black');
+        balkan[balkanIndex - 1].classList.add('hue-rotate-animation-white');
+    };
+    console.log(balkan[i].style.filter)
+
+}
+balkan[balkanIndex - 1].style.display = "block";
+
+}
+
+const openSonnets = () => {
+
+if (userIsMobile == false) {
+    prevSonnets.style.display = "block"
+    nextSonnets.style.display = "block"
+    console.log("userwasntmobile")
+}
+
+            wordsOptionsDiv.animate({
+    height: ["80%", "0%"],
+    width: ["80%", "0%"]
+}, {
+    duration: 1000,
+    easing: "ease",
+    fill: "forwards"
+})
+
+sonnetsDiv.style.display = "block"
+
+sonnetsDiv.animate({
+    height: ["0%", "100%"]
+}, {
+    duration: 1000,
+    easing: "ease",
+    fill: "forwards"
+})
+
+sonnetsIsOpen = true
+wordsOptionsAreOpen = false
+
+showSonnets(sonnetsIndex);
+
+}
+
+function showSonnets(n) {
+let i;
+let sonnets = document.getElementsByClassName("mySonnets");
+if (n > sonnets.length) { sonnetsIndex = 1 }
+if (n < 1) { sonnetsIndex = sonnets.length }
+for (i = 0; i < sonnets.length; i++) {
+    sonnets[i].style.display = "none";
+    if (backgroundBlack == true) {
+        sonnets[sonnetsIndex - 1].classList.remove('hue-rotate-animation-white');
+        sonnets[sonnetsIndex - 1].classList.add('hue-rotate-animation-black');
+    } else {
+        sonnets[sonnetsIndex - 1].classList.remove('hue-rotate-animation-black');
+        sonnets[sonnetsIndex - 1].classList.add('hue-rotate-animation-white');
+    };
+    console.log(sonnets[i].style.filter)
+
+}
+sonnets[sonnetsIndex - 1].style.display = "block";
+
+}
 
         function showHidden(n) {
             let i;
@@ -4037,8 +4238,8 @@
 
             centerContainer.style.display = "none"
             if (userIsMobile == false) {
-                prev2.style.display = "block"
-                next2.style.display = "block"
+                prevImage.style.display = "block"
+                nextImage.style.display = "block"
             }
             optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
@@ -4063,13 +4264,20 @@
 
         const openHidden = () => {
 
-            centerContainer.style.display = "none"
+            
             if (userIsMobile == false) {
-                prev3.style.display = "block"
-                next3.style.display = "block"
+                prevHidden.style.display = "block"
+                nextHidden.style.display = "block"
             }
-            optionsDiv.style.width = "0%"
-            optionsDiv.style.height = "0%"
+            optionsDiv.animate({
+                    height: ["80%", "0%"],
+                    width: ["80%", "0%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+
 
             showHidden(hiddenIndex);
 
@@ -4101,11 +4309,15 @@
 
 
         imagesDiv.addEventListener('touchstart', handleTouchStart, false);
-        imagesDiv.addEventListener('touchmove', handleTouchEnd, false);
-        poemsDiv.addEventListener('touchstart', handleTouchStart, false);
-        poemsDiv.addEventListener('touchmove', handleTouchEnd2, false);
+        imagesDiv.addEventListener('touchmove', handleTouchEndImages, false);
+        doodlesDiv.addEventListener('touchstart', handleTouchStart, false);
+        doodlesDiv.addEventListener('touchmove', handleTouchEndDoodles, false);
         hiddenDiv.addEventListener('touchstart', handleTouchStart, false);
-        hiddenDiv.addEventListener('touchmove', handleTouchEnd3, false);
+        hiddenDiv.addEventListener('touchmove', handleTouchEndHidden, false);
+        balkanDiv.addEventListener('touchstart', handleTouchStart, false);
+        balkanDiv.addEventListener('touchmove', handleTouchEndBalkan, false);
+        sonnetsDiv.addEventListener('touchstart', handleTouchStart, false);
+        sonnetsDiv.addEventListener('touchmove', handleTouchEndSonnets, false);
 
         // Handle touch start
         function handleTouchStart(event) {
@@ -4113,7 +4325,7 @@
             startY = event.touches[0].clientY;
         }
 
-        function handleTouchEnd(event) {
+        function handleTouchEndImages(event) {
             if (!startX || !startY) return;
 
             const endX = event.changedTouches[0].clientX;
@@ -4137,7 +4349,7 @@
             startY = null;
         }
 
-        function handleTouchEnd2(event) {
+        function handleTouchEndDoodles(event) {
             if (!startX || !startY) return;
 
             const endX = event.changedTouches[0].clientX;
@@ -4150,9 +4362,9 @@
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
 
                 if (deltaX > 0) {
-                    showPoems(poemIndex += -1)
+                    showDoodles(doodleIndex += -1)
                 } else {
-                    showPoems(poemIndex += 1)
+                    showDoodles(doodleIndex += 1)
                 }
             }
 
@@ -4161,7 +4373,7 @@
             startY = null;
         }
 
-        function handleTouchEnd3(event) {
+        function handleTouchEndHidden(event) {
             if (!startX || !startY) return;
 
             const endX = event.changedTouches[0].clientX;
@@ -4185,46 +4397,101 @@
             startY = null;
         }
 
+        function handleTouchEndBalkan(event) {
+            if (!startX || !startY) return;
+
+            const endX = event.changedTouches[0].clientX;
+            const endY = event.changedTouches[0].clientY;
+
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+
+            // Check if the swipe is horizontal (left or right) and long enough
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+
+                if (deltaX > 0) {
+                    showBalkan(balkanIndex += -1)
+                } else {
+                    showBalkan(balkanIndex += 1)
+                }
+            }
+
+            // Reset the start coordinates to prevent multiple swipes in one touch event
+            startX = null;
+            startY = null;
+        }
+
+        function handleTouchEndSonnets(event) {
+            if (!startX || !startY) return;
+
+            const endX = event.changedTouches[0].clientX;
+            const endY = event.changedTouches[0].clientY;
+
+            const deltaX = endX - startX;
+            const deltaY = endY - startY;
+
+            // Check if the swipe is horizontal (left or right) and long enough
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+
+                if (deltaX > 0) {
+                    showSonnets(sonnetsIndex += -1)
+                } else {
+                    showSonnets(sonnetsIndex += 1)
+                }
+            }
+
+            // Reset the start coordinates to prevent multiple swipes in one touch event
+            startX = null;
+            startY = null;
+        }
 
 
 
-        const prev = document.getElementById("prev")
-        const next = document.getElementById("next")
-
-        prev.addEventListener('click', () => {
-            showPoems(poemIndex += -1);
+        const prevDoodle = document.getElementById("prevDoodle")
+        const nextDoodle = document.getElementById("nextDoodle")
+        prevDoodle.addEventListener('click', () => {
+            showDoodles(doodleIndex += -1);
+        })
+        nextDoodle.addEventListener('click', () => {
+            showDoodles(doodleIndex += 1);
         })
 
-
-        next.addEventListener('click', () => {
-            showPoems(poemIndex += 1);
-        })
-
-        const prev2 = document.getElementById("prev2")
-
-
-        prev2.addEventListener('click', () => {
+        const prevImage = document.getElementById("prevImage")
+        prevImage.addEventListener('click', () => {
             showImages(imageIndex += -1);
         })
-        const next2 = document.getElementById("next2")
-
-        next2.addEventListener('click', () => {
+        const nextImage = document.getElementById("nextImage")
+        nextImage.addEventListener('click', () => {
             showImages(imageIndex += 1);
         })
 
-
-        const prev3 = document.getElementById("prev3")
-
-        prev3.addEventListener('click', () => {
+        const prevHidden = document.getElementById("prevHidden")
+        prevHidden.addEventListener('click', () => {
             showHidden(hiddenIndex += -1);
         })
-        const next3 = document.getElementById("next3")
-
-        next3.addEventListener('click', () => {
+        const nextHidden = document.getElementById("nextHidden")
+        nextHidden.addEventListener('click', () => {
             showHidden(hiddenIndex += 1);
+        })
+        const prevBalkan = document.getElementById("prevBalkan")
+        prevBalkan.addEventListener('click', () => {
+            showBalkan(balkanIndex += -1);
+        })
+        const nextBalkan = document.getElementById("nextBalkan")
+        nextBalkan.addEventListener('click', () => {
+            showBalkan(balkanIndex += 1);
+        })
+        const prevSonnets = document.getElementById("prevSonnets")
+        prevSonnets.addEventListener('click', () => {
+            showSonnets(sonnetsIndex += -1);
+        })
+        const nextSonnets = document.getElementById("nextSonnets")
+        nextSonnets.addEventListener('click', () => {
+            showSonnets(sonnetsIndex += 1);
         })
 
 
+        
         function showImages(n) {
             let i;
             let Images = document.getElementsByClassName("myImages");
@@ -4262,12 +4529,6 @@
         }
 
 
-
-
-
-
-
-
         const closeAbout = () => {
 
 
@@ -4293,28 +4554,84 @@
             centerContainer.style.display = "block"
 
         }
-        const closePoems = () => {
-            poemsDiv.animate({
+        const closeDoodles = () => {
+            doodlesDiv.animate({
                 height: ["100%", "0%"]
             }, {
                 duration: 1000,
                 easing: "ease",
                 fill: "forwards"
             })
-            optionsDiv.style.width = "100%"
-            optionsDiv.style.height = "33%"
-            optionsDiv.style.top = "33%"
-            backArrow.animate({
-                opacity: ["0.5", "0"]
+            wordsOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            wordsOptionsDiv.style.top = "33%"
+
+            doodlesDiv.style.display = "none"
+            doodlesIsOpen = false
+            wordsOptionsAreOpen = true
+
+            prevDoodle.style.display = "none"
+            nextDoodle.style.display = "none"
+            centerContainer.style.display = "block"
+
+        }
+        const closeBalkan = () => {
+            balkanDiv.animate({
+                height: ["100%", "0%"]
             }, {
                 duration: 1000,
+                easing: "ease",
                 fill: "forwards"
             })
-            poemsDiv.style.display = "none"
-            poemsIsOpen = false
+            wordsOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            wordsOptionsDiv.style.top = "33%"
 
-            prev.style.display = "none"
-            next.style.display = "none"
+            balkanDiv.style.display = "none"
+            balkanIsOpen = false
+            wordsOptionsAreOpen = true
+
+            prevBalkan.style.display = "none"
+            nextBalkan.style.display = "none"
+            centerContainer.style.display = "block"
+
+        }
+        const closeSonnets = () => {
+            sonnetsDiv.animate({
+                height: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+            wordsOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            wordsOptionsDiv.style.top = "33%"
+
+            sonnetsDiv.style.display = "none"
+            sonnetsIsOpen = false
+            wordsOptionsAreOpen = true
+
+            prevSonnets.style.display = "none"
+            nextSonnets.style.display = "none"
             centerContainer.style.display = "block"
 
         }
@@ -4327,8 +4644,15 @@
                 easing: "ease",
                 fill: "forwards"
             })
-            optionsDiv.style.width = "100%"
-            optionsDiv.style.height = "33%"
+            optionsDiv.animate({
+                    height: ["0%", "33%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+
             optionsDiv.style.top = "33%"
             backArrow.animate({
                 opacity: ["0.5", "0"]
@@ -4339,8 +4663,8 @@
             hiddenDiv.style.display = "none"
             hiddenIsOpen = false
 
-            prev3.style.display = "none"
-            next3.style.display = "none"
+            prevHidden.style.display = "none"
+            nextHidden.style.display = "none"
             centerContainer.style.display = "block"
 
         }
@@ -4358,8 +4682,8 @@
             imagesDiv.style.display = "none"
             imagesIsOpen = false
             centerContainer.style.display = "block"
-            prev2.style.display = "none"
-            next2.style.display = "none"
+            prevImage.style.display = "none"
+            nextImage.style.display = "none"
 
         }
 
@@ -4393,6 +4717,9 @@
             else if (musicOptionsAreOpen == true) {
                 closeMusicOptions()
             }
+            else if (wordsOptionsAreOpen == true) {
+                closeWordsOptions()
+            }
 
             else if (albumsAreOpen == true) {
                 closeRockAlbums()
@@ -4403,9 +4730,17 @@
                 closeAbout()
                 aboutIsOpen = false
             }
-            else if (poemsIsOpen == true) {
-                closePoems()
-                poemsIsOpen = false
+            else if (doodlesIsOpen == true) {
+                closeDoodles()
+                doodlesIsOpen = false
+            }
+            else if (balkanIsOpen == true) {
+                closeBalkan()
+                balkanIsOpen = false
+            }
+            else if (sonnetsIsOpen == true) {
+                closeSonnets()
+                sonnetsIsOpen = false
             }
             else if (imagesIsOpen == true) {
                 closeImages()
@@ -4553,12 +4888,12 @@
 
                 starSphere.material.map = loader.load(starSphere2)
                 fovX.style.filter = "invert(1)"
-                prev.style.filter = "invert(1)"
-                prev2.style.filter = "invert(1)"
-                prev3.style.filter = "invert(1)"
-                next.style.filter = "invert(1)"
-                next2.style.filter = "invert(1)"
-                next3.style.filter = "invert(1)"
+                prevDoodle.style.filter = "invert(1)"
+                prevImage.style.filter = "invert(1)"
+                prevHidden.style.filter = "invert(1)"
+                nextDoodle.style.filter = "invert(1)"
+                nextImage.style.filter = "invert(1)"
+                nextHidden.style.filter = "invert(1)"
 
 
                 // sideControlsContainer.style.left = "0%"
@@ -4671,12 +5006,12 @@
                 // fov.style.width = "auto"
                 fov.style.filter = "brightness(100%)"
                 fovX.style.filter = "invert(0)"
-                prev.style.filter = "invert(0)"
-                prev2.style.filter = "invert(0)"
-                prev3.style.filter = "invert(0)"
-                next.style.filter = "invert(0)"
-                next2.style.filter = "invert(0)"
-                next3.style.filter = "invert(0)"
+                prevDoodle.style.filter = "invert(0)"
+                prevImage.style.filter = "invert(0)"
+                prevHidden.style.filter = "invert(0)"
+                nextDoodle.style.filter = "invert(0)"
+                nextImage.style.filter = "invert(0)"
+                nextHidden.style.filter = "invert(0)"
 
                 // topControlsNavButton.style.filter = "invert(1)"
                 // albumDivNavButtonLeft.style.visibility = "visible"

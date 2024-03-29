@@ -90,19 +90,28 @@
       pointer-events: none;
     }
     #musicOption {
-      animation: hueRotation 4s linear infinite, pulsate 2s ease-in-out infinite alternate;
+      animation: hueRotation 4s linear infinite, pulsate 2.5s ease-in-out infinite alternate;
     }
     #imagesOption {
       animation: hueRotation 5s linear infinite, pulsate 3s ease-in-out infinite alternate;
     }
-    #poemsOption {
+    #wordsOption {
       animation: hueRotation 3s linear infinite, pulsate 4s ease-in-out infinite alternate;
     }
     #hiddenOption {
       animation: hueRotation 2s linear infinite, pulsate 5s ease-in-out infinite alternate;
     }
     #aboutOption {
-      animation: hueRotation 6s linear infinite, pulsate 2.5s ease-in-out infinite alternate;
+      animation: hueRotation 6s linear infinite, pulsate 3.5s ease-in-out infinite alternate;
+    }
+    #doodlesOption {
+      animation: hueRotation 3s linear infinite, pulsate 4s ease-in-out infinite alternate;
+    }
+    #balkanOption {
+      animation: hueRotation 2s linear infinite, pulsate 5s ease-in-out infinite alternate;
+    }
+    #sonnetsOption {
+      animation: hueRotation 6s linear infinite, pulsate 7s ease-in-out infinite alternate;
     }
 
     #pianoTitle {
@@ -113,6 +122,19 @@
     }
 
     #musicOptionsDiv {  
+      display:none
+    }
+    #wordsOptionsDiv {  
+      display:none
+    }
+
+    #doodlesDiv {  
+      display:none
+    }
+    #sonnetsDiv {  
+      display:none
+    }
+    #balkanDiv {  
       display:none
     }
 
@@ -323,7 +345,7 @@
         transition: 1s ease
       }
 
-      #prev, #next, #prev2, #next2, #prev3, #next3 {
+      #prevDoodle, #nextDoodle, #prevBalkan, #nextBalkan, #prevHidden, #nextHidden, #prevImage, #nextImage, #prevSonnets, #nextSonnets {
         top: 90%;
       }    
 
@@ -417,6 +439,7 @@
     top: 33%;
     height: 33%;
     width: auto;
+    transition: 1s ease;
   }
   #optionsDiv img {
     position: relative;
@@ -437,6 +460,22 @@
     width: auto;
   }
   #musicOptionsDiv img {
+    position: relative;
+    transition: 1s ease;
+    width: 100%;
+    opacity: 0.8;   
+    
+  }
+
+  #wordsOptionsDiv {
+    position: relative;
+    transition: 1s;
+    top: 33%;
+    height: 33%;
+    width: auto;
+    transition: 1s ease;
+  }
+  #wordsOptionsDiv img {
     position: relative;
     transition: 1s ease;
     width: 100%;
@@ -475,45 +514,64 @@
 }
 
 
-#next {
+#nextDoodle {
   right: 5%;
   border-radius: 3px 0 0 3px;
 }
 
-#prev {
+#prevDoodle {
   left: 5%;
   border-radius: 3px 0 0 3px;
 }
 
-#next2 {
+#nextImage {
   right: 5%;
   border-radius: 3px 0 0 3px;
 }
 
-#prev2 {
+#prevImage {
   left: 5%;
   border-radius: 3px 0 0 3px;
 }
 
-#next3 {
+#nextHidden {
   right: 5%;
   border-radius: 3px 0 0 3px;
 }
 
-#prev3 {
+#prevHidden {
   left: 5%;
   border-radius: 3px 0 0 3px;
 }
 
 
 
-#poemsDiv {
+#doodlesDiv {
 	height: 100vh;
 	display: none;
 	position: fixed;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: 1s ease;
+}
+#balkanDiv {
+	height: 100vh;
+	display: none;
+	position: fixed;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 1s ease;
+}
+#sonnetsDiv {
+	height: 100vh;
+	display: none;
+	position: fixed;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 1s ease;
 }
 
 #imagesDiv {
@@ -527,11 +585,12 @@
 
 #hiddenDiv {
   overflow: hidden;
-	height: 100vh;
+	height: 0%;
 	display: none;
 	position: fixed;
   align-items: center;
   justify-content: center;
+  transition: 1s ease;
 }
 
 
@@ -559,31 +618,49 @@
   
 
 
-    #next {
+    #nextDoodle {
       right: 5%;
       border-radius: 3px 0 0 3px;
     }
   
-    #prev {
+    #prevDoodle {
+      left: 5%;
+      border-radius: 3px 0 0 3px;
+    }
+    #nextBalkan {
+      right: 5%;
+      border-radius: 3px 0 0 3px;
+    }
+  
+    #prevBalkan {
+      left: 5%;
+      border-radius: 3px 0 0 3px;
+    }
+    #nextSonnets {
+      right: 5%;
+      border-radius: 3px 0 0 3px;
+    }
+  
+    #prevSonnets {
       left: 5%;
       border-radius: 3px 0 0 3px;
     }
 
-    #next2 {
+    #nextImage {
       right: 5%;
       border-radius: 3px 0 0 3px;
     }
   
-    #prev2 {
+    #prevImage {
       left: 5%;
       border-radius: 3px 0 0 3px;
     }
-    #next3 {
+    #nextHidden {
       right: 5%;
       border-radius: 3px 0 0 3px;
     }
   
-    #prev3 {
+    #prevHidden {
       left: 5%;
       border-radius: 3px 0 0 3px;
     }
@@ -680,6 +757,21 @@
     position: relative;
   }
 
+  #wordsOptionsDiv {    
+    position: relative;
+    transition: 1s;
+    top: 33%;
+    height: 33%;
+    width: auto;
+    transition: 1s ease;
+  }
+
+  #wordsOptionsDiv img {
+    transition: 1s ease;
+    width: 100%;
+    opacity: 0.8;
+    position: relative;
+  }
 
 
        
@@ -727,26 +819,48 @@
 }
 
 
-#poemsDiv {
+#doodlesDiv {
 	height: 100%;
 	width: auto;
 	display: none;
 	position: relative;
   align-items: center;
   justify-content: center;
+  transition: 1s ease;
+
+}
+#balkanDiv {
+	height: 100%;
+	width: auto;
+	display: none;
+	position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
+
+}
+#sonnetsDiv {
+	height: 100%;
+	width: auto;
+	display: none;
+	position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
 
 }
 
 #hiddenDiv {
-	height: 100%;
+	height: 0%;
 	width: auto;
 	display: none;
 	position: relative;
   align-items: center;
   justify-content: center;
+  transition: 1s ease;
 }
 
-#prev, #next, #prev2, #next2, #prev3, #next3 {
+#prevDoodle, #nextDoodle, #prevBalkan, #nextBalkan, #prevHidden, #nextHidden, #prevImage, #nextImage, #prevSonnets, #nextSonnets {
   top: 50%;
 }    
 
@@ -796,7 +910,7 @@
 
 
 
-  #prev, #next, #prev2, #next2, #prev3, #next3 {
+  #prevDoodle, #nextDoodle, #prevBalkan, #nextBalkan, #prevHidden, #nextHidden, #prevImage, #nextImage, #prevSonnets, #nextSonnets {
     display: none;
     cursor: pointer;
     position: absolute;
@@ -810,7 +924,7 @@
   }    
  
   
-  .myPoems {
+  .myDoodles {
     height: 100%;
     display: flex;
     position: relative;
@@ -856,7 +970,19 @@
     justify-content: center;
   }
 
-  #poemsDiv img {
+  #doodlesDiv img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: contain;
+    display: block;
+  }
+  #balkanDiv img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: contain;
+    display: block;
+  }
+  #sonnetsDiv img {
     height: 100vh;
     width: 100vw;
     object-fit: contain;
@@ -883,6 +1009,7 @@
     width: 100vw;
     object-fit: contain;
     display: block;
+    transition: 1s ease
   }
   
   .sideControl {
