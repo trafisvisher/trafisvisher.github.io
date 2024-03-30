@@ -4144,11 +4144,11 @@ const openWordsOptions = () => {
             for (i = 0; i < doodles.length; i++) {
                 doodles[i].style.display = "none";
                 if (backgroundBlack == true) {
-                    doodles[doodleIndex - 1].classList.remove('hue-rotate-animation-white');
-                    doodles[doodleIndex - 1].classList.add('hue-rotate-animation-black');
+                    doodles[doodleIndex - 1].classList.remove('hue-rotate-animation-white-pulsateLess');
+                    doodles[doodleIndex - 1].classList.add('hue-rotate-animation-black-pulsateLess');
                 } else {
-                    doodles[doodleIndex - 1].classList.remove('hue-rotate-animation-black');
-                    doodles[doodleIndex - 1].classList.add('hue-rotate-animation-white');
+                    doodles[doodleIndex - 1].classList.remove('hue-rotate-animation-black-pulsateLess');
+                    doodles[doodleIndex - 1].classList.add('hue-rotate-animation-white-pulsateLess');
                 };
                 console.log(doodles[i].style.filter)
 
@@ -4200,11 +4200,11 @@ if (n < 1) { balkanIndex = balkan.length }
 for (i = 0; i < balkan.length; i++) {
     balkan[i].style.display = "none";
     if (backgroundBlack == true) {
-        balkan[balkanIndex - 1].classList.remove('hue-rotate-animation-white');
-        balkan[balkanIndex - 1].classList.add('hue-rotate-animation-black');
+        balkan[balkanIndex - 1].classList.remove('hue-rotate-animation-white-pulsateLess');
+        balkan[balkanIndex - 1].classList.add('hue-rotate-animation-black-pulsateLess');
     } else {
-        balkan[balkanIndex - 1].classList.remove('hue-rotate-animation-black');
-        balkan[balkanIndex - 1].classList.add('hue-rotate-animation-white');
+        balkan[balkanIndex - 1].classList.remove('hue-rotate-animation-black-pulsateLess');
+        balkan[balkanIndex - 1].classList.add('hue-rotate-animation-white-pulsateLess');
     };
     console.log(balkan[i].style.filter)
 
@@ -4255,11 +4255,11 @@ if (n < 1) { sonnetsIndex = sonnets.length }
 for (i = 0; i < sonnets.length; i++) {
     sonnets[i].style.display = "none";
     if (backgroundBlack == true) {
-        sonnets[sonnetsIndex - 1].classList.remove('hue-rotate-animation-white');
-        sonnets[sonnetsIndex - 1].classList.add('hue-rotate-animation-black');
+        sonnets[sonnetsIndex - 1].classList.remove('hue-rotate-animation-white-pulsateLess');
+        sonnets[sonnetsIndex - 1].classList.add('hue-rotate-animation-black-pulsateLess');
     } else {
-        sonnets[sonnetsIndex - 1].classList.remove('hue-rotate-animation-black');
-        sonnets[sonnetsIndex - 1].classList.add('hue-rotate-animation-white');
+        sonnets[sonnetsIndex - 1].classList.remove('hue-rotate-animation-black-pulsateLess');
+        sonnets[sonnetsIndex - 1].classList.add('hue-rotate-animation-white-pulsateLess');
     };
     console.log(sonnets[i].style.filter)
 

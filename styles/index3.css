@@ -954,6 +954,9 @@
   .hue-rotate-animation-black {
     animation: hueRotateAnimationBlack 10s linear infinite, pulsate 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
   }
+  .hue-rotate-animation-black-pulsateLess {
+    animation: hueRotateAnimationBlack 10s linear infinite, pulsateLess 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
+  }
   
   @keyframes hueRotateAnimationBlack {
     0% {
@@ -964,7 +967,10 @@
     }
   }
   .hue-rotate-animation-white {
-    animation: hueRotateAnimationWhite 10s linear infinite, pulsate 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
+    animation: hueRotateAnimationWhite 10s linear infinite, pulsateLess 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
+  }
+  .hue-rotate-animation-white-pulsateLess {
+    animation: hueRotateAnimationWhite 10s linear infinite, pulsateLess 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
   }
   
   @keyframes hueRotateAnimationWhite {
