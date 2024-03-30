@@ -60,77 +60,70 @@
       }
     }
 
-    #infinityTitle {
-      animation: hueRotation 10s linear infinite, pulsate 5s ease-in-out infinite alternate;
+    /* #infinityTitle {
+      animation:  pulsate 5s ease-in-out infinite alternate;
     }
     
     #horseloverTitle {
-      animation: hueRotation 8s linear infinite, pulsate 6s ease-in-out infinite alternate;
+      animation: pulsate 6s ease-in-out infinite alternate;
     }
     
     #maapTitle {
-      animation: hueRotation 12s linear infinite, pulsate 4s ease-in-out infinite alternate;
+      animation:  pulsate 4s ease-in-out infinite alternate;
     }
     
     #maasTitle {
-      animation: hueRotation 7s linear infinite, pulsate 7s ease-in-out infinite alternate;
+      animation: pulsate 7s ease-in-out infinite alternate;
     }
     
     #sapientsTitle {
-      animation: hueRotation 9s linear infinite, pulsate 3s ease-in-out infinite alternate;
+      animation: pulsate 3s ease-in-out infinite alternate;
     }
     
     #symbioseTitle {
-      animation: hueRotation 11s linear infinite, pulsate 5s ease-in-out infinite alternate;
+      animation:  pulsate 5s ease-in-out infinite alternate;
     }
     
     #braidingTitle {
-      animation: hueRotation 9s linear infinite, pulsate 8s ease-in-out infinite alternate;
+      animation: pulsate 8s ease-in-out infinite alternate;
     }
     
     #luzTitle {
-      animation: hueRotation 10s linear infinite, pulsate 4s ease-in-out infinite alternate;
+      animation:  pulsate 4s ease-in-out infinite alternate;
     }
     
     #inertiaTitle {
-      animation: hueRotation 8s linear infinite, pulsate 6s ease-in-out infinite alternate;
-    }
+      animation: pulsate 6s ease-in-out infinite alternate;
+    } */
 
     #optionsDiv {
       transition: 1s;
       pointer-events: none;
     }
-    #musicOption {
-      animation: hueRotation 4s linear infinite, pulsate 2.5s ease-in-out infinite alternate;
+    /* #musicOption {
+      animation: pulsate 2.5s ease-in-out infinite alternate;
     }
     #imagesOption {
-      animation: hueRotation 5s linear infinite, pulsate 3s ease-in-out infinite alternate;
+      animation: pulsate 3s ease-in-out infinite alternate;
     }
     #wordsOption {
-      animation: hueRotation 3s linear infinite, pulsate 4s ease-in-out infinite alternate;
+      animation: pulsate 4s ease-in-out infinite alternate;
     }
     #hiddenOption {
-      animation: hueRotation 2s linear infinite, pulsate 5s ease-in-out infinite alternate;
+      animation: pulsate 5s ease-in-out infinite alternate;
     }
     #aboutOption {
-      animation: hueRotation 6s linear infinite, pulsate 3.5s ease-in-out infinite alternate;
+      animation: pulsate 3.5s ease-in-out infinite alternate;
     }
     #doodlesOption {
-      animation: hueRotation 3s linear infinite, pulsate 4s ease-in-out infinite alternate;
+      animation: pulsate 4s ease-in-out infinite alternate;
     }
     #balkanOption {
-      animation: hueRotation 2s linear infinite, pulsate 5s ease-in-out infinite alternate;
+      animation: pulsate 5s ease-in-out infinite alternate;
     }
     #sonnetsOption {
-      animation: hueRotation 6s linear infinite, pulsate 7s ease-in-out infinite alternate;
-    }
-
-    #pianoTitle {
-      animation: hueRotation 10s linear infinite, pulsate 4s ease-in-out infinite alternate;
-    }
-    #rockOption {
-      animation: hueRotation 8s linear infinite, pulsate 3s ease-in-out infinite alternate;
-    }
+      animation: pulsate 7s ease-in-out infinite alternate;
+    } */
 
     #musicOptionsDiv {  
       display:none
@@ -959,7 +952,7 @@
   } */
 
   .hue-rotate-animation-black {
-    animation: hueRotateAnimationBlack 10s linear infinite; /* Animation for hue-rotate */
+    animation: hueRotateAnimationBlack 10s linear infinite, pulsate 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
   }
   
   @keyframes hueRotateAnimationBlack {
@@ -971,7 +964,7 @@
     }
   }
   .hue-rotate-animation-white {
-    animation: hueRotateAnimationWhite 10s linear infinite; /* Animation for hue-rotate */
+    animation: hueRotateAnimationWhite 10s linear infinite, pulsate 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
   }
   
   @keyframes hueRotateAnimationWhite {
@@ -1031,7 +1024,7 @@
     object-fit: contain;
     display: block;
     transition: 1s ease;
-    animation: pulsateLess 3s ease-in-out infinite alternate
+    animation: pulsateLess 3s ease-in-out infinite alternate, hueRotation 20s linear infinite;
     
   }
   
@@ -1162,7 +1155,7 @@
       .songTitleImage {
         position: relative;
         display: block;
-        animation: pulsate 5s ease-in-out infinite alternate;
+        animation: pulsate 5s ease-in-out infinite alternate, hueRotation 7s linear infinite;
       }
       .songTitleImage:hover{
         opacity: 0.5;

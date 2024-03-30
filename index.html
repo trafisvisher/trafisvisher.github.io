@@ -29,6 +29,7 @@
     <audio id="kathariaAudio" preload="none" src="songs/pianoSongs/katharia.mp3"> </audio>
     <audio id="nyxophoniaAudio" preload="none" src="songs/pianoSongs/nyxophonia.mp3"> </audio>
     <audio id="aphasiaAudio" preload="none" src="songs/pianoSongs/aphasia.mp3"> </audio>
+    <audio id="interstitiaAudio" preload="none" src="songs/pianoSongs/interstitia.mp3"> </audio>
     <audio id="antechroniaAudio" preload="none" src="songs/pianoSongs/antechronia.mp3"> </audio>
 
     <audio id="siderialAudio" preload="none" src="songs/maapSongs/siderial.mp3"> </audio>
@@ -299,15 +300,15 @@
         </div>
 
         <div id="albumTitlesDiv">
-            <img id="infinityTitle" src="images/infinity-title.png" loading="lazy">
-            <img id="horseloverTitle" src="images/horselover-title.png" loading="lazy">
-            <img id="maapTitle" src="images/maap-title.png" loading="lazy">
-            <img id="maasTitle" src="images/maas-title.png" loading="lazy">
-            <img id="sapientsTitle" src="images/sapients-title.png" loading="lazy">
-            <img id="symbioseTitle" src="images/symbiose-title.png" loading="lazy">
-            <img id="braidingTitle" src="images/braiding-title.png" loading="lazy">
-            <img id="luzTitle" src="images/luz-title.png" loading="lazy">
-            <img id="inertiaTitle" src="images/inertia-title.png" loading="lazy">
+            <img id="infinityTitle" class="albumTitleImage" src="images/infinity-title.png" loading="lazy">
+            <img id="horseloverTitle" class="albumTitleImage" src="images/horselover-title.png" loading="lazy">
+            <img id="maapTitle" class="albumTitleImage" src="images/maap-title.png" loading="lazy">
+            <img id="maasTitle" class="albumTitleImage" src="images/maas-title.png" loading="lazy">
+            <img id="sapientsTitle" class="albumTitleImage" src="images/sapients-title.png" loading="lazy">
+            <img id="symbioseTitle" class="albumTitleImage" src="images/symbiose-title.png" loading="lazy">
+            <img id="braidingTitle" class="albumTitleImage" src="images/braiding-title.png" loading="lazy">
+            <img id="luzTitle" class="albumTitleImage" src="images/luz-title.png" loading="lazy">
+            <img id="inertiaTitle" class="albumTitleImage" src="images/inertia-title.png" loading="lazy">
         </div>
 
         <div id="seekbarContain" style="visibility: hidden;">
@@ -435,6 +436,8 @@
                 src="images/pianoImages/kyklopalma-paused.png" loading="lazy">
             <img class="songTitleImage" id="aphasiaImage" data-song="aphasiaAudio"
                 src="images/pianoImages/aphasia-paused.png" loading="lazy">
+                <img class="songTitleImage" id="interstitiaImage" data-song="interstitiaAudio"
+                src="images/pianoImages/interstitia-paused.png" loading="lazy">
             <img class="songTitleImage" id="antechroniaImage" data-song="antechroniaAudio"
                 src="images/pianoImages/antechronia-paused.png" loading="lazy">
 
@@ -1046,6 +1049,7 @@
                     'kathariaAudio',
                     'kyklopalmaAudio',
                     'aphasiaAudio',
+                    'interstitiaAudio',
                     'antechroniaAudio'
                 ],
                 songs: {
@@ -1056,6 +1060,17 @@
                         playingImg: "images/pianoImages/microrecia-playing.png",
                         sphereTexture: "images/luzImages/luz-texture.png",
                         elem: document.getElementById("microreciaAudio"),
+                        hex: "0xdffc03",
+                        orbit: -690,
+                        speed: 750
+                    },
+                    interstitiaAudio: {
+                        imageId: 'interstitiaImage',
+                        audioId: 'interstitiaAudio',
+                        pausedImg: "images/pianoImages/interstitia-paused.png",
+                        playingImg: "images/pianoImages/interstitia-playing.png",
+                        sphereTexture: "images/luzImages/luz-texture.png",
+                        elem: document.getElementById("interstitiaAudio"),
                         hex: "0xdffc03",
                         orbit: -690,
                         speed: 750
@@ -1358,7 +1373,7 @@
                 texture: "images/braidingImages/album-cube-texture.png",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
-                fov: 250,
+                fov: 330,
                 imageId: "braidingTitle",
                 divId: "braidingDiv",
                 div1Width: "100%",
@@ -3426,7 +3441,22 @@
         document.addEventListener('DOMContentLoaded', function() {
             const pulsatingElements = document.querySelectorAll('.songTitleImage');
             pulsatingElements.forEach(function(element) {
-                const duration = getRandomNumber(3000, 6000); // Random duration between 800ms and 1200ms
+                const duration = getRandomNumber(3000, 6000); 
+                element.style.animationDuration = duration + 'ms';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = document.querySelectorAll('.option');
+         options.forEach(function(element) {
+                const duration = getRandomNumber(2000, 12000); 
+                element.style.animationDuration = duration + 'ms';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = document.querySelectorAll('.albumTitleImage');
+         options.forEach(function(element) {
+                const duration = getRandomNumber(2000, 12000); 
                 element.style.animationDuration = duration + 'ms';
             });
         });
@@ -3548,12 +3578,18 @@
         for (let option of options) {
 
             console.log(options)
+            option.classList.add('hue-rotate-animation-black');
 
             let image = document.getElementById(option.id)
 
             image.addEventListener('click', event => {
                 openCurrentOption(option)
             })
+        }
+
+        
+        for (let title of albumTitleImages){
+            title.classList.add('hue-rotate-animation-black');
         }
 
         for (let album in albums) {
@@ -4927,8 +4963,13 @@ sonnets[sonnetsIndex - 1].style.display = "block";
                 document.body.style.backgroundColor = "#fffaf1"
                 rendererContain.style.backgroundColor = "#fffaf1"
                 for (let option of options) {
-                    option.style.filter = "invert(1)"
+                    option.classList.add('hue-rotate-animation-white');
+                    option.classList.remove('hue-rotate-animation-black');
                 }
+                for (let title of albumTitleImages){
+                    title.classList.add('hue-rotate-animation-white');
+                    title.classList.remove('hue-rotate-animation-black');
+        }
                 backArrow.style.filter = "invert(1)"
                 backgroundBlack = false
                 backgroundWhite = true
@@ -5015,8 +5056,13 @@ sonnets[sonnetsIndex - 1].style.display = "block";
                 document.body.style.backgroundColor = "#010203"
                 rendererContain.style.backgroundColor = "#010203"
                 for (let option of options) {
-                    option.style.filter = "invert(0)"
+                    option.classList.add('hue-rotate-animation-white');
+                    option.classList.remove('hue-rotate-animation-black');
                 }
+                for (let title of albumTitleImages){
+                    title.classList.add('hue-rotate-animation-black');
+                    title.classList.remove('hue-rotate-animation-white');
+        }
                 backArrow.style.filter = "invert(0)"
                 backgroundBlack = true
                 backgroundWhite = false
