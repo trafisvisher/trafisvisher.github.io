@@ -135,22 +135,22 @@
     #doodlesDiv {  
       display:none
     }
-    #doodlesDiv img {  
+    /* #doodlesDiv img {  
       animation: pulsateLess 3s ease-in-out infinite alternate
-    }
+    } */
     #sonnetsDiv {  
       display:none
     }
-    #sonnetsDiv img {  
+    /* #sonnetsDiv img {  
       animation: pulsateLess 3s ease-in-out infinite alternate
-    }
+    } */
     
     #balkanDiv {  
       display:none
     }
-    #balkanDiv img {  
+    /* #balkanDiv img {  
       animation: pulsateLess 3s ease-in-out infinite alternate
-    }
+    } */
 
     #aboutDiv {
       overflow: hidden;
@@ -967,7 +967,7 @@
     }
   }
   .hue-rotate-animation-white {
-    animation: hueRotateAnimationWhite 10s linear infinite, pulsateLess 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
+    animation: hueRotateAnimationWhite 10s linear infinite, pulsate 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
   }
   .hue-rotate-animation-white-pulsateLess {
     animation: hueRotateAnimationWhite 10s linear infinite, pulsateLess 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
