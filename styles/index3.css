@@ -183,6 +183,7 @@
       animation: spin 2s linear infinite;
   }
   
+  
   @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -955,7 +956,7 @@
     animation: hueRotateAnimationBlack 10s linear infinite, pulsate 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
   }
   .hue-rotate-animation-black-pulsateLess {
-    animation: hueRotateAnimationBlack 10s linear infinite, pulsateLess 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
+    animation: hueRotateAnimationBlack 10s linear infinite /* Animation for hue-rotate */
   }
   
   @keyframes hueRotateAnimationBlack {
@@ -970,7 +971,7 @@
     animation: hueRotateAnimationWhite 10s linear infinite, pulsate 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
   }
   .hue-rotate-animation-white-pulsateLess {
-    animation: hueRotateAnimationWhite 10s linear infinite, pulsateLess 3s ease-in-out infinite alternate; /* Animation for hue-rotate */
+    animation: hueRotateAnimationWhite 10s linear infinite /* Animation for hue-rotate */
   }
   
   @keyframes hueRotateAnimationWhite {
@@ -1030,7 +1031,7 @@
     object-fit: contain;
     display: block;
     transition: 1s ease;
-    animation: pulsateLess 3s ease-in-out infinite alternate, hueRotation 20s linear infinite;
+    animation: hueRotation 20s linear infinite;
     
   }
   
