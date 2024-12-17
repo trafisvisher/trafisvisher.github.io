@@ -174,7 +174,7 @@
     </div>
 
 
-    <!-- <div id="imagesDiv">
+    <div id="imagesDiv">
         <div class="myImages">
             <img id="travisCambodiaImage" src="images/images/travis-cambodia-mirror.jpg" loading="lazy">
         </div>
@@ -270,7 +270,7 @@
     
     <a id="prevSonnets">❮</a>
     <a id="nextSonnets">❯</a>
-</div> -->
+</div>
 
     <div id="scrollContainer">
         <img id="habitatsScroll" src="images/habitats-scroll-brushed.jpg" loading="lazy">
@@ -281,21 +281,25 @@
 
         <div id="optionsDiv">
             <img id="musicOption" class="option optionSlow" data-imgstm="images/music" src="images/music-unselected.png">
-            <!-- <img id="wordsOption" class="option optionFast" data-imgstm="images/words" src="images/words-unselected.png">
-            <img id="imagesOption" class="option optionSlow" data-imgstm="images/images" src="images/images-unselected.png"> -->
+            <img id="wordsOption" class="option optionFast" data-imgstm="images/words" src="images/words-unselected.png">
+            <img id="imagesOption" class="option optionSlow" data-imgstm="images/images" src="images/images-unselected.png">
             <img id="hiddenOption" class="option optionFast" data-imgstm="images/hidden" src="images/hidden-option.png">
             <img id="aboutOption" class="option optionSlow" data-imgstm="images/about" src="images/about-unselected.png">
         </div>
 
-        <!-- <div id="wordsOptionsDiv">
+        <div id="musicOptionsDiv">
+            <img id="pianoTitle" class="option" src="images/piano-works.png">
+            <img id="rockOption" class="option" src="images/art-rock.png">
+        </div>
+
+        <div id="wordsOptionsDiv">
             <img id="doodlesOption" class="option" src="images/doodles.png">
             <img id="balkanOption" class="option" src="images/balkan.png">
             <img id="sonnetsOption" class="option" src="images/sonnets.png">
             
-        </div> -->
+        </div>
 
         <div id="albumTitlesDiv">
-            <img id="pianoTitle" class="option" src="images/piano-works.png">
             <img id="infinityTitle" class="albumTitleImage" src="images/infinity-title.png" loading="lazy">
             <img id="horseloverTitle" class="albumTitleImage" src="images/horselover-title.png" loading="lazy">
             <img id="maapTitle" class="albumTitleImage" src="images/maap-title.png" loading="lazy">
@@ -746,10 +750,10 @@
         const albumTitlesDivChildren = albumTitlesDiv.children
         const optionsDiv = document.getElementById("optionsDiv")
         const aboutDiv = document.getElementById("aboutDiv")
-        // const doodlesDiv = document.getElementById("doodlesDiv")
-        // const balkanDiv = document.getElementById("balkanDiv")
-        // const sonnetsDiv = document.getElementById("sonnetsDiv")
-        // const imagesDiv = document.getElementById("imagesDiv")
+        const doodlesDiv = document.getElementById("doodlesDiv")
+        const balkanDiv = document.getElementById("balkanDiv")
+        const sonnetsDiv = document.getElementById("sonnetsDiv")
+        const imagesDiv = document.getElementById("imagesDiv")
         // const aboutTextDiv = document.getElementById("aboutTextDiv")
         // const div2D3D = document.getElementById("div2D3D")
         // const icon2D = document.getElementById("icon2D")
@@ -824,23 +828,23 @@
         let balkanIsOpen = false
         let sonnetsIsOpen = false
         let hiddenIsOpen = false
-        // let doodlesDivChildren = doodlesDiv.children
-        // let balkanDivChildren = balkanDiv.children
-        // let sonnetsDivChildren = sonnetsDiv.children
+        let doodlesDivChildren = doodlesDiv.children
+        let balkanDivChildren = balkanDiv.children
+        let sonnetsDivChildren = sonnetsDiv.children
         let doodlesCounter = 0
         let balkanCounter = 0
         let sonnetsCounter = 0
         let imagesIsOpen = false
-        // let imagesDivChildren = imagesDiv.children
+        let imagesDivChildren = imagesDiv.children
         let imageCounter = 0
         // let aboutDivChildren = aboutDiv.children
         // let aboutTextCounter = 0 
         // let aboutTextsObject = []
         // let aboutText
-        // let doodlesObject = []
-        // let balkanObject = []
-        // let sonnetsObject = []
-        // let imagesObject = []
+        let doodlesObject = []
+        let balkanObject = []
+        let sonnetsObject = []
+        let imagesObject = []
         let dimensionSelectIsOpen = false
         let dimension2D = false
         let dimension3D = false
@@ -1026,7 +1030,7 @@
                 texture: "images/pianoImages/album-cube-texture.png",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
-                fov: 359,
+                fov: 300,
                 imageId: "pianoTitle",
                 divId: "pianoDiv",
                 div1Width: "100%",
@@ -2372,7 +2376,7 @@
             infinityAlbum: {
                 imageId: "infinityTitle",
                 divId: "infinityDiv",
-                fov: 340,
+                fov: 90,
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
                 texture: "images/infinityImages/album-cube-texture.png",
@@ -3602,34 +3606,43 @@
         const openCurrentOption = (option) => {
 
             if (option.id == "musicOption") {
-                openAlbums()
+                openMusicOptions()
             }
 
-            // if (option.id == "wordsOption") {
-            //     console.log("tryin")
-            //     openWordsOptions()
-            // }
+            if (option.id == "rockOption") {
+                openRockAlbums()
+            }
 
-            // if (option.id == "doodlesOption") {
+            if (option.id == "pianoTitle") {
+                openCurrentAlbum(albums.pianoWorks)
+                musicOptionsAreOpen = false
+            }
 
-            //     openDoodles()
-            // }
+            if (option.id == "wordsOption") {
+                console.log("tryin")
+                openWordsOptions()
+            }
 
-            // if (option.id == "sonnetsOption") {
-            //     openSonnets()
-            // }
+            if (option.id == "doodlesOption") {
 
-            // if (option.id == "balkanOption") {
-            //     openBalkan()
-            // }
+                openDoodles()
+            }
+
+            if (option.id == "sonnetsOption") {
+                openSonnets()
+            }
+
+            if (option.id == "balkanOption") {
+                openBalkan()
+            }
 
             if (option.id == "aboutOption") {
                 openAbout()
             }
             
-            // if (option.id == "imagesOption") {
-            //     openImages()
-            // }
+            if (option.id == "imagesOption") {
+                openImages()
+            }
             if (option.id == "hiddenOption") {
                 openHidden()
             }
@@ -3845,74 +3858,72 @@
             albumDivContainer.style.width = "0%"
         }
 
-        // const openMusicOptions = () => {
-        //     musicOptionsDiv.style.display = "block"
-        //     optionsDiv.style.width = "0%"
-        //     optionsDiv.style.height = "0%"
-        //     if (orientationPortrait == true) {
-        //         musicOptionsDiv.animate({
-        //             height: ["0%", "80%"],
-        //             width: ["0%", "100%"]
-        //         }, {
-        //             duration: 1000,
-        //             fill: "forwards",
-        //             easing: "ease"
-        //         })
-        //     } else {
-        //         musicOptionsDiv.animate({
-        //             height: ["0%", "80%"],
-        //             width: ["0%", "100%"]
-        //         }, {
-        //             duration: 1000,
-        //             fill: "forwards",
-        //             easing: "ease"
-        //         })
-        //     }
-        //     backArrow.style.visibility = "visible"
-        //     backArrow.animate({
-        //         opacity: ["0", "0.5"]
-        //     }, {
-        //         duration: 1000,
-        //         fill: "forwards"
-        //     })
-
-        //     musicOptionsAreOpen = true
-        // }
-
-        // const closeMusicOptions = () => {
-
-
-        //     musicOptionsDiv.animate({
-        //         height: ["20%", "0%"],
-        //         width: ["100%", "0%"]
-        //     }, {
-        //         duration: 1000,
-        //         easing: "ease",
-        //         fill: "forwards"
-        //     })
-
-        //     backArrow.animate({
-        //         opacity: ["0.5", "0"]
-        //     }, {
-        //         duration: 1000,
-        //         fill: "forwards"
-        //     })
-        //     optionsDiv.style.width = "100%"
-
-        //     optionsDiv.style.height = "33%"
-        //     optionsDiv.style.top = "33%"
-
-        //     musicOptionsAreOpen = false
-
-
-        // }
-
-
-        const openAlbums = () => {
-
-            albumTitlesDiv.style.display = "block"
+        const openMusicOptions = () => {
+            musicOptionsDiv.style.display = "block"
             optionsDiv.style.width = "0%"
             optionsDiv.style.height = "0%"
+            if (orientationPortrait == true) {
+                musicOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            } else {
+                musicOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            }
+            backArrow.style.visibility = "visible"
+            backArrow.animate({
+                opacity: ["0", "0.5"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+
+            musicOptionsAreOpen = true
+        }
+
+        const closeMusicOptions = () => {
+
+
+            musicOptionsDiv.animate({
+                height: ["20%", "0%"],
+                width: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+
+            backArrow.animate({
+                opacity: ["0.5", "0"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            optionsDiv.style.width = "100%"
+
+            optionsDiv.style.height = "33%"
+            optionsDiv.style.top = "33%"
+
+            musicOptionsAreOpen = false
+
+
+        }
+
+
+        const openRockAlbums = () => {
+            musicOptionsDiv.style.display = "none"
+            albumTitlesDiv.style.display = "block"
             if (orientationPortrait == true) {
                 albumTitlesDiv.animate({
                     height: ["0%", "80%"],
@@ -3932,13 +3943,6 @@
                     easing: "ease"
                 })
             }
-                        backArrow.style.visibility = "visible"
-            backArrow.animate({
-                opacity: ["0", "0.5"]
-            }, {
-                duration: 1000,
-                fill: "forwards"
-            })
 
 
 
@@ -3971,6 +3975,7 @@
 
 
             albumsAreOpen = true
+            musicOptionsAreOpen = false
 
 
 
@@ -3982,7 +3987,7 @@
         }
 
 
-        const closeAlbums = () => {
+        const closeRockAlbums = () => {
 
             albumTitlesDiv.animate({
                 height: ["80%", "0%"]
@@ -3993,19 +3998,11 @@
             })
             albumsAreOpen = false
 
+
+
             albumDivContainer.style.width = "0%"
             albumTitlesDiv.style.display = "none"
-            backArrow.animate({
-                opacity: ["0.5", "0"]
-            }, {
-                duration: 1000,
-                fill: "forwards"
-            })
-            optionsDiv.style.width = "100%"
-
-            optionsDiv.style.height = "33%"
-            optionsDiv.style.top = "33%"
-
+            openMusicOptions()
 
 
         }
@@ -4344,16 +4341,16 @@ sonnets[sonnetsIndex - 1].style.display = "block";
 
         }
 
-        // imagesDiv.addEventListener('touchstart', handleTouchStart, false);
-        // imagesDiv.addEventListener('touchmove', handleTouchEndImages, false);
-        // doodlesDiv.addEventListener('touchstart', handleTouchStart, false);
-        // doodlesDiv.addEventListener('touchmove', handleTouchEndDoodles, false);
+        imagesDiv.addEventListener('touchstart', handleTouchStart, false);
+        imagesDiv.addEventListener('touchmove', handleTouchEndImages, false);
+        doodlesDiv.addEventListener('touchstart', handleTouchStart, false);
+        doodlesDiv.addEventListener('touchmove', handleTouchEndDoodles, false);
         hiddenDiv.addEventListener('touchstart', handleTouchStart, false);
         hiddenDiv.addEventListener('touchmove', handleTouchEndHidden, false);
-        // balkanDiv.addEventListener('touchstart', handleTouchStart, false);
-        // balkanDiv.addEventListener('touchmove', handleTouchEndBalkan, false);
-        // sonnetsDiv.addEventListener('touchstart', handleTouchStart, false);
-        // sonnetsDiv.addEventListener('touchmove', handleTouchEndSonnets, false);
+        balkanDiv.addEventListener('touchstart', handleTouchStart, false);
+        balkanDiv.addEventListener('touchmove', handleTouchEndBalkan, false);
+        sonnetsDiv.addEventListener('touchstart', handleTouchStart, false);
+        sonnetsDiv.addEventListener('touchmove', handleTouchEndSonnets, false);
 
         // Handle touch start
         function handleTouchStart(event) {
@@ -4483,23 +4480,23 @@ sonnets[sonnetsIndex - 1].style.display = "block";
 
 
 
-        // const prevDoodle = document.getElementById("prevDoodle")
-        // const nextDoodle = document.getElementById("nextDoodle")
-        // prevDoodle.addEventListener('click', () => {
-        //     showDoodles(doodleIndex += -1);
-        // })
-        // nextDoodle.addEventListener('click', () => {
-        //     showDoodles(doodleIndex += 1);
-        // })
+        const prevDoodle = document.getElementById("prevDoodle")
+        const nextDoodle = document.getElementById("nextDoodle")
+        prevDoodle.addEventListener('click', () => {
+            showDoodles(doodleIndex += -1);
+        })
+        nextDoodle.addEventListener('click', () => {
+            showDoodles(doodleIndex += 1);
+        })
 
-        // const prevImage = document.getElementById("prevImage")
-        // prevImage.addEventListener('click', () => {
-        //     showImages(imageIndex += -1);
-        // })
-        // const nextImage = document.getElementById("nextImage")
-        // nextImage.addEventListener('click', () => {
-        //     showImages(imageIndex += 1);
-        // })
+        const prevImage = document.getElementById("prevImage")
+        prevImage.addEventListener('click', () => {
+            showImages(imageIndex += -1);
+        })
+        const nextImage = document.getElementById("nextImage")
+        nextImage.addEventListener('click', () => {
+            showImages(imageIndex += 1);
+        })
 
         const prevHidden = document.getElementById("prevHidden")
         prevHidden.addEventListener('click', () => {
@@ -4509,60 +4506,60 @@ sonnets[sonnetsIndex - 1].style.display = "block";
         nextHidden.addEventListener('click', () => {
             showHidden(hiddenIndex += 1);
         })
-        // const prevBalkan = document.getElementById("prevBalkan")
-        // prevBalkan.addEventListener('click', () => {
-        //     showBalkan(balkanIndex += -1);
-        // })
-        // const nextBalkan = document.getElementById("nextBalkan")
-        // nextBalkan.addEventListener('click', () => {
-        //     showBalkan(balkanIndex += 1);
-        // })
-        // const prevSonnets = document.getElementById("prevSonnets")
-        // prevSonnets.addEventListener('click', () => {
-        //     showSonnets(sonnetsIndex += -1);
-        // })
-        // const nextSonnets = document.getElementById("nextSonnets")
-        // nextSonnets.addEventListener('click', () => {
-        //     showSonnets(sonnetsIndex += 1);
-        // })
+        const prevBalkan = document.getElementById("prevBalkan")
+        prevBalkan.addEventListener('click', () => {
+            showBalkan(balkanIndex += -1);
+        })
+        const nextBalkan = document.getElementById("nextBalkan")
+        nextBalkan.addEventListener('click', () => {
+            showBalkan(balkanIndex += 1);
+        })
+        const prevSonnets = document.getElementById("prevSonnets")
+        prevSonnets.addEventListener('click', () => {
+            showSonnets(sonnetsIndex += -1);
+        })
+        const nextSonnets = document.getElementById("nextSonnets")
+        nextSonnets.addEventListener('click', () => {
+            showSonnets(sonnetsIndex += 1);
+        })
 
 
         
-        // function showImages(n) {
-        //     let i;
-        //     let Images = document.getElementsByClassName("myImages");
-        //     if (backgroundBlack == false) {
-        //         for (let image of Images) {
-        //             image.style.filter = "invert(1)"
-        //         }
-        //     }
-        //     if (n > Images.length) { imageIndex = 1 }
-        //     if (n < 1) { imageIndex = Images.length }
-        //     for (i = 0; i < Images.length; i++) {
-        //         Images[i].style.display = "none";
-        //     }
+        function showImages(n) {
+            let i;
+            let Images = document.getElementsByClassName("myImages");
+            if (backgroundBlack == false) {
+                for (let image of Images) {
+                    image.style.filter = "invert(1)"
+                }
+            }
+            if (n > Images.length) { imageIndex = 1 }
+            if (n < 1) { imageIndex = Images.length }
+            for (i = 0; i < Images.length; i++) {
+                Images[i].style.display = "none";
+            }
 
-        //     Images[imageIndex - 1].style.display = "block";
-        //     //         var zoomableImage = Images[imageIndex - 1]
-        //     // var pz = Panzoom(zoomableImage, {
-        //     //     zoomSpeed: 0.25,
-        //     //     maxZoom: 3
-        //     // });
+            Images[imageIndex - 1].style.display = "block";
+            //         var zoomableImage = Images[imageIndex - 1]
+            // var pz = Panzoom(zoomableImage, {
+            //     zoomSpeed: 0.25,
+            //     maxZoom: 3
+            // });
 
-        //     imagesDiv.addEventListener('wheel', function (e) {
-        //         e.preventDefault();
-        //         pz.zoomWithWheel(e);
-        //     });
-        //     imagesDiv.addEventListener('touchstart', function (e) {
-        //         pz.zoomWithTouch(e);
-        //     });
+            imagesDiv.addEventListener('wheel', function (e) {
+                e.preventDefault();
+                pz.zoomWithWheel(e);
+            });
+            imagesDiv.addEventListener('touchstart', function (e) {
+                pz.zoomWithTouch(e);
+            });
 
-        //     // Prevent default touchmove to avoid scrolling
-        //     imagesDiv.addEventListener('touchmove', function (e) {
-        //         e.preventDefault();
-        //     });
+            // Prevent default touchmove to avoid scrolling
+            imagesDiv.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            });
 
-        // }
+        }
 
 
         const closeAbout = () => {
@@ -4590,87 +4587,87 @@ sonnets[sonnetsIndex - 1].style.display = "block";
             centerContainer.style.display = "block"
 
         }
-        // const closeDoodles = () => {
-        //     doodlesDiv.animate({
-        //         height: ["100%", "0%"]
-        //     }, {
-        //         duration: 1000,
-        //         easing: "ease",
-        //         fill: "forwards"
-        //     })
-        //     wordsOptionsDiv.animate({
-        //             height: ["0%", "80%"],
-        //             width: ["0%", "100%"]
-        //         }, {
-        //             duration: 1000,
-        //             fill: "forwards",
-        //             easing: "ease"
-        //         })
-        //     wordsOptionsDiv.style.top = "33%"
+        const closeDoodles = () => {
+            doodlesDiv.animate({
+                height: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+            wordsOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            wordsOptionsDiv.style.top = "33%"
 
-        //     doodlesDiv.style.display = "none"
-        //     doodlesIsOpen = false
-        //     wordsOptionsAreOpen = true
+            doodlesDiv.style.display = "none"
+            doodlesIsOpen = false
+            wordsOptionsAreOpen = true
 
-        //     prevDoodle.style.display = "none"
-        //     nextDoodle.style.display = "none"
-        //     centerContainer.style.display = "block"
+            prevDoodle.style.display = "none"
+            nextDoodle.style.display = "none"
+            centerContainer.style.display = "block"
 
-        // }
-        // const closeBalkan = () => {
-        //     balkanDiv.animate({
-        //         height: ["100%", "0%"]
-        //     }, {
-        //         duration: 1000,
-        //         easing: "ease",
-        //         fill: "forwards"
-        //     })
-        //     wordsOptionsDiv.animate({
-        //             height: ["0%", "80%"],
-        //             width: ["0%", "100%"]
-        //         }, {
-        //             duration: 1000,
-        //             fill: "forwards",
-        //             easing: "ease"
-        //         })
-        //     wordsOptionsDiv.style.top = "33%"
+        }
+        const closeBalkan = () => {
+            balkanDiv.animate({
+                height: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+            wordsOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            wordsOptionsDiv.style.top = "33%"
 
-        //     balkanDiv.style.display = "none"
-        //     balkanIsOpen = false
-        //     wordsOptionsAreOpen = true
+            balkanDiv.style.display = "none"
+            balkanIsOpen = false
+            wordsOptionsAreOpen = true
 
-        //     prevBalkan.style.display = "none"
-        //     nextBalkan.style.display = "none"
-        //     centerContainer.style.display = "block"
+            prevBalkan.style.display = "none"
+            nextBalkan.style.display = "none"
+            centerContainer.style.display = "block"
 
-        // }
-        // const closeSonnets = () => {
-        //     sonnetsDiv.animate({
-        //         height: ["100%", "0%"]
-        //     }, {
-        //         duration: 1000,
-        //         easing: "ease",
-        //         fill: "forwards"
-        //     })
-        //     wordsOptionsDiv.animate({
-        //             height: ["0%", "80%"],
-        //             width: ["0%", "100%"]
-        //         }, {
-        //             duration: 1000,
-        //             fill: "forwards",
-        //             easing: "ease"
-        //         })
-        //     wordsOptionsDiv.style.top = "33%"
+        }
+        const closeSonnets = () => {
+            sonnetsDiv.animate({
+                height: ["100%", "0%"]
+            }, {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            })
+            wordsOptionsDiv.animate({
+                    height: ["0%", "80%"],
+                    width: ["0%", "100%"]
+                }, {
+                    duration: 1000,
+                    fill: "forwards",
+                    easing: "ease"
+                })
+            wordsOptionsDiv.style.top = "33%"
 
-        //     sonnetsDiv.style.display = "none"
-        //     sonnetsIsOpen = false
-        //     wordsOptionsAreOpen = true
+            sonnetsDiv.style.display = "none"
+            sonnetsIsOpen = false
+            wordsOptionsAreOpen = true
 
-        //     prevSonnets.style.display = "none"
-        //     nextSonnets.style.display = "none"
-        //     centerContainer.style.display = "block"
+            prevSonnets.style.display = "none"
+            nextSonnets.style.display = "none"
+            centerContainer.style.display = "block"
 
-        // }
+        }
 
         const closeHidden = () => {
             hiddenDiv.animate({
@@ -4699,23 +4696,23 @@ sonnets[sonnetsIndex - 1].style.display = "block";
 
         }
 
-        // const closeImages = () => {
-        //     optionsDiv.style.width = "100%"
-        //     optionsDiv.style.height = "33%"
-        //     optionsDiv.style.top = "33%"
-        //     backArrow.animate({
-        //         opacity: ["0.5", "0"]
-        //     }, {
-        //         duration: 1000,
-        //         fill: "forwards"
-        //     })
-        //     imagesDiv.style.display = "none"
-        //     imagesIsOpen = false
-        //     centerContainer.style.display = "block"
-        //     prevImage.style.display = "none"
-        //     nextImage.style.display = "none"
+        const closeImages = () => {
+            optionsDiv.style.width = "100%"
+            optionsDiv.style.height = "33%"
+            optionsDiv.style.top = "33%"
+            backArrow.animate({
+                opacity: ["0.5", "0"]
+            }, {
+                duration: 1000,
+                fill: "forwards"
+            })
+            imagesDiv.style.display = "none"
+            imagesIsOpen = false
+            centerContainer.style.display = "block"
+            prevImage.style.display = "none"
+            nextImage.style.display = "none"
 
-        // }
+        }
 
         pausePlay.addEventListener('click', event => {
             if (currentSong) {
@@ -4736,18 +4733,23 @@ sonnets[sonnetsIndex - 1].style.display = "block";
             if (albumIsOpen == true) {
 
                 closeCurrentAlbum(selectedAlbumTitleImage);
-                    openAlbums()
-
+                if (currentAlbum == albums.pianoWorks) {
+                    openMusicOptions()
+                } else {
+                    openRockAlbums()
+                }
 
             }
 
-
-            // else if (wordsOptionsAreOpen == true) {
-            //     closeWordsOptions()
-            // }
+            else if (musicOptionsAreOpen == true) {
+                closeMusicOptions()
+            }
+            else if (wordsOptionsAreOpen == true) {
+                closeWordsOptions()
+            }
 
             else if (albumsAreOpen == true) {
-                closeAlbums()
+                closeRockAlbums()
 
             }
 
@@ -4755,22 +4757,22 @@ sonnets[sonnetsIndex - 1].style.display = "block";
                 closeAbout()
                 aboutIsOpen = false
             }
-            // else if (doodlesIsOpen == true) {
-            //     closeDoodles()
-            //     doodlesIsOpen = false
-            // }
-            // else if (balkanIsOpen == true) {
-            //     closeBalkan()
-            //     balkanIsOpen = false
-            // }
-            // else if (sonnetsIsOpen == true) {
-            //     closeSonnets()
-            //     sonnetsIsOpen = false
-            // }
-            // else if (imagesIsOpen == true) {
-            //     closeImages()
-            //     imagesIsOpen = false
-            // }
+            else if (doodlesIsOpen == true) {
+                closeDoodles()
+                doodlesIsOpen = false
+            }
+            else if (balkanIsOpen == true) {
+                closeBalkan()
+                balkanIsOpen = false
+            }
+            else if (sonnetsIsOpen == true) {
+                closeSonnets()
+                sonnetsIsOpen = false
+            }
+            else if (imagesIsOpen == true) {
+                closeImages()
+                imagesIsOpen = false
+            }
             else if (hiddenIsOpen == true) {
                 closeHidden()
                 hiddenIsOpen = false
@@ -4913,11 +4915,11 @@ sonnets[sonnetsIndex - 1].style.display = "block";
 
                 starSphere.material.map = loader.load(starSphere2)
                 fovX.style.filter = "invert(1)"
-                // prevDoodle.style.filter = "invert(1)"
-                // prevImage.style.filter = "invert(1)"
+                prevDoodle.style.filter = "invert(1)"
+                prevImage.style.filter = "invert(1)"
                 prevHidden.style.filter = "invert(1)"
-                // nextDoodle.style.filter = "invert(1)"
-                // nextImage.style.filter = "invert(1)"
+                nextDoodle.style.filter = "invert(1)"
+                nextImage.style.filter = "invert(1)"
                 nextHidden.style.filter = "invert(1)"
 
 
