@@ -22,7 +22,7 @@
     <!--AUDIO TRACKS -->
 
     
-    <audio id="microreciaAudio" preload="none" src="songs/pianoSongs/microrecia.mp3"> </audio>
+    <!-- <audio id="microreciaAudio" preload="none" src="songs/pianoSongs/microrecia.mp3"> </audio>
     <audio id="hypnostadiaAudio" preload="none" src="songs/pianoSongs/hypnostadia.mp3"> </audio>
     <audio id="kyklopalmaAudio" preload="none" src="songs/pianoSongs/kyklopalma.mp3"> </audio>
     <audio id="limineticaAudio" preload="none" src="songs/pianoSongs/liminetica.mp3"> </audio>
@@ -30,7 +30,7 @@
     <audio id="nyxophoniaAudio" preload="none" src="songs/pianoSongs/nyxophonia.mp3"> </audio>
     <audio id="aphasiaAudio" preload="none" src="songs/pianoSongs/aphasia.mp3"> </audio>
     <audio id="interstitiaAudio" preload="none" src="songs/pianoSongs/interstitia.mp3"> </audio>
-    <audio id="antechroniaAudio" preload="none" src="songs/pianoSongs/antechronia.mp3"> </audio>
+    <audio id="antechroniaAudio" preload="none" src="songs/pianoSongs/antechronia.mp3"> </audio> -->
 
     <audio id="siderialAudio" preload="none" src="songs/maapSongs/siderial.mp3"> </audio>
     <audio id="abstractingAudio" preload="none" src="songs/maapSongs/abstracting-abstractions.mp3"> </audio>
@@ -295,7 +295,7 @@
         </div> -->
 
         <div id="albumTitlesDiv">
-            <img id="pianoTitle" class="option" src="images/piano-works.png">
+            <!-- <img id="pianoTitle" class="option" src="images/piano-works.png"> -->
             <img id="infinityTitle" class="albumTitleImage" src="images/infinity-title.png" loading="lazy">
             <img id="horseloverTitle" class="albumTitleImage" src="images/horselover-title.png" loading="lazy">
             <img id="maapTitle" class="albumTitleImage" src="images/maap-title.png" loading="lazy">
@@ -417,7 +417,7 @@
 
         </div>
         <div id="luzDiv2"></div>
-        <div id="pianoDiv">
+        <!-- <div id="pianoDiv">
             <img class="songTitleImage" id="microreciaImage" data-song="microreciaAudio"
                 src="images/pianoImages/microrecia-paused.png" loading="lazy">
                 <img class="songTitleImage" id="hypnostadiaImage" data-song="hypnostadiaAudio"
@@ -438,7 +438,7 @@
                 src="images/pianoImages/antechronia-paused.png" loading="lazy">
 
         </div>
-        <div id="pianoDiv2"></div>
+        <div id="pianoDiv2"></div> -->
         <div id="inertiaDiv">
             <img class="songTitleImage" id="inertiaImage" data-song="inertiaAudio"
                 src="images/inertiaImages/inertia-paused.png" loading="lazy">
@@ -1021,141 +1021,141 @@
 
         const albums = {
 
-            pianoWorks: {
-                filter: "yes",
-                texture: "images/pianoImages/album-cube-texture.png",
-                starSphere1: "images/maapImages/galaxy-starfield.png",
-                starSphere2: "images/iridescent-background-white.png",
-                fov: 345,
-                imageId: "pianoTitle",
-                divId: "pianoDiv",
-                div1Width: "100%",
-                div2Width: "100%",
-                div1Height: "50",
-                div2Height: "50",
-                div1HeightLandscape: "75",
-                div2HeightLandscape: "75",
-                div1Left: "0%",
-                div2Left: "0%",
-                playlist: [
-                    'microreciaAudio',
-                    'hypnostadiaAudio',
-                    'limineticaAudio',
-                    'nyxophoniaAudio',
-                    'kathariaAudio',
-                    'kyklopalmaAudio',
-                    'aphasiaAudio',
-                    'interstitiaAudio',
-                    'antechroniaAudio'
-                ],
-                songs: {
-                    microreciaAudio: {
-                        imageId: 'microreciaImage',
-                        audioId: 'microreciaAudio',
-                        pausedImg: "images/pianoImages/microrecia-paused.png",
-                        playingImg: "images/pianoImages/microrecia-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("microreciaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    interstitiaAudio: {
-                        imageId: 'interstitiaImage',
-                        audioId: 'interstitiaAudio',
-                        pausedImg: "images/pianoImages/interstitia-paused.png",
-                        playingImg: "images/pianoImages/interstitia-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("interstitiaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    hypnostadiaAudio: {
-                        imageId: 'hypnostadiaImage',
-                        audioId: 'hypnostadiaAudio',
-                        pausedImg: "images/pianoImages/hypnostadia-paused.png",
-                        playingImg: "images/pianoImages/hypnostadia-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("hypnostadiaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    kyklopalmaAudio: {
-                        imageId: 'kyklopalmaImage',
-                        audioId: 'kyklopalmaAudio',
-                        pausedImg: "images/pianoImages/kyklopalma-paused.png",
-                        playingImg: "images/pianoImages/kyklopalma-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("kyklopalmaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    kathariaAudio: {
-                        imageId: 'kathariaImage',
-                        audioId: 'kathariaAudio',
-                        pausedImg: "images/pianoImages/katharia-paused.png",
-                        playingImg: "images/pianoImages/katharia-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("kathariaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    limineticaAudio: {
-                        imageId: 'limineticaImage',
-                        audioId: 'limineticaAudio',
-                        pausedImg: "images/pianoImages/liminetica-paused.png",
-                        playingImg: "images/pianoImages/liminetica-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("limineticaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    nyxophoniaAudio: {
-                        imageId: 'nyxophoniaImage',
-                        audioId: 'nyxophoniaAudio',
-                        pausedImg: "images/pianoImages/nyxophonia-paused.png",
-                        playingImg: "images/pianoImages/nyxophonia-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("nyxophoniaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    aphasiaAudio: {
-                        imageId: 'aphasiaImage',
-                        audioId: 'aphasiaAudio',
-                        pausedImg: "images/pianoImages/aphasia-paused.png",
-                        playingImg: "images/pianoImages/aphasia-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("aphasiaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                    antechroniaAudio: {
-                        imageId: 'antechroniaImage',
-                        audioId: 'antechroniaAudio',
-                        pausedImg: "images/pianoImages/antechronia-paused.png",
-                        playingImg: "images/pianoImages/antechronia-playing.png",
-                        sphereTexture: "images/luzImages/luz-texture.png",
-                        elem: document.getElementById("antechroniaAudio"),
-                        hex: "0xdffc03",
-                        orbit: -690,
-                        speed: 750
-                    },
-                }
-            },
+            // pianoWorks: {
+            //     filter: "yes",
+            //     texture: "images/pianoImages/album-cube-texture.png",
+            //     starSphere1: "images/maapImages/galaxy-starfield.png",
+            //     starSphere2: "images/iridescent-background-white.png",
+            //     fov: 345,
+            //     imageId: "pianoTitle",
+            //     divId: "pianoDiv",
+            //     div1Width: "100%",
+            //     div2Width: "100%",
+            //     div1Height: "50",
+            //     div2Height: "50",
+            //     div1HeightLandscape: "75",
+            //     div2HeightLandscape: "75",
+            //     div1Left: "0%",
+            //     div2Left: "0%",
+            //     playlist: [
+            //         'microreciaAudio',
+            //         'hypnostadiaAudio',
+            //         'limineticaAudio',
+            //         'nyxophoniaAudio',
+            //         'kathariaAudio',
+            //         'kyklopalmaAudio',
+            //         'aphasiaAudio',
+            //         'interstitiaAudio',
+            //         'antechroniaAudio'
+            //     ],
+            //     songs: {
+            //         microreciaAudio: {
+            //             imageId: 'microreciaImage',
+            //             audioId: 'microreciaAudio',
+            //             pausedImg: "images/pianoImages/microrecia-paused.png",
+            //             playingImg: "images/pianoImages/microrecia-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("microreciaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         interstitiaAudio: {
+            //             imageId: 'interstitiaImage',
+            //             audioId: 'interstitiaAudio',
+            //             pausedImg: "images/pianoImages/interstitia-paused.png",
+            //             playingImg: "images/pianoImages/interstitia-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("interstitiaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         hypnostadiaAudio: {
+            //             imageId: 'hypnostadiaImage',
+            //             audioId: 'hypnostadiaAudio',
+            //             pausedImg: "images/pianoImages/hypnostadia-paused.png",
+            //             playingImg: "images/pianoImages/hypnostadia-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("hypnostadiaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         kyklopalmaAudio: {
+            //             imageId: 'kyklopalmaImage',
+            //             audioId: 'kyklopalmaAudio',
+            //             pausedImg: "images/pianoImages/kyklopalma-paused.png",
+            //             playingImg: "images/pianoImages/kyklopalma-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("kyklopalmaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         kathariaAudio: {
+            //             imageId: 'kathariaImage',
+            //             audioId: 'kathariaAudio',
+            //             pausedImg: "images/pianoImages/katharia-paused.png",
+            //             playingImg: "images/pianoImages/katharia-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("kathariaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         limineticaAudio: {
+            //             imageId: 'limineticaImage',
+            //             audioId: 'limineticaAudio',
+            //             pausedImg: "images/pianoImages/liminetica-paused.png",
+            //             playingImg: "images/pianoImages/liminetica-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("limineticaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         nyxophoniaAudio: {
+            //             imageId: 'nyxophoniaImage',
+            //             audioId: 'nyxophoniaAudio',
+            //             pausedImg: "images/pianoImages/nyxophonia-paused.png",
+            //             playingImg: "images/pianoImages/nyxophonia-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("nyxophoniaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         aphasiaAudio: {
+            //             imageId: 'aphasiaImage',
+            //             audioId: 'aphasiaAudio',
+            //             pausedImg: "images/pianoImages/aphasia-paused.png",
+            //             playingImg: "images/pianoImages/aphasia-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("aphasiaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //         antechroniaAudio: {
+            //             imageId: 'antechroniaImage',
+            //             audioId: 'antechroniaAudio',
+            //             pausedImg: "images/pianoImages/antechronia-paused.png",
+            //             playingImg: "images/pianoImages/antechronia-playing.png",
+            //             sphereTexture: "images/luzImages/luz-texture.png",
+            //             elem: document.getElementById("antechroniaAudio"),
+            //             hex: "0xdffc03",
+            //             orbit: -690,
+            //             speed: 750
+            //         },
+            //     }
+            // },
 
             luzAlbum: {
                 texture: "images/luzImages/album-cube-texture.png",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
-                fov: 310,
+                fov: 260,
                 imageId: "luzTitle",
                 divId: "luzDiv",
                 div1Width: "100%",
@@ -1369,7 +1369,7 @@
                 texture: "images/braidingImages/album-cube-texture.png",
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
-                fov: 330,
+                fov: 250,
                 imageId: "braidingTitle",
                 divId: "braidingDiv",
                 div1Width: "100%",
@@ -2372,7 +2372,7 @@
             infinityAlbum: {
                 imageId: "infinityTitle",
                 divId: "infinityDiv",
-                fov: 340,
+                fov: 300,
                 starSphere1: "images/maapImages/galaxy-starfield.png",
                 starSphere2: "images/iridescent-background-white.png",
                 texture: "images/infinityImages/album-cube-texture.png",
